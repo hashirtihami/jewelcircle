@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample</title>
+</head>
+<style type="text/css">
+	.cont	{
+		display: none;
+	}
+</style>
+<body>
+	<form>
+		<p>Fruits Select</p>
+		<div>
+			<label for="apple"> Apple
+				<input id="apple" onclick="hideUser();" type="radio" name="fruits" value="apple">
+			</label>
+			<label for="mng"> Mango
+				<input id="mng" onclick="hideUser();" type="radio" name="fruits" value="mango">
+			</label> 
+			<label for="orng" onclick="displayUser();"> Orange
+				<input id="orng" type="radio" name="fruits" value="orange">
+			</label>
+		</div>
+		<div class="cont" id="major">
+			<label for="name">
+				<input id="name" type="text" name="username" placeholder="username">
+			</label>
+		</div>
+	</form>
+	<script type="text/javascript">
+		function displayUser() {
+			var target = document.getElementById("major");
+			// target.classList.toggle("cont");
+			target.style.display = "block";
+		}
+		function hideUser() {
+			var target = document.getElementById("major");
+			// target.classList.toggle("cont");
+			target.style.display = "none";
+		}
+	</script>
+</body>
+</html>
