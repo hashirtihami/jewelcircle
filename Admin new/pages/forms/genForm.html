@@ -8,8 +8,6 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
@@ -19,6 +17,9 @@
   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
     <!-- iCheck for checkboxes and radio inputs -->
   <link rel="stylesheet" href="../../plugins/iCheck/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <style type="text/css">
     .hideShow {
       display: none;
@@ -53,6 +54,7 @@
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
         <span class="sr-only">Toggle navigation</span>
+      <i class="fas fa-bars"></i>
       </a>
 
       <div class="navbar-custom-menu">
@@ -63,13 +65,13 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="../../dist/img/user0.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs">Zaid Farouqi</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="../../dist/img/user0.jpg" class="img-circle" alt="User Image">
 
                 <p>
                  Zaid Farouqi - Entrepreneur
@@ -100,7 +102,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="../../dist/img/user0.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Zaid Farouqi</p>
@@ -122,11 +124,6 @@
           <ul class="treeview-menu">
             <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Orders</a></li>
             <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Coupons</a></li>
-            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> PDF Invoices</a></li>
-            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Reports</a></li>
-            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Settings</a></li>
-            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Status</a></li>
-            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Extensions</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -139,9 +136,6 @@
           <ul class="treeview-menu">
             <li><a href="#"><i class="fa fa-circle-o"></i> All Products</a></li>
             <li><a href="pages/forms/genForm.html"><i class="fa fa-circle-o"></i> Add New</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Categories</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Tags</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Attributes</a></li>
           </ul>
         </li>
 
@@ -159,8 +153,8 @@
         Add New Product
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Products</a></li>
+        <li><a href="../../home.html"><i class="fas fa-home"></i> Home</a></li>
+        <li>Products</li>
         <li class="active">Add New Products</li>
       </ol>
     </section>
@@ -183,21 +177,13 @@
                   <label>Product Category</label>
                   <div class="form-group">
                     <label for="exist" class="chotaSize" onclick="displayOne();">
-                      <input id="exist" type="radio" name="r3" class="flat-red">
+                      <input id="exist" type="radio" name="r3" >
                       <span>Choose existing category</span>
                     </label>
-                    <label for="new" class="chotaSize">
-                      <input id="new" type="radio" name="r3" class="flat-red">
-                      <span onclick="displayTwo();">Add New</span>
+                    <label for="new" class="chotaSize" onclick="displayTwo();">
+                      <input id="new" type="radio" name="r3" >
+                      <span>Add New</span>
                     </label>
-                    <label for="orng" onclick="displayUser();"> Orange
-                      <input id="orng" type="radio" name="fruits" value="orange" class="flat-red">
-                    </label>
-                      <div class="cont hideShow" id="major">
-                        <label for="name">
-                          <input id="name" type="text" name="username" placeholder="username">
-                        </label>
-                      </div>
               </div>
                   <select onblur="checkInput();" id="dis1" class="form-control hideShow" name="proCategory">
                     <option value="bracelet">Bracelet</option>
@@ -216,13 +202,13 @@
                <div class="form-group">
                   <label>Product Type</label>
                   <div class="form-group">
-                    <label class="chotaSize">
-                      <input type="radio" name="r34" class="flat-red">
-                      <span onclick="displayThree();">Choose existing type</span>
+                    <label class="chotaSize" onclick="displayThree();">
+                      <input type="radio" name="r34">
+                      <span>Choose existing type</span>
                    </label>
-                   <label class="chotaSize">
-                      <input type="radio" name="r34" class="flat-red">
-                      <span onclick="displayFour();">Add New</span>
+                   <label class="chotaSize" onclick="displayFour();">
+                      <input type="radio" name="r34">
+                      <span>Add New</span>
                    </label>
 
                   <select class="form-control hideShow" id="dis3">
@@ -260,31 +246,31 @@
                 <div class="form-group">
                 <label>Language: </label>
                 <label class="chotaSize">
-                  <input type="checkbox" class="flat-red"> English
+                  <input type="checkbox"> English
                 </label>
                 <label class="chotaSize">
-                  <input type="checkbox" class="flat-red"> Urdu
+                  <input type="checkbox"> Urdu
                 </label>
                 <label class="chotaSize">
-                  <input type="checkbox" class="flat-red"> Arabic
+                  <input type="checkbox"> Arabic
                 </label>
               </div>
               <div class="form-group">
                 <label>Plating: </label>
                 <label class="chotaSize">
-                  <input type="radio" name="r3" class="flat-red"> Gold
+                  <input type="radio" name="plateType"> Gold
                 </label>
                 <label class="chotaSize">
-                  <input type="radio" name="r3" class="flat-red"> Silver
+                  <input type="radio" name="plateType"> Silver
                 </label>
               </div>
               <div class="form-group">
                 <label>Name Type:</label>
                  <label class="chotaSize"> 
-                 <input type="radio" name="r3" class="flat-red"> Single
+                 <input type="radio" name="wordCount"> Single
                 </label>
                 <label class="chotaSize">
-                  <input type="radio" name="r3" class="flat-red"> Double
+                  <input type="radio" name="wordCount"> Double
                 </label>
               </div>
                <div id="chainSize" class="form-group hideShow">
@@ -309,16 +295,6 @@
           <!-- /.box -->
 
 
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 2.3.8
-    </div>
-    <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Jellybeans</a>.</strong> All rights
-    reserved.
-  </footer>
-
-<!-- ./wrapper -->
 
 <!-- jQuery 2.2.3 -->
 <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
