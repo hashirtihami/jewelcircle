@@ -8,8 +8,8 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -18,6 +18,8 @@
     <!-- iCheck for checkboxes and radio inputs -->
   <link rel="stylesheet" href="../../plugins/iCheck/all.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <style type="text/css">
@@ -54,7 +56,6 @@
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
         <span class="sr-only">Toggle navigation</span>
-      <i class="fas fa-bars"></i>
       </a>
 
       <div class="navbar-custom-menu">
@@ -116,26 +117,27 @@
 
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-edit"></i> <span>E-Commerce</span>
+            <i class="fas fa-globe-asia"></i> <span>E-Commerce</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Orders</a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Coupons</a></li>
+            <li><a href="../../pages/tables/orders.html"><i class="fas fa-angle-double-right"></i> Orders</a></li>
+            <li><a href="#"><i class="fas fa-angle-double-right"></i> Coupons</a></li>
+            <!-- pages/forms/advanced.html PATH -->
           </ul>
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-table"></i> <span>Products</span>
+            <i class="fas fa-box-open"></i> <span>Products</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> All Products</a></li>
-            <li><a href="pages/forms/genForm.html"><i class="fa fa-circle-o"></i> Add New</a></li>
+            <li><a href="#"><i class="fas fa-arrow-circle-right"></i> All Products</a></li>
+            <li><a href="genForm.html"><i class="fas fa-arrow-circle-right"></i> Add New</a></li>
           </ul>
         </li>
 
@@ -154,8 +156,8 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="../../home.html"><i class="fas fa-home"></i> Home</a></li>
-        <li>Products</li>
-        <li class="active">Add New Products</li>
+        <li> Products</li>
+        <li class="active"> Add New Products</li>
       </ol>
     </section>
 
