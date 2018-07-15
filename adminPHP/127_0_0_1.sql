@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 15, 2018 at 11:06 AM
+-- Generation Time: Jul 15, 2018 at 02:22 PM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `test-jc`
 --
-CREATE DATABASE IF NOT EXISTS `test-jc` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE IF NOT EXISTS `test-jc` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `test-jc`;
 
 -- --------------------------------------------------------
@@ -38,7 +38,7 @@ CREATE TABLE `address` (
   `city` varchar(20) DEFAULT NULL,
   `postalCode` int(11) DEFAULT NULL,
   `country` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -47,19 +47,18 @@ CREATE TABLE `address` (
 --
 
 CREATE TABLE `category` (
-  `categoryID` int(11) NOT NULL,
-  `category` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `category` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `category`
 --
 
-INSERT INTO `category` (`categoryID`, `category`) VALUES
-(1, 'Bracelet'),
-(3, 'Cufflinks'),
-(4, 'Locket'),
-(2, 'Ring');
+INSERT INTO `category` (`category`) VALUES
+('Bracelet'),
+('Cufflinks'),
+('Locket'),
+('Ring');
 
 -- --------------------------------------------------------
 
@@ -74,7 +73,7 @@ CREATE TABLE `customer` (
   `email` varchar(50) DEFAULT NULL,
   `contact` varchar(50) DEFAULT NULL,
   `addressID` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -85,13 +84,13 @@ CREATE TABLE `customer` (
 CREATE TABLE `details` (
   `detailsID` int(11) NOT NULL,
   `productID` int(11) DEFAULT NULL,
-  `typeID` int(11) DEFAULT NULL,
-  `languageID` int(11) DEFAULT NULL,
-  `platingID` int(11) DEFAULT NULL,
-  `sizeID` int(11) DEFAULT NULL,
-  `nameTypeID` int(11) DEFAULT NULL,
-  `catetgoryID` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `typeName` varchar(15) DEFAULT NULL,
+  `languageName` varchar(15) DEFAULT NULL,
+  `platingType` varchar(15) DEFAULT NULL,
+  `sizeType` varchar(15) DEFAULT NULL,
+  `nameTypeValue` varchar(15) DEFAULT NULL,
+  `category` varchar(15) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -103,7 +102,7 @@ CREATE TABLE `item` (
   `itemID` int(11) NOT NULL,
   `productID` int(11) DEFAULT NULL,
   `orderID` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -112,18 +111,17 @@ CREATE TABLE `item` (
 --
 
 CREATE TABLE `language` (
-  `languageID` int(11) NOT NULL,
-  `languageName` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `languageName` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `language`
 --
 
-INSERT INTO `language` (`languageID`, `languageName`) VALUES
-(3, 'Arabic'),
-(2, 'English'),
-(1, 'Urdu');
+INSERT INTO `language` (`languageName`) VALUES
+('Arabic'),
+('English'),
+('Urdu');
 
 -- --------------------------------------------------------
 
@@ -132,17 +130,16 @@ INSERT INTO `language` (`languageID`, `languageName`) VALUES
 --
 
 CREATE TABLE `nametype` (
-  `nameTypeID` int(11) NOT NULL,
-  `nameTypeValue` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `nameTypeValue` varchar(15) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `nametype`
 --
 
-INSERT INTO `nametype` (`nameTypeID`, `nameTypeValue`) VALUES
-(2, 'Double'),
-(1, 'Single');
+INSERT INTO `nametype` (`nameTypeValue`) VALUES
+('Double'),
+('Single');
 
 -- --------------------------------------------------------
 
@@ -156,7 +153,7 @@ CREATE TABLE `order` (
   `totalAmount` int(11) DEFAULT NULL,
   `customerID` int(11) DEFAULT NULL,
   `addressID` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -165,17 +162,16 @@ CREATE TABLE `order` (
 --
 
 CREATE TABLE `plating` (
-  `platingID` int(11) NOT NULL,
-  `platingType` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `platingType` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `plating`
 --
 
-INSERT INTO `plating` (`platingID`, `platingType`) VALUES
-(2, 'Gold'),
-(1, 'Silver');
+INSERT INTO `plating` (`platingType`) VALUES
+('Gold'),
+('Silver');
 
 -- --------------------------------------------------------
 
@@ -191,7 +187,7 @@ CREATE TABLE `product` (
   `salesPrice` int(11) DEFAULT NULL,
   `date` datetime DEFAULT NULL,
   `quantity` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -200,22 +196,21 @@ CREATE TABLE `product` (
 --
 
 CREATE TABLE `producttype` (
-  `typeID` int(11) NOT NULL,
-  `typeName` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `typeName` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `producttype`
 --
 
-INSERT INTO `producttype` (`typeID`, `typeName`) VALUES
-(7, 'Caligraphy'),
-(4, 'Fancy'),
-(2, 'Heart'),
-(3, 'Infinity'),
-(5, 'Pearl'),
-(1, 'Simple'),
-(6, 'Zodiac');
+INSERT INTO `producttype` (`typeName`) VALUES
+('Calligraphy'),
+('Fancy'),
+('Heart'),
+('Infinity'),
+('Pearl'),
+('Simple'),
+('Zodiac');
 
 -- --------------------------------------------------------
 
@@ -224,9 +219,8 @@ INSERT INTO `producttype` (`typeID`, `typeName`) VALUES
 --
 
 CREATE TABLE `size` (
-  `sizeID` int(11) NOT NULL,
-  `sizeType` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `sizeType` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Indexes for dumped tables
@@ -243,8 +237,7 @@ ALTER TABLE `address`
 -- Indexes for table `category`
 --
 ALTER TABLE `category`
-  ADD PRIMARY KEY (`categoryID`),
-  ADD KEY `Key` (`category`);
+  ADD PRIMARY KEY (`category`);
 
 --
 -- Indexes for table `customer`
@@ -259,7 +252,7 @@ ALTER TABLE `customer`
 --
 ALTER TABLE `details`
   ADD PRIMARY KEY (`detailsID`),
-  ADD KEY `FK` (`productID`,`typeID`,`languageID`,`platingID`,`sizeID`,`nameTypeID`,`catetgoryID`);
+  ADD KEY `FK` (`productID`,`typeName`,`languageName`,`platingType`,`sizeType`,`nameTypeValue`,`category`);
 
 --
 -- Indexes for table `item`
@@ -272,14 +265,12 @@ ALTER TABLE `item`
 -- Indexes for table `language`
 --
 ALTER TABLE `language`
-  ADD PRIMARY KEY (`languageID`),
-  ADD KEY `Key` (`languageName`);
+  ADD PRIMARY KEY (`languageName`);
 
 --
 -- Indexes for table `nametype`
 --
 ALTER TABLE `nametype`
-  ADD PRIMARY KEY (`nameTypeID`),
   ADD KEY `Key` (`nameTypeValue`);
 
 --
@@ -294,8 +285,7 @@ ALTER TABLE `order`
 -- Indexes for table `plating`
 --
 ALTER TABLE `plating`
-  ADD PRIMARY KEY (`platingID`),
-  ADD KEY `Key` (`platingType`);
+  ADD PRIMARY KEY (`platingType`);
 
 --
 -- Indexes for table `product`
@@ -308,15 +298,13 @@ ALTER TABLE `product`
 -- Indexes for table `producttype`
 --
 ALTER TABLE `producttype`
-  ADD PRIMARY KEY (`typeID`),
-  ADD KEY `Key` (`typeName`);
+  ADD PRIMARY KEY (`typeName`);
 
 --
 -- Indexes for table `size`
 --
 ALTER TABLE `size`
-  ADD PRIMARY KEY (`sizeID`),
-  ADD KEY `Key` (`sizeType`);
+  ADD PRIMARY KEY (`sizeType`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -329,12 +317,6 @@ ALTER TABLE `address`
   MODIFY `addressID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `category`
---
-ALTER TABLE `category`
-  MODIFY `categoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
@@ -344,7 +326,7 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `details`
 --
 ALTER TABLE `details`
-  MODIFY `detailsID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `detailsID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `item`
@@ -353,46 +335,16 @@ ALTER TABLE `item`
   MODIFY `itemID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `language`
---
-ALTER TABLE `language`
-  MODIFY `languageID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `nametype`
---
-ALTER TABLE `nametype`
-  MODIFY `nameTypeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
   MODIFY `orderID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `plating`
---
-ALTER TABLE `plating`
-  MODIFY `platingID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
   MODIFY `productID` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `producttype`
---
-ALTER TABLE `producttype`
-  MODIFY `typeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `size`
---
-ALTER TABLE `size`
-  MODIFY `sizeID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
