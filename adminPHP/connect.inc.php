@@ -1,13 +1,14 @@
 <?php
 
 	$mysql_host = 'localhost';
-	$mysql_username = 'alex';
+	$mysql_username = 'root';
 	$mysql_pass = '';
 
 	$mysql_db = 'test-jc';
-
-	if(!@mysqli_connect($mysql_host, $mysql_username, $mysql_pass)||@mysqli_select_db($mysql_db)){
-		die('Connection Error');
+	$conn = mysqli_connect($mysql_host, $mysql_username, $mysql_pass, $mysql_db);
+	
+	if(mysqli_connect_errno()){
+		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
 
 ?>
