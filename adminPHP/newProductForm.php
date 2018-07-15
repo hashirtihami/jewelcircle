@@ -43,10 +43,10 @@
               <select onblur="checkInput();" id="dis1" class="form-control hideShow" name="proCategory">
                <?php
                   //Dynamically Adding categories to the dropdown from Category table
-                  $query = "SELECT * FROM category ORDER BY categoryID";
+                  $query = "SELECT * FROM category";
                   $query_run = mysqli_query($conn, $query);
                   while($query_array = mysqli_fetch_array($query_run)){
-                    echo "<option value='".$query_array["categoryID"]."' >".htmlspecialchars($query_array["category"])."</option>";
+                    echo "<option value='".$query_array["category"]."' >".htmlspecialchars($query_array["category"])."</option>";
                   }
                 ?>
               </select>
@@ -73,14 +73,12 @@
               <select class="form-control hideShow" id="dis3" name="type">
                <?php
                   //Dynamically Adding Product Tyoes to the dropdown from producttype table
-                  $query = "SELECT * FROM producttype ORDER BY typeID";
+                  $query = "SELECT * FROM producttype";
                   $query_run = mysqli_query($conn, $query);
                   while($query_array = mysqli_fetch_array($query_run)){
-                    echo "<option value='".$query_array["typeID"]."' >".htmlspecialchars($query_array["typeName"])."</option>";
+                    echo "<option value='".$query_array["typeName"]."' >".htmlspecialchars($query_array["typeName"])."</option>";
                   }
                 ?>
-                <option>Heart</option>
-                <option>Infinity</option>
               </select>
           <div class="input-group input-group-sm hideShow" id="dis4">
             <input type="text" class="form-control" placeholder="Enter name of new product...">
@@ -114,11 +112,11 @@
             <label>Language: </label>
             <?php
               //Dynamically Adding language checkboxes from Language table
-              $query = "SELECT * FROM language ORDER BY languageID";
+              $query = "SELECT * FROM language";
               $query_run = mysqli_query($conn, $query);
               while($query_array = mysqli_fetch_array($query_run)){
                 echo "<label class='chotaSize'>";
-                echo "  <input type='checkbox' name='language[]' value='".$query_array["languageID"]."'> ".htmlspecialchars($query_array["languageName"])." ";
+                echo "  <input type='checkbox' name='language[]' value='".$query_array["languageName"]."'> ".htmlspecialchars($query_array["languageName"])." ";
                 echo "</label>";
               }
             ?>
@@ -127,11 +125,11 @@
             <label>Plating: </label>
             <?php
               //Dynamically Adding platingType checkboxes from Plating table
-              $query = "SELECT * FROM plating ORDER BY platingID";
+              $query = "SELECT * FROM plating";
               $query_run = mysqli_query($conn, $query);
               while($query_array = mysqli_fetch_array($query_run)){
                 echo "<label class='chotaSize'>";
-                echo "  <input type='checkbox' name='platingType[]' value='".$query_array["platingID"]."'> ".htmlspecialchars($query_array["platingType"])." ";
+                echo "  <input type='checkbox' name='platingType[]' value='".$query_array["platingType"]."'> ".htmlspecialchars($query_array["platingType"])." ";
                 echo "</label>";
               }
             ?>
@@ -140,11 +138,11 @@
             <label>Name Type:</label>
             <?php
               //Dynamically Adding nameType checkboxes from Name Type table
-              $query = "SELECT * FROM nameType ORDER BY nameTypeID";
+              $query = "SELECT * FROM nameType";
               $query_run = mysqli_query($conn, $query);
               while($query_array = mysqli_fetch_array($query_run)){
                 echo "<label class='chotaSize'>";
-                echo "  <input type='checkbox' name='wordCount[]' value='".$query_array["nameTypeID"]."'> ".htmlspecialchars($query_array["nameTypeValue"])." ";
+                echo "  <input type='checkbox' name='wordCount[]' value='".$query_array["nameTypeValue"]."'> ".htmlspecialchars($query_array["nameTypeValue"])." ";
                 echo "</label>";
               }
             ?>

@@ -13,9 +13,12 @@
     @$platingType = $_POST['platingType'];
     @$nameType = $_POST['wordCount'];
     foreach ($language as $lang) {
+      echo $lang;
       foreach ($platingType as $plating) {
+        echo $plating;
         foreach ($nameType as $wordCount) {
-          $query = "INSERT INTO details (categoryID, typeID, languageID, platingID, nameTypeID) VALUES ('$category', '$type', '$lang', '$plating', '$wordCount')";
+          echo $wordCount;
+          $query = "INSERT INTO details (category, typeName, languageName, platingType, nameTypeValue) VALUES ('$category', '$type', '$lang', '$plating', '$wordCount')";
           if(!@mysqli_query($conn, $query)){
             echo mysqli_use_result($conn);
           }
