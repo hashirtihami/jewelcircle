@@ -12,17 +12,16 @@
     @$language = $_POST['language'];
     @$platingType = $_POST['platingType'];
     @$nameType = $_POST['wordCount'];
-    $query = "INSERT INTO category (category) VALUES ('$category');";
-    $query .= "INSERT INTO producttype (typeName) VALUES ('$type');";
-    $query .= "INSERT INTO product (description) VALUES ('$desc');";
-    $query .= "INSERT INTO product (regPrice) VALUES ('$regPrice');";
-    $query .= "INSERT INTO product (salesPrice) VALUES ('$salesPrice');";
-    $query .= "INSERT INTO language (languageName) VALUES ('$language');";
-    $query .= "INSERT INTO plating (platingType) VALUES ('$platingType');";
-    $query .= "INSERT INTO nametype (nameTypeValue) VALUES ('$nameType');";
-  }
-  if(!@mysqli_query($conn, $query)){
-    echo mysqli_use_result($conn);
+    foreach ($language as $lang) {
+      foreach ($platingType as $plating) {
+        foreach ($nameType as $wordCount) {
+          $query = "INSERT INTO details (categoryID, typeID, languageID, platingID, nameTypeID) VALUES ('$category', '$type', '$lang', '$plating', '$wordCount')";
+          if(!@mysqli_query($conn, $query)){
+            echo mysqli_use_result($conn);
+          }
+        }   
+      }
+    }
   }
 ?>
 

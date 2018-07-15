@@ -44,7 +44,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="home.html" class="logo">
+    <a href="home.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>P</span>
       <!-- logo for regular state and mobile devices -->
