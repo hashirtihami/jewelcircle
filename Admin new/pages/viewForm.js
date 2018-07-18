@@ -3,7 +3,7 @@ function displayExistingCatg() {
 	target.style.display = "block";
 	var other = document.getElementById("newCatg");
 	other.style.display = "none";
-	// alert("hi");
+	alert("hi");
 }
 function displayNewCatg() {
 	var targ = document.getElementById("newCatg");
@@ -53,8 +53,14 @@ function displayAddCoupon() {
 	tar.classList.toggle("hideShow");
 	// alert("hi");
 }
+
+function counts() {
+	var rows = document.querySelectorAll('tr');
+	var count = rows.length;
+	alert(count);
+}
 function checkInput() {
-	var val = document.getElementById("dis1");
+	var val = document.getElementById("existingCatg");
 	var chainInput = document.getElementById("chainSize");
 	chainInput.style.display = "none";
 	var inputCheck = val.options[val.selectedIndex].value;

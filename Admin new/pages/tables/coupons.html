@@ -152,7 +152,8 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>Coupons<button type="button" class="btn bg-blue margin" onclick="displayAddCoupon();">Add new coupon <i class="fas fa-plus-circle"></i></button></h1>
+      <h1 onclick="counts();">Coupons
+      	<button type="button" class="btn bg-blue margin" onclick="displayAddCoupon();">Add new coupon <i class="fas fa-plus-circle"></i></button></h1>
       <!-- <button type="button" class="btn bg-blue margin">Default</button> -->      
       <ol class="breadcrumb">
         <li><a href="../../home.html"><i class="fas fa-home"></i> Home</a></li>
@@ -201,7 +202,6 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th></th>
                   <th>Code</th>
                   <th>Discount(%)</th>
                   <th>Description</th>
@@ -212,9 +212,6 @@
                 </thead>
                 <tbody>
                 <tr>
-                  <td class="a-center ">
-                    <input type="checkbox" class="flat" name="table_records">
-                  </td>
                   <td>Trident</td>
                   <td>Internet
                     Explorer 4.0
@@ -228,9 +225,6 @@
                     </div></td>
                 </tr>
                 <tr>
-                  <td class="a-center ">
-                    <input type="checkbox" class="flat" name="table_records">
-                  </td>                  
                   <td>Trident</td>
                   <td>Internet
                     Explorer 5.0
@@ -244,9 +238,6 @@
                     </div></td>
                 </tr>
                 <tr>
-                  <td class="a-center ">
-                    <input type="checkbox" class="flat" name="table_records">
-                  </td>                 
                   <td>Trident</td>
                   <td>Internet
                     Explorer 6
@@ -260,9 +251,6 @@
                     </div></td>
                 </tr>
                 <tr>
-                  <td class="a-center ">
-                    <input type="checkbox" class="flat" name="table_records">
-                  </td>                
                   <td>Trident</td>
                   <td>Internet Explorer 7</td>
                   <td>Win XP SP2+</td>
@@ -274,9 +262,6 @@
                     </div></td>
                 </tr>
                 <tr>
-                  <td class="a-center ">
-                    <input type="checkbox" class="flat" name="table_records">
-                  </td>
                   <td>Trident</td>
                   <td>AOL browser (AOL desktop)</td>
                   <td>Win XP</td>
@@ -288,9 +273,6 @@
                     </div></td>
                 </tr>
                 <tr>
-                  <td class="a-center ">
-                    <input type="checkbox" class="flat" name="table_records">
-                  </td>                  
                   <td>Misc</td>
                   <td>NetFront 3.4</td>
                   <td>Embedded devices</td>
@@ -302,9 +284,6 @@
                     </div></td>
                 </tr>
                 <tr>
-                  <td class="a-center ">
-                    <input type="checkbox" class="flat" name="table_records">
-                  </td>                  
                   <td>Misc</td>
                   <td>Dillo 0.8</td>
                   <td>Embedded devices</td>
@@ -316,9 +295,6 @@
                     </div></td>
                 </tr>
                 <tr>
-                  <td class="a-center ">
-                    <input type="checkbox" class="flat" name="table_records">
-                  </td>                  
                   <td>Misc</td>
                   <td>Links</td>
                   <td>Text only</td>
@@ -330,9 +306,6 @@
                     </div></td>
                 </tr>
                 <tr>
-                  <td class="a-center ">
-                    <input type="checkbox" class="flat" name="table_records">
-                  </td>                
                   <td>Misc</td>
                   <td>Lynx</td>
                   <td>Text only</td>
@@ -344,9 +317,6 @@
                     </div></td>
                 </tr>
                 <tr>
-                  <td class="a-center ">
-                    <input type="checkbox" class="flat" name="table_records">
-                  </td>                  
                   <td>Misc</td>
                   <td>IE Mobile</td>
                   <td>Windows Mobile 6</td>
@@ -358,9 +328,6 @@
                     </div></td>
                 </tr>
                 <tr>
-                  <td class="a-center ">
-                    <input type="checkbox" class="flat" name="table_records">
-                  </td>                  
                   <td>Misc</td>
                   <td>PSP browser</td>
                   <td>PSP</td>
@@ -372,9 +339,9 @@
                     </div></td>
                 </tr>
                 <tr>
-                  <td class="a-center ">
+                 <!--  <td class="a-center ">
                     <input type="checkbox" class="flat" name="table_records">
-                  </td>                  
+                  </td>  -->                 
                   <td>Other browsers</td>
                   <td>All others</td>
                   <td>-</td>
@@ -388,7 +355,6 @@
                 </tbody>
                 <tfoot>
                 <tr>
-                  <th></th>
                   <th>Code</th>
                   <th>Discount(%)</th>
                   <th>Description</th>
