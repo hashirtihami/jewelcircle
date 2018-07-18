@@ -39,16 +39,27 @@
     opacity: 0;
     z-index: 2;
     height: 100px;
+    width: 100px;
   }
 
   #upload{
     width: 100px;
   }
   ul{
-    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
   }
   li{
-    display: inline;
+    float: left;
+  }
+  li div{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
   }
 </style>
 
