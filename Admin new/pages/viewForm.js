@@ -48,11 +48,11 @@ function displayPriceInputDouble() {
 	tar.classList.toggle("hideShow");
 }
 
-// function checkInput() {
-// 	if(proCategory === "cuffs") {
-// 		alert('hi');
-// 	}
-// }
+function displayAddCoupon() {
+	var tar = document.getElementById("addCoupon"); 
+	tar.classList.toggle("hideShow");
+	// alert("hi");
+}
 function checkInput() {
 	var val = document.getElementById("dis1");
 	var chainInput = document.getElementById("chainSize");

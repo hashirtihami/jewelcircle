@@ -23,6 +23,18 @@
 
   <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
+  <style type="text/css">
+    .hideShow {
+      display: none;
+    }
+    .chotaSize   {
+      font-weight: 100 !important;
+    }
+    #newButton  {
+      margin: 5px 0px !important;
+    }
+  </style>
+
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -140,7 +152,7 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>Coupons<button type="button" class="btn bg-blue margin">Add new coupon</button></h1>
+      <h1>Coupons<button type="button" class="btn bg-blue margin" onclick="displayAddCoupon();">Add new coupon <i class="fas fa-plus-circle"></i></button></h1>
       <!-- <button type="button" class="btn bg-blue margin">Default</button> -->      
       <ol class="breadcrumb">
         <li><a href="../../home.html"><i class="fas fa-home"></i> Home</a></li>
@@ -148,20 +160,35 @@
         <li class="active"> Coupons</li>
       </ol>
     </section>
-    <div class="col-md-6">
-    <div class="box-body">
-      <form role="form">
-                <!-- text input -->
-        <div class="form-group">
-          	<label>Text</label>
-          		<input type="text" class="form-control" placeholder="Enter ...">
-        	</div> 
-    	</form>
-    	</div>   
-	</div>
+
+
 
     <!-- Main content -->
     <section class="content">
+    	   <div class="hideShow" id="addCoupon">
+    	<!-- <section class="content"> -->
+    		<!-- <div class="row"> -->
+    			<!-- <div class="col-md-6"> -->
+
+    <div class="box-body" style="width: 75%;">
+
+      				<form role="form">
+        				<div class="form-group">
+        					<!-- <label>Text</label> -->
+          					<input type="text" name="couponCode" class="form-control" placeholder="Coupon Code...">
+        				</div> <br>
+    					<div class="form-group">
+    						<!-- <label>Text</label> -->
+        				 	<textarea class="form-control" name="desciption" rows="3" placeholder="Description(optional)"></textarea>
+       					</div>
+       					<div class="form-group">
+       						<!-- <label>Text</label> -->
+          					<input type="text" name="discount" class="form-control" placeholder="Discount(%)...">
+        				</div>
+        				<button type="button" class="btn bg-blue margin";>Proceed <i class="far fa-check-circle"></i></button>   
+    				</form>
+    	</div>
+    </div>
  <!--      <div class="row">
         <div class="col-xs-12"> -->
 
@@ -386,13 +413,14 @@
 
   <!-- Control Sidebar -->
 
+<script src="../viewForm.js"></script>
 <!-- jQuery 2.2.3 -->
 <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="../../bootstrap/js/bootstrap.min.js"></script>
 <!-- DataTables -->
-<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="../../plugins/datatables/dataTables.bootstrap.min.js"></script>
+<!--<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>-->
+<!--<script src="../../plugins/datatables/dataTables.bootstrap.min.js"></script>-->
 <!-- SlimScroll -->
 <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
