@@ -178,23 +178,23 @@
                 <div class="form-group">
                   <label>Product Category</label>
                   <div class="form-group">
-                    <label for="exist" class="chotaSize" onclick="displayOne();">
+                    <label for="exist" class="chotaSize" onclick="displayExistingCatg();">
                       <input id="exist" type="radio" name="r3" >
                       <span>Choose existing category</span>
                     </label>
-                    <label for="new" class="chotaSize" onclick="displayTwo();">
+                    <label for="new" class="chotaSize" onclick="displayNewCatg();">
                       <input id="new" type="radio" name="r3" >
                       <span>Add New</span>
                     </label>
               </div>
-                  <select onblur="checkInput();" id="dis1" class="form-control hideShow" name="proCategory">
+                  <select onblur="checkInput();" id="existingCatg" class="form-control hideShow" name="proCategory">
                     <option value="bracelet">Bracelet</option>
                     <option value="ring">Ring</option>
                     <option value="cuffs">Cufflings</option>
                     <option value="locket">Locket</option>
                   </select>
                 </div>
-              <div class="input-group input-group-sm hideShow" id="dis2">
+              <div class="input-group input-group-sm hideShow" id="newCatg">
                 <input type="text" class="form-control" placeholder="Enter name of new product...">
                     <span id="newButton" class="input-group-btn">
                       <button type="button" class="btn btn-info btn-flat">Add New Product</button>
@@ -204,20 +204,20 @@
                <div class="form-group">
                   <label>Product Type</label>
                   <div class="form-group">
-                    <label class="chotaSize" onclick="displayThree();">
+                    <label class="chotaSize" onclick="displayExistingTypes();">
                       <input type="radio" name="r34">
                       <span>Choose existing type</span>
                    </label>
-                   <label class="chotaSize" onclick="displayFour();">
+                   <label class="chotaSize" onclick="displayNewType();">
                       <input type="radio" name="r34">
                       <span>Add New</span>
                    </label>
 
-                  <select class="form-control hideShow" id="dis3">
+                  <select class="form-control hideShow" id="existingTypes">
                     <option>Heart</option>
                     <option>Infinity</option>
                   </select>
-              <div class="input-group input-group-sm hideShow" id="dis4">
+              <div class="input-group input-group-sm hideShow" id="newTypes">
                 <input type="text" class="form-control" placeholder="Enter name of new product...">
                     <span id="newButton" class="input-group-btn">
                       <button type="button" class="btn btn-info btn-flat">Add New Type</button>
@@ -236,44 +236,54 @@
                   <label>Product Description</label>
                   <textarea class="form-control" rows="3" placeholder="Enter a few details of the product..."></textarea>
                 </div>
-                <div class="form-group">
-                  <label>Regular Price</label>
-                  <input type="text" class="form-control" placeholder="Enter price in rupees ...">
-                </div>
-                <div class="form-group">
-                  <label>Sale Price</label>
-                  <input type="text" class="form-control" placeholder="Enter price in rupees ...">
-                </div>
-
-                <div class="form-group">
-                <label>Language: </label>
-                <label class="chotaSize">
-                  <input type="checkbox" name="language"> English
-                </label>
-                <label class="chotaSize">
-                  <input type="checkbox" name="language"> Urdu
-                </label>
-                <label class="chotaSize">
-                  <input type="checkbox" name="language"> Arabic
-                </label>
-              </div>
               <div class="form-group">
                 <label>Plating: </label>
-                <label class="chotaSize">
+                <label class="chotaSize" onclick="displayPriceInputGold();">
                   <input type="checkbox" name="plateType"> Gold
                 </label>
-                <label class="chotaSize">
+                <label class="chotaSize" onclick="displayPriceInputSilver();">
                   <input type="checkbox" name="plateType"> Silver
                 </label>
+                <div class="form-group hideShow" id="priceInputGold">
+                  <input id="english" type="text" class="form-control" placeholder="Gold price ...">
+                </div>
+                <div class="form-group hideShow" id="priceInputSilver">
+                  <input id="english" type="text" class="form-control" placeholder="Silver price ...">
+                </div>
               </div>
+                <div class="form-group">
+                <label>Language: </label>
+                <label for="english" class="chotaSize" onclick="displayPriceInputEng();">
+                  <input type="checkbox" name="language"> English
+                </label>
+                <label class="chotaSize" onclick="displayPriceInputUrdu();">
+                  <input type="checkbox" name="language"> Urdu
+                </label>
+                <label class="chotaSize" onclick="displayPriceInputArab();">
+                  <input type="checkbox" name="language"> Arabic
+                </label>
+                <div class="form-group hideShow" id="priceInputEng">
+                  <input id="english" type="text" class="form-control" placeholder="Additional price(English) ...">
+                </div>
+                <div class="form-group hideShow" id="priceInputUrdu">
+                  <input id="english" type="text" class="form-control" placeholder="Additional price(Urdu) ...">
+                </div>
+                <div class="form-group hideShow" id="priceInputArab">
+                  <input id="english" type="text" class="form-control" placeholder="Additional price(Arabic) ...">
+                </div>
+              </div>
+
               <div class="form-group">
                 <label>Name Type:</label>
                  <label class="chotaSize"> 
                  <input type="checkbox" name="wordCount"> Single
                 </label>
-                <label class="chotaSize">
+                <label class="chotaSize" onclick="displayPriceInputDouble();">
                   <input type="checkbox" name="wordCount"> Double
                 </label>
+                 <div class="form-group hideShow" id="priceInputDouble">
+                  <input id="english" type="text" class="form-control" placeholder="Additional price(Double) ...">
+                </div>
               </div>
                <div id="chainSize" class="form-group hideShow">
                   <label>Chain size</label>
@@ -283,7 +293,10 @@
                     <option>Large</option>
                   </select>
                 </div>
-
+                <div class="form-group">
+                  <label>Discount</label>
+                  <input type="text" class="form-control" placeholder="Enter in % ...">
+                </div>
               </div>
     
               </div>
