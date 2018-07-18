@@ -21,12 +21,12 @@
     display: none;
     font-size: 12px;
   }
-  #imgErr{
+  #imgErr, #numFiles{
     color: red;
   }
 </style>
 
-<script src="../viewForm.js"></script>
+<script src="viewForm.js"></script>
 
 <?php
   if(isset($_POST['submit'])){

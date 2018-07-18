@@ -2,7 +2,6 @@
   //Starting Database Connection
   require 'connect.inc.php';
 ?>
-
 <section class="content-header">
   <h1>
     Add New Product
@@ -91,10 +90,9 @@
             <div class="form-group">
               <label for="exampleInputFile">Product Images</label>
               <!--<input type="file" name="file">-->
-              <div class="fileinputs">
-                <input id="file" type="file" name="files[]" multiple>
-                <span id="imgErr"></span>
-              </div>
+              <input id="file" type="file" name="files[]" multiple>
+              <span id="imgErr"></span>
+              <span id="numFiles"></span>
               <p class="help-block">Upload images of new product (upto 3)</p>
             </div>
                             <!-- text input -->
