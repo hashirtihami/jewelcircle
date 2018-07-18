@@ -36,5 +36,6 @@ function checkInput() {
 	if((inputCheck === "bracelet") || (inputCheck === "locket")) {
 		chainInput
 		chainInput.style.display = "block";
+	}
 }
-}
+
