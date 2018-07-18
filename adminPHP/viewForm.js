@@ -1,9 +1,12 @@
+
+
 function displayOne() {
 	var target = document.getElementById("dis1");
 	target.style.display = "block";
 	var other = document.getElementById("dis2");
 	other.style.display = "none";
-	// alert("hi");
+	//console.log($("#file").val());
+	alert("hi");
 }
 function displayTwo() {
 	var targ = document.getElementById("dis2");
