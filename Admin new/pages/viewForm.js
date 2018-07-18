@@ -3,7 +3,7 @@ function displayExistingCatg() {
 	target.style.display = "block";
 	var other = document.getElementById("newCatg");
 	other.style.display = "none";
-	alert("hi");
+	// alert("hi");
 }
 function displayNewCatg() {
 	var targ = document.getElementById("newCatg");
@@ -57,7 +57,8 @@ function displayAddCoupon() {
 function counts() {
 	var rows = document.querySelectorAll('tr');
 	var count = rows.length;
-	alert(count);
+	alert("grey");
+	// alert(count);
 }
 function checkInput() {
 	var val = document.getElementById("existingCatg");

@@ -178,12 +178,12 @@
                 <div class="form-group">
                   <label>Product Category</label>
                   <div class="form-group">
-                    <label for="exist" class="chotaSize" onclick="displayExistingCatg();">
-                      <input id="exist" type="radio" name="r3" >
+                    <label class="chotaSize">
+                      <input onclick="displayExistingCatg();" type="radio" name="r3" >
                       <span>Choose existing category</span>
                     </label>
-                    <label for="new" class="chotaSize" onclick="displayNewCatg();">
-                      <input id="new" type="radio" name="r3" >
+                    <label class="chotaSize">
+                      <input type="radio" name="r3" onclick="displayNewCatg();" >
                       <span>Add New</span>
                     </label>
               </div>
@@ -204,12 +204,12 @@
                <div class="form-group">
                   <label>Product Type</label>
                   <div class="form-group">
-                    <label class="chotaSize" onclick="displayExistingTypes();">
-                      <input type="radio" name="r34">
+                    <label class="chotaSize">
+                      <input type="radio" name="r34" onclick="displayExistingTypes();">
                       <span>Choose existing type</span>
                    </label>
-                   <label class="chotaSize" onclick="displayNewType();">
-                      <input type="radio" name="r34">
+                   <label class="chotaSize">
+                      <input type="radio" name="r34" onclick="displayNewType();">
                       <span>Add New</span>
                    </label>
 
@@ -238,11 +238,11 @@
                 </div>
               <div class="form-group">
                 <label>Plating: </label>
-                <label class="chotaSize" onclick="displayPriceInputGold();">
-                  <input type="checkbox" name="plateType"> Gold
+                <label class="chotaSize">
+                  <input type="checkbox" name="plateType" onclick="displayPriceInputGold();"> Gold
                 </label>
-                <label class="chotaSize" onclick="displayPriceInputSilver();">
-                  <input type="checkbox" name="plateType"> Silver
+                <label class="chotaSize">
+                  <input type="checkbox" name="plateType" onclick="displayPriceInputSilver();"> Silver
                 </label>
                 <div class="form-group hideShow" id="priceInputGold">
                   <input id="english" type="text" class="form-control" placeholder="Gold price ...">
@@ -252,15 +252,15 @@
                 </div>
               </div>
                 <div class="form-group">
-                <label>Language: </label>
-                <label for="english" class="chotaSize" onclick="displayPriceInputEng();">
-                  <input type="checkbox" name="language"> English
+                <label onclick="counts();">Language: </label>
+                <label for="english" class="chotaSize">
+                  <input type="checkbox" name="language" onclick="displayPriceInputEng();"> English
                 </label>
-                <label class="chotaSize" onclick="displayPriceInputUrdu();">
-                  <input type="checkbox" name="language"> Urdu
+                <label class="chotaSize">
+                  <input type="checkbox" name="language" onclick="displayPriceInputUrdu();"> Urdu
                 </label>
-                <label class="chotaSize" onclick="displayPriceInputArab();">
-                  <input type="checkbox" name="language"> Arabic
+                <label class="chotaSize">
+                  <input type="checkbox" name="language" onclick="displayPriceInputArab();"> Arabic
                 </label>
                 <div class="form-group hideShow" id="priceInputEng">
                   <input id="english" type="text" class="form-control" placeholder="Additional price(English) ...">
@@ -278,8 +278,8 @@
                  <label class="chotaSize"> 
                  <input type="checkbox" name="wordCount"> Single
                 </label>
-                <label class="chotaSize" onclick="displayPriceInputDouble();">
-                  <input type="checkbox" name="wordCount"> Double
+                <label class="chotaSize">
+                  <input type="checkbox" name="wordCount" onclick="displayPriceInputDouble();"> Double
                 </label>
                  <div class="form-group hideShow" id="priceInputDouble">
                   <input id="english" type="text" class="form-control" placeholder="Additional price(Double) ...">
