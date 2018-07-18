@@ -37,7 +37,7 @@
     foreach ($language as $lang) {
       foreach ($platingType as $plating) {
         foreach ($nameType as $wordCount) {
-          $query = "SELECT * FROM product WHERE productID=CONCAT('$category', '$type', '$lang', '$plating', '$wordCount');";
+          $query = "SELECT * FROM product WHERE productID=CONCAT('$category', '$type');";
           $result = mysqli_query($conn, $query);
           if(mysqli_num_rows($result)>0){
             echo "<script type='text/javascript'>
@@ -48,8 +48,8 @@
                      error();
                   </script>";
           }else{
-            $query = "INSERT INTO product (productID, description) VALUES (CONCAT('$category', '$type', '$lang', '$plating', '$wordCount'), '$desc');";
-            $query .= "INSERT INTO details (productID, categoryID, typeID, languageID, platingID, nameTypeID) VALUES (CONCAT('$category', '$type', '$lang', '$plating', '$wordCount'),'$category', '$type', '$lang', '$plating', '$wordCount');";
+            $query = "INSERT INTO product (productID, description) VALUES (CONCAT('$category', '$type');";
+            $query .= "INSERT INTO details (productID, categoryID, typeID, languageID, platingID, nameTypeID) VALUES (CONCAT('$category', '$type'),'$category', '$type', '$lang', '$plating', '$wordCount');";
             if(!@mysqli_multi_query($conn, $query)){
               echo mysqli_use_result($conn);
             }

@@ -90,8 +90,7 @@
             </div>
             <div class="form-group">
               <label for="exampleInputFile">Product Images</label>
-              <input type="file" id="exampleInputFile">
-
+              <input type="file" name="file">
               <p class="help-block">Upload images of new product (upto 3)</p>
             </div>
                             <!-- text input -->
