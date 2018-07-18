@@ -20,6 +20,36 @@
     color: red;
     display: none;
   }
+  div.fileinputs {
+    position: relative;
+  }
+
+  div.fakefile {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+  }
+
+  input.file {
+    position: relative;
+    text-align: right;
+    -moz-opacity:0 ;
+    filter:alpha(opacity: 0);
+    opacity: 0;
+    z-index: 2;
+    height: 100px;
+  }
+
+  #upload{
+    width: 100px;
+  }
+  ul{
+    text-align: center;
+  }
+  li{
+    display: inline;
+  }
 </style>
 
 <script src="viewForm.js"></script>

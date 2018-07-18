@@ -90,7 +90,33 @@
             </div>
             <div class="form-group">
               <label for="exampleInputFile">Product Images</label>
-              <input type="file" name="file">
+              <!--<input type="file" name="file">-->
+              <ul>
+                <li>
+                  <div class="fileinputs">
+                    <input type="file" class="file" />
+                    <div class="fakefile">
+                      <img id="upload" src="imageUpload.jpg" />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="fileinputs">
+                    <input type="file" class="file" />
+                    <div class="fakefile">
+                      <img id="upload" src="imageUpload.jpg" />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="fileinputs">
+                    <input type="file" class="file" />
+                    <div class="fakefile">
+                      <img id="upload" src="imageUpload.jpg" />
+                    </div>
+                  </div>
+                </li> 
+              </ul>
               <p class="help-block">Upload images of new product (upto 3)</p>
             </div>
                             <!-- text input -->
