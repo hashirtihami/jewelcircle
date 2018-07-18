@@ -1,9 +1,18 @@
+$('input#file').change(function(){
+    var files = $(this)[0].files;
+    if(files.length > 3){
+        $("#numFiles").html("You can select max 3 files.");
+        $(this).val("");
+    }
+    else
+    	$("#numFiles").html("");
+});
+
 function displayOne() {
 	var target = document.getElementById("dis1");
 	target.style.display = "block";
 	var other = document.getElementById("dis2");
 	other.style.display = "none";
-	// alert("hi");
 }
 function displayTwo() {
 	var targ = document.getElementById("dis2");

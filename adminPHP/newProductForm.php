@@ -2,7 +2,6 @@
   //Starting Database Connection
   require 'connect.inc.php';
 ?>
-
 <section class="content-header">
   <h1>
     Add New Product
@@ -27,7 +26,7 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form role="form" action="<?php echo $_SERVER['SCRIPT_NAME']?>" method='post'>
+        <form role="form" action="<?php echo $_SERVER['SCRIPT_NAME']?>" method="POST" enctype="multipart/form-data">
           <div class="box-body">
             <div class="form-group">
               <label>Product Category</label>
@@ -91,32 +90,9 @@
             <div class="form-group">
               <label for="exampleInputFile">Product Images</label>
               <!--<input type="file" name="file">-->
-              <ul>
-                <li>
-                  <div class="fileinputs">
-                    <input type="file" class="file" />
-                    <div class="fakefile">
-                      <img id="upload" src="imageUpload.jpg" />
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="fileinputs">
-                    <input type="file" class="file" />
-                    <div class="fakefile">
-                      <img id="upload" src="imageUpload.jpg" />
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="fileinputs">
-                    <input type="file" class="file" />
-                    <div class="fakefile">
-                      <img id="upload" src="imageUpload.jpg" />
-                    </div>
-                  </div>
-                </li> 
-              </ul>
+              <input id="file" type="file" name="files[]" multiple>
+              <span id="imgErr"></span>
+              <span id="numFiles"></span>
               <p class="help-block">Upload images of new product (upto 3)</p>
             </div>
                             <!-- text input -->
