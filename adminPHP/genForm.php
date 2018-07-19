@@ -33,35 +33,10 @@
     $category = $_POST['proCategory'];
     $type = $_POST['type'];
     $desc = $_POST['desc'];
-    $regPrice = $_POST['regPrice'];
-    $salesPrice = $_POST['salesPrice'];
     @$language = $_POST['language'];
     @$platingType = $_POST['platingType'];
     @$nameType = $_POST['wordCount'];
     if(!empty($language)&&!empty($platingType)&&!empty($nameType)){
-      foreach ($language as $lang) {
-        foreach ($platingType as $plating) {
-          foreach ($nameType as $wordCount) {
-            $query = "SELECT * FROM product WHERE productID = CONCAT('$category', '$type');";
-            $result = mysqli_query($conn, $query);
-            if(mysqli_num_rows($result)>0){
-              echo "<script type='text/javascript'>
-                      function error(){
-                          var warning = document.getElementById('warning');
-                          warning.style.display = 'block';
-                       }
-                       error();
-                    </script>";
-            }else{
-              $query = "INSERT INTO product (productID, description) VALUES (CONCAT('$category', '$type'), '$desc');";
-              $query .= "INSERT INTO details (productID, categoryID, typeID, languageID, platingID, nameTypeID) VALUES (CONCAT('$category', '$type'),'$category', '$type', '$lang', '$plating', '$wordCount');";
-              if(!@mysqli_multi_query($conn, $query)){
-                echo mysqli_use_result($conn);
-              }
-            }
-          }   
-        }
-      }
       $i = 1;
       foreach ($_FILES["files"]["tmp_name"] as $key=>$tmp_name) {
         $fileName = $_FILES["files"]["name"][$key];
@@ -86,27 +61,58 @@
               $i++;
               $fileDestination = 'uploads/'.$fileNameNew;
               move_uploaded_file($fileTmpName, $fileDestination);
-            } else echo "<script type='text/javascript'>
+            } else {
+                echo "<script type='text/javascript'>
                       function error(){
                           $('#imgErr').html('File size too big');
                        }
                        error();
                     </script>";
+                die();
+              }
 
-          } else echo "<script type='text/javascript'>
+          } else {
+              echo "<script type='text/javascript'>
                       function error(){
                           $('#imgErr').html('Error uploading file');
                        }
                        error();
                     </script>";
+              die();
+            }
 
-        } else 
-          echo "<script type='text/javascript'>
+        } else {
+            echo "<script type='text/javascript'>
                       function error(){
                           $('#imgErr').html('File type not allowed');
                        }
                        error();
                   </script>";
+            die();
+          }
+      }
+      foreach ($language as $lang) {
+        foreach ($platingType as $plating) {
+          foreach ($nameType as $wordCount) {
+            $query = "SELECT * FROM product WHERE productID = CONCAT('$category', '$type');";
+            $result = mysqli_query($conn, $query);
+            if(mysqli_num_rows($result)>0){
+              echo "<script type='text/javascript'>
+                      function error(){
+                          var warning = document.getElementById('warning');
+                          warning.style.display = 'block';
+                       }
+                       error();
+                    </script>";
+            }else{
+              $query = "INSERT INTO product (productID, description) VALUES (CONCAT('$category', '$type'), '$desc');";
+              $query .= "INSERT INTO details (productID, categoryID, typeID, languageID, platingID, nameTypeID) VALUES (CONCAT('$category', '$type'),'$category', '$type', '$lang', '$plating', '$wordCount');";
+              if(!@mysqli_multi_query($conn, $query)){
+                echo mysqli_use_result($conn);
+              }
+            }
+          }   
+        }
       }
     }
   }

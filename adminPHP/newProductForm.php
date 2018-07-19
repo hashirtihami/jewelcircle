@@ -32,7 +32,7 @@
               <label>Product Category</label>
               <div class="form-group">
                 <label for="exist" class="chotaSize">
-                  <input onclick="displayExistingCat();" id="exist" type="radio" name="r3" >
+                  <input onclick="displayExistingCatg();" id="exist" type="radio" name="r3" >
                   <span>Choose existing category</span>
                 </label>
                 <label for="new" class="chotaSize">
@@ -40,7 +40,7 @@
                   <span>Add New</span>
                 </label>
           </div>
-              <select onblur="checkInput();" id="existingCat" class="form-control hideShow" name="proCategory">
+              <select onblur="checkInput();" id="existingCatg" class="form-control hideShow" name="proCategory">
                <?php
                   //Dynamically Adding categories to the dropdown from Category table
                   $query = "SELECT * FROM category ORDER BY categoryID";
@@ -51,7 +51,7 @@
                 ?>
               </select>
             </div>
-          <div class="input-group input-group-sm hideShow" id="dis2">
+          <div class="input-group input-group-sm hideShow" id="newCatg">
             <input type="text" class="form-control" placeholder="Enter name of new product...">
                 <span id="newButton" class="input-group-btn">
                   <button type="button" class="btn btn-info btn-flat">Add New Product</button>
@@ -80,7 +80,7 @@
                   }
                 ?>
               </select>
-          <div class="input-group input-group-sm hideShow" id="newTypes">
+          <div class="input-group input-group-sm hideShow" id="newType">
             <input type="text" class="form-control" placeholder="Enter name of new product...">
                 <span id="newButton" class="input-group-btn">
                   <button type="button" class="btn btn-info btn-flat">Add New Type</button>
@@ -94,6 +94,7 @@
               <span id="imgErr"></span>
               <span id="numFiles"></span>
               <p class="help-block">Upload images of new product (upto 3)</p>
+              <p class="help-block">Max image size = 3MB</p>
             </div>
                             <!-- text input -->
             <div class="form-group">
