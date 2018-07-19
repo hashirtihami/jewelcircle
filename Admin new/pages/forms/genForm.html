@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin Panel | Add New Products</title>
+  <title>Admin Panel | Products</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -124,7 +124,8 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="../../pages/tables/orders.html"><i class="fas fa-angle-double-right"></i> Orders</a></li>
-            <li><a href="#"><i class="fas fa-angle-double-right"></i> Coupons</a></li>
+            <li><a href="../../pages/tables/coupons.html""><i class="fas fa-angle-double-right"></i> Coupons</a></li>
+            <li><a href="../giftcards.html"><i class="fas fa-angle-double-right"></i> Giftcards</a></li>
             <!-- pages/forms/advanced.html PATH -->
           </ul>
         </li>
@@ -187,8 +188,10 @@
                       <span>Add New</span>
                     </label>
               </div>
-                  <select onblur="checkInput();" id="existingCatg" class="form-control hideShow" name="proCategory">
-                    <option value="bracelet">Bracelet</option>
+                  <select id="existingCatg" class="form-control hideShow" name="proCategory">
+                  <!-- <select onblur="checkInput();" id="existingCatg" class="form-control hideShow" name="proCategory"> -->
+                    
+                    <option value="bracelet" selected="selected">Bracelet</option>
                     <option value="ring">Ring</option>
                     <option value="cuffs">Cufflings</option>
                     <option value="locket">Locket</option>
@@ -205,11 +208,11 @@
                   <label>Product Type</label>
                   <div class="form-group">
                     <label class="chotaSize">
-                      <input type="radio" name="r34" onclick="displayExistingTypes();">
+                      <input type="radio" name="r34" onclick="displayExistingTypes(); alert('hi');">
                       <span>Choose existing type</span>
                    </label>
                    <label class="chotaSize">
-                      <input type="radio" name="r34" onclick="displayNewType();">
+                      <input type="radio" name="r34" onclick="displayNewType();" onclick="checkInput();">
                       <span>Add New</span>
                    </label>
 

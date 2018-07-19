@@ -14,9 +14,21 @@ $last_name = $mysqli->escape_string($_POST['lastname']);
 $email = $mysqli->escape_string($_POST['email']);
 $password = $mysqli->escape_string(password_hash($_POST['password'], PASSWORD_BCRYPT));
 $hash = $mysqli->escape_string( md5( rand(0,1000) ) );
+$contact= $mysqli->escape_string($_POST['contact']);
+$address= $mysqli->escape_string($_POST['address']);
+$city= $mysqli->escape_string($_POST['city']);
+$country= $mysqli->escape_string($_POST['country']);
+$zipcode= $mysqli->escape_string($_POST['zipcode']);
+
       
+/*
+      echo $password . '<br/>';
+      echo $hash;
+         die;
+*/
+
 // Check if user with that email already exists
-$result = $mysqli->query("SELECT * FROM users WHERE email='$email'") or die($mysqli->error());
+$result = $mysqli->query("SELECT * FROM customer WHERE email='$email'") or die($mysqli->error());
 
 // We know user email exists if the rows returned are more than 0
 if ( $result->num_rows > 0 ) {
@@ -28,11 +40,17 @@ if ( $result->num_rows > 0 ) {
 else { // Email doesn't already exist in a database, proceed...
 
     // active is 0 by DEFAULT (no need to include it here)
-    $sql = "INSERT INTO users (first_name, last_name, email, password, hash) " 
-            . "VALUES ('$first_name','$last_name','$email','$password', '$hash')";
+    $sql1 = "INSERT INTO customer (first_name, last_name, email, password, hash, contact) " 
+            . "VALUES ('$first_name','$last_name','$email','$password', '$hash' , '$contact')";
+   
+    $sql2 = "INSERT INTO address (address, city, zipcode, country) " 
+            . "VALUES ('$address','$city','$zipcode','$country')";
+
+   
+// ===================== $sql1 aur $sql2 ki jugarr apni taraf sy maari hay .... koi aur hal hay tow kr ley ========================//
 
     // Add user to the database
-    if ( $mysqli->query($sql) ){
+    if ( $mysqli->query($sql1) && $mysqli->query($sql2)  ){
 
         $_SESSION['active'] = 0; //0 until user activates their account with verify.php
         $_SESSION['logged_in'] = true; // So we know the user has logged in
