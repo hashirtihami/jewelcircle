@@ -1,7 +1,11 @@
-<?php 
+  
+
+
+  <?php 
 /* Main page with two forms: sign up and log in */
 require 'db.php';
 session_start();
+//https://www.youtube.com/watch?v=Pz5CbLqdGwM&ab_channel=CleverTechie
 ?>
 <!DOCTYPE html>
 <html>
