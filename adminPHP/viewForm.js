@@ -32,7 +32,7 @@ function displayPriceInputSilver() {
 	tar.classList.toggle("hideShow");
 }
 function displayPriceInputEnglish() {
-	var tar = document.getElementById("priceInputEng"); 
+	var tar = document.getElementById("priceInputEnglish"); 
 	tar.classList.toggle("hideShow");
 }
 function displayPriceInputUrdu() {
@@ -40,7 +40,7 @@ function displayPriceInputUrdu() {
 	tar.classList.toggle("hideShow");
 }
 function displayPriceInputArabic() {
-	var tar = document.getElementById("priceInputArab"); 
+	var tar = document.getElementById("priceInputArabic"); 
 	tar.classList.toggle("hideShow");
 }
 function displayPriceInputDouble() {

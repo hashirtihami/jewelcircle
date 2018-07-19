@@ -33,9 +33,9 @@
     $category = $_POST['proCategory'];
     $type = $_POST['type'];
     $desc = $_POST['desc'];
-    @$language = $_POST['language'];
-    @$platingType = $_POST['platingType'];
-    @$nameType = $_POST['wordCount'];
+    $platingType = $_POST['platingType'];
+    $language = $_POST['language'];
+    $nameType = $_POST['wordCount'];
     if(!empty($language)&&!empty($platingType)&&!empty($nameType)){
       $i = 1;
       foreach ($_FILES["files"]["tmp_name"] as $key=>$tmp_name) {
@@ -94,7 +94,8 @@
       foreach ($language as $lang) {
         foreach ($platingType as $plating) {
           foreach ($nameType as $wordCount) {
-            $query = "SELECT * FROM product WHERE productID = CONCAT('$category', '$type');";
+            $query = "SELECT * FROM details WHERE detailsID = CONCAT('$category', '$type', '$lang', '$plating', '$wordCount')";
+            //echo $query;
             $result = mysqli_query($conn, $query);
             if(mysqli_num_rows($result)>0){
               echo "<script type='text/javascript'>
@@ -105,9 +106,16 @@
                        error();
                     </script>";
             }else{
+              echo "hi";
+              $platingPrice = $_POST['pricePlating'.$plating];
+              echo $platingPrice;
+              $languagePrice = $_POST['priceLanguage'.$lang];
+              echo $languagePrice;
+              $nameTypePrice = $_POST['priceNameType'.$wordCount];
+              echo $nameTypePrice;
               $query = "INSERT INTO product (productID, description) VALUES (CONCAT('$category', '$type'), '$desc');";
-              $query .= "INSERT INTO details (productID, categoryID, typeID, languageID, platingID, nameTypeID) VALUES (CONCAT('$category', '$type'),'$category', '$type', '$lang', '$plating', '$wordCount');";
-              if(!@mysqli_multi_query($conn, $query)){
+              $query .= "INSERT INTO details (detailsID, productID, categoryID, typeID, languageID, platingID, nameTypeID, platingPrice, languagePrice, nameTypePrice) VALUES (CONCAT('$category', '$type', '$lang', '$plating', '$wordCount'), CONCAT('$category', '$type'),'$category', '$type', '$lang', '$plating', '$wordCount', '$platingPrice', '$languagePrice', '$nameTypePrice');";
+              if(!mysqli_multi_query($conn, $query)){
                 echo mysqli_use_result($conn);
               }
             }

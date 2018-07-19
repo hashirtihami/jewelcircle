@@ -114,13 +114,13 @@
                 echo "  <input type='checkbox' name='platingType[]' onclick='displayPriceInput".$query_array["platingType"]."()' value='".$query_array["platingID"]."'> ".htmlspecialchars($query_array["platingType"])." ";
                 echo "</label>";
               }
+              $query_run = mysqli_query($conn, $query);
+              while($query_array = mysqli_fetch_array($query_run)){
+                echo "<div class='form-group hideShow' id='priceInput".$query_array["platingType"]."'>";
+                echo "<input id='".$query_array["platingType"]."' type='text' class='form-control' name='pricePlating".$query_array["platingID"]."' placeholder='".$query_array["platingType"]." price ...'>";
+                echo "</div>";
+              }
             ?>
-            <div class="form-group hideShow" id="priceInputGold">
-              <input id="english" type="text" class="form-control" placeholder="Gold price ...">
-            </div>
-            <div class="form-group hideShow" id="priceInputSilver">
-              <input id="english" type="text" class="form-control" placeholder="Silver price ...">
-            </div>
           </div>
           <div class="form-group">
             <label>Language: </label>
@@ -133,16 +133,13 @@
                 echo "  <input type='checkbox' name='language[]' onclick='displayPriceInput".$query_array["languageName"]."()' value='".$query_array["languageID"]."'> ".htmlspecialchars($query_array["languageName"])." ";
                 echo "</label>";
               }
+              $query_run = mysqli_query($conn, $query);
+              while($query_array = mysqli_fetch_array($query_run)){
+                echo '<div class="form-group hideShow" id="priceInput'.$query_array["languageName"].'">';
+                echo '<input id="'.$query_array["languageName"].'" type="text" class="form-control" name="priceLanguage'.$query_array["languageID"].'" placeholder="Additional price('.$query_array["languageName"].') ...">';
+                echo '</div>';
+              }
             ?>
-            <div class="form-group hideShow" id="priceInputEng">
-              <input id="english" type="text" class="form-control" placeholder="Additional price(English) ...">
-            </div>
-            <div class="form-group hideShow" id="priceInputUrdu">
-              <input id="english" type="text" class="form-control" placeholder="Additional price(Urdu) ...">
-            </div>
-            <div class="form-group hideShow" id="priceInputArab">
-              <input id="english" type="text" class="form-control" placeholder="Additional price(Arabic) ...">
-            </div>
           </div>
           <div class="form-group">
             <label>Name Type:</label>
@@ -155,12 +152,15 @@
                 echo "  <input type='checkbox' name='wordCount[]' onclick='displayPriceInput".$query_array["nameTypeValue"]."()' value='".$query_array["nameTypeID"]."'> ".htmlspecialchars($query_array["nameTypeValue"])." ";
                 echo "</label>";
               }
+              $query_run = mysqli_query($conn, $query);
+              while($query_array = mysqli_fetch_array($query_run)){
+                echo '<div class="form-group hideShow" id="priceInput'.$query_array["nameTypeValue"].'">';
+                echo '<input id="'.$query_array["nameTypeValue"].'" type="text" name="priceNameType'.$query_array["nameTypeID"].'" class="form-control" placeholder="Additional price('.$query_array["nameTypeValue"].') ...">';
+                echo '</div>';
+              }
             ?>
-            <div class="form-group hideShow" id="priceInputDouble">
-              <input id="english" type="text" class="form-control" placeholder="Additional price(Double) ...">
-              </div>
-            </div>
           </div>
+        </div>
           <div id="chainSize" class="form-group hideShow">
             <label>Chain size</label>
             <select class="form-control">
@@ -173,9 +173,9 @@
             <label>Discount</label>
             <input type="text" class="form-control" placeholder="Enter in % ...">
           </div>
-          </div>
+        </div>
 
-          </div>
+      </div>
           <!-- /.box-body -->
 
           <div class="box-footer">
