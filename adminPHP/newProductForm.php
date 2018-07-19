@@ -31,16 +31,16 @@
             <div class="form-group">
               <label>Product Category</label>
               <div class="form-group">
-                <label for="exist" class="chotaSize" onclick="displayOne();">
-                  <input id="exist" type="radio" name="r3" >
+                <label for="exist" class="chotaSize">
+                  <input onclick="displayExistingCat();" id="exist" type="radio" name="r3" >
                   <span>Choose existing category</span>
                 </label>
-                <label for="new" class="chotaSize" onclick="displayTwo();">
-                  <input id="new" type="radio" name="r3" >
+                <label for="new" class="chotaSize">
+                  <input onclick="displayNewCatg();" id="new" type="radio" name="r3" >
                   <span>Add New</span>
                 </label>
           </div>
-              <select onblur="checkInput();" id="dis1" class="form-control hideShow" name="proCategory">
+              <select onblur="checkInput();" id="existingCat" class="form-control hideShow" name="proCategory">
                <?php
                   //Dynamically Adding categories to the dropdown from Category table
                   $query = "SELECT * FROM category ORDER BY categoryID";
@@ -61,16 +61,16 @@
            <div class="form-group">
               <label>Product Type</label>
               <div class="form-group">
-                <label class="chotaSize" onclick="displayThree();">
-                  <input type="radio" name="r34">
+                <label class="chotaSize">
+                  <input onclick="displayExistingTypes();" type="radio" name="r34">
                   <span>Choose existing type</span>
                </label>
-               <label class="chotaSize" onclick="displayFour();">
-                  <input type="radio" name="r34">
+               <label class="chotaSize">
+                  <input onclick="displayNewType();" type="radio" name="r34">
                   <span>Add New</span>
                </label>
 
-              <select class="form-control hideShow" id="dis3" name="type">
+              <select class="form-control hideShow" id="existingTypes" name="type">
                <?php
                   //Dynamically Adding Product Tyoes to the dropdown from producttype table
                   $query = "SELECT * FROM producttype ORDER BY typeID";
@@ -80,7 +80,7 @@
                   }
                 ?>
               </select>
-          <div class="input-group input-group-sm hideShow" id="dis4">
+          <div class="input-group input-group-sm hideShow" id="newTypes">
             <input type="text" class="form-control" placeholder="Enter name of new product...">
                 <span id="newButton" class="input-group-btn">
                   <button type="button" class="btn btn-info btn-flat">Add New Type</button>
@@ -101,28 +101,7 @@
               <label>Product Description</label>
               <textarea class="form-control" rows="3" placeholder="Enter a few details of the product..." name="desc"></textarea>
             </div>
-            <div class="form-group">
-              <label>Regular Price</label>
-              <input type="text" class="form-control" placeholder="Enter price in rupees ..." name="regPrice">
-            </div>
-            <div class="form-group">
-              <label>Sale Price</label>
-              <input type="text" class="form-control" placeholder="Enter price in rupees ..." name="salesPrice">
-            </div>
 
-          <div class="form-group">
-            <label>Language: </label>
-            <?php
-              //Dynamically Adding language checkboxes from Language table
-              $query = "SELECT * FROM language ORDER BY languageID";
-              $query_run = mysqli_query($conn, $query);
-              while($query_array = mysqli_fetch_array($query_run)){
-                echo "<label class='chotaSize'>";
-                echo "  <input type='checkbox' name='language[]' value='".$query_array["languageID"]."'> ".htmlspecialchars($query_array["languageName"])." ";
-                echo "</label>";
-              }
-            ?>
-          </div>
           <div class="form-group">
             <label>Plating: </label>
             <?php
@@ -131,10 +110,38 @@
               $query_run = mysqli_query($conn, $query);
               while($query_array = mysqli_fetch_array($query_run)){
                 echo "<label class='chotaSize'>";
-                echo "  <input type='checkbox' name='platingType[]' value='".$query_array["platingID"]."'> ".htmlspecialchars($query_array["platingType"])." ";
+                echo "  <input type='checkbox' name='platingType[]' onclick='displayPriceInput".$query_array["platingType"]."()' value='".$query_array["platingID"]."'> ".htmlspecialchars($query_array["platingType"])." ";
                 echo "</label>";
               }
             ?>
+            <div class="form-group hideShow" id="priceInputGold">
+              <input id="english" type="text" class="form-control" placeholder="Gold price ...">
+            </div>
+            <div class="form-group hideShow" id="priceInputSilver">
+              <input id="english" type="text" class="form-control" placeholder="Silver price ...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Language: </label>
+            <?php
+              //Dynamically Adding language checkboxes from Language table
+              $query = "SELECT * FROM language ORDER BY languageID";
+              $query_run = mysqli_query($conn, $query);
+              while($query_array = mysqli_fetch_array($query_run)){
+                echo "<label class='chotaSize'>";
+                echo "  <input type='checkbox' name='language[]' onclick='displayPriceInput".$query_array["languageName"]."()' value='".$query_array["languageID"]."'> ".htmlspecialchars($query_array["languageName"])." ";
+                echo "</label>";
+              }
+            ?>
+            <div class="form-group hideShow" id="priceInputEng">
+              <input id="english" type="text" class="form-control" placeholder="Additional price(English) ...">
+            </div>
+            <div class="form-group hideShow" id="priceInputUrdu">
+              <input id="english" type="text" class="form-control" placeholder="Additional price(Urdu) ...">
+            </div>
+            <div class="form-group hideShow" id="priceInputArab">
+              <input id="english" type="text" class="form-control" placeholder="Additional price(Arabic) ...">
+            </div>
           </div>
           <div class="form-group">
             <label>Name Type:</label>
@@ -144,20 +151,27 @@
               $query_run = mysqli_query($conn, $query);
               while($query_array = mysqli_fetch_array($query_run)){
                 echo "<label class='chotaSize'>";
-                echo "  <input type='checkbox' name='wordCount[]' value='".$query_array["nameTypeID"]."'> ".htmlspecialchars($query_array["nameTypeValue"])." ";
+                echo "  <input type='checkbox' name='wordCount[]' onclick='displayPriceInput".$query_array["nameTypeValue"]."()' value='".$query_array["nameTypeID"]."'> ".htmlspecialchars($query_array["nameTypeValue"])." ";
                 echo "</label>";
               }
             ?>
-          </div>
-           <div id="chainSize" class="form-group hideShow">
-              <label>Chain size</label>
-              <select class="form-control">
-                <option>Small</option>
-                <option>Medium</option>
-                <option>Large</option>
-              </select>
+            <div class="form-group hideShow" id="priceInputDouble">
+              <input id="english" type="text" class="form-control" placeholder="Additional price(Double) ...">
+              </div>
             </div>
-
+          </div>
+          <div id="chainSize" class="form-group hideShow">
+            <label>Chain size</label>
+            <select class="form-control">
+              <option>Small</option>
+              <option>Medium</option>
+              <option>Large</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Discount</label>
+            <input type="text" class="form-control" placeholder="Enter in % ...">
+          </div>
           </div>
 
           </div>
