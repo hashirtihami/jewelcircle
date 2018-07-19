@@ -1,50 +1,72 @@
-$('input#file').change(function(){
-    var files = $(this)[0].files;
-    if(files.length > 3){
-        $("#numFiles").html("You can select max 3 files.");
-        $(this).val("");
-    }
-    else
-    	$("#numFiles").html("");
-});
-
-function displayOne() {
-	var target = document.getElementById("dis1");
+function displayExistingCatg() {
+	var target = document.getElementById("existingCatg");
 	target.style.display = "block";
-	var other = document.getElementById("dis2");
+	var other = document.getElementById("newCatg");
 	other.style.display = "none";
+	// alert("hi");
 }
-function displayTwo() {
-	var targ = document.getElementById("dis2");
+function displayNewCatg() {
+	var targ = document.getElementById("newCatg");
 	targ.style.display = "grid";
-	var other = document.getElementById("dis1");
+	var other = document.getElementById("existingCatg");
 	other.style.display = "none";
 }
-function displayThree() {
-	var targ = document.getElementById("dis3");
+function displayExistingTypes() {
+	var targ = document.getElementById("existingTypes");
 	targ.style.display = "block";
-	var other = document.getElementById("dis4");
+	var other = document.getElementById("newType");
 	other.style.display = "none";
 }
-function displayFour() {
-	var targ = document.getElementById("dis4");
+function displayNewType() {
+	var targ = document.getElementById("newType");
 	targ.style.display = "grid";
-	var other = document.getElementById("dis3");
+	var other = document.getElementById("existingTypes");
 	other.style.display = "none";
 }
-// function checkInput() {
-// 	if(proCategory === "cuffs") {
-// 		alert('hi');
-// 	}
-// }
+function displayPriceInputGold() {
+	var tar = document.getElementById("priceInputGold"); 
+	tar.classList.toggle("hideShow");
+}
+function displayPriceInputSilver() {
+	var tar = document.getElementById("priceInputSilver"); 
+	tar.classList.toggle("hideShow");
+}
+function displayPriceInputEnglish() {
+	var tar = document.getElementById("priceInputEng"); 
+	tar.classList.toggle("hideShow");
+}
+function displayPriceInputUrdu() {
+	var tar = document.getElementById("priceInputUrdu"); 
+	tar.classList.toggle("hideShow");
+}
+function displayPriceInputArabic() {
+	var tar = document.getElementById("priceInputArab"); 
+	tar.classList.toggle("hideShow");
+}
+function displayPriceInputDouble() {
+	var tar = document.getElementById("priceInputDouble"); 
+	tar.classList.toggle("hideShow");
+}
+
+function displayAddCoupon() {
+	var tar = document.getElementById("addCoupon"); 
+	tar.classList.toggle("hideShow");
+	// alert("hi");
+}
+
+function counts() {
+	var rows = document.querySelectorAll('tr');
+	var count = rows.length;
+	alert("grey");
+	// alert(count);
+}
 function checkInput() {
-	var val = document.getElementById("dis1");
+	var val = document.getElementById("existingCatg");
 	var chainInput = document.getElementById("chainSize");
 	chainInput.style.display = "none";
 	var inputCheck = val.options[val.selectedIndex].value;
 	if((inputCheck === "bracelet") || (inputCheck === "locket")) {
 		chainInput
 		chainInput.style.display = "block";
-	}
 }
-
+}
