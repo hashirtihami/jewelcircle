@@ -91,6 +91,10 @@
             die();
           }
       }
+      $query = "INSERT INTO product (productID, description) VALUES (CONCAT('$category', '$type'), '$desc');";
+      if(mysqli_query($conn, $query)){
+        echo mysqli_use_result($conn);
+      }
       foreach ($language as $lang) {
         foreach ($platingType as $plating) {
           foreach ($nameType as $wordCount) {
@@ -100,22 +104,19 @@
             if(mysqli_num_rows($result)>0){
               echo "<script type='text/javascript'>
                       function error(){
-                          var warning = document.getElementById('warning');
-                          warning.style.display = 'block';
+                        $('#warning').css('display', 'block');
                        }
                        error();
                     </script>";
             }else{
-              echo "hi";
               $platingPrice = $_POST['pricePlating'.$plating];
               echo $platingPrice;
               $languagePrice = $_POST['priceLanguage'.$lang];
               echo $languagePrice;
               $nameTypePrice = $_POST['priceNameType'.$wordCount];
               echo $nameTypePrice;
-              $query = "INSERT INTO product (productID, description) VALUES (CONCAT('$category', '$type'), '$desc');";
               $query = "INSERT INTO details (detailsID, productID, categoryID, typeID, languageID, platingID, nameTypeID, platingPrice, languagePrice, nameTypePrice) VALUES (CONCAT('$category', '$type', '$lang', '$plating', '$wordCount'), CONCAT('$category', '$type'),'$category', '$type', '$lang', '$plating', '$wordCount', '$platingPrice', '$languagePrice', '$nameTypePrice');";
-              if(mysqli_multi_query($conn, $query)){
+              if(mysqli_query($conn, $query)){
                 echo mysqli_use_result($conn);
               }
             }

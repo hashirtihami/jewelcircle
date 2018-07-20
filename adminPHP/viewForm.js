@@ -163,5 +163,6 @@ $("input[name='wordCount[]']").change(function(){
 });
 
 $("form").change(function(){
+	$("#warning").css("display","none");
 	$("#submit").prop("disabled", false);
 })
