@@ -22,7 +22,7 @@
       <div class="box box-primary">
         <div class="box-header with-border">
           <h3 class="box-title">Product Details</h3>
-          <span><h4 id="warning"><i class="fa fa-warning"></i> Product Exists</h4></span>
+          <span><h4 id="warning" class="error"><i class="fa fa-warning"></i> Product Exists</h4></span>
         </div>
         <!-- /.box-header -->
         <!-- form start -->
