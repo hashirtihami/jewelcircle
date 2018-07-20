@@ -17,12 +17,12 @@
     margin: 5px 0px !important;
   }
   #warning{
-    color: red;
     display: none;
     font-size: 12px;
   }
-  #imgErr, #numFiles{
+  .error{
     color: red;
+    display: block;
   }
 </style>
 
@@ -33,9 +33,9 @@
     $category = $_POST['proCategory'];
     $type = $_POST['type'];
     $desc = $_POST['desc'];
-    $platingType = $_POST['platingType'];
-    $language = $_POST['language'];
-    $nameType = $_POST['wordCount'];
+    @$platingType = $_POST['platingType'];
+    @$language = $_POST['language'];
+    @$nameType = $_POST['wordCount'];
     if(!empty($language)&&!empty($platingType)&&!empty($nameType)){
       $i = 1;
       foreach ($_FILES["files"]["tmp_name"] as $key=>$tmp_name) {
@@ -114,8 +114,8 @@
               $nameTypePrice = $_POST['priceNameType'.$wordCount];
               echo $nameTypePrice;
               $query = "INSERT INTO product (productID, description) VALUES (CONCAT('$category', '$type'), '$desc');";
-              $query .= "INSERT INTO details (detailsID, productID, categoryID, typeID, languageID, platingID, nameTypeID, platingPrice, languagePrice, nameTypePrice) VALUES (CONCAT('$category', '$type', '$lang', '$plating', '$wordCount'), CONCAT('$category', '$type'),'$category', '$type', '$lang', '$plating', '$wordCount', '$platingPrice', '$languagePrice', '$nameTypePrice');";
-              if(!mysqli_multi_query($conn, $query)){
+              $query = "INSERT INTO details (detailsID, productID, categoryID, typeID, languageID, platingID, nameTypeID, platingPrice, languagePrice, nameTypePrice) VALUES (CONCAT('$category', '$type', '$lang', '$plating', '$wordCount'), CONCAT('$category', '$type'),'$category', '$type', '$lang', '$plating', '$wordCount', '$platingPrice', '$languagePrice', '$nameTypePrice');";
+              if(mysqli_multi_query($conn, $query)){
                 echo mysqli_use_result($conn);
               }
             }

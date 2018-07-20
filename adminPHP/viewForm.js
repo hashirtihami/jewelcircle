@@ -68,5 +68,48 @@ function checkInput() {
 	if((inputCheck === "bracelet") || (inputCheck === "locket")) {
 		chainInput
 		chainInput.style.display = "block";
+	}
 }
-}
+
+$("#submit").on("click", function(){
+	var formValidated;
+	if($(".category-group :checked").length<1){
+		$("#categoryErr").html("Please select one of the following options");
+		formValidated=0;
+	}
+	if($(".type-group :checked").length<1){
+		$("#typeErr").html("Please select one of the following options");
+		formValidated=0;
+	}
+	if($("input#file")[0].files.length<1){
+		$("#imgErr").html("Please select one or more images");
+		formValidated=0;
+	}
+	if(!$("#desc").val()){
+		$("#descErr").html("Please enter description of the product");
+		formValidated=0;
+	}
+	if($(".plating-group :checked").length<1){
+		$("#platingErr").html("Please select one of the following options");
+		formValidated=0;
+	}
+	if($(".language-group :checked").length<1){
+		$("#languageErr").html("Please select one of the following options");
+		formValidated=0;
+	}
+	if($(".nameType-group :checked").length<1){
+		$("#nameTypeErr").html("Please select one of the following options");
+		formValidated=0;
+	}
+});
+
+$('input#file').change(function(){
+    var files = $(this)[0].files;
+    if(files.length > 3){
+        $("#numFiles").html("You can select max 3 files.");
+        $(this).val("");
+    }
+    else
+    	$("#numFiles").html("");
+});
+

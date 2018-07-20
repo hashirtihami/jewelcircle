@@ -28,29 +28,30 @@
         <!-- form start -->
         <form role="form" action="<?php echo $_SERVER['SCRIPT_NAME']?>" method="POST" enctype="multipart/form-data">
           <div class="box-body">
-            <div class="form-group">
-              <label>Product Category</label>
-              <div class="form-group">
-                <label for="exist" class="chotaSize">
-                  <input onclick="displayExistingCatg();" id="exist" type="radio" name="r3" >
-                  <span>Choose existing category</span>
-                </label>
-                <label for="new" class="chotaSize">
-                  <input onclick="displayNewCatg();" id="new" type="radio" name="r3" >
-                  <span>Add New</span>
-                </label>
-          </div>
-              <select onblur="checkInput();" id="existingCatg" class="form-control hideShow" name="proCategory">
-               <?php
-                  //Dynamically Adding categories to the dropdown from Category table
-                  $query = "SELECT * FROM category ORDER BY categoryID";
-                  $query_run = mysqli_query($conn, $query);
-                  while($query_array = mysqli_fetch_array($query_run)){
-                    echo "<option value='".$query_array["categoryID"]."' >".htmlspecialchars($query_array["category"])."</option>";
-                  }
-                ?>
-              </select>
+          <div id="category" class="form-group">
+            <label>Product Category</label>
+            <div class="form-group category-group">
+              <span id="categoryErr" class="error"></span>
+              <label for="exist" class="chotaSize">
+                <input onclick="displayExistingCatg();" id="exist" type="radio" name="r3" >
+                <span>Choose existing category</span>
+              </label>
+              <label for="new" class="chotaSize">
+                <input onclick="displayNewCatg();" id="new" type="radio" name="r3" >
+                <span>Add New</span>
+              </label>
             </div>
+            <select onblur="checkInput();" id="existingCatg" class="form-control hideShow" name="proCategory">
+             <?php
+                //Dynamically Adding categories to the dropdown from Category table
+                $query = "SELECT * FROM category ORDER BY categoryID";
+                $query_run = mysqli_query($conn, $query);
+                while($query_array = mysqli_fetch_array($query_run)){
+                  echo "<option value='".$query_array["categoryID"]."' >".htmlspecialchars($query_array["category"])."</option>";
+                }
+              ?>
+            </select>
+          </div>
           <div class="input-group input-group-sm hideShow" id="newCatg">
             <input type="text" class="form-control" placeholder="Enter name of new product...">
                 <span id="newButton" class="input-group-btn">
@@ -60,7 +61,8 @@
 
            <div class="form-group">
               <label>Product Type</label>
-              <div class="form-group">
+              <div class="form-group type-group">
+                <span id="typeErr" class="error"></span>
                 <label class="chotaSize">
                   <input onclick="displayExistingTypes();" type="radio" name="r34">
                   <span>Choose existing type</span>
@@ -69,6 +71,7 @@
                   <input onclick="displayNewType();" type="radio" name="r34">
                   <span>Add New</span>
                </label>
+              </div>
 
               <select class="form-control hideShow" id="existingTypes" name="type">
                <?php
@@ -80,31 +83,32 @@
                   }
                 ?>
               </select>
-          <div class="input-group input-group-sm hideShow" id="newType">
-            <input type="text" class="form-control" placeholder="Enter name of new product...">
-                <span id="newButton" class="input-group-btn">
-                  <button type="button" class="btn btn-info btn-flat">Add New Type</button>
-                </span>
-          </div>
             </div>
-            <div class="form-group">
+            <div class="input-group input-group-sm hideShow" id="newType">
+              <input type="text" class="form-control" placeholder="Enter name of new product...">
+                  <span id="newButton" class="input-group-btn">
+                    <button type="button" class="btn btn-info btn-flat">Add New Type</button>
+                  </span>
+            </div>
+            <div class="form-group img-group">
               <label for="exampleInputFile">Product Images</label>
               <!--<input type="file" name="file">-->
+              <span id="imgErr" class="error"></span>
               <input id="file" type="file" name="files[]" multiple>
-              <span id="imgErr"></span>
-              <span id="numFiles"></span>
+              <span id="numFiles" class="error"></span>
               <p class="help-block">Upload images of new product (upto 3)</p>
               <p class="help-block">Max image size = 3MB</p>
             </div>
                             <!-- text input -->
             <div class="form-group">
-            <div class="form-group">
               <label>Product Description</label>
-              <textarea class="form-control" rows="3" placeholder="Enter a few details of the product..." name="desc"></textarea>
+              <span id="descErr" class="error"></span>
+              <textarea id="desc" class="form-control" rows="3" placeholder="Enter a few details of the product..." name="desc"></textarea>
             </div>
 
-          <div class="form-group">
+          <div class="form-group plating-group">
             <label>Plating: </label>
+            <span id="platingErr" class="error"></span>
             <?php
               //Dynamically Adding platingType checkboxes from Plating table
               $query = "SELECT * FROM plating ORDER BY platingID";
@@ -122,8 +126,9 @@
               }
             ?>
           </div>
-          <div class="form-group">
+          <div class="form-group language-group">
             <label>Language: </label>
+            <span id="languageErr" class="error"></span>
             <?php
               //Dynamically Adding language checkboxes from Language table
               $query = "SELECT * FROM language ORDER BY languageID";
@@ -141,8 +146,9 @@
               }
             ?>
           </div>
-          <div class="form-group">
+          <div class="form-group nameType-group">
             <label>Name Type:</label>
+            <span id="nameTypeErr" class="error"></span>
             <?php
               //Dynamically Adding nameType checkboxes from Name Type table
               $query = "SELECT * FROM nameType ORDER BY nameTypeID";
@@ -160,7 +166,6 @@
               }
             ?>
           </div>
-        </div>
           <div id="chainSize" class="form-group hideShow">
             <label>Chain size</label>
             <select class="form-control">
@@ -173,13 +178,11 @@
             <label>Discount</label>
             <input type="text" class="form-control" placeholder="Enter in % ...">
           </div>
-        </div>
-
       </div>
           <!-- /.box-body -->
 
           <div class="box-footer">
-            <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+            <button type="submit" id="submit" class="btn btn-primary" name="submit">Submit</button>
           </div>
         </form>
       </div>
