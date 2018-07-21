@@ -179,3 +179,8 @@ $("form").change(function(){
 	$("#submit").prop("disabled", false);
 });
 
+$(document).ready(function() {
+	$("#example1").on('click', '.buttons', function() {
+		$(this).closest('tr').fadeOut("slow");
+	})
+})
