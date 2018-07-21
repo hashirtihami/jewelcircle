@@ -1,29 +1,22 @@
 function displayExistingCatg() {
-	var target = document.getElementById("existingCatg");
-	target.style.display = "block";
-	var other = document.getElementById("newCatg");
-	other.style.display = "none";
+	$("#existingCatg").slideDown("fast");
+	$("#newCatg").hide();
 	$("#newCatg input").prop('required',false);
 }
 function displayNewCatg() {
-	var targ = document.getElementById("newCatg");
-	targ.style.display = "grid";
-	var other = document.getElementById("existingCatg");
-	other.style.display = "none";
+	$("#newCatg").slideDown("fast");
+	$("#existingCatg").hide();
+
 	$("#newCatg input").prop('required',true);
 }
 function displayExistingTypes() {
-	var targ = document.getElementById("existingTypes");
-	targ.style.display = "block";
-	var other = document.getElementById("newType");
-	other.style.display = "none";
+	$("#existingTypes").slideDown("fast");
+	$("#newType").hide();
 	$("#newType input").prop('required',false);
 }
 function displayNewType() {
-	var targ = document.getElementById("newType");
-	targ.style.display = "grid";
-	var other = document.getElementById("existingTypes");
-	other.style.display = "none";
+	$("#newType").slideDown("fast");
+	$("#existingTypes").hide();
 	$("#newType input").prop('required',true);
 }
 function displayPriceInputGold() {
@@ -70,9 +63,11 @@ function displayPriceInputDouble() {
 }
 
 function displayAddCoupon() {
-	var tar = document.getElementById("addCoupon"); 
-	tar.classList.toggle("hideShow");
-	// alert("hi");
+	if ($("#addCoupon").is(":hidden")) {
+       $("#addCoupon").slideDown("slow");
+   } else {
+       $("#addCoupon").slideUp("slow");
+   }
 }
 
 function counts() {

@@ -10,7 +10,8 @@ div.dataTables_length select {
 }
 
 div.dataTables_filter {
-	text-align: right;
+	/*text-align: right;*/
+	display: none;
 }
 
 div.dataTables_filter label {
