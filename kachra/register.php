@@ -14,21 +14,9 @@ $last_name = $mysqli->escape_string($_POST['lastname']);
 $email = $mysqli->escape_string($_POST['email']);
 $password = $mysqli->escape_string(password_hash($_POST['password'], PASSWORD_BCRYPT));
 $hash = $mysqli->escape_string( md5( rand(0,1000) ) );
-$contact= $mysqli->escape_string($_POST['contact']);
-$address= $mysqli->escape_string($_POST['address']);
-$city= $mysqli->escape_string($_POST['city']);
-$country= $mysqli->escape_string($_POST['country']);
-$zipcode= $mysqli->escape_string($_POST['zipcode']);
-
       
-/*
-      echo $password . '<br/>';
-      echo $hash;
-         die;
-*/
-
 // Check if user with that email already exists
-$result = $mysqli->query("SELECT * FROM customer WHERE email='$email'") or die($mysqli->error());
+$result = $mysqli->query("SELECT * FROM users WHERE email='$email'") or die($mysqli->error());
 
 // We know user email exists if the rows returned are more than 0
 if ( $result->num_rows > 0 ) {
@@ -37,39 +25,14 @@ if ( $result->num_rows > 0 ) {
     header("location: error.php");
     
 }
-
 else { // Email doesn't already exist in a database, proceed...
 
     // active is 0 by DEFAULT (no need to include it here)
-    $sql2 = "INSERT INTO address (address, city, zipcode, country) " 
-            . "VALUES ('$address','$city','$zipcode','$country')";
-
-    
-   
-   // $addressID ="SELECT addressID FROM address";
-
-    $sql1 = "INSERT INTO customer (first_name, last_name, email, password, hash, contact) " 
-            . "VALUES ('$first_name','$last_name','$email','$password', '$hash' , '$contact' )";
-   
-// ===================== $sql1 aur $sql2 ki jugarr apni taraf sy maari hay .... koi aur hal hay tow kr ley ========================//
+    $sql = "INSERT INTO users (first_name, last_name, email, password, hash) " 
+            . "VALUES ('$first_name','$last_name','$email','$password', '$hash')";
 
     // Add user to the database
-    if ( $mysqli->query($sql1) && $mysqli->query($sql2)  ){
-            
-            //$addressID = mysqli_query('SELECT addressID FROM address LIMIT 1');
-           // $addressID ="SELECT addressID FROM address";
-            
-
-            $again = "SELECT addressID FROM address LIMIT 1";
-            $result = $mysqli->query($again);
-            while($query_array = mysqli_fetch_array($result)){
- 
-            }
-            echo $again;
-            echo $result;
-            die;
-
-           
+    if ( $mysqli->query($sql) ){
 
         $_SESSION['active'] = 0; //0 until user activates their account with verify.php
         $_SESSION['logged_in'] = true; // So we know the user has logged in
@@ -80,7 +43,7 @@ else { // Email doesn't already exist in a database, proceed...
 
         // Send registration confirmation link (verify.php)
         $to      = $email;
-        $subject = 'Account Verification ( jewelcircle.net )';
+        $subject = 'Account Verification ( clevertechie.com )';
         $message_body = '
         Hello '.$first_name.',
 

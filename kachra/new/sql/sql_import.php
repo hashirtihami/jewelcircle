@@ -2,7 +2,7 @@
 
 //connection variables
 $host = 'localhost';
-$user = 'root';
+$user = '';
 $password = '';
 
 //create mysql connection
