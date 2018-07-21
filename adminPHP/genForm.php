@@ -29,10 +29,16 @@
 <script src="viewForm.js"></script>
 
 <?php
-  if(isset($_POST['submit'])){
+  if(isset($_POST['submit'])){ 
+    $timezone_offset_minutes = $_POST['date'];  // $_GET['timezone_offset_minutes']
+    $timezone_name = timezone_name_from_abbr("", $timezone_offset_minutes*60, false);
+    date_default_timezone_set($timezone_name);
+    $date = date('Y-m-d H:i:s');
     $category = $_POST['proCategory'];
     $type = $_POST['type'];
     $desc = $_POST['desc'];
+    $discount = $_POST['discount'];
+    $nameLength = $_POST['length'];
     @$platingType = $_POST['platingType'];
     @$language = $_POST['language'];
     @$nameType = $_POST['wordCount'];
@@ -91,7 +97,7 @@
             die();
           }
       }
-      $query = "INSERT INTO product (productID, description) VALUES (CONCAT('$category', '$type'), '$desc');";
+      $query = "INSERT INTO product (productID, description, discount, date, nameLength) VALUES (CONCAT('$category', '$type'), '$desc', '$discount', '$date', '$nameLength');";
       if(mysqli_query($conn, $query)){
         echo mysqli_use_result($conn);
       }
@@ -110,11 +116,8 @@
                     </script>";
             }else{
               $platingPrice = $_POST['pricePlating'.$plating];
-              echo $platingPrice;
               $languagePrice = $_POST['priceLanguage'.$lang];
-              echo $languagePrice;
               $nameTypePrice = $_POST['priceNameType'.$wordCount];
-              echo $nameTypePrice;
               $query = "INSERT INTO details (detailsID, productID, categoryID, typeID, languageID, platingID, nameTypeID, platingPrice, languagePrice, nameTypePrice) VALUES (CONCAT('$category', '$type', '$lang', '$plating', '$wordCount'), CONCAT('$category', '$type'),'$category', '$type', '$lang', '$plating', '$wordCount', '$platingPrice', '$languagePrice', '$nameTypePrice');";
               if(mysqli_query($conn, $query)){
                 echo mysqli_use_result($conn);

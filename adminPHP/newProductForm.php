@@ -121,7 +121,7 @@
               $query_run = mysqli_query($conn, $query);
               while($query_array = mysqli_fetch_array($query_run)){
                 echo "<div class='form-group hideShow' id='priceInput".$query_array["platingType"]."'>";
-                echo "<input id='".$query_array["platingType"]."' type='text' class='form-control' name='pricePlating".$query_array["platingID"]."' placeholder='".$query_array["platingType"]." price ...'>";
+                echo "<input id='".$query_array["platingType"]."' type='number' class='form-control' name='pricePlating".$query_array["platingID"]."' placeholder='".$query_array["platingType"]." price ...'>";
                 echo "</div>";
               }
             ?>
@@ -141,7 +141,7 @@
               $query_run = mysqli_query($conn, $query);
               while($query_array = mysqli_fetch_array($query_run)){
                 echo '<div class="form-group hideShow" id="priceInput'.$query_array["languageName"].'">';
-                echo '<input id="'.$query_array["languageName"].'" type="text" class="form-control" name="priceLanguage'.$query_array["languageID"].'" placeholder="Additional price('.$query_array["languageName"].') ...">';
+                echo '<input id="'.$query_array["languageName"].'" type="number" class="form-control" name="priceLanguage'.$query_array["languageID"].'" placeholder="Additional price('.$query_array["languageName"].') ...">';
                 echo '</div>';
               }
             ?>
@@ -161,7 +161,7 @@
               $query_run = mysqli_query($conn, $query);
               while($query_array = mysqli_fetch_array($query_run)){
                 echo '<div class="form-group hideShow" id="priceInput'.$query_array["nameTypeValue"].'">';
-                echo '<input id="'.$query_array["nameTypeValue"].'" type="text" name="priceNameType'.$query_array["nameTypeID"].'" class="form-control" placeholder="Additional price('.$query_array["nameTypeValue"].') ...">';
+                echo '<input id="'.$query_array["nameTypeValue"].'" type="number" name="priceNameType'.$query_array["nameTypeID"].'" class="form-control" placeholder="Additional price('.$query_array["nameTypeValue"].') ...">';
                 echo '</div>';
               }
             ?>
@@ -175,8 +175,17 @@
             </select>
           </div>
           <div class="form-group">
+            <label>Allowed Name Length</label>
+            <span id="lengthErr" class="error"></span>
+            <input type="number" min="0" id="length" name="length" class="form-control" placeholder="Enter in the length of name allowed...">
+          </div>
+          <div class="form-group">
             <label>Discount</label>
-            <input type="text" class="form-control" placeholder="Enter in % ...">
+            <span id="discountErr" class="error"></span>
+            <input type="number" min="0" id="discount" name="discount" class="form-control" placeholder="Enter in % ...">
+          </div>
+          <div class="form-group">
+            <input type="text" id="date" name="date" class="form-control" style="display: none">
           </div>
       </div>
           <!-- /.box-body -->

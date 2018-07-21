@@ -122,10 +122,22 @@ $("#submit").on("click", function(){
 		$("#nameTypeErr").html("Please select one of the following options");
 		formValidated=false
 	}
+	if(!$("#length").val()){
+		$("#lengthErr").html("Please enter some value");
+		formValidated=false;
+	}
+	if(!$("#discount").val()){
+		$("#discountErr").html("Please enter some value");
+		formValidated=false;
+	}
 	if(!formValidated){
 		$(this).prop("disabled", true);
 	}
+	var timezone_offset_minutes = new Date().getTimezoneOffset();
+	timezone_offset_minutes = timezone_offset_minutes == 0 ? 0 : -timezone_offset_minutes;
+	$("#date").val(timezone_offset_minutes);
 });
+
 
 $('input#file').change(function(){
 	$("#imgErr").html("");
@@ -165,4 +177,5 @@ $("input[name='wordCount[]']").change(function(){
 $("form").change(function(){
 	$("#warning").css("display","none");
 	$("#submit").prop("disabled", false);
-})
+});
+
