@@ -75,7 +75,9 @@
               echo '<td>'.$query_array["usageLimit"].'</td>';
               echo '<td>'.$query_array["expiryDate"].'</td>';
               echo '<td><div class="btn-group">
-                  <button type="button" class="btn bg-grey buttonDel"><i class="fas fa-trash-alt"></i></button>
+                  <button type="button" class="btn bg-grey buttonDel">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
                 </div></td></td>';
               echo '</tr>';
             }
