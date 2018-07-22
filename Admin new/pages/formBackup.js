@@ -49,10 +49,19 @@ function displayPriceInputDouble() {
 }
 
 function displayAddCoupon() {
-	var tar = document.getElementById("addCoupon"); 
-	tar.classList.toggle("hideShow");
+	// var tar = document.getElementById("addCoupon"); 
+	// tar.classList.toggle("hideShow");
+	// $("#addCoupon").slideDown("slow");
+	// $("#addCoupon").
 	// alert("hi");
+
+	if ($("#addCoupon").is(":hidden")) {
+       $("#addCoupon").slideDown("slow");
+   } else {
+       $("#addCoupon").slideUp("slow");
+   }
 }
+
 
 function counts() {
 	var rows = document.querySelectorAll('tr');

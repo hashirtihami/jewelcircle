@@ -1,78 +1,79 @@
 function displayExistingCatg() {
-	var target = document.getElementById("existingCatg");
-	target.style.display = "block";
-	var other = document.getElementById("newCatg");
-	other.style.display = "none";
+	$("#existingCatg").slideDown("fast");
+	$("#newCatg").hide();
 	$("#newCatg input").prop('required',false);
 }
 function displayNewCatg() {
-	var targ = document.getElementById("newCatg");
-	targ.style.display = "grid";
-	var other = document.getElementById("existingCatg");
-	other.style.display = "none";
+	$("#newCatg").slideDown("fast");
+	$("#existingCatg").hide();
+
 	$("#newCatg input").prop('required',true);
 }
 function displayExistingTypes() {
-	var targ = document.getElementById("existingTypes");
-	targ.style.display = "block";
-	var other = document.getElementById("newType");
-	other.style.display = "none";
+	$("#existingTypes").slideDown("fast");
+	$("#newType").hide();
 	$("#newType input").prop('required',false);
 }
 function displayNewType() {
-	var targ = document.getElementById("newType");
-	targ.style.display = "grid";
-	var other = document.getElementById("existingTypes");
-	other.style.display = "none";
+	$("#newType").slideDown("fast");
+	$("#existingTypes").hide();
 	$("#newType input").prop('required',true);
 }
 function displayPriceInputGold() {
-	var tar = document.getElementById("priceInputGold"); 
-	tar.classList.toggle("hideShow");
+	// var tar = document.getElementById("priceInputGold"); 
+	// tar.classList.toggle("hideShow");
+	$("#priceInputGold").toggle("fast");
 	if(!($("#priceInputGold").hasClass("hideShow"))){
 		$("#Gold").prop('required',true);
 	}
 }
 function displayPriceInputSilver() {
-	var tar = document.getElementById("priceInputSilver"); 
-	tar.classList.toggle("hideShow");
+	// var tar = document.getElementById("priceInputSilver"); 
+	// tar.classList.toggle("hideShow");
+	$("#priceInputSilver").toggle("fast");
 	if(!($("#priceInputSilver").hasClass("hideShow"))){
 		$("#Silver").prop('required',true);
 	}
 }
 function displayPriceInputEnglish() {
-	var tar = document.getElementById("priceInputEnglish"); 
-	tar.classList.toggle("hideShow");
+	// var tar = document.getElementById("priceInputEnglish"); 
+	// tar.classList.toggle("hideShow");
+	$("#priceInputEnglish").toggle("fast");
 	if(!($("#priceInputEnglish").hasClass("hideShow"))){
 		$("#English").prop('required',true);
 	}
 }
 function displayPriceInputUrdu() {
-	var tar = document.getElementById("priceInputUrdu"); 
-	tar.classList.toggle("hideShow");
+	// var tar = document.getElementById("priceInputUrdu"); 
+	// tar.classList.toggle("hideShow");
+	$("#priceInputUrdu").toggle("fast");
 	if(!($("#priceInputUrdu").hasClass("hideShow"))){
 		$("#Urdu").prop('required',true);
 	}
 }
 function displayPriceInputArabic() {
-	var tar = document.getElementById("priceInputArabic"); 
-	tar.classList.toggle("hideShow");
+	// var tar = document.getElementById("priceInputArabic"); 
+	// tar.classList.toggle("hideShow");
+	$("#priceInputArabic").toggle("fast");
 	if(!($("#priceInputArabic").hasClass("hideShow"))){
 		$("#Arabic").prop('required',true);
 	}
 }
 function displayPriceInputDouble() {
-	var tar = document.getElementById("priceInputDouble"); 
-	tar.classList.toggle("hideShow");
+	// var tar = document.getElementById("priceInputDouble"); 
+	// tar.classList.toggle("hideShow");
+	$("#priceInputDouble").toggle("fast");
 	if(!($("#priceInputDouble").hasClass("hideShow"))){
 		$("#Double").prop('required',true);
 	}
 }
 
 function displayAddCoupon() {
-	var tar = document.getElementById("addCoupon"); 
-	tar.classList.toggle("hideShow");
-	// alert("hi");
+	if ($("#addCoupon").is(":hidden")) {
+       $("#addCoupon").slideDown("slow");
+   } else {
+       $("#addCoupon").slideUp("slow");
+   }
 }
 
 function counts() {
@@ -87,7 +88,6 @@ function checkInput() {
 	chainInput.style.display = "none";
 	var inputCheck = val.options[val.selectedIndex].value;
 	if((inputCheck === "bracelet") || (inputCheck === "locket")) {
-		chainInput
 		chainInput.style.display = "block";
 	}
 }
@@ -179,3 +179,8 @@ $("form").change(function(){
 	$("#submit").prop("disabled", false);
 });
 
+$(document).ready(function() {
+	$("#example1").on('click', '.buttons', function() {
+		$(this).closest('tr').fadeOut("slow");
+	})
+})

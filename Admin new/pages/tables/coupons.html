@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin Panel | Coupns</title>
+  <title>Admin Panel | Coupons</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -20,6 +20,8 @@
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
 
   <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
@@ -154,11 +156,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>Coupons
+        <!-- <button id="abc" type="button" class="btn bg-blue margin">Add new coupon <i class="fas fa-plus-circle"></i></button></h1> -->
       	<button type="button" class="btn bg-blue margin" onclick="displayAddCoupon();">Add new coupon <i class="fas fa-plus-circle"></i></button></h1>
-      <!-- <button type="button" class="btn bg-blue margin">Default</button> -->      
       <ol class="breadcrumb">
         <li><a href="../../home.html"><i class="fas fa-home"></i> Home</a></li>
-        <li> E-Commerce</li>
+        <li id="heee"> E-Commerce</li>
         <li class="active"> Coupons</li>
       </ol>
     </section>
@@ -199,7 +201,7 @@
               <h3 class="box-title">Data Table With Full Features</h3>
             </div> -->
             <!-- /.box-header -->
-            <div class="box-body">
+            <div class="box-body table-responsive">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -214,28 +216,28 @@
                 <tbody>
                 <tr>
                   <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
+                  <td>Internet Explorer 4.0
                   </td>
                   <td>Win 95+</td>
                   <td> 4</td>
                   <td></td>
                   <td>
                     <div class="btn-group">
-                      <button type="button" class="btn bg-grey"><i class="fas fa-trash-alt"></i></button>
+                      <button onclick="deleteRow();" type="button" class="btn bg-grey buttons"><i class="fas fa-trash-alt"></i></button>
                     </div></td>
                 </tr>
                 <tr>
                   <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.0
+                  <td>Internet Explorer 5.0
                   </td>
-                  <td>Win 95+</td>
+                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation</td>
                   <td>5</td>
                   <td></td>
                   <td>
                     <div class="btn-group">
-                      <button type="button" class="btn bg-grey"><i class="fas fa-trash-alt"></i></button>
+                      <button onclick="deleteRow();" type="button" class="btn bg-grey buttons"><i class="fas fa-trash-alt"></i></button>                      
                     </div></td>
                 </tr>
                 <tr>
@@ -248,7 +250,7 @@
                   <td></td>
                   <td>
                     <div class="btn-group">
-                      <button type="button" class="btn bg-grey"><i class="fas fa-trash-alt"></i></button>
+                      <button onclick="deleteRow();" type="button" class="btn bg-grey buttons"><i class="fas fa-trash-alt"></i></button>
                     </div></td>
                 </tr>
                 <tr>
@@ -259,7 +261,7 @@
                   <td></td>
                   <td>
                     <div class="btn-group">
-                      <button type="button" class="btn bg-grey"><i class="fas fa-trash-alt"></i></button>
+                      <button onclick="deleteRow();" type="button" class="btn bg-grey buttons"><i class="fas fa-trash-alt"></i></button>
                     </div></td>
                 </tr>
                 <tr>
@@ -270,7 +272,7 @@
                   <td></td>
                   <td>
                     <div class="btn-group">
-                      <button type="button" class="btn bg-grey"><i class="fas fa-trash-alt"></i></button>
+                      <button onclick="deleteRow();" type="button" class="btn bg-grey buttons"><i class="fas fa-trash-alt"></i></button>
                     </div></td>
                 </tr>
                 <tr>
@@ -281,7 +283,7 @@
                   <td></td>
                   <td>
                     <div class="btn-group">
-                      <button type="button" class="btn bg-grey"><i class="fas fa-trash-alt"></i></button>
+                      <button onclick="deleteRow();" type="button" class="btn bg-grey buttons"><i class="fas fa-trash-alt"></i></button>
                     </div></td>
                 </tr>
                 <tr>
@@ -292,7 +294,7 @@
                   <td></td>
                   <td>
                     <div class="btn-group">
-                      <button type="button" class="btn bg-grey"><i class="fas fa-trash-alt"></i></button>
+                      <button onclick="deleteRow();" type="button" class="btn bg-grey buttons"><i class="fas fa-trash-alt"></i></button>
                     </div></td>
                 </tr>
                 <tr>
@@ -303,7 +305,7 @@
                   <td></td>
                   <td>
                     <div class="btn-group">
-                      <button type="button" class="btn bg-grey"><i class="fas fa-trash-alt"></i></button>
+                      <button onclick="deleteRow();" type="button" class="btn bg-grey buttons"><i class="fas fa-trash-alt"></i></button>
                     </div></td>
                 </tr>
                 <tr>
@@ -314,7 +316,7 @@
                   <td></td>
                   <td>
                     <div class="btn-group">
-                      <button type="button" class="btn bg-grey"><i class="fas fa-trash-alt"></i></button>
+                      <button onclick="deleteRow();" type="button" class="btn bg-grey buttons"><i class="fas fa-trash-alt"></i></button>
                     </div></td>
                 </tr>
                 <tr>
@@ -325,7 +327,7 @@
                   <td></td>
                   <td>
                     <div class="btn-group">
-                      <button type="button" class="btn bg-grey"><i class="fas fa-trash-alt"></i></button>
+                      <button onclick="deleteRow();" type="button" class="btn bg-grey buttons"><i class="fas fa-trash-alt"></i></button>
                     </div></td>
                 </tr>
                 <tr>
@@ -336,7 +338,7 @@
                   <td></td>
                   <td>
                     <div class="btn-group">
-                      <button type="button" class="btn bg-grey"><i class="fas fa-trash-alt"></i></button>
+                      <button onclick="deleteRow();" type="button" class="btn bg-grey buttons"><i class="fas fa-trash-alt"></i></button>
                     </div></td>
                 </tr>
                 <tr>
@@ -350,7 +352,7 @@
                   <td></td>
                   <td>
                     <div class="btn-group">
-                      <button type="button" class="btn bg-grey"><i class="fas fa-trash-alt"></i></button>
+                      <button type="button" class="btn bg-grey buttons"><i class="fas fa-trash-alt"></i></button>
                     </div></td>
                 </tr>
                 </tbody>
@@ -380,9 +382,9 @@
 
   <!-- Control Sidebar -->
 
-<script src="../viewForm.js"></script>
+<script src="../../../viewForm.js"></script>
 <!-- jQuery 2.2.3 -->
-<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script> -->
 <!-- Bootstrap 3.3.6 -->
 <script src="../../bootstrap/js/bootstrap.min.js"></script>
 <!-- DataTables -->
@@ -410,5 +412,6 @@
     });
   });
 </script>
+
 </body>
 *</html>

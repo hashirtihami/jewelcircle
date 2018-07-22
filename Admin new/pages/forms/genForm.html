@@ -190,6 +190,10 @@
               </div>
                   <select id="existingCatg" class="form-control hideShow" name="proCategory">
                   <!-- <select onblur="checkInput();" id="existingCatg" class="form-control hideShow" name="proCategory"> -->
+
+
+                  <!-- Go to LINE NO 244.  -->
+
                     
                     <option value="bracelet" selected="selected">Bracelet</option>
                     <option value="ring">Ring</option>
@@ -208,11 +212,11 @@
                   <label>Product Type</label>
                   <div class="form-group">
                     <label class="chotaSize">
-                      <input type="radio" name="r34" onclick="displayExistingTypes(); alert('hi');">
+                      <input type="radio" name="r34" onclick="displayExistingTypes();">
                       <span>Choose existing type</span>
                    </label>
                    <label class="chotaSize">
-                      <input type="radio" name="r34" onclick="displayNewType();" onclick="checkInput();">
+                      <input type="radio" name="r34" onclick="displayNewType();">
                       <span>Add New</span>
                    </label>
 
@@ -220,7 +224,7 @@
                     <option>Heart</option>
                     <option>Infinity</option>
                   </select>
-              <div class="input-group input-group-sm hideShow" id="newTypes">
+              <div class="input-group input-group-sm hideShow" id="newType">
                 <input type="text" class="form-control" placeholder="Enter name of new product...">
                     <span id="newButton" class="input-group-btn">
                       <button type="button" class="btn btn-info btn-flat">Add New Type</button>
@@ -237,7 +241,7 @@
                 <div class="form-group">
                 <div class="form-group">
                   <label>Product Description</label>
-                  <textarea class="form-control" rows="3" placeholder="Enter a few details of the product..."></textarea>
+                  <textarea onclick="checkInput();" class="form-control" rows="3" placeholder="Enter a few details of the product..."></textarea>
                 </div>
               <div class="form-group">
                 <label>Plating: </label>
@@ -248,31 +252,31 @@
                   <input type="checkbox" value="Silver" name="plateType" onclick="displayPriceInputSilver();"> Silver
                 </label>
                 <div class="form-group hideShow" id="priceInputGold">
-                  <input id="english" type="text" class="form-control" placeholder="Gold price ...">
+                  <input type="text" class="form-control" placeholder="Gold price ...">
                 </div>
                 <div class="form-group hideShow" id="priceInputSilver">
-                  <input id="english" type="text" class="form-control" placeholder="Silver price ...">
+                  <input type="text" class="form-control" placeholder="Silver price ...">
                 </div>
               </div>
                 <div class="form-group">
-                <label onclick="counts();">Language: </label>
-                <label for="english" class="chotaSize">
-                  <input type="checkbox" name="language" onclick="displayPriceInputEng();"> English
+                <label>Language: </label>
+                <label class="chotaSize">
+                  <input type="checkbox" name="language" onclick="displayPriceInputEnglish();"> English
                 </label>
                 <label class="chotaSize">
                   <input type="checkbox" name="language" onclick="displayPriceInputUrdu();"> Urdu
                 </label>
                 <label class="chotaSize">
-                  <input type="checkbox" name="language" onclick="displayPriceInputArab();"> Arabic
+                  <input type="checkbox" name="language" onclick="displayPriceInputArabic();"> Arabic
                 </label>
-                <div class="form-group hideShow" id="priceInputEng">
-                  <input id="english" type="text" class="form-control" placeholder="Additional price(English) ...">
+                <div class="form-group hideShow" id="priceInputEnglish">
+                  <input type="text" class="form-control" placeholder="Additional price(English) ...">
                 </div>
                 <div class="form-group hideShow" id="priceInputUrdu">
-                  <input id="english" type="text" class="form-control" placeholder="Additional price(Urdu) ...">
+                  <input type="text" class="form-control" placeholder="Additional price(Urdu) ...">
                 </div>
-                <div class="form-group hideShow" id="priceInputArab">
-                  <input id="english" type="text" class="form-control" placeholder="Additional price(Arabic) ...">
+                <div class="form-group hideShow" id="priceInputArabic">
+                  <input type="text" class="form-control" placeholder="Additional price(Arabic) ...">
                 </div>
               </div>
 
@@ -355,7 +359,7 @@
       radioClass: 'iradio_flat-green'
     });
 </script>
-<script src="../viewForm.js"></script>
+<script src="../../../viewForm.js"></script>
 
 </body>
 </html>
