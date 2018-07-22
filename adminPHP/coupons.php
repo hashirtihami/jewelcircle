@@ -1,6 +1,7 @@
 <?php
   require 'templates/top.inc.php';
   require 'couponsTable.php';
+  require 'popup.php';
   require 'templates/bottom.inc.php';
   require 'connect.inc.php';
 ?>
@@ -32,5 +33,6 @@
 			    echo mysqli_use_result($conn);
 			}
 		}
+		echo "<meta http-equiv='refresh' content='0'>";
 	}
 ?>

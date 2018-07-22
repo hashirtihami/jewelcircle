@@ -58,7 +58,6 @@
             <th>Code</th>
             <th>Discount(%)</th>
             <th>Description</th>
-            <th>Usage/Limit</th>
             <th>Expiry Date</th>
             <th></th>
           </tr>
@@ -72,7 +71,6 @@
               echo '<td>'.$query_array["couponCode"].'</td>';
               echo '<td>'.$query_array["discount"].'</td>';
               echo '<td>'.$query_array["description"].'</td>';
-              echo '<td>'.$query_array["usageLimit"].'</td>';
               echo '<td>'.$query_array["expiryDate"].'</td>';
               echo '<td><div class="btn-group">
                   <button type="button" class="btn bg-grey buttonDel"><i class="fas fa-trash-alt"></i></button>
@@ -80,154 +78,12 @@
               echo '</tr>';
             }
           ?>
-          <tr>
-            <td>Trident</td>
-            <td>Internet Explorer 4.0
-            </td>
-            <td>Win 95+</td>
-            <td> 4</td>
-            <td></td>
-            <td>
-              <div class="btn-group">
-                <button type="button" class="btn bg-grey buttonDel"><i class="fas fa-trash-alt"></i></button>
-              </div></td>
-          </tr>
-          <tr>
-            <td>Trident</td>
-            <td>Internet Explorer 5.0
-            </td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation</td>
-            <td>5</td>
-            <td></td>
-            <td>
-              <div class="btn-group">
-                <button type="button" class="btn bg-grey buttonDel"><i class="fas fa-trash-alt"></i></button>                      
-              </div></td>
-          </tr>
-          <tr>
-            <td>Trident</td>
-            <td>Internet
-              Explorer 6
-            </td>
-            <td>Win 98+</td>
-            <td>6</td>
-            <td></td>
-            <td>
-              <div class="btn-group">
-                <button type="button" class="btn bg-grey buttonDel"><i class="fas fa-trash-alt"></i></button>
-              </div></td>
-          </tr>
-          <tr>
-            <td>Trident</td>
-            <td>Internet Explorer 7</td>
-            <td>Win XP SP2+</td>
-            <td>7</td>
-            <td></td>
-            <td>
-              <div class="btn-group">
-                <button type="button" class="btn bg-grey buttonDel"><i class="fas fa-trash-alt"></i></button>
-              </div></td>
-          </tr>
-          <tr>
-            <td>Trident</td>
-            <td>AOL browser (AOL desktop)</td>
-            <td>Win XP</td>
-            <td>6</td>
-            <td></td>
-            <td>
-              <div class="btn-group">
-                <button type="button" class="btn bg-grey buttonDel"><i class="fas fa-trash-alt"></i></button>
-              </div></td>
-          </tr>
-          <tr>
-            <td>Misc</td>
-            <td>NetFront 3.4</td>
-            <td>Embedded devices</td>
-            <td>-</td>
-            <td></td>
-            <td>
-              <div class="btn-group">
-                <button type="button" class="btn bg-grey buttonDel"><i class="fas fa-trash-alt"></i></button>
-              </div></td>
-          </tr>
-          <tr>
-            <td>Misc</td>
-            <td>Dillo 0.8</td>
-            <td>Embedded devices</td>
-            <td>-</td>
-            <td></td>
-            <td>
-              <div class="btn-group">
-                <button type="button" class="btn bg-grey buttonDel"><i class="fas fa-trash-alt"></i></button>
-              </div></td>
-          </tr>
-          <tr>
-            <td>Misc</td>
-            <td>Links</td>
-            <td>Text only</td>
-            <td>-</td>
-            <td></td>
-            <td>
-              <div class="btn-group">
-                <button type="button" class="btn bg-grey buttonDel"><i class="fas fa-trash-alt"></i></button>
-              </div></td>
-          </tr>
-          <tr>
-            <td>Misc</td>
-            <td>Lynx</td>
-            <td>Text only</td>
-            <td>-</td>
-            <td></td>
-            <td>
-              <div class="btn-group">
-                <button type="button" class="btn bg-grey buttonDel"><i class="fas fa-trash-alt"></i></button>
-              </div></td>
-          </tr>
-          <tr>
-            <td>Misc</td>
-            <td>IE Mobile</td>
-            <td>Windows Mobile 6</td>
-            <td>-</td>
-            <td></td>
-            <td>
-              <div class="btn-group">
-                <button type="button" class="btn bg-grey buttonDel"><i class="fas fa-trash-alt"></i></button>
-              </div></td>
-          </tr>
-          <tr>
-            <td>Misc</td>
-            <td>PSP browser</td>
-            <td>PSP</td>
-            <td>-</td>
-            <td></td>
-            <td>
-              <div class="btn-group">
-                <button type="button" class="btn bg-grey buttonDel"><i class="fas fa-trash-alt"></i></button>
-              </div></td>
-          </tr>
-          <tr>
-           <!--  <td class="a-center ">
-              <input type="checkbox" class="flat" name="table_records">
-            </td>  -->                 
-            <td>Other browsers</td>
-            <td>All others</td>
-            <td>-</td>
-            <td>-</td>
-            <td></td>
-            <td>
-              <div class="btn-group">
-                <button type="button" class="btn bg-grey buttonDel"><i class="fas fa-trash-alt"></i></button>
-              </div></td>
-          </tr>
         </tbody>
         <tfoot>
           <tr>
             <th>Code</th>
             <th>Discount(%)</th>
             <th>Description</th>
-            <th>Usage/Limit</th>
             <th>Expiry Date</th>
             <th></th>
           </tr>
