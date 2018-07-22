@@ -180,6 +180,16 @@ $("form").change(function(){
 });
 
 $(document).ready(function() {
+	var d = new Date();
+
+	var month = d.getMonth()+1;
+	var day = d.getDate();
+
+	var output = d.getFullYear() + '-' +
+	    ((''+month).length<2 ? '0' : '') + month + '-' +
+	    ((''+day).length<2 ? '0' : '') + day;
+	$("input[type='date']").attr("min", output);
+	$("input[type='date']").val(output);
 	$("#example1").on('click', '.buttonDel', function() {
 		$(this).closest('tr').fadeOut("slow");
 	})
