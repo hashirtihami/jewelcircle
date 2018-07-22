@@ -191,7 +191,10 @@ $(document).ready(function() {
 	$("input[type='date']").attr("min", output);
 	$("input[type='date']").val(output);
 	$("#example1").on('click', '.buttonDel', function() {
-		$(this).closest('tr').fadeOut("slow");
+		var target = this;
+		$("#delete").click(function() {
+			 $(target).closest('tr').fadeOut("slow");
+		})
 	})
 })
 

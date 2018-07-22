@@ -77,8 +77,6 @@
                  Zaid Farouqi - Entrepreneur
                 </p>
               </li>
- 
-              </li>
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
