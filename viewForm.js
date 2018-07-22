@@ -68,11 +68,11 @@ function displayPriceInputDouble() {
 	}
 }
 
-function displayAddCoupon() {
-	if ($("#addCoupon").is(":hidden")) {
-       $("#addCoupon").slideDown("slow");
+function displayAddNew() {
+	if ($("#addNew").is(":hidden")) {
+       $("#addNew").slideDown("slow");
    } else {
-       $("#addCoupon").slideUp("slow");
+       $("#addNew").slideUp("slow");
    }
 }
 
@@ -180,7 +180,18 @@ $("form").change(function(){
 });
 
 $(document).ready(function() {
-	$("#example1").on('click', '.buttons', function() {
+	$("#example1").on('click', '.buttonDel', function() {
 		$(this).closest('tr').fadeOut("slow");
 	})
+})
+
+// $(document).ready(function() {
+// 	$("#example1").on('click', '.addButton', function() {
+// 		// $('#example1 tr:last').after('<tr>...</tr><tr>...</tr>');
+// 		alert("hi");
+// 	})
+// })
+$("#example1").on('click', '.addButton', function() {
+	$('#example1 tr:last').after('<tr>...</tr><tr>...</tr><tr>...</tr>');
+	// alert("hi");
 })
