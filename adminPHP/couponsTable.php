@@ -8,7 +8,7 @@
 <section class="content-header">
   <h1>Coupons
     <!-- <button id="abc" type="button" class="btn bg-blue margin">Add new coupon <i class="fas fa-plus-circle"></i></button></h1> -->
-	<button type="button" class="btn bg-blue margin" onclick="displayAddNew();">Add new coupon <i class="fas fa-plus-circle"></i></button></h1>
+	<button type="button" class="btn bg-blue margin" onclick="displayAddNew();">Add new <i class="fas fa-plus-circle"></i></button></h1>
   <ol class="breadcrumb">
     <li><a href="../../home.html"><i class="fas fa-home"></i> Home</a></li>
     <li id="heee"> E-Commerce</li>

@@ -120,9 +120,9 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/tables/orders.html"><i class="fas fa-angle-double-right"></i> Orders</a></li>
+            <li><a href="orders.php"><i class="fas fa-angle-double-right"></i> Orders</a></li>
             <li><a href="coupons.php"><i class="fas fa-angle-double-right"></i> Coupons</a></li>
-            <li><a href="pages/giftcards.html"><i class="fas fa-angle-double-right"></i> Giftcards</a></li>
+            <li><a href="giftcards.php"><i class="fas fa-angle-double-right"></i> Giftcards</a></li>
             <li><a href="shipping.php"><i class="fas fa-angle-double-right"></i> Shipping</a></li>
           </ul>
         </li>
