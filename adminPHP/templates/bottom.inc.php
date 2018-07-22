@@ -1,5 +1,5 @@
-	</div>
-  </aside>
+
+  </div>
   <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
