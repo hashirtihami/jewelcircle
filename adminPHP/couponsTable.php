@@ -74,7 +74,7 @@
               echo '<td>'.$query_array["expiryDate"].'</td>';
               echo '<td><div class="btn-group">
                   <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm"><i class="fas fa-trash-alt"></i></button>
-                </div></td></td>';
+                </div></td>';
               echo '</tr>';
             }
           ?>
