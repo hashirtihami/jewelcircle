@@ -190,11 +190,24 @@ $(document).ready(function() {
 	    ((''+day).length<2 ? '0' : '') + day;
 	$("input[type='date']").attr("min", output);
 	$("input[type='date']").val(output);
-	$("#example1").on('click', '.buttonDel', function() {
+	$("#example1").on('click', '.buttonDel', function(e) {
+		e.preventDefault();
 		var target = this;
+		var code;
 		$("#delete").click(function() {
-			 $(target).closest('tr').fadeOut("slow");
-		})
+ 			code = $(target).closest('tr').children().html();
+ 			console.log(code);
+			$.ajax({
+				method: 'POST',
+				data: {couponCode: code},
+				success: function(){
+					$(target).closest('tr').fadeOut("slow");
+				},
+				error: function(error){
+				console.log(error);
+				}
+			});
+		});
 	})
 })
 
