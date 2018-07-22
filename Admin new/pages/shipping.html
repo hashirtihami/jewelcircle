@@ -37,26 +37,24 @@
 </style>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
- <header class="main-header">
+  <header class="main-header">
     <!-- Logo -->
-    <a href="../home.html" class="logo">
+    <a href="home.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>P</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>Panel</span>
+      <span class="logo-lg">Admin Panel</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
       </a>
 
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
+
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -69,10 +67,9 @@
                 <img src="../dist/img/user0.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Zaid Farouqi - Entrepreneur
+                 Zaid Farouqi - Entrepreneur
                 </p>
               </li>
-              </li>   
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
@@ -190,8 +187,11 @@
                   <td>Win 95+</td>
                   <td>
                     <div class="btn-group">
-                      <button type="button" class="btn bg-grey buttonDel"><i class="fas fa-trash-alt"></i></button>
-                    </div></td>
+                      <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>Trident</td>
@@ -217,6 +217,30 @@
                 </tr>
                 </tfoot>
     </section>
+<div class="example-modal">
+        <div class="modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Default Modal</h4>
+              </div>
+              <div class="modal-body">
+                <p>One fine body&hellip;</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+      </div>
+      <!-- /.example-modal -->
        
 
 </div>

@@ -185,13 +185,3 @@ $(document).ready(function() {
 	})
 })
 
-// $(document).ready(function() {
-// 	$("#example1").on('click', '.addButton', function() {
-// 		// $('#example1 tr:last').after('<tr>...</tr><tr>...</tr>');
-// 		alert("hi");
-// 	})
-// })
-$("#example1").on('click', '.addButton', function() {
-	$('#example1 tr:last').after('<tr>...</tr><tr>...</tr><tr>...</tr>');
-	// alert("hi");
-})
