@@ -194,8 +194,8 @@ $(document).ready(function() {
 		var target = $(this).parent();
 		$("#delete").unbind().on("click", function() {
  			var row = $(target).parent();
- 			var couponCode = $(row).children("td:first").html();
- 			$.post( "delete.php",{couponCode: couponCode }, function( data ) {
+ 			var data = $(row).children("td:first").html();
+ 			$.post("delete.php" ,{data: data }, function( data ) {
  				console.log(data);
 				row.fadeOut("slow");
 			});
@@ -203,11 +203,3 @@ $(document).ready(function() {
 	});
 });
 
-$(document).ready(function() {
-	$('#some').on('click', '.buttonDel', function()	{
-		var target = this.parentNode.parentNode.parentNode.parentNode;
-		$('#delete').click(function() {
-			$(target).fadeOut('slow');
-		})
-	})
-})

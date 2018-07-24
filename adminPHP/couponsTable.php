@@ -8,7 +8,8 @@
 <section class="content-header">
   <h1>Coupons
     <!-- <button id="abc" type="button" class="btn bg-blue margin">Add new coupon <i class="fas fa-plus-circle"></i></button></h1> -->
-	<button type="button" class="btn bg-blue margin" onclick="displayAddNew();">Add new <i class="fas fa-plus-circle"></i></button></h1>
+    <button type="button" class="btn bg-blue margin" onclick="displayAddNew();">Add new <i class="fas fa-plus-circle"></i></button>
+  </h1>
   <span><h4 id="warning" class="error hideShow"><i class="fa fa-warning"></i> Coupon Exists</h4></span>
   <ol class="breadcrumb">
     <li><a href="../../home.html"><i class="fas fa-home"></i> Home</a></li>
@@ -26,7 +27,7 @@
 			<form role="form" action="<?php echo $_SERVER['SCRIPT_NAME']?>" method="POST">
 				<div class="form-group">
 					<!-- <label>Text</label> -->
-					<input type="text" name="couponCode" class="form-control" placeholder="Coupon Code..." required>
+					<input type="text" name="couponCode" class="form-control" placeholder="Coupon Code..." style="text-transform:uppercase;" required>
 				</div> <br>
 				<div class="form-group">
 					<!-- <label>Text</label> -->

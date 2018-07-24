@@ -7,6 +7,7 @@
         Shipping Chart
         <button type="button" class="btn bg-blue margin" onclick="displayAddNew();">New entry <i class="fas fa-plus-circle"></i></button>
       </h1>
+      <span><h4 id="warning" class="error hideShow"><i class="fa fa-warning"></i> Entry Exists</h4></span>
       <ol class="breadcrumb">
         <li><a href="../home.html"><i class="fas fa-home"></i> Home</a></li>
         <li> E-Commerce</li>
@@ -18,16 +19,16 @@
     <section class="content">
       <div class="hideShow" id="addNew">
           <div class="box-body" style="width: 75%;">
-              <form role="form">
+              <form role="form" action="<?php echo $_SERVER['SCRIPT_NAME']?>" method="POST">
                 <div class="form-group">
                   <!-- <label>Text</label> -->
-                    <input type="text" name="country" class="form-control" placeholder="Name of country...">
+                    <input type="text" name="country" class="form-control" placeholder="Name of country..." required>
                 </div> <br>
                 <div class="form-group">
                   <!-- <label>Text</label> -->
-                    <input type="text" name="cost" class="form-control" placeholder="Shipping cost...">
+                    <input type="number" name="cost" min="0" class="form-control" placeholder="Shipping cost..." required>
                 </div>
-                <button type="button" class="btn bg-blue margin";>Proceed <i class="far fa-check-circle"></i></button>   
+                <button type="submit" name="submit" class="btn bg-blue margin";>Proceed <i class="far fa-check-circle"></i></button>   
             </form>
       </div>
     </div>

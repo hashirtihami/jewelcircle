@@ -27,6 +27,7 @@
 			if(mysqli_query($conn, $query)){
 			    echo mysqli_use_result($conn);
 			}
+      echo "<meta http-equiv='refresh' content='0'>";
 		}
 	}
 ?>
