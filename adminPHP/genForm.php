@@ -5,26 +5,7 @@
   require 'connect.inc.php';
 ?>
 
-<style type="text/css">
-  .hideShow {
-    display: none;
-  }
-  .chotaSize   {
-    font-weight: 100 !important;
-    padding: 4px;
-  }
-  #newButton  {
-    margin: 5px 0px !important;
-  }
-  #warning{
-    display: none;
-    font-size: 12px;
-  }
-  .error{
-    color: red;
-    display: block;
-  }
-</style>
+<link rel="stylesheet" type="text/css" href="utils.css">
 
 <script src="../viewForm.js"></script>
 

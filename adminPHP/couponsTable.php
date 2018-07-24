@@ -9,6 +9,7 @@
   <h1>Coupons
     <!-- <button id="abc" type="button" class="btn bg-blue margin">Add new coupon <i class="fas fa-plus-circle"></i></button></h1> -->
 	<button type="button" class="btn bg-blue margin" onclick="displayAddNew();">Add new <i class="fas fa-plus-circle"></i></button></h1>
+  <span><h4 id="warning" class="error hideShow"><i class="fa fa-warning"></i> Coupon Exists</h4></span>
   <ol class="breadcrumb">
     <li><a href="../../home.html"><i class="fas fa-home"></i> Home</a></li>
     <li id="heee"> E-Commerce</li>
@@ -33,7 +34,7 @@
 				</div>
 				<div class="form-group">
 					<!-- <label>Text</label> -->
-					<input type="number" name="discount" class="form-control" placeholder="Discount(%)..." required>
+					<input type="number" name="discount" class="form-control" max="100" placeholder="Discount(%)..." required>
         </div>
         <div class="form-group">
           <!-- <label>Text</label> -->
@@ -72,11 +73,7 @@
               echo '<td>'.$query_array["discount"].'</td>';
               echo '<td>'.$query_array["description"].'</td>';
               echo '<td>'.$query_array["expiryDate"].'</td>';
-              echo '<td><div class="btn-group">
-                  <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
-                    <i class="fas fa-trash-alt"></i>
-                  </button>
-                </div></td></td>';
+              echo '<td><button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm"><i class="fas fa-trash-alt"></i></button></td>';
               echo '</tr>';
             }
           ?>
