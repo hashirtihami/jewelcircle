@@ -27,7 +27,7 @@
 			<form role="form" action="<?php echo $_SERVER['SCRIPT_NAME']?>" method="POST">
 				<div class="form-group">
 					<!-- <label>Text</label> -->
-					<input type="text" name="couponCode" class="form-control" placeholder="Coupon Code..." style="text-transform:uppercase;" required>
+					<input type="text" name="couponCode" class="form-control" maxlength="5" placeholder="Coupon Code..." style="text-transform:uppercase;" required>
 				</div> <br>
 				<div class="form-group">
 					<!-- <label>Text</label> -->

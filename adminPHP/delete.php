@@ -4,7 +4,7 @@
 		$delete = $_POST['data'];
 		echo $delete;
 		if(!empty($delete)){
-			$query = "DELETE FROM coupon WHERE couponCode='$delete'";
+			$query = "DELETE FROM coupon WHERE couponCode='$delete' COLLATE SQL_Latin1_General_CP1_CS_AS";
 			if(mysqli_query($conn, $query)){
 			    echo mysqli_use_result($conn);
 			}

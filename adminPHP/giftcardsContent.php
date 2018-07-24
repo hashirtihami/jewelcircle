@@ -42,9 +42,9 @@
             <div class="box-header with-border">
               <h3 class="box-title">Happy Birthday(1)</h3>
 
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool buttonDel" data-toggle="modal" data-target="#delConfirm"><i class="fas fa-trash-alt"></i></button>
-              </div>
+              <!-- <div class="box-tools pull-right"> -->
+                <button type="button" class="btn btn-box-tool buttonDel pull-right box-tools" data-toggle="modal" data-target="#delConfirm"><i class="fas fa-trash-alt"></i></button>
+              <!-- </div> -->
               <!-- /.box-tools -->
             </div>
             <!-- /.box-header -->
