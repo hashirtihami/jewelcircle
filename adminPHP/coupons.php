@@ -8,7 +8,7 @@
 
 <?php
 	if(isset($_POST['submit'])){
-		$couponCode = $_POST['couponCode'];
+		$couponCode = strtoupper($_POST['couponCode']);
 		$desc = $_POST['description'];
 		$discount = $_POST['discount'];
 		$expDate = $_POST['expiryDate'];
