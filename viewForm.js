@@ -203,3 +203,11 @@ $(document).ready(function() {
 	});
 });
 
+$(document).ready(function() {
+	$('#some').on('click', '.buttonDel', function()	{
+		var target = this.parentNode.parentNode.parentNode.parentNode;
+		$('#delete').click(function() {
+			$(target).fadeOut('slow');
+		})
+	})
+})

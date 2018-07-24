@@ -6,6 +6,10 @@
   require 'connect.inc.php';
 ?>
 <style type="text/css">
+	.container{
+    padding: 0;
+    width: auto;
+  }
   .img-thumb {
     display: inline-block;
     max-width: 100%;
