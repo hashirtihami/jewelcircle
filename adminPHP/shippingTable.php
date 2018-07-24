@@ -1,3 +1,6 @@
+<?php
+  require 'connect.inc.php';
+?>
 <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
@@ -39,37 +42,17 @@
                   </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <td>Pakistan</td>
-                  <td>Win 95+</td>
-                  <td>
-                    <div class="btn-group">
-                      <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>India</td>
-                  <td>Win 95+</td>
-                  <td>
-                    <div class="btn-group">
-                      <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
-                    </div></td>
-                </tr>
-                <tr>
-                  <td>UK</td>
-                  <td>Win 95+</td>
-                  <td>
-                    <div class="btn-group">
-                      <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
-                    </div></td>
-                </tr>
+                <?php
+                  $query = "SELECT * FROM shipping ORDER BY shippingId";
+                  $query_run = mysqli_query($conn, $query);
+                  while($query_array = mysqli_fetch_array($query_run)){
+                    echo "<tr>";
+                    echo '<td>'.$query_array["country"].'</td>';
+                    echo '<td>'.$query_array["cost"].'</td>';
+                    echo '<td><button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm"><i class="fas fa-trash-alt"></i></button></td>';
+                    echo '</tr>';
+                  }
+                ?>
               </tbody>
               <tfoot>
                   <tr>

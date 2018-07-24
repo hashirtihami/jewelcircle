@@ -6,10 +6,5 @@
 	require 'connect.inc.php';
 ?>
 
-<style>
-	.hideShow {
-		display: none;
-	}
-</style>
-
-<script src="../../viewForm.js"></script>
+<link rel="stylesheet" type="text/css" href="utils.css">
+<script src="../viewForm.js"></script>
