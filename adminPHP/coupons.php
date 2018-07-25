@@ -35,4 +35,9 @@
 <link rel="stylesheet" type="text/css" href="utils.css">
 
 <script src="../viewForm.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('tbody > div').addClass('deleteSelection');
+  })
+</script>
 

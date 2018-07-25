@@ -20,7 +20,7 @@
 			<form role="form" action="<?php echo $_SERVER['SCRIPT_NAME']?>" method="POST">
 				<div class="form-group">
 					<!-- <label>Text</label> -->
-					<input type="text" name="name" class="form-control" placeholder="Coupon Code..." required>
+					<input type="text" name="name" class="form-control" placeholder="Giftcard name..." required>
 				</div>
 	            <div class="form-group">
                   <label for="exampleInputFile">Product Images</label>
