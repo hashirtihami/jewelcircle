@@ -197,7 +197,9 @@ $(document).ready(function() {
  			var data = $(row).children("td:first").html();
  			$.post("delete.php" ,{data: data }, function( data ) {
  				console.log(data);
-				row.fadeOut("slow");
+				row.fadeOut("slow", function(){
+					row.remove();
+				});
 			});
 		});
 	});
