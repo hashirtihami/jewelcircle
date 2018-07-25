@@ -6,10 +6,41 @@
 	require 'connect.inc.php';
 ?>
 
-<style>
-	.hideShow {
-		display: none;
+<?php
+	if(isset($_POST['submit'])){
+		$country = $_POST['country'];
+		$cost = $_POST['cost'];
+		$query = "SELECT * FROM shipping WHERE country = '$country'";
+        //echo $query;
+        $result = mysqli_query($conn, $query);
+        if(mysqli_num_rows($result)>0){
+          echo "<script type='text/javascript'>
+                  function error(){
+                    $('#warning').css('display', 'block');
+                   }
+                   error();
+                </script>";
+        }else if(!empty($country)&&!empty($cost)){
+			$query = "INSERT INTO shipping (country, cost) VALUES ('$country','$cost')";
+			if(mysqli_query($conn, $query)){
+			    echo mysqli_use_result($conn);
+			}
+			echo "<meta http-equiv='refresh' content='0'>";
+		}
 	}
-</style>
+?>
 
-<script src="../../viewForm.js"></script>
+<link rel="stylesheet" type="text/css" href="utils.css">
+<script type="text/javascript">
+  $(".buttonDel").on('click', function() {
+    var target = $(this).parent();
+    $("#delete").unbind().on("click", function() {
+        var row = $(target).parent();
+        var country = $(row).children("td:first").html();
+        $.post( "delete.php",{country: country }, function( data ) {
+          row.fadeOut("slow");
+      });
+    });
+  });
+</script>
+<script src="../viewForm.js"></script>

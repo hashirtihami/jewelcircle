@@ -38,7 +38,7 @@
         Are you sure nibba?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn bg-grey" data-dismiss="modal">Skip</button>
+        <button id="skip" type="button" class="btn bg-grey" data-dismiss="modal">Skip</button>
         <button id="delete" type="button" data-dismiss="modal" class="btn btn-dark">Delete</button>
       </div>
     </div>

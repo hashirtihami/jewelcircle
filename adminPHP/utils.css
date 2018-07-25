@@ -1,0 +1,18 @@
+  .hideShow {
+    display: none;
+  }
+  .chotaSize   {
+    font-weight: 100 !important;
+    padding: 4px;
+  }
+  #newButton  {
+    margin: 5px 0px !important;
+  }
+  #warning{
+    display: none;
+    font-size: 12px;
+  }
+  .error{
+    color: red;
+    display: block;
+  }

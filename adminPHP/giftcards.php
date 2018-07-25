@@ -22,6 +22,10 @@
 .hideShow {
 	display: none;
 }
+h3 {
+  font-family: 'Dosis', sans-serif !important;
+  color: #e60040;
+}
 </style>
 
 <script src="../viewForm.js"></script>

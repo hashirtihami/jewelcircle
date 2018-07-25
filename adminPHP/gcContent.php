@@ -1,0 +1,132 @@
+<?php
+  //Starting Database Connection
+  require 'connect.inc.php';
+?>
+<section class="content-header">
+      <h1>
+        Giftcards
+		<button type="button" class="btn bg-blue margin" onclick="displayAddNew();">Add new <i class="fas fa-plus-circle"></i></button></h1>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="../home.html"><i class="fas fa-home"></i> Home</a></li>
+        <li> E-Commerce</li>
+        <li class="active"> Giftcards</li>
+      </ol>
+</section>
+<section class="content">
+    <div class="hideShow" id="addNew">
+    	<!-- <section class="content"> -->
+    	<div class="box-body" style="width: 75%;">
+			<form role="form" action="<?php echo $_SERVER['SCRIPT_NAME']?>" method="POST">
+				<div class="form-group">
+					<!-- <label>Text</label> -->
+					<input type="text" name="name" class="form-control" placeholder="Coupon Code..." required>
+				</div>
+	            <div class="form-group">
+                  <label for="exampleInputFile">Product Images</label>
+                  <input type="file" id="exampleInputFile">
+					<p class="help-block">Upload images of new product (upto 3)</p>
+                </div>		
+				
+				<div class="form-group">
+					<input type="text" name="discount" class="form-control" placeholder="Additional cost..." required>
+        		</div>
+       			<button type="submit" id="submit" name="submit" class="btn bg-blue margin">Proceed <i class="far fa-check-circle"></i></button>   
+			</form>
+  		</div>
+    </div>
+
+     <div class="container" id="some">  
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <div class="col-md-3 col-sm-4">
+        <div class="box box-success">
+=======
+=======
+>>>>>>> d7643ee2243b705ae97cb846800fdb5aa931f111
+              <!-- <div class="box-tools pull-right"> -->
+                <button type="button" class="btn btn-box-tool buttonDel pull-right box-tools" data-toggle="modal" data-target="#delConfirm"><i class="fas fa-trash-alt"></i></button>
+              <!-- </div> -->
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <img class="img-thumb" src="Giftcards/1.jpg">
+                <p style="text-align: center;">Rs.50</p>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+        <div class=" col-md-3 col-sm-4">
+          <div class="box box-success">
+>>>>>>> d7643ee2243b705ae97cb846800fdb5aa931f111
+            <div class="box-header with-border">
+              <h3 class="box-title ion-ios-star"> TE AMO</h3>
+            </div>
+            <div class="box-body">
+              <div class="hovereffect">
+                <img class="img-thumb" src="Giftcards/5.jpg" alt="">
+                  <div class="owerlay">
+                    <!-- <h2 class="info">Rs. 50</h2> -->
+                   <a class="info" href="#">
+                    <button type="button" class="btn btn-lg bg-black buttonDel" data-toggle="modal" data-target="#delConfirm">
+                      <i class="fas fa-trash-alt"></i>
+                    </button>
+                   </a>
+                  </div>
+              </div>
+              <p style="text-align: center;">Rs.50</p>
+                <!-- /.box -->
+            </div>
+          </div>
+      </div>
+      <div class="col-md-3 col-sm-4">
+        <div class="box box-success">
+            <div class="box-header with-border">
+              <h3 class="box-title ion-ios-star"> MEJOR AMIGA</h3>
+            </div>
+            <div class="box-body">
+              <div class="hovereffect">
+                <img class="img-thumb" src="Giftcards/8.jpg" alt="">
+                  <div class="owerlay">
+                    <!-- <h2 class="info">Rs. 50</h2> -->
+                   <a class="info" href="#">
+                    <button type="button" class="btn btn-lg bg-black buttonDel" data-toggle="modal" data-target="#delConfirm">
+                      <i class="fas fa-trash-alt"></i>
+                    </button>
+                   </a>
+                  </div>
+              </div>
+              <p style="text-align: center;">Rs.50</p>
+                <!-- /.box -->
+            </div>
+          </div>
+      </div>
+      <div class="col-md-3 col-sm-4">
+        <div class="box box-success">
+            <div class="box-header with-border">
+              <h3 class="box-title ion-ios-star"> meilleur ami</h3>
+            </div>
+            <div class="box-body">
+              <div class="hovereffect">
+                <img class="img-thumb" src="Giftcards/11.jpg" alt="">
+                  <div class="owerlay">
+                    <!-- <h2 class="info">Rs. 50</h2> -->
+                   <a class="info" href="#">
+                    <button type="button" class="btn btn-lg bg-black buttonDel" data-toggle="modal" data-target="#delConfirm">
+                      <i class="fas fa-trash-alt"></i>
+                    </button>
+                   </a>
+                  </div>
+              </div>
+              <p style="text-align: center;">Rs.100</p>
+                <!-- /.box -->
+            </div>
+          </div>
+      </div>
+
+       </div>
+     </section>
