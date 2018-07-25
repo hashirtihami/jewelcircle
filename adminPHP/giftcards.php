@@ -32,4 +32,4 @@
 }
 </style>
 
-<script src="../viewFormAwesome.js"></script>
+<script src="../viewForm.js"></script>

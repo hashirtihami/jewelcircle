@@ -191,15 +191,15 @@ $(document).ready(function() {
 	$("input[type='date']").attr("min", output);
 	$("input[type='date']").val(output);
 	$(".buttonDel").on('click', function() {
+		var deleteData = $(this).parentsUntil('.deleteSelection');
 		var target = $(this).parent();
 		$("#delete").unbind().on("click", function() {
  			var row = $(target).parent();
  			var data = $(row).children("td:first").html();
  			$.post("delete.php" ,{data: data }, function( data ) {
  				console.log(data);
-				row.fadeOut("slow", function(){
-					row.remove();
-				});
+				// $(deleteData).fadeOut("slow");
+				$(deleteData).fadeOut('slow');
 			});
 		});
 	});
