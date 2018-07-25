@@ -191,26 +191,27 @@ $(document).ready(function() {
 	$("input[type='date']").attr("min", output);
 	$("input[type='date']").val(output);
 	$(".buttonDel").on('click', function() {
+		var deleteData = $(this).parentsUntil('.deleteSelection');
 		var target = $(this).parent();
 		$("#delete").unbind().on("click", function() {
  			var row = $(target).parent();
  			var data = $(row).children("td:first").html();
  			$.post("delete.php" ,{data: data }, function( data ) {
  				console.log(data);
-				row.fadeOut("slow");
+				// $(deleteData).fadeOut("slow");
+				$(deleteData).fadeOut('slow');
 			});
 		});
 	});
 });
 
 					// DELETE GIFTCARD
-$(document).ready(function() {
-	$('#some').on('click', '.buttonDel', function()	{
-        // $('.box').addClass('grayscale');
-		var target = this.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
-		$('#delete').click(function() {
-			$(target).fadeOut('slow');
-		})
-	})
-})
-
+// $(document).ready(function() {
+// 	$('#some').on('click', '.buttonDel', function()	{
+//         // $('.box').addClass('grayscale');
+// 		var target = $(this).parentsUntil('.deleteSelection');
+// 		$('#delete').click(function() {
+// 			$(target).fadeOut('slow');
+// 		})
+// 	})
+// })

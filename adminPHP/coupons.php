@@ -34,5 +34,5 @@
 
 <link rel="stylesheet" type="text/css" href="utils.css">
 
-<script src="../viewForm.js"></script>
+<script src="../viewFormAwesome.js"></script>
 
