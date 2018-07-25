@@ -31,16 +31,4 @@
 ?>
 
 <link rel="stylesheet" type="text/css" href="utils.css">
-<script type="text/javascript">
-  $(".buttonDel").on('click', function() {
-    var target = $(this).parent();
-    $("#delete").unbind().on("click", function() {
-        var row = $(target).parent();
-        var country = $(row).children("td:first").html();
-        $.post( "delete.php",{country: country }, function( data ) {
-          row.fadeOut("slow");
-      });
-    });
-  });
-</script>
-<script src="../viewForm.js"></script>
+<script src="js/tables.js"></script>

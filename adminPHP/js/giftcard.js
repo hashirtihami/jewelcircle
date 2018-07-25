@@ -14,3 +14,4 @@ function displayAddNew() {
        $("#addNew").slideUp("slow");
    }
 }
+

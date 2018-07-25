@@ -68,13 +68,6 @@ function displayPriceInputDouble() {
 	}
 }
 
-function displayAddNew() {
-	if ($("#addNew").is(":hidden")) {
-       $("#addNew").slideDown("slow");
-   } else {
-       $("#addNew").slideUp("slow");
-   }
-}
 function checkInput() {
 	var val = document.getElementById("existingCatg");
 	var chainInput = document.getElementById("chainSize");
@@ -84,3 +77,84 @@ function checkInput() {
 		chainInput.style.display = "block";
 	}
 }
+
+$('input#file').change(function(){
+	$("#imgErr").html("");
+    var files = $(this)[0].files;
+    if(files.length > 3){
+        $("#numFiles").html("You can select max 3 files.");
+        $(this).val("");
+    }
+    else
+    	$("#numFiles").html("");
+});
+
+$("input[name=r3]").change(function(){
+	$("#categoryErr").html("");
+});
+
+$("input[name=r34]").change(function(){
+	$("#typeErr").html("");
+});
+
+$("textarea#desc").on("change keydown paste",function(){
+	$("#descErr").html("");
+});
+
+$("input[name='platingType[]']").change(function(){
+	$("#platingErr").html("");
+});
+
+$("input[name='language[]']").change(function(){
+	$("#languageErr").html("");
+});
+
+$("input[name='wordCount[]']").change(function(){
+	$("#nameTypeErr").html("");
+});
+
+$("#submit").on("click", function(){
+	var formValidated=true;
+	if($(".category-group :checked").length<1){
+		$("#categoryErr").html("Please select one of the following options");
+		formValidated=false;
+	}
+	if($(".type-group :checked").length<1){
+		$("#typeErr").html("Please select one of the following options");
+		formValidated=false;
+	}
+	if($("input#file")[0].files.length<1){
+		$("#imgErr").html("Please select one or more images");
+		formValidated=false;
+	}
+	if(!$("#desc").val()){
+		$("#descErr").html("Please enter description of the product");
+		formValidated=false;
+	}
+	if($(".plating-group :checked").length<1){
+		$("#platingErr").html("Please select one of the following options");
+		formValidated=false;
+	}
+	if($(".language-group :checked").length<1){
+		$("#languageErr").html("Please select one of the following options");
+		formValidated=false;
+	}
+	if($(".nameType-group :checked").length<1){
+		$("#nameTypeErr").html("Please select one of the following options");
+		formValidated=false
+	}
+	if(!$("#length").val()){
+		$("#lengthErr").html("Please enter some value");
+		formValidated=false;
+	}
+	if(!$("#discount").val()){
+		$("#discountErr").html("Please enter some value");
+		formValidated=false;
+	}
+	if(!formValidated){
+		$(this).prop("disabled", true);
+	}
+	var timezone_offset_minutes = new Date().getTimezoneOffset();
+	timezone_offset_minutes = timezone_offset_minutes == 0 ? 0 : -timezone_offset_minutes;
+	$("#date").val(timezone_offset_minutes);
+});

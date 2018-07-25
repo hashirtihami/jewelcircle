@@ -46,7 +46,7 @@
                 <?php
                   $query = "SELECT * FROM shipping ORDER BY shippingId";
                   $query_run = mysqli_query($conn, $query);
-                  while($query_array = mysqli_fetch_array($query_run)){
+                  while(@$query_array = mysqli_fetch_array($query_run)){
                     echo "<tr>";
                     echo '<td>'.$query_array["country"].'</td>';
                     echo '<td>'.$query_array["cost"].'</td>';
