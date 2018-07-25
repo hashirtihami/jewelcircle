@@ -65,11 +65,11 @@
           </tr>
         </thead>
         <tbody>
+          <div class="deleteSelection">
           <?php
             $query = "SELECT * FROM coupon ORDER BY couponId";
             $query_run = mysqli_query($conn, $query);
             while($query_array = mysqli_fetch_array($query_run)){
-              echo "<div class='deleteSelection'>";
               echo "<tr>";
               echo '<td>'.$query_array["couponCode"].'</td>';
               echo '<td>'.$query_array["discount"].'</td>';
@@ -77,9 +77,9 @@
               echo '<td>'.$query_array["expiryDate"].'</td>';
               echo '<td><button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm"><i class="fas fa-trash-alt"></i></button></td>';
               echo '</tr>';
-              echo '</div>';
             }
           ?>
+          </div>
         </tbody>
         <tfoot>
           <tr>

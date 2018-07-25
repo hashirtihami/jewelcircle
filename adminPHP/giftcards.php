@@ -32,4 +32,4 @@
 }
 </style>
 
-<script src="../viewForm.js"></script>
+<script src="js/giftcard.js"></script>
