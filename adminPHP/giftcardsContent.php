@@ -29,7 +29,7 @@
                 </div>		
 				
 				<div class="form-group">
-					<input type="number" name="discount" class="form-control" placeholder="Additional cost..." required>
+					<input type="number" name="price" class="form-control" placeholder="Additional cost..." required>
         		</div>
        			<button type="submit" id="submit" name="submit" class="btn bg-blue margin">Proceed <i class="far fa-check-circle"></i></button>   
 			</form>

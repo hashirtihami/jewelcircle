@@ -9,6 +9,7 @@
 <?php
   if(isset($_POST["submit"])){
     $giftCardName = $_POST["name"];
+    $price = $_POST["price"];
     $fileName = $_FILES["file"]["name"];
     $fileTmpName = $_FILES["file"]["tmp_name"];
     $fileSize = $_FILES["file"]['size'];
@@ -19,8 +20,6 @@
     $fileExt = strtolower(end($fileApart));
 
     $allowed = array('jpg', 'jpeg' , 'png');
-    echo $fileName;
-    echo $fileSize;
     if(in_array($fileExt, $allowed))
     {
       if($fileError===0)
