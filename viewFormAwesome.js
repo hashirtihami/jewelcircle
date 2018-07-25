@@ -203,8 +203,6 @@ $(document).ready(function() {
 	});
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 					// DELETE GIFTCARD
 $(document).ready(function() {
 	$('#some').on('click', '.buttonDel', function()	{

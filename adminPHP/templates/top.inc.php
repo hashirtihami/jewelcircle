@@ -31,7 +31,7 @@
     <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Dosis|Inconsolata|Pacifico" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="dist/css/giftcards.css">
+  <!-- <link rel="stylesheet" type="text/css" href="dist/css/giftcards.css"> -->
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

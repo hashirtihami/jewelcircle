@@ -19,10 +19,10 @@
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
-.hideShow {
+  .hideShow {
 	display: none;
 }
-h3 {
+  h3 {
   font-family: 'Dosis', sans-serif !important;
   color: #e60040;
 }

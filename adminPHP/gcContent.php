@@ -6,7 +6,6 @@
       <h1>
         Giftcards
 		<button type="button" class="btn bg-blue margin" onclick="displayAddNew();">Add new <i class="fas fa-plus-circle"></i></button></h1>
-      </h1>
       <ol class="breadcrumb">
         <li><a href="../home.html"><i class="fas fa-home"></i> Home</a></li>
         <li> E-Commerce</li>
@@ -38,31 +37,8 @@
 
      <div class="container" id="some">  
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div class="col-md-3 col-sm-4">
-        <div class="box box-success">
-=======
-=======
->>>>>>> d7643ee2243b705ae97cb846800fdb5aa931f111
-              <!-- <div class="box-tools pull-right"> -->
-                <button type="button" class="btn btn-box-tool buttonDel pull-right box-tools" data-toggle="modal" data-target="#delConfirm"><i class="fas fa-trash-alt"></i></button>
-              <!-- </div> -->
-              <!-- /.box-tools -->
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-                <img class="img-thumb" src="Giftcards/1.jpg">
-                <p style="text-align: center;">Rs.50</p>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-        </div>
-        <!-- /.col -->
         <div class=" col-md-3 col-sm-4">
           <div class="box box-success">
->>>>>>> d7643ee2243b705ae97cb846800fdb5aa931f111
             <div class="box-header with-border">
               <h3 class="box-title ion-ios-star"> TE AMO</h3>
             </div>
