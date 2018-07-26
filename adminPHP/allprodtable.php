@@ -7,9 +7,8 @@
       display: none;
     }
     .delColumn {
-      width: 150px;
+      width: 20px;
     }
-    
     .nen {
       position: absolute;
       top: 9px;
@@ -27,21 +26,19 @@
 </style>
 
 <section class="content-header">
-      <h1>Orders 
+      <h1>All Products 
         <div class="btn-group showButtons" id="btnAddons">
         <button class="btn bg-light-blue-gradient btn-lg" data-toggle="modal" data-target="#delConfirm">
           <i class="fas fa-trash"></i>
           <span class="label-warning nen counts"></span>
         </button>
-        <button class="btn bg-light-blue-gradient btn-lg"><i class="fas fa-file-download"></i>
-          <span class="label-success nen counts"></span>
-        </button>
+        
         </div>
       </h1>
       <ol class="breadcrumb">
         <li><a href="../../home.html"><i class="fas fa-home"></i> Home</a></li>
         <li> E-Commerce</li>
-        <li class="active"> Orders</li>
+        <li class="active"> All Products</li>
       </ol>
     </section>
 
@@ -60,10 +57,9 @@
                 <thead>
                 <tr>
                   <th></th>
-                  <th>Order</th>
-                  <th>Ship To</th>
-                  <th>Date</th>
-                  <th>Total</th>
+                  <th>Product</th>
+                  <th>Product Type</th>
+                  <th>Price </th>
                   <th class="delColumn">Actions</th>
                 </tr>
                 </thead>
@@ -72,24 +68,21 @@
                     <td class="a-center ">
                       <input type="checkbox" class="flat checks" name="table_records">
                     </td>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
+                    <td>Ring</td>
+                    <td>Heart Ring
                     </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td class="btn-group" role="group">
+                    <td>2401232</td>
+                    
+                    <td >
                       <!-- <div> -->
                         <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
                           <i class="fas fa-trash-alt"></i>
                         </button>
-                        <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
-                        <button type="button" class="btn bg-grey"><i class="fas fa-question-circle"></i></button>
                       <!-- </div> -->
                     </td>
                   </tr>
                   <tr>
-                    <td class="a-center ">
+                    <td class="a-center">
                       <input type="checkbox" class="flat checks" name="table_records">
                     </td>
                     <td>Trident</td>
@@ -97,14 +90,12 @@
                       Explorer 4.0
                     </td>
                     <td>Win 95+</td>
-                    <td> 4</td>
-                    <td class="btn-group" role="group">
+                    
+                    <td >
                       <!-- <div> -->
                         <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
                           <i class="fas fa-trash-alt"></i>
                         </button>
-                        <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
-                        <button type="button" class="btn bg-grey"><i class="fas fa-question-circle"></i></button>
                       <!-- </div> -->
                     </td>
                   </tr>
@@ -117,14 +108,12 @@
                       Explorer 4.0
                     </td>
                     <td>Win 95+</td>
-                    <td> 4</td>
-                    <td class="btn-group" role="group">
+                   
+                    <td >
                       <!-- <div> -->
                         <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
                           <i class="fas fa-trash-alt"></i>
                         </button>
-                        <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
-                        <button type="button" class="btn bg-grey"><i class="fas fa-question-circle"></i></button>
                       <!-- </div> -->
                     </td>
                   </tr>
@@ -137,14 +126,12 @@
                       Explorer 4.0
                     </td>
                     <td>Win 95+</td>
-                    <td> 4</td>
-                    <td class="btn-group" role="group">
+                    
+                    <td >
                       <!-- <div> -->
                         <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
                           <i class="fas fa-trash-alt"></i>
                         </button>
-                        <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
-                        <button type="button" class="btn bg-grey"><i class="fas fa-question-circle"></i></button>
                       <!-- </div> -->
                     </td>
                   </tr>
@@ -155,10 +142,9 @@
                 <tfoot>
                 <tr>
                   <th></th>                 
-                  <th>Order</th>
-                  <th>Ship To</th>
-                  <th>Date</th>
-                  <th>Total</th>
+                  <th>Product</th>
+                  <th>Product Type</th>
+                  <th>Price </th>
                   <th>Actions</th>
                 </tr>
                 </tfoot>

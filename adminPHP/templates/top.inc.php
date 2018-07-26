@@ -135,7 +135,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fas fa-arrow-circle-right"></i> All Products</a></li>
+            <li><a href="allprod.php"><i class="fas fa-arrow-circle-right"></i> All Products</a></li>
             <li><a href="genForm.php"><i class="fas fa-arrow-circle-right"></i> Add New</a></li>
           </ul>
         </li>

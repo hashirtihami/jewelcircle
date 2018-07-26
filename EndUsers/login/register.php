@@ -59,17 +59,17 @@ else { // Email doesn't already exist in a database, proceed...
             //$addressID = mysqli_query('SELECT addressID FROM address LIMIT 1');
            // $addressID ="SELECT addressID FROM address";
             
-
+/*
             $again = "SELECT addressID FROM address LIMIT 1";
             $result = $mysqli->query($again);
             while($query_array = mysqli_fetch_array($result)){
- 
+
             }
             echo $again;
             echo $result;
             die;
 
-           
+  */         
 
         $_SESSION['active'] = 0; //0 until user activates their account with verify.php
         $_SESSION['logged_in'] = true; // So we know the user has logged in
