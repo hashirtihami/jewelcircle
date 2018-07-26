@@ -7,7 +7,7 @@
 
 <link rel="stylesheet" type="text/css" href="utils.css">
 
-<script src="../viewForm.js"></script>
+<script src="js/genForm.js"></script>
 
 <?php
   if(isset($_POST['submit'])){ 
@@ -41,7 +41,7 @@
         {
           if($fileError===0)
           {
-            if($fileSize > 3000)
+            if($fileSize < 3000000)
             {
               //$fileNameNew=$i.uniqid('',true).".".$fileExt;
               $fileNameNew=$i.".".$category.$type.".".$fileExt;

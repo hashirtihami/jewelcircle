@@ -34,10 +34,14 @@
 
 <link rel="stylesheet" type="text/css" href="utils.css">
 
+<<<<<<< HEAD
 <script src="../viewForm.js"></script>
+=======
+<script src="js/tables.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
     $('tbody > div').addClass('deleteSelection');
   })
 </script>
+>>>>>>> fa4f422bf0a18512cfb488bdc9a0d75a8f49b75d
 

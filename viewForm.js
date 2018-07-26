@@ -192,9 +192,46 @@ $(document).ready(function() {
  				console.log(data);
 				row.fadeOut("slow", function(){
 					row.remove();
+					$('#btnAddons').fadeOut('slow');
 				});
 			});
 		});
 	});
 });
 
+// Multi-delete function
+$('#delete').click(function() {
+	var targets = $('.checks');
+	targets.each(function() {
+		if ($(this).is(":checked")) {
+			var row = this.parentNode.parentNode;
+			$(row).fadeOut('slow');
+			$(this).attr('checked', false); 
+			$('#btnAddons').fadeOut('slow');
+		}
+	})
+})
+
+		// count checked checkboxes
+$('.checks').click(function() {
+	var targets = $('.checks');
+	var count = 0;
+	targets.each(function() {
+		if ($(this).is(":checked")) {
+			count++;
+			if(count > 1) {
+				if($('#btnAddons').is(':hidden')) {
+					$('#btnAddons').slideDown('slow');
+				}
+				$('.counts').text(count);
+			}			
+		}
+	})
+		if(count < 2) {
+			$('#btnAddons').slideUp('slow');
+		}
+})
+		// hide Multi-delete button
+$(document).ready(function() {
+	$('#btnAddons').hide();
+})

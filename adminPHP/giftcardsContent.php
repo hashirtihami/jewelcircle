@@ -17,19 +17,19 @@
     <div class="hideShow" id="addNew">
     	<!-- <section class="content"> -->
     	<div class="box-body" style="width: 75%;">
-			<form role="form" action="<?php echo $_SERVER['SCRIPT_NAME']?>" method="POST">
+			<form role="form" action="<?php echo $_SERVER['SCRIPT_NAME']?>" method="POST" enctype="multipart/form-data">
 				<div class="form-group">
 					<!-- <label>Text</label> -->
 					<input type="text" name="name" class="form-control" placeholder="Giftcard name..." required>
 				</div>
 	            <div class="form-group">
                   <label for="exampleInputFile">Product Images</label>
-                  <input type="file" id="exampleInputFile">
-					<p class="help-block">Upload images of new product (upto 3)</p>
+                  <input type="file" name="file" id="exampleInputFile">
+					<p class="help-block">Upload image of new giftcard</p>
                 </div>		
 				
 				<div class="form-group">
-					<input type="text" name="discount" class="form-control" placeholder="Additional cost..." required>
+					<input type="number" name="price" class="form-control" placeholder="Additional cost..." required>
         		</div>
        			<button type="submit" id="submit" name="submit" class="btn bg-blue margin">Proceed <i class="far fa-check-circle"></i></button>   
 			</form>
