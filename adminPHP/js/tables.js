@@ -26,7 +26,7 @@ $(document).ready(function() {
 		var target = $(this).parent();
 		$("#delete").unbind().on("click", function() {
  			var row = $(target).parent();
- 			var data = $(row).find(".code").html();
+ 			var data = $(row).children("td:first").html();
  			$.post("delete.php" ,{data: data }, function( data ) {
  				console.log(data);
 				row.fadeOut("slow", function(){
@@ -36,48 +36,3 @@ $(document).ready(function() {
 		});
 	});
 });
-
-// Multi-delete function
-$('#delete').unbind().click(function() {
-	var targets = $('.checks');
-	targets.each(function() {
-		if ($(this).is(":checked")) {
-			var row = this.parentNode.parentNode;
-			console.log(row);
-			var data = $(row).find(".code").html();
-			$(row).fadeOut('slow', function(){
-				$(row).remove();
-			});
-			$.post("delete.php" ,{data: data }, function( data ) {
- 				console.log(data);
-
-			});
-			$(this).attr('checked', false); 
-			$('#btnAddons').fadeOut('slow');
-		}
-	});
-});
-
-		// count checked checkboxes
-$('.checks').click(function() {
-	var targets = $('.checks');
-	var count = 0;
-	targets.each(function() {
-		if ($(this).is(":checked")) {
-			count++;
-			if(count > 1) {
-				if($('#btnAddons').is(':hidden')) {
-					$('#btnAddons').slideDown('slow');
-				}
-				$('.counts').text(count);
-			}			
-		}
-	})
-		if(count < 2) {
-			$('#btnAddons').slideUp('slow');
-		}
-})
-		// hide Multi-delete button
-$(document).ready(function() {
-	$('#btnAddons').hide();
-})
