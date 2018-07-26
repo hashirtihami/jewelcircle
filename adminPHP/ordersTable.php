@@ -3,14 +3,39 @@
   require 'connect.inc.php';
 ?>
 <style type="">
-     #delColumn {
+    .hideShow {
+      display: none;
+    }
+    .delColumn {
       width: 150px;
+    }
+    .nen {
+      position: absolute;
+      top: 9px;
+      right: 7px;
+      text-align: center;
+      font-size: 11px;
+      padding: 2px 3px;
+      line-height: .9;
+      border-radius: 10px;
+    }
+    .showButtons {
+      display: inline-block;
+      margin-left: 5px;
     }
 </style>
 
 <section class="content-header">
-      <h1>
-        Orders
+      <h1>Orders 
+        <div class="btn-group showButtons" id="btnAddons">
+        <button class="btn bg-light-blue-gradient btn-lg" data-toggle="modal" data-target="#delConfirm">
+          <i class="fas fa-trash"></i>
+          <span class="label-warning nen counts"></span>
+        </button>
+        <button class="btn bg-light-blue-gradient btn-lg"><i class="fas fa-file-download"></i>
+          <span class="label-success nen counts"></span>
+        </button>
+        </div>
       </h1>
       <ol class="breadcrumb">
         <li><a href="../../home.html"><i class="fas fa-home"></i> Home</a></li>
@@ -38,11 +63,91 @@
                   <th>Ship To</th>
                   <th>Date</th>
                   <th>Total</th>
-                  <th id="delColumn">Actions</th>
+                  <th class="delColumn">Actions</th>
                 </tr>
                 </thead>
                 <tbody>
-
+                 <tr>
+                    <td class="a-center ">
+                      <input type="checkbox" class="flat checks" name="table_records">
+                    </td>
+                    <td>Trident</td>
+                    <td>Internet
+                      Explorer 4.0
+                    </td>
+                    <td>Win 95+</td>
+                    <td> 4</td>
+                    <td class="btn-group" role="group">
+                      <!-- <div> -->
+                        <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-question-circle"></i></button>
+                      <!-- </div> -->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="a-center ">
+                      <input type="checkbox" class="flat checks" name="table_records">
+                    </td>
+                    <td>Trident</td>
+                    <td>Internet
+                      Explorer 4.0
+                    </td>
+                    <td>Win 95+</td>
+                    <td> 4</td>
+                    <td class="btn-group" role="group">
+                      <!-- <div> -->
+                        <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-question-circle"></i></button>
+                      <!-- </div> -->
+                    </td>
+                  </tr>
+                   <tr>
+                    <td class="a-center ">
+                      <input type="checkbox" class="flat checks" name="table_records">
+                    </td>
+                    <td>Trident</td>
+                    <td>Internet
+                      Explorer 4.0
+                    </td>
+                    <td>Win 95+</td>
+                    <td> 4</td>
+                    <td class="btn-group" role="group">
+                      <!-- <div> -->
+                        <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-question-circle"></i></button>
+                      <!-- </div> -->
+                    </td>
+                  </tr>
+                                    <tr>
+                    <td class="a-center ">
+                      <input type="checkbox" class="flat checks" name="table_records">
+                    </td>
+                    <td>Trident</td>
+                    <td>Internet
+                      Explorer 4.0
+                    </td>
+                    <td>Win 95+</td>
+                    <td> 4</td>
+                    <td class="btn-group" role="group">
+                      <!-- <div> -->
+                        <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-question-circle"></i></button>
+                      <!-- </div> -->
+                    </td>
+                  </tr>
+                   <tr>
 
 
                 </tbody>
@@ -54,11 +159,6 @@
                   <th>Date</th>
                   <th>Total</th>
                   <th>Actions</th>
- <!--                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th> -->
                 </tr>
                 </tfoot>
               </table>
