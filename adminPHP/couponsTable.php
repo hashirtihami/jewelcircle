@@ -57,6 +57,7 @@
       <table id="example1" class="table table-bordered table-striped">
         <thead>
           <tr>
+            <th></th>
             <th>Code</th>
             <th>Discount(%)</th>
             <th>Description</th>
@@ -71,6 +72,7 @@
             $query_run = mysqli_query($conn, $query);
             while(@$query_array = mysqli_fetch_array($query_run)){
               echo "<tr>";
+              echo '<td><input type="checkbox" class="flat checks" name="table_records"></td>';
               echo '<td>'.$query_array["couponCode"].'</td>';
               echo '<td>'.$query_array["discount"].'</td>';
               echo '<td>'.$query_array["description"].'</td>';
@@ -83,6 +85,7 @@
         </tbody>
         <tfoot>
           <tr>
+            <th></th>
             <th>Code</th>
             <th>Discount(%)</th>
             <th>Description</th>
