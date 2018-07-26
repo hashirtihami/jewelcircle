@@ -26,7 +26,7 @@ $(document).ready(function() {
 		var target = $(this).parent();
 		$("#delete").unbind().on("click", function() {
  			var row = $(target).parent();
- 			var data = $(row).children("td:first").html();
+ 			var data = $(row).find(".code").html();
  			$.post("delete.php" ,{data: data }, function( data ) {
  				console.log(data);
 				row.fadeOut("slow", function(){

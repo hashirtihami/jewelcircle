@@ -205,9 +205,17 @@ $('#delete').click(function() {
 	targets.each(function() {
 		if ($(this).is(":checked")) {
 			var row = this.parentNode.parentNode;
-			$(row).fadeOut('slow');
-			$(this).attr('checked', false); 
-			$('#btnAddons').fadeOut('slow');
+			$.post("delete.php" ,{data: data }, function( data ) {
+ 				console.log(data);
+				row.fadeOut("slow", function(){
+					$(this).attr('checked', false); 
+					$('#btnAddons').fadeOut('slow');
+					row.remove();
+				});
+			});
+			// $(row).fadeOut('slow');
+			// $(this).attr('checked', false); 
+			// $('#btnAddons').fadeOut('slow');
 		}
 	})
 })

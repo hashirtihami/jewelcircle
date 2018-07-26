@@ -73,7 +73,7 @@
             while(@$query_array = mysqli_fetch_array($query_run)){
               echo "<tr>";
               echo '<td><input type="checkbox" class="flat checks" name="table_records"></td>';
-              echo '<td>'.$query_array["couponCode"].'</td>';
+              echo '<td class="code">'.$query_array["couponCode"].'</td>';
               echo '<td>'.$query_array["discount"].'</td>';
               echo '<td>'.$query_array["description"].'</td>';
               echo '<td>'.$query_array["expiryDate"].'</td>';
