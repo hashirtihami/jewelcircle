@@ -2,6 +2,28 @@
   //Starting Database Connection
   require 'connect.inc.php';
 ?>
+<style type="">
+    .hideShow {
+      display: none;
+    }
+    .delColumn {
+      width: 150px;
+    }
+    .nen {
+      position: absolute;
+      top: 9px;
+      right: 7px;
+      text-align: center;
+      font-size: 11px;
+      padding: 2px 3px;
+      line-height: .9;
+      border-radius: 10px;
+    }
+    .showButtons {
+      display: inline-block;
+      margin-left: 5px;
+    }
+</style>
 <!-- Content Wrapper. Contains page content -->
   <!-- <div class="content-wrapper"> -->
     <!-- Content Header (Page header) -->
@@ -9,6 +31,15 @@
   <h1>Coupons
     <!-- <button id="abc" type="button" class="btn bg-blue margin">Add new coupon <i class="fas fa-plus-circle"></i></button></h1> -->
     <button type="button" class="btn bg-blue margin" onclick="displayAddNew();">Add new <i class="fas fa-plus-circle"></i></button>
+    <div class="btn-group showButtons" id="btnAddons">
+        <button class="btn bg-light-blue-gradient btn-lg" data-toggle="modal" data-target="#delConfirm">
+          <i class="fas fa-trash"></i>
+          <span class="label-warning nen counts"></span>
+        </button>
+        <button class="btn bg-light-blue-gradient btn-lg"><i class="fas fa-file-download"></i>
+          <span class="label-success nen counts"></span>
+        </button>
+        </div>
   </h1>
   <span><h4 id="warning" class="error hideShow"><i class="fa fa-warning"></i> Coupon Exists</h4></span>
   <ol class="breadcrumb">
