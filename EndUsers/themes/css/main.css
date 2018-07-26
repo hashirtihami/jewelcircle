@@ -179,7 +179,7 @@ section#copyright{
 section#footer-bar{
 	margin-top:20px;
 	padding-top:10px;
-	background-color:#242424;
+	background-color: black;
 	border-top:1px solid #ddd;
 	color:#777;
 }
@@ -215,7 +215,7 @@ section#footer-bar  .nav a{
 	background: url(../images/trigger_right.png) no-repeat 5px 7px;
 }
 section#footer-bar h4 {
-	padding: 0;
+	padding: 15px;
 	font-size: 16px;
 	color: #fff;
 	font-weight:normal;
