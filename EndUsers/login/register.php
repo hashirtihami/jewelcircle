@@ -41,14 +41,11 @@ if ( $result->num_rows > 0 ) {
 else { // Email doesn't already exist in a database, proceed...
 
     // active is 0 by DEFAULT (no need to include it here)
-    $sql2 = "INSERT INTO address (address, city, zipcode, country) " 
+    $sql1 = "INSERT INTO address (address, city, zipcode, country) " 
             . "VALUES ('$address','$city','$zipcode','$country')";
-
-    
-   
    // $addressID ="SELECT addressID FROM address";
 
-    $sql1 = "INSERT INTO customer (first_name, last_name, email, password, hash, contact) " 
+    $sql2 = "INSERT INTO customer (first_name, last_name, email, password, hash, contact) " 
             . "VALUES ('$first_name','$last_name','$email','$password', '$hash' , '$contact' )";
    
 // ===================== $sql1 aur $sql2 ki jugarr apni taraf sy maari hay .... koi aur hal hay tow kr ley ========================//
@@ -56,20 +53,12 @@ else { // Email doesn't already exist in a database, proceed...
     // Add user to the database
     if ( $mysqli->query($sql1) && $mysqli->query($sql2)  ){
             
-            //$addressID = mysqli_query('SELECT addressID FROM address LIMIT 1');
-           // $addressID ="SELECT addressID FROM address";
-            
-/*
-            $again = "SELECT addressID FROM address LIMIT 1";
-            $result = $mysqli->query($again);
-            while($query_array = mysqli_fetch_array($result)){
+          //$addressID = "SELECT addressID FROM address";
+          $addressID = "SELECT * FROM address ORDER BY addressID DESC LIMIT 1";
+          $foreignID ="INSERT INTO customer (addressID)"
+                      ."VALUES ('$addressID')";
+          $mysqli->query($foreignID);
 
-            }
-            echo $again;
-            echo $result;
-            die;
-
-  */         
 
         $_SESSION['active'] = 0; //0 until user activates their account with verify.php
         $_SESSION['logged_in'] = true; // So we know the user has logged in
