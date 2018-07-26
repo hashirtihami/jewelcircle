@@ -200,17 +200,25 @@ $(document).ready(function() {
 });
 
 // Multi-delete function
-$('#delete').click(function() {
+$('#delete').unbind().click(function() {
 	var targets = $('.checks');
 	targets.each(function() {
 		if ($(this).is(":checked")) {
 			var row = this.parentNode.parentNode;
-			$(row).fadeOut('slow');
+			console.log(row);
+			var data = $(row).find(".code").html();
+			$(row).fadeOut('slow', function(){
+				$(row).remove();
+			});
+			$.post("delete.php" ,{data: data }, function( data ) {
+ 				console.log(data);
+
+			});
 			$(this).attr('checked', false); 
 			$('#btnAddons').fadeOut('slow');
 		}
-	})
-})
+	});
+});
 
 		// count checked checkboxes
 $('.checks').click(function() {
