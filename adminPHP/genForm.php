@@ -24,6 +24,10 @@
     @$language = $_POST['language'];
     @$nameType = $_POST['wordCount'];
     if(!empty($language)&&!empty($platingType)&&!empty($nameType)){
+      $query = "INSERT INTO product (productID, description, discount, date, nameLength) VALUES (CONCAT('$category', '$type'), '$desc', '$discount', '$date', '$nameLength');";
+      if(mysqli_query($conn, $query)){
+        echo mysqli_use_result($conn);
+      }
       $i = 1;
       foreach ($_FILES["files"]["tmp_name"] as $key=>$tmp_name) {
         $fileName = $_FILES["files"]["name"][$key];
@@ -77,10 +81,6 @@
                   </script>";
             die();
           }
-      }
-      $query = "INSERT INTO product (productID, description, discount, date, nameLength) VALUES (CONCAT('$category', '$type'), '$desc', '$discount', '$date', '$nameLength');";
-      if(mysqli_query($conn, $query)){
-        echo mysqli_use_result($conn);
       }
       foreach ($language as $lang) {
         foreach ($platingType as $plating) {

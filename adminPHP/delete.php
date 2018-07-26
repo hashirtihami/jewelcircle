@@ -12,6 +12,10 @@
 			if(mysqli_query($conn, $query)){
 			    echo mysqli_use_result($conn);
 			}
+			$query = "DELETE FROM giftcard WHERE cardName='$delete'";
+			if(mysqli_query($conn, $query)){
+			    echo mysqli_use_result($conn);
+			}
 		}
 	}
 ?>

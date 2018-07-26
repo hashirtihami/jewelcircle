@@ -7,6 +7,7 @@
         Giftcards
 		<button type="button" class="btn bg-blue margin" onclick="displayAddNew();">Add new <i class="fas fa-plus-circle"></i></button></h1>
       </h1>
+      <span><h4 id="warning" class="error hideShow"><i class="fa fa-warning"></i> Giftcard Exists</h4></span>
       <ol class="breadcrumb">
         <li><a href="../home.html"><i class="fas fa-home"></i> Home</a></li>
         <li> E-Commerce</li>
@@ -37,77 +38,33 @@
     </div>
 
      <div class="container" id="some">  
-      <div class="deleteSelection">
-        <div class=" col-md-3 col-sm-4">
-          <div class="box box-success">
-            <div class="box-header with-border">
-              <h3 class="box-title ion-ios-star"> TE AMO</h3>
-            </div>
-            <div class="box-body">
-              <div class="hovereffect">
-                <img class="img-thumb" src="Giftcards/5.jpg" alt="">
-                  <div class="owerlay">
-                    <!-- <h2 class="info">Rs. 50</h2> -->
-                   <a class="info" href="#">
-                    <button type="button" class="btn btn-lg bg-black buttonDel" data-toggle="modal" data-target="#delConfirm">
-                      <i class="fas fa-trash-alt"></i>
-                    </button>
-                   </a>
-                  </div>
-              </div>
-              <p style="text-align: center;">Rs.50</p>
-                <!-- /.box -->
-            </div>
-          </div>
-      </div>
-    </div>
-      <div class="deleteSelection">
-        <div class="col-md-3 col-sm-4">
-          <div class="box box-success">
-              <div class="box-header with-border">
-                <h3 class="box-title ion-ios-star"> MEJOR AMIGA</h3>
-              </div>
-              <div class="box-body">
-                <div class="hovereffect">
-                  <img class="img-thumb" src="Giftcards/8.jpg" alt="">
-                    <div class="owerlay">
-                      <!-- <h2 class="info">Rs. 50</h2> -->
-                     <a class="info" href="#">
-                      <button type="button" class="btn btn-lg bg-black buttonDel" data-toggle="modal" data-target="#delConfirm">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
-                     </a>
-                    </div>
-                </div>
-                <p style="text-align: center;">Rs.50</p>
-                  <!-- /.box -->
-              </div>
-            </div>
-        </div>
-      </div>
-      <div class="deleteSelection">
-        <div class="col-md-3 col-sm-4">
-          <div class="box box-success">
-              <div class="box-header with-border">
-                <h3 class="box-title ion-ios-star"> meilleur ami</h3>
-              </div>
-              <div class="box-body">
-                <div class="hovereffect">
-                  <img class="img-thumb" src="Giftcards/11.jpg" alt="">
-                    <div class="owerlay">
-                      <!-- <h2 class="info">Rs. 50</h2> -->
-                     <a class="info" href="#">
-                      <button type="button" class="btn btn-lg bg-black buttonDel" data-toggle="modal" data-target="#delConfirm">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
-                     </a>
-                    </div>
-                </div>
-                <p style="text-align: center;">Rs.100</p>
-                  <!-- /.box -->
-              </div>
-            </div>
-        </div>
-      </div>
+      <?php
+        $query = "SELECT * FROM giftcard ORDER BY giftcardId";
+        $query_run = mysqli_query($conn, $query);
+        while(@$query_array = mysqli_fetch_array($query_run)){
+          echo '<div class="deleteSelection">';
+          echo '<div class=" col-md-3 col-sm-4">';
+          echo '<div class="box box-success">';
+          echo '<div class="box-header with-border">';
+          echo '<h3 class="box-title ion-ios-star">'.$query_array["cardName"].'</h3>';
+          echo '</div>';
+          echo '<div class="box-body" >';
+          echo '<div class="hovereffect">';
+          echo '<img class="img-thumb" src="giftcards/thumbs/'.$query_array["cardName"].'-thumb.'.$query_array["fileExt"].'" alt="">';
+          echo '<div class="owerlay" style="width: 100%">';
+          echo '<a class="info" href="#">';
+          echo '<button type="button" class="btn btn-lg bg-black buttonDel" data-toggle="modal" data-target="#delConfirm">';
+          echo '<i class="fas fa-trash-alt"></i>';
+          echo '</button>';
+          echo '</a>';
+          echo '</div>';
+          echo '</div>';
+          echo '<p style="text-align: center;">Rs '.$query_array["cardCost"].'</p>';
+          echo '</div>';
+          echo '</div>';
+          echo '</div>';
+          echo '</div>';
+        }
+      ?>
     </div>
 </section>
