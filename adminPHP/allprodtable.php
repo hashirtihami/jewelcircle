@@ -73,8 +73,8 @@
                         echo '<td class="a-center ">';
                         echo '<input type="checkbox" class="flat checks" name="table_records">';
                         echo '</td>';
-                        echo '<td>'.$query_array["category"].'</td>';
-                        echo '<td>'.$query_array["typeName"].'</td>';
+                        echo '<td class="category">'.$query_array["category"].'</td>';
+                        echo '<td class="type">'.$query_array["typeName"].'</td>';
                         $query = "SELECT platingID FROM plating";
                         $run = mysqli_query($conn, $query);
                         while(@$query_array = mysqli_fetch_array($run)){
