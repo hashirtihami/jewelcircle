@@ -2,7 +2,7 @@
   //Starting Database Connection
   require 'connect.inc.php';
 ?>
-<link rel="stylesheet" type="text/css" href="check.css">
+<link rel="stylesheet" type="text/css" href="tables.css">
 
 <section class="content-header">
       <h1>Orders 

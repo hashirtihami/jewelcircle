@@ -34,7 +34,7 @@
                   <!-- <label>Text</label> -->
                     <input type="number" name="cost" min="0" class="form-control" placeholder="Shipping cost..." required>
                 </div>
-                <button type="submit" name="submit" class="btn bg-blue margin";>Proceed <i class="far fa-check-circle"></i></button>   
+                <button type="submit" name="submit" class="btn bg-blue";>Proceed <i class="far fa-check-circle"></i></button>   
             </form>
       </div>
     </div>
