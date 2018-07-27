@@ -2,39 +2,17 @@
   //Starting Database Connection
   require 'connect.inc.php';
 ?>
-<style type="">
-    .hideShow {
-      display: none;
-    }
-    .delColumn {
-      width: 150px;
-    }
-    
-    .nen {
-      position: absolute;
-      top: 9px;
-      right: 7px;
-      text-align: center;
-      font-size: 11px;
-      padding: 2px 3px;
-      line-height: .9;
-      border-radius: 10px;
-    }
-    .showButtons {
-      display: inline-block;
-      margin-left: 5px;
-    }
-</style>
+<link rel="stylesheet" type="text/css" href="check.css">
 
 <section class="content-header">
       <h1>Orders 
         <div class="btn-group showButtons" id="btnAddons">
         <button class="btn bg-light-blue-gradient btn-lg" data-toggle="modal" data-target="#delConfirm">
           <i class="fas fa-trash"></i>
-          <span class="label-warning nen counts"></span>
+          <span class="label-warning labelCount counts"></span>
         </button>
         <button class="btn bg-light-blue-gradient btn-lg"><i class="fas fa-file-download"></i>
-          <span class="label-success nen counts"></span>
+          <span class="label-success labelCount counts"></span>
         </button>
         </div>
       </h1>
@@ -49,17 +27,21 @@
     <section class="content">
  <!--      <div class="row">
         <div class="col-xs-12"> -->
-
-          <div class="box">
 <!--             <div class="box-header">
               <h3 class="box-title">Data Table With Full Features</h3>
             </div> -->
             <!-- /.box-header -->
             <div class="box-body table-responsive">
+              <div class="box">
+                <div>
+                  <p>
+                    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+                  </p>
+                </div>
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th></th>
+                  <th class="checkboxColumn"></th>
                   <th>Order</th>
                   <th>Ship To</th>
                   <th>Date</th>
@@ -67,10 +49,10 @@
                   <th class="delColumn">Actions</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody id="tableBody">
                  <tr>
                     <td class="a-center ">
-                      <input type="checkbox" class="flat checks" name="table_records">
+                      <input type="checkbox" class="icheckbox_flat-blue checks" name="table_records">
                     </td>
                     <td>Trident</td>
                     <td>Internet
@@ -78,7 +60,7 @@
                     </td>
                     <td>Win 95+</td>
                     <td> 4</td>
-                    <td class="btn-group" role="group">
+                    <td class="btn-group buttonsCss" role="group">
                       <!-- <div> -->
                         <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
                           <i class="fas fa-trash-alt"></i>
@@ -90,15 +72,15 @@
                   </tr>
                   <tr>
                     <td class="a-center ">
-                      <input type="checkbox" class="flat checks" name="table_records">
+                      <input type="checkbox" class="icheckbox_flat-blue checks" name="table_records">
                     </td>
                     <td>Trident</td>
                     <td>Internet
                       Explorer 4.0
                     </td>
                     <td>Win 95+</td>
-                    <td> 4</td>
-                    <td class="btn-group" role="group">
+                    <td> 5</td>
+                    <td class="btn-group buttonsCss" role="group">
                       <!-- <div> -->
                         <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
                           <i class="fas fa-trash-alt"></i>
@@ -108,17 +90,17 @@
                       <!-- </div> -->
                     </td>
                   </tr>
-                   <tr>
+                  <tr>
                     <td class="a-center ">
-                      <input type="checkbox" class="flat checks" name="table_records">
+                      <input type="checkbox" class="icheckbox_flat-blue checks" name="table_records">
                     </td>
-                    <td>Trident</td>
+                    <td>Part</td>
                     <td>Internet
                       Explorer 4.0
                     </td>
                     <td>Win 95+</td>
-                    <td> 4</td>
-                    <td class="btn-group" role="group">
+                    <td> 6</td>
+                    <td class="btn-group buttonsCss" role="group">
                       <!-- <div> -->
                         <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
                           <i class="fas fa-trash-alt"></i>
@@ -127,29 +109,7 @@
                         <button type="button" class="btn bg-grey"><i class="fas fa-question-circle"></i></button>
                       <!-- </div> -->
                     </td>
-                  </tr>
-                                    <tr>
-                    <td class="a-center ">
-                      <input type="checkbox" class="flat checks" name="table_records">
-                    </td>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td class="btn-group" role="group">
-                      <!-- <div> -->
-                        <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
-                          <i class="fas fa-trash-alt"></i>
-                        </button>
-                        <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
-                        <button type="button" class="btn bg-grey"><i class="fas fa-question-circle"></i></button>
-                      <!-- </div> -->
-                    </td>
-                  </tr>
-                   <tr>
-
+                  </tr>                  
 
                 </tbody>
                 <tfoot>
@@ -168,3 +128,5 @@
           </div>
           <!-- /.box -->
     </section>
+
+

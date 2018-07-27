@@ -33,6 +33,9 @@
   <link href="https://fonts.googleapis.com/css?family=Dosis|Inconsolata|Pacifico" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="dist/css/giftcards.css">
 
+  <!-- JQUERYY -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>

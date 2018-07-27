@@ -12,6 +12,7 @@
     background: url(blue.png) no-repeat;
     border: none;
     cursor: pointer;
+    margin: 8px !important;
 }
 
 .icheckbox_flat-blue {

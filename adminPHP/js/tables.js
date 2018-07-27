@@ -81,3 +81,4 @@ $('.checks').click(function() {
 $(document).ready(function() {
 	$('#btnAddons').hide();
 })
+
