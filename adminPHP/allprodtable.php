@@ -3,11 +3,8 @@
   require 'connect.inc.php';
 ?>
 <style type="">
-    .hideShow {
-      display: none;
-    }
     .delColumn {
-      width: 20px;
+      width: 150px;
     }
     .nen {
       position: absolute;
@@ -28,11 +25,10 @@
 <section class="content-header">
       <h1>All Products 
         <div class="btn-group showButtons" id="btnAddons">
-        <button class="btn bg-light-blue-gradient btn-lg" data-toggle="modal" data-target="#delConfirm">
-          <i class="fas fa-trash"></i>
-          <span class="label-warning nen counts"></span>
-        </button>
-        
+          <button class="btn bg-light-blue-gradient btn-lg" data-toggle="modal" data-target="#delConfirm">
+            <i class="fas fa-trash"></i>
+            <span class="label-warning nen counts"></span>
+          </button>
         </div>
       </h1>
       <ol class="breadcrumb">
@@ -64,80 +60,39 @@
                 </tr>
                 </thead>
                 <tbody>
-                 <tr>
-                    <td class="a-center ">
-                      <input type="checkbox" class="flat checks" name="table_records">
-                    </td>
-                    <td>Ring</td>
-                    <td>Heart Ring
-                    </td>
-                    <td>2401232</td>
-                    
-                    <td >
-                      <!-- <div> -->
-                        <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
-                          <i class="fas fa-trash-alt"></i>
-                        </button>
-                      <!-- </div> -->
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="a-center">
-                      <input type="checkbox" class="flat checks" name="table_records">
-                    </td>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    
-                    <td >
-                      <!-- <div> -->
-                        <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
-                          <i class="fas fa-trash-alt"></i>
-                        </button>
-                      <!-- </div> -->
-                    </td>
-                  </tr>
-                   <tr>
-                    <td class="a-center ">
-                      <input type="checkbox" class="flat checks" name="table_records">
-                    </td>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                   
-                    <td >
-                      <!-- <div> -->
-                        <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
-                          <i class="fas fa-trash-alt"></i>
-                        </button>
-                      <!-- </div> -->
-                    </td>
-                  </tr>
-                                    <tr>
-                    <td class="a-center ">
-                      <input type="checkbox" class="flat checks" name="table_records">
-                    </td>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    
-                    <td >
-                      <!-- <div> -->
-                        <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
-                          <i class="fas fa-trash-alt"></i>
-                        </button>
-                      <!-- </div> -->
-                    </td>
-                  </tr>
-                   <tr>
-
-
+                  <?php
+                    $query = "SELECT productID FROM product";
+                    $query_run = mysqli_query($conn, $query);
+                    while(@$query_array = mysqli_fetch_array($query_run)){
+                      $query = "SELECT T.typeName, C.category FROM details D JOIN producttype T ON D.typeID=T.typeID JOIN category C ON D.categoryID=C.categoryID WHERE D.productID=".$query_array["productID"]." LIMIT 1";
+                      $productId = $query_array["productID"];
+                      $result = mysqli_query($conn, $query);
+                      while(@$query_array = mysqli_fetch_array($result)){
+                        echo '<tr>';
+                        echo '<td class="a-center ">';
+                        echo '<input type="checkbox" class="flat checks" name="table_records">';
+                        echo '</td>';
+                        echo '<td>'.$query_array["category"].'</td>';
+                        echo '<td>'.$query_array["typeName"].'</td>';
+                        echo '<td>';
+                        $query = "SELECT platingID FROM plating";
+                        $run = mysqli_query($conn, $query);
+                        while(@$query_array = mysqli_fetch_array($run)){
+                          $query = "SELECT PL.platingPrice FROM platingprice PL JOIN product P JOIN plating PLA ON PL.platingPriceId = CONCAT(".$productId.", ".$query_array["platingID"].") LIMIT 1";
+                          $check = $query_array["platingID"];
+                          $price = mysqli_query($conn, $query);
+                          while(@$query_array = mysqli_fetch_array($price)){
+                            echo $query_array["platingPrice"];
+                            if($check==="1")
+                              echo ",";
+                          }
+                        }
+                        echo '</td>';
+                        echo '<td><button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm"><i class="fas fa-trash-alt"></i></button></td>';
+                        echo '</tr>';
+                      }
+                    }
+                  ?>
                 </tbody>
                 <tfoot>
                 <tr>

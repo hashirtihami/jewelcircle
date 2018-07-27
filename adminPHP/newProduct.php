@@ -7,7 +7,7 @@
 
 <link rel="stylesheet" type="text/css" href="utils.css">
 
-<script src="js/genForm.js"></script>
+<script src="js/newProduct.js"></script>
 
 <?php
   if(isset($_POST['submit'])){ 
@@ -99,9 +99,30 @@
               $platingPrice = $_POST['pricePlating'.$plating];
               $languagePrice = $_POST['priceLanguage'.$lang];
               $nameTypePrice = $_POST['priceNameType'.$wordCount];
-              $query = "INSERT INTO details (detailsID, productID, categoryID, typeID, languageID, platingID, nameTypeID, platingPrice, languagePrice, nameTypePrice) VALUES (CONCAT('$category', '$type', '$lang', '$plating', '$wordCount'), CONCAT('$category', '$type'),'$category', '$type', '$lang', '$plating', '$wordCount', '$platingPrice', '$languagePrice', '$nameTypePrice');";
+              $query = "INSERT INTO details (detailsID, productID, categoryID, typeID, languageID, platingID, nameTypeID, platingPriceId, languagePriceId, nameTypePriceId) VALUES (CONCAT('$category', '$type', '$lang', '$plating', '$wordCount'), CONCAT('$category', '$type'),'$category', '$type', '$lang', '$plating', '$wordCount', CONCAT('$category', '$type', '$plating'), CONCAT('$category', '$type', '$lang'), CONCAT('$category', '$type', '$wordCount'));";
               if(mysqli_query($conn, $query)){
                 echo mysqli_use_result($conn);
+              }
+              $query = "SELECT * FROM platingPrice WHERE platingPriceId = CONCAT('$category', '$type', '$plating')";
+              if(mysqli_num_rows($result)<1){
+                $query = "INSERT INTO platingPrice (platingPriceId, platingPrice) VALUES (CONCAT('$category', '$type', '$plating'), '$platingPrice')";
+                if(mysqli_query($conn, $query)){
+                  echo mysqli_use_result($conn);
+                }
+              }
+              $query = "SELECT * FROM languagePrice WHERE languagePriceId = CONCAT('$category', '$type', '$lang')";
+              if(mysqli_num_rows($result)<1){
+                $query = "INSERT INTO languagePrice (languagePriceId, languagePrice) VALUES (CONCAT('$category', '$type', '$lang'), '$languagePrice')";
+                if(mysqli_query($conn, $query)){
+                  echo mysqli_use_result($conn);
+                }
+              }
+              $query = "SELECT * FROM nameTypePrice WHERE nameTypePriceId = CONCAT('$category', '$type', '$wordCount')";
+              if(mysqli_num_rows($result)<1){
+                $query = "INSERT INTO nameTypePrice (nameTypePriceId, nameTypePrice) VALUES (CONCAT('$category', '$type', '$wordCount'), '$nameTypePrice')";
+                if(mysqli_query($conn, $query)){
+                  echo mysqli_use_result($conn);
+                }
               }
             }
           }   

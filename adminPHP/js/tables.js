@@ -12,6 +12,7 @@ function displayAddNew() {
 }
 
 $(document).ready(function() {
+	$('#btnAddons').hide();
 	var d = new Date();
 
 	var month = d.getMonth()+1;
@@ -76,8 +77,4 @@ $('.checks').click(function() {
 		if(count < 2) {
 			$('#btnAddons').slideUp('slow');
 		}
-})
-		// hide Multi-delete button
-$(document).ready(function() {
-	$('#btnAddons').hide();
-})
+});

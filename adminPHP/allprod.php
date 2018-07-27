@@ -6,4 +6,10 @@
   require 'connect.inc.php';
 ?>
 
-<script src="../viewForm.js"></script>
+<link rel="stylesheet" type="text/css" href="utils.css">
+<script src="js/tables.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('tbody > div').addClass('deleteSelection');
+  })
+</script>

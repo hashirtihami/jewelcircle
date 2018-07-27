@@ -3,9 +3,6 @@
   require 'connect.inc.php';
 ?>
 <style type="">
-    .hideShow {
-      display: none;
-    }
     .delColumn {
       width: 150px;
     }
@@ -32,14 +29,11 @@
     <!-- <button id="abc" type="button" class="btn bg-blue margin">Add new coupon <i class="fas fa-plus-circle"></i></button></h1> -->
     <button type="button" class="btn bg-blue margin" onclick="displayAddNew();">Add new <i class="fas fa-plus-circle"></i></button>
     <div class="btn-group showButtons" id="btnAddons">
-        <button class="btn bg-light-blue-gradient btn-lg" data-toggle="modal" data-target="#delConfirm">
-          <i class="fas fa-trash"></i>
-          <span class="label-warning nen counts"></span>
-        </button>
-        <button class="btn bg-light-blue-gradient btn-lg"><i class="fas fa-file-download"></i>
-          <span class="label-success nen counts"></span>
-        </button>
-        </div>
+      <button class="btn bg-light-blue-gradient btn-lg" data-toggle="modal" data-target="#delConfirm">
+        <i class="fas fa-trash"></i>
+        <span class="label-warning nen counts"></span>
+      </button>
+    </div>
   </h1>
   <span><h4 id="warning" class="error hideShow"><i class="fa fa-warning"></i> Coupon Exists</h4></span>
   <ol class="breadcrumb">
@@ -97,7 +91,6 @@
           </tr>
         </thead>
         <tbody>
-          <div class="deleteSelection">
           <?php
             $query = "SELECT * FROM coupon ORDER BY couponId";
             $query_run = mysqli_query($conn, $query);
@@ -112,7 +105,6 @@
               echo '</tr>';
             }
           ?>
-          </div>
         </tbody>
         <tfoot>
           <tr>
