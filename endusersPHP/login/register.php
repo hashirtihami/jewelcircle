@@ -48,28 +48,18 @@ else { // Email doesn't already exist in a database, proceed...
     $sql2 = "INSERT INTO customer (first_name, last_name, email, password, hash, contact) " 
             . "VALUES ('$first_name','$last_name','$email','$password', '$hash' , '$contact' )";
    
-
-
 // ===================== $sql1 aur $sql2 ki jugarr apni taraf sy maari hay .... koi aur hal hay tow kr ley ========================//
 
     // Add user to the database
     if ( $mysqli->query($sql1) && $mysqli->query($sql2)  ){
-/*            
+            
           //$addressID = "SELECT addressID FROM address";
+          $addressID = "SELECT addressID FROM address WHERE address";
           $foreignID ="INSERT INTO customer (addressID)"
                       ."VALUES ('$addressID')";
           $mysqli->query($foreignID);
-*/
-          
-/*
-          $sql3 = "SELECT addressID FROM address WHERE (address)"
-            ."VALUES('$address')";
-          $mysqli->query($sql3);
 
-          $sql4 = "INSERT INTO costumer (addressID)"
-                ."VALUES('$sql3')";
-          $mysqli->query($sql4);       
-*/
+
         $_SESSION['active'] = 0; //0 until user activates their account with verify.php
         $_SESSION['logged_in'] = true; // So we know the user has logged in
         $_SESSION['message'] =
