@@ -12,6 +12,7 @@ function displayAddNew() {
 }
 
 $(document).ready(function() {
+	$('#btnAddons').hide();
 	var d = new Date();
 
 	var month = d.getMonth()+1;
@@ -26,7 +27,7 @@ $(document).ready(function() {
 		var target = $(this).parent();
 		$("#delete").unbind().on("click", function() {
  			var row = $(target).parent();
- 			var data = $(row).find(".code").html();
+ 			var data = $(row).find(".data").html();
  			$.post("delete.php" ,{data: data }, function( data ) {
  				console.log(data);
 				row.fadeOut("slow", function(){
@@ -44,7 +45,7 @@ $('#delete').unbind().click(function() {
 		if ($(this).is(":checked")) {
 			var row = this.parentNode.parentNode;
 			console.log(row);
-			var data = $(row).find(".code").html();
+			var data = $(row).find(".data").html();
 			$(row).fadeOut('slow', function(){
 				$(row).remove();
 			});
@@ -76,9 +77,7 @@ $('.checks').click(function() {
 		if(count < 2) {
 			$('#btnAddons').slideUp('slow');
 		}
-})
-		// hide Multi-delete button
-$(document).ready(function() {
-	$('#btnAddons').hide();
-})
+
+});
+
 

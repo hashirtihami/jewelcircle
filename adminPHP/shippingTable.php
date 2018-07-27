@@ -6,6 +6,12 @@
       <h1>
         Shipping Chart
         <button type="button" class="btn bg-blue margin" onclick="displayAddNew();">New entry <i class="fas fa-plus-circle"></i></button>
+        <div class="btn-group showButtons" id="btnAddons">
+          <button class="btn bg-light-blue-gradient btn-lg" data-toggle="modal" data-target="#delConfirm">
+            <i class="fas fa-trash"></i>
+            <span class="label-warning nen counts"></span>
+          </button>
+        </div>
       </h1>
       <span><h4 id="warning" class="error hideShow"><i class="fa fa-warning"></i> Entry Exists</h4></span>
       <ol class="breadcrumb">
@@ -48,7 +54,8 @@
                   $query_run = mysqli_query($conn, $query);
                   while(@$query_array = mysqli_fetch_array($query_run)){
                     echo "<tr>";
-                    echo '<td>'.$query_array["country"].'</td>';
+                    echo '<td><input type="checkbox" class="flat checks" name="table_records"></td>';
+                    echo '<td class="data">'.$query_array["country"].'</td>';
                     echo '<td>'.$query_array["cost"].'</td>';
                     echo '<td><button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm"><i class="fas fa-trash-alt"></i></button></td>';
                     echo '</tr>';

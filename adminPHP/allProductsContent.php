@@ -5,7 +5,6 @@
 <section class="content-header">
       <h1>
         All Products
-		<button type="button" class="btn bg-blue margin" onclick="displayAddNew();">Add new <i class="fas fa-plus-circle"></i></button></h1>
       </h1>
       <span><h4 id="warning" class="error hideShow"><i class="fa fa-warning"></i> Giftcard Exists</h4></span>
       <ol class="breadcrumb">

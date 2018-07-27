@@ -2,7 +2,29 @@
   //Starting Database Connection
   require 'connect.inc.php';
 ?>
+<<<<<<< HEAD
 <link rel="stylesheet" type="text/css" href="check.css">
+=======
+<style type="">
+    .delColumn {
+      width: 150px;
+    }
+    .nen {
+      position: absolute;
+      top: 9px;
+      right: 7px;
+      text-align: center;
+      font-size: 11px;
+      padding: 2px 3px;
+      line-height: .9;
+      border-radius: 10px;
+    }
+    .showButtons {
+      display: inline-block;
+      margin-left: 5px;
+    }
+</style>
+>>>>>>> 79229266d1096ccfec41676d3b8aae1f4105cccf
 <!-- Content Wrapper. Contains page content -->
   <!-- <div class="content-wrapper"> -->
     <!-- Content Header (Page header) -->
@@ -13,12 +35,20 @@
       <i class="fas fa-plus-circle"></i>
     </button>
     <div class="btn-group showButtons" id="btnAddons">
+<<<<<<< HEAD
         <button class="btn bg-light-blue-gradient btn-lg" data-toggle="modal" data-target="#delConfirm">
           <i class="fas fa-trash"></i>
           <span class="label-warning labelCount counts"></span>
         </button>
 
         </div>
+=======
+      <button class="btn bg-light-blue-gradient btn-lg" data-toggle="modal" data-target="#delConfirm">
+        <i class="fas fa-trash"></i>
+        <span class="label-warning nen counts"></span>
+      </button>
+    </div>
+>>>>>>> 79229266d1096ccfec41676d3b8aae1f4105cccf
   </h1>
   <span><h4 id="warning" class="error hideShow"><i class="fa fa-warning"></i> Coupon Exists</h4></span>
   <ol class="breadcrumb">
@@ -76,14 +106,18 @@
           </tr>
         </thead>
         <tbody>
-          <div class="deleteSelection">
           <?php
             $query = "SELECT * FROM coupon ORDER BY couponId";
             $query_run = mysqli_query($conn, $query);
             while(@$query_array = mysqli_fetch_array($query_run)){
               echo "<tr>";
+<<<<<<< HEAD
               echo '<td><input type="checkbox" class="icheckbox_flat-blue checks" name="table_records"></td>';
               echo '<td class="code">'.$query_array["couponCode"].'</td>';
+=======
+              echo '<td><input type="checkbox" class="flat checks" name="table_records"></td>';
+              echo '<td class="data">'.$query_array["couponCode"].'</td>';
+>>>>>>> 79229266d1096ccfec41676d3b8aae1f4105cccf
               echo '<td>'.$query_array["discount"].'</td>';
               echo '<td>'.$query_array["description"].'</td>';
               echo '<td>'.$query_array["expiryDate"].'</td>';
@@ -91,7 +125,6 @@
               echo '</tr>';
             }
           ?>
-          </div>
         </tbody>
         <tfoot>
           <tr>
