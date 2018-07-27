@@ -55,7 +55,8 @@
                   <th></th>
                   <th>Product</th>
                   <th>Product Type</th>
-                  <th>Price </th>
+                  <th>Silver Price </th>
+                  <th>Gold Price </th>
                   <th class="delColumn">Actions</th>
                 </tr>
                 </thead>
@@ -74,7 +75,6 @@
                         echo '</td>';
                         echo '<td>'.$query_array["category"].'</td>';
                         echo '<td>'.$query_array["typeName"].'</td>';
-                        echo '<td>';
                         $query = "SELECT platingID FROM plating";
                         $run = mysqli_query($conn, $query);
                         while(@$query_array = mysqli_fetch_array($run)){
@@ -82,12 +82,9 @@
                           $check = $query_array["platingID"];
                           $price = mysqli_query($conn, $query);
                           while(@$query_array = mysqli_fetch_array($price)){
-                            echo $query_array["platingPrice"];
-                            if($check==="1")
-                              echo ",";
+                            echo "<td>".$query_array["platingPrice"]."</td>";
                           }
                         }
-                        echo '</td>';
                         echo '<td><button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm"><i class="fas fa-trash-alt"></i></button></td>';
                         echo '</tr>';
                       }
@@ -99,7 +96,8 @@
                   <th></th>                 
                   <th>Product</th>
                   <th>Product Type</th>
-                  <th>Price </th>
+                  <th>Silver Price </th>
+                  <th>Gold Price </th>
                   <th>Actions</th>
                 </tr>
                 </tfoot>
