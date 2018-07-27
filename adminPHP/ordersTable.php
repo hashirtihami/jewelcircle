@@ -42,6 +42,7 @@
                 <thead>
                 <tr>
                   <th class="checkboxColumn"></th>
+                  <th>Order ID</th>
                   <th>Order</th>
                   <th>Ship To</th>
                   <th>Date</th>
@@ -54,12 +55,12 @@
                     <td class="a-center ">
                       <input type="checkbox" class="icheckbox_flat-blue checks" name="table_records">
                     </td>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
+                    <td>981</td>
+                    <td>Heart Bracelet</td>
+                    <td>Ghar pe
                     </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
+                    <td>Abhi chaye</td>
+                    <td>150</td>
                     <td class="btn-group buttonsCss" role="group">
                       <!-- <div> -->
                         <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
@@ -74,6 +75,7 @@
                     <td class="a-center ">
                       <input type="checkbox" class="icheckbox_flat-blue checks" name="table_records">
                     </td>
+                    <td>1926</td>
                     <td>Trident</td>
                     <td>Internet
                       Explorer 4.0
@@ -94,6 +96,7 @@
                     <td class="a-center ">
                       <input type="checkbox" class="icheckbox_flat-blue checks" name="table_records">
                     </td>
+                    <td>101</td>
                     <td>Part</td>
                     <td>Internet
                       Explorer 4.0
@@ -114,7 +117,8 @@
                 </tbody>
                 <tfoot>
                 <tr>
-                  <th></th>                 
+                  <th></th>
+                  <th>Order ID</th>                 
                   <th>Order</th>
                   <th>Ship To</th>
                   <th>Date</th>
