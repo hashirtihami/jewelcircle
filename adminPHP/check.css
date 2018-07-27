@@ -1,0 +1,40 @@
+.hideShow {
+  display: none;
+}
+.delColumn {
+  width: 135px !important;
+}
+
+.labelCount {
+  position: absolute;
+  top: 9px;
+  right: 7px;
+  text-align: center;
+  font-size: 11px;
+  padding: 2px 3px;
+  line-height: .9;
+  border-radius: 10px;
+}
+.showButtons {
+  display: inline-block;
+  margin-left: 5px;
+}
+.checkboxColumn {
+  width: 50px;
+}
+.buttonsCss {
+  display: inline-flex !important;
+}
+#searchBar {
+  border: 1px solid #f4f4f4;
+  padding: 5px;
+  /* margin-bottom: 10px; */
+  background: #f7f7f7;
+}
+#myInput {
+  border-radius:5px !important;
+  width: 30%;
+  float: right;
+  background: #f7f7f7;
+  margin: 5px;
+}

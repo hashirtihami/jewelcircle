@@ -77,4 +77,7 @@ $('.checks').click(function() {
 		if(count < 2) {
 			$('#btnAddons').slideUp('slow');
 		}
+
 });
+
+

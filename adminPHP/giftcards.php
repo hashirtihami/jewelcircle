@@ -94,7 +94,7 @@
 ?>
 
 <style type="">
-  .container{
+  .contayner{
     padding: 0;
     width: auto;
   }
