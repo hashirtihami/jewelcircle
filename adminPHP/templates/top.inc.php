@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Dosis|Inconsolata|Pacifico" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="dist/css/giftcards.css">
+  <link rel="stylesheet" type="text/css" href="tables.css">
 
   <!-- JQUERYY -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -143,6 +144,22 @@
           </ul>
         </li>
 
+
+      <li id="actionCss" class="header hideShow">ACTIONS</li>
+        <li>
+          <div class="btn-group hideShow box-footer" id="btnAddons">
+            <button id="firstBtn" class="btn bg-custom btn-lg" data-toggle="modal" data-target="#delConfirm">
+              <i class="fas fa-trash"></i>
+              <span class="label-warning labelCount counts"></span>
+            </button>
+            <button class="btn bg-custom btn-lg orderButtons"><i class="fas fa-file-download"></i>
+              <span class="label-success labelCount counts"></span>
+            </button>
+            <button class="btn bg-custom btn-lg orderButtons"><i class="fas fa-shipping-fast"></i>
+              <span class="label-primary labelCount counts"></span>
+            </button>
+          </div>
+        </li>
       </ul>
     </section>
     <!-- /.sidebar -->

@@ -1,5 +1,6 @@
 .hideShow {
-  display: none;
+  display: none;  
+  /*margin-left: 5px;*/
 }
 .delColumn {
   width: 135px !important;
@@ -40,4 +41,19 @@
 }
 #submit {
   margin-bottom: 15px;
+}
+#actionCss {
+  margin-top: 100%;
+}
+.bg-custom {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #1a2226), color-stop(1, #222d32)) !important;
+  color: #b8c7ce;
+}
+#btnAddons {
+  border: 5px solid #1a2226;
+  padding: 2px !important;
+  background-color: #2c3a40 !important;
+}
+#firstBtn {
+  margin-left: 16%;
 }

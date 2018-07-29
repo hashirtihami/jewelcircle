@@ -6,7 +6,7 @@
 
 <section class="content-header">
       <h1>Orders 
-        <div class="btn-group showButtons" id="btnAddons">
+<!--         <div class="btn-group showButtons" id="btnAddons">
         <button class="btn bg-light-blue-gradient btn-lg" data-toggle="modal" data-target="#delConfirm">
           <i class="fas fa-trash"></i>
           <span class="label-warning labelCount counts"></span>
@@ -14,7 +14,7 @@
         <button class="btn bg-light-blue-gradient btn-lg"><i class="fas fa-file-download"></i>
           <span class="label-success labelCount counts"></span>
         </button>
-        </div>
+        </div> -->
       </h1>
       <ol class="breadcrumb">
         <li><a href="../../home.html"><i class="fas fa-home"></i> Home</a></li>
@@ -62,7 +62,7 @@
                           <i class="fas fa-trash-alt"></i>
                         </button>
                         <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
-                        <button type="button" class="btn bg-grey"><i class="fas fa-question-circle"></i></button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-shipping-fast"></i></button>
                       <!-- </div> -->
                     </td>
                   </tr>
@@ -83,7 +83,7 @@
                           <i class="fas fa-trash-alt"></i>
                         </button>
                         <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
-                        <button type="button" class="btn bg-grey"><i class="fas fa-question-circle"></i></button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-shipping-fast"></i></button>
                       <!-- </div> -->
                     </td>
                   </tr>
@@ -104,10 +104,218 @@
                           <i class="fas fa-trash-alt"></i>
                         </button>
                         <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
-                        <button type="button" class="btn bg-grey"><i class="fas fa-question-circle"></i></button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-shipping-fast"></i></button>
                       <!-- </div> -->
                     </td>
-                  </tr>                  
+                  </tr>
+                                                    <tr>
+                    <td class="a-center ">
+                      <input type="checkbox" class="icheckbox_flat-blue checks" name="table_records">
+                    </td>
+                    <td>1926</td>
+                    <td>Trident</td>
+                    <td>Internet
+                      Explorer 4.0
+                    </td>
+                    <td>Win 95+</td>
+                    <td> 5</td>
+                    <td class="btn-group buttonsCss" role="group">
+                      <!-- <div> -->
+                        <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-shipping-fast"></i></button>
+                      <!-- </div> -->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="a-center ">
+                      <input type="checkbox" class="icheckbox_flat-blue checks" name="table_records">
+                    </td>
+                    <td>101</td>
+                    <td>Part</td>
+                    <td>Internet
+                      Explorer 4.0
+                    </td>
+                    <td>Win 95+</td>
+                    <td> 6</td>
+                    <td class="btn-group buttonsCss" role="group">
+                      <!-- <div> -->
+                        <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-shipping-fast"></i></button>
+                      <!-- </div> -->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="a-center ">
+                      <input type="checkbox" class="icheckbox_flat-blue checks" name="table_records">
+                    </td>
+                    <td>1926</td>
+                    <td>Trident</td>
+                    <td>Internet
+                      Explorer 4.0
+                    </td>
+                    <td>Win 95+</td>
+                    <td> 5</td>
+                    <td class="btn-group buttonsCss" role="group">
+                      <!-- <div> -->
+                        <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-shipping-fast"></i></button>
+                      <!-- </div> -->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="a-center ">
+                      <input type="checkbox" class="icheckbox_flat-blue checks" name="table_records">
+                    </td>
+                    <td>101</td>
+                    <td>Part</td>
+                    <td>Internet
+                      Explorer 4.0
+                    </td>
+                    <td>Win 95+</td>
+                    <td> 6</td>
+                    <td class="btn-group buttonsCss" role="group">
+                      <!-- <div> -->
+                        <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-shipping-fast"></i></button>
+                      <!-- </div> -->
+                    </td>
+                  </tr>
+                                                      <tr>
+                    <td class="a-center ">
+                      <input type="checkbox" class="icheckbox_flat-blue checks" name="table_records">
+                    </td>
+                    <td>1926</td>
+                    <td>Trident</td>
+                    <td>Internet
+                      Explorer 4.0
+                    </td>
+                    <td>Win 95+</td>
+                    <td> 5</td>
+                    <td class="btn-group buttonsCss" role="group">
+                      <!-- <div> -->
+                        <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-shipping-fast"></i></button>
+                      <!-- </div> -->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="a-center ">
+                      <input type="checkbox" class="icheckbox_flat-blue checks" name="table_records">
+                    </td>
+                    <td>101</td>
+                    <td>Part</td>
+                    <td>Internet
+                      Explorer 4.0
+                    </td>
+                    <td>Win 95+</td>
+                    <td> 6</td>
+                    <td class="btn-group buttonsCss" role="group">
+                      <!-- <div> -->
+                        <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-shipping-fast"></i></button>
+                      <!-- </div> -->
+                    </td>
+                                    <tr>
+                    <td class="a-center ">
+                      <input type="checkbox" class="icheckbox_flat-blue checks" name="table_records">
+                    </td>
+                    <td>1926</td>
+                    <td>Trident</td>
+                    <td>Internet
+                      Explorer 4.0
+                    </td>
+                    <td>Win 95+</td>
+                    <td> 5</td>
+                    <td class="btn-group buttonsCss" role="group">
+                      <!-- <div> -->
+                        <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-shipping-fast"></i></button>
+                      <!-- </div> -->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="a-center ">
+                      <input type="checkbox" class="icheckbox_flat-blue checks" name="table_records">
+                    </td>
+                    <td>101</td>
+                    <td>Part</td>
+                    <td>Internet
+                      Explorer 4.0
+                    </td>
+                    <td>Win 95+</td>
+                    <td> 6</td>
+                    <td class="btn-group buttonsCss" role="group">
+                      <!-- <div> -->
+                        <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-shipping-fast"></i></button>
+                      <!-- </div> -->
+                    </td>
+                                    <tr>
+                    <td class="a-center ">
+                      <input type="checkbox" class="icheckbox_flat-blue checks" name="table_records">
+                    </td>
+                    <td>1926</td>
+                    <td>Trident</td>
+                    <td>Internet
+                      Explorer 4.0
+                    </td>
+                    <td>Win 95+</td>
+                    <td> 5</td>
+                    <td class="btn-group buttonsCss" role="group">
+                      <!-- <div> -->
+                        <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-shipping-fast"></i></button>
+                      <!-- </div> -->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="a-center ">
+                      <input type="checkbox" class="icheckbox_flat-blue checks" name="table_records">
+                    </td>
+                    <td>101</td>
+                    <td>Part</td>
+                    <td>Internet
+                      Explorer 4.0
+                    </td>
+                    <td>Win 95+</td>
+                    <td> 6</td>
+                    <td class="btn-group buttonsCss" role="group">
+                      <!-- <div> -->
+                        <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
+                        <button type="button" class="btn bg-grey"><i class="fas fa-shipping-fast"></i></button>
+                      <!-- </div> -->
+                    </td>
+                  </tr></tr></tr>
 
                 </tbody>
                 <tfoot>

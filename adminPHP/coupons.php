@@ -37,4 +37,13 @@
 <!-- <script src="../viewForm.js"></script> -->
 <script src="js/tables.js"></script>
 
+  <!-- DISABLE INVOICE AND DISPATCH BUTTON -->
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.orderButtons').addClass("disabled");
+    $('button.orderButtons span').hide();
+  })
+
+</script>
+
 

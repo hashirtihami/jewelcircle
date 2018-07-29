@@ -31,4 +31,5 @@
 ?>
 
 <link rel="stylesheet" type="text/css" href="utils.css">
+<link rel="stylesheet" type="text/css" href="tables.css">
 <script src="js/tables.js"></script>

@@ -11,13 +11,13 @@
     <button type="button" class="btn bg-blue margin" onclick="displayAddNew();">Add new 
       <i class="fas fa-plus-circle"></i>
     </button>
-    <div class="btn-group showButtons" id="btnAddons">
+<!--     <div class="btn-group showButtons" id="btnAddons">
         <button class="btn bg-light-blue-gradient btn-lg" data-toggle="modal" data-target="#delConfirm">
           <i class="fas fa-trash"></i>
           <span class="label-warning labelCount counts"></span>
         </button>
 
-        </div>
+        </div> -->
 
   </h1>
   <span><h4 id="warning" class="error hideShow"><i class="fa fa-warning"></i> Coupon Exists</h4></span>
@@ -37,7 +37,7 @@
 			<form role="form" action="<?php echo $_SERVER['SCRIPT_NAME']?>" method="POST">
 				<div class="form-group">
 					<!-- <label>Text</label> -->
-					<input type="text" name="couponCode" class="form-control" maxlength="5" placeholder="Coupon Code..." style="text-transform:uppercase;" required>
+					<input id="fis" type="text" name="couponCode" class="form-control" maxlength="5" placeholder="Coupon Code..." style="text-transform:uppercase;" required>
 				</div> <br>
 				<div class="form-group">
 					<!-- <label>Text</label> -->
@@ -78,14 +78,14 @@
             <th></th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="tableBody">
           <?php
             $query = "SELECT * FROM coupon ORDER BY couponId";
             $query_run = mysqli_query($conn, $query);
             while(@$query_array = mysqli_fetch_array($query_run)){
               echo "<tr>";
               echo '<td><input type="checkbox" class="icheckbox_flat-blue checks" name="table_records"></td>';
-              echo '<td class="code">'.$query_array["couponCode"].'</td>';
+              echo '<td class="data">'.$query_array["couponCode"].'</td>';
               echo '<td>'.$query_array["discount"].'</td>';
               echo '<td>'.$query_array["description"].'</td>';
               echo '<td>'.$query_array["expiryDate"].'</td>';

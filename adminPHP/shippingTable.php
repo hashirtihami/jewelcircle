@@ -6,12 +6,6 @@
       <h1>
         Shipping Chart
         <button type="button" class="btn bg-blue margin" onclick="displayAddNew();">New entry <i class="fas fa-plus-circle"></i></button>
-        <div class="btn-group showButtons" id="btnAddons">
-          <button class="btn bg-light-blue-gradient btn-lg" data-toggle="modal" data-target="#delConfirm">
-            <i class="fas fa-trash"></i>
-            <span class="label-warning nen counts"></span>
-          </button>
-        </div>
       </h1>
       <span><h4 id="warning" class="error hideShow"><i class="fa fa-warning"></i> Entry Exists</h4></span>
       <ol class="breadcrumb">
@@ -34,7 +28,7 @@
                   <!-- <label>Text</label> -->
                     <input type="number" name="cost" min="0" class="form-control" placeholder="Shipping cost..." required>
                 </div>
-                <button type="submit" name="submit" class="btn bg-blue";>Proceed <i class="far fa-check-circle"></i></button>   
+                <button id="submit" type="submit" name="submit" class="btn bg-blue";>Proceed <i class="far fa-check-circle"></i></button>   
             </form>
       </div>
     </div>

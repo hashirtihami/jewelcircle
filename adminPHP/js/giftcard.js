@@ -22,6 +22,8 @@ $(document).ready(function() {
 function displayAddNew() {
 	if ($("#addNew").is(":hidden")) {
        $("#addNew").slideDown("slow");
+       setTimeout(function() {
+       	$('form input:first').focus(); }, 500);       
    } else {
        $("#addNew").slideUp("slow");
    }

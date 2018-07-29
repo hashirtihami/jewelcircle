@@ -6,13 +6,15 @@ $("form").change(function(){
 function displayAddNew() {
 	if ($("#addNew").is(":hidden")) {
        $("#addNew").slideDown("slow");
-   } else {
+       setTimeout(function() {
+       	$('form input:first').focus(); }, 500);			//Cursor on first input
+   }
+    else {
        $("#addNew").slideUp("slow");
    }
 }
 
 $(document).ready(function() {
-	$('#btnAddons').hide();
 	var d = new Date();
 
 	var month = d.getMonth()+1;
@@ -68,6 +70,7 @@ $('.checks').click(function() {
 			count++;
 			if(count > 1) {
 				if($('#btnAddons').is(':hidden')) {
+					$('#actionCss').slideDown('slow');
 					$('#btnAddons').slideDown('slow');
 				}
 				$('.counts').text(count);
@@ -76,8 +79,20 @@ $('.checks').click(function() {
 	})
 		if(count < 2) {
 			$('#btnAddons').slideUp('slow');
+			$('#actionCss').slideUp('slow');
 		}
 
 });
 
+// SEARCH FUNCTION
+	$(document).ready(function() {
+	var $rows = $('#tableBody tr');
+	$('#myInput').keyup(function() {
+    var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
 
+    $rows.show().filter(function() {
+        var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+        return !~text.indexOf(val);
+    }).hide();
+});
+});
