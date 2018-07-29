@@ -25,6 +25,7 @@
 }
 .buttonsCss {
   display: inline-flex !important;
+  border: none !important;
 }
 #searchBar {
   border: 1px solid #f4f4f4;
@@ -42,9 +43,6 @@
 #submit {
   margin-bottom: 15px;
 }
-#actionCss {
-  margin-top: 100%;
-}
 .bg-custom {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #1a2226), color-stop(1, #222d32)) !important;
   color: #b8c7ce;
@@ -56,4 +54,20 @@
 }
 #firstBtn {
   margin-left: 16%;
+}
+.bg-dispatch {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #3c8dbc), color-stop(1, #67a8ce)) !important;
+  border-top: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f4f4f4;
+  color: white;
+}
+.bg-dispatch button {
+  color: #333;
+}
+.bg-dispatch span {
+  display: block;
+}
+
+.buttonDispatch {
+  font-size: 8px !important;
 }
