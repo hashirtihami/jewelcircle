@@ -15,8 +15,46 @@
     $timezone_name = timezone_name_from_abbr("", $timezone_offset_minutes*60, false);
     date_default_timezone_set($timezone_name);
     $date = date('Y-m-d H:i:s');
-    $category = $_POST['proCategory'];
-    $type = $_POST['type'];
+    if(isset($_POST['proCategory'])){
+      $category = $_POST['proCategory'];
+    }
+    else{
+      $category = $_POST['newProCategory'];
+    }
+    if(ctype_alpha($category)){
+      $query = "SELECT * FROM category WHERE category = '$category'";
+      $result = mysqli_query($conn, $query);
+      if(mysqli_num_rows($result)<1){
+        $query = "INSERT INTO category (category) VALUES ('$category')";
+        if(mysqli_query($conn, $query)){
+          echo mysqli_use_result($conn);
+        }
+      }
+      $query = "SELECT categoryID FROM category WHERE category = '$category'";
+      $query_run = mysqli_query($conn, $query);
+      while($query_array = mysqli_fetch_array($query_run)){
+        $category = $query_array["categoryID"];
+      }
+    }
+    if(isset($_POST["newType"]))
+      $type = $_POST['newType'];
+    else
+      $type = $_POST['type'];
+    if(ctype_alpha($type)){
+      $query = "SELECT * FROM producttype WHERE typeName = '$type'";
+      $result = mysqli_query($conn, $query);
+      if(mysqli_num_rows($result)<1){
+        $query = "INSERT INTO producttype (typeName) VALUES ('$type')";
+        if(mysqli_query($conn, $query)){
+          echo mysqli_use_result($conn);
+        }
+      }
+      $query = "SELECT typeID FROM producttype WHERE typeName = '$type'";
+      $query_run = mysqli_query($conn, $query);
+      while($query_array = mysqli_fetch_array($query_run)){
+        $type = $query_array["categoryID"];
+      }
+    }
     $desc = $_POST['desc'];
     $discount = $_POST['discount'];
     $nameLength = $_POST['length'];
