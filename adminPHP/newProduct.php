@@ -52,7 +52,7 @@
       $query = "SELECT typeID FROM producttype WHERE typeName = '$type'";
       $query_run = mysqli_query($conn, $query);
       while($query_array = mysqli_fetch_array($query_run)){
-        $type = $query_array["categoryID"];
+        $type = $query_array["typeID"];
       }
     }
     $desc = $_POST['desc'];

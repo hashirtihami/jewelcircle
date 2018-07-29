@@ -1,7 +1,4 @@
-   
-
-
-  <?php 
+<?php 
 /* Main page with two forms: sign up and log in */
 require 'templates/top.inc.php';
 require 'login/db.php';
