@@ -43,9 +43,6 @@
 #submit {
   margin-bottom: 15px;
 }
-#actionCss {
-  margin-top: 100%;
-}
 .bg-custom {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #1a2226), color-stop(1, #222d32)) !important;
   color: #b8c7ce;
