@@ -19,7 +19,7 @@
     <!-- left column -->
     <div class="col-md-6">
       <!-- general form elements -->
-      <div class="box box-primary">
+      <div class="box box-primary" style="padding: 10px">
         <div class="box-header with-border">
           <h3 class="box-title">Product Details</h3>
           <span><h4 id="warning" class="error"><i class="fa fa-warning"></i> Product Exists</h4></span>
@@ -51,12 +51,9 @@
                 }
               ?>
             </select>
-          </div>
-          <div class="input-group input-group-sm hideShow" id="newCatg">
-            <input type="text" class="form-control" placeholder="Enter name of new product...">
-                <span id="newButton" class="input-group-btn">
-                  <button type="button" class="btn btn-info btn-flat">Add New Product</button>
-                </span>
+            <div class="input-group input-group-sm hideShow" id="newCatg">
+              <input type="text" name="newProCategory" class="form-control" placeholder="Enter name of new product..." value="">
+            </div>
           </div>
 
            <div class="form-group">
@@ -83,12 +80,9 @@
                   }
                 ?>
               </select>
-            </div>
-            <div class="input-group input-group-sm hideShow" id="newType">
-              <input type="text" class="form-control" placeholder="Enter name of new product...">
-                  <span id="newButton" class="input-group-btn">
-                    <button type="button" class="btn btn-info btn-flat">Add New Type</button>
-                  </span>
+              <div class="input-group input-group-sm hideShow" id="newType">
+                <input type="text" name="newType" class="form-control" placeholder="Enter name of new product..." value="">
+              </div>
             </div>
             <div class="form-group img-group">
               <label for="exampleInputFile">Product Images</label>

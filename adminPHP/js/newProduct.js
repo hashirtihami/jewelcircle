@@ -1,22 +1,29 @@
 function displayExistingCatg() {
+	$("#existingCatg").prop('disabled', false);
 	$("#existingCatg").slideDown("fast");
 	$("#newCatg").hide();
+	$("#newCatg").prop('disabled', true);
 	$("#newCatg input").prop('required',false);
 }
 function displayNewCatg() {
+	$("#newCatg").prop('disabled', false);
 	$("#newCatg").slideDown("fast");
 	$("#existingCatg").hide();
-
+	$("#existingCatg").prop('disabled', true);
 	$("#newCatg input").prop('required',true);
 }
 function displayExistingTypes() {
+	$("#existingType").prop('disabled', false);
 	$("#existingTypes").slideDown("fast");
 	$("#newType").hide();
+	$("#newType").prop('disabled', true);
 	$("#newType input").prop('required',false);
 }
 function displayNewType() {
+	$("#newType").prop('disabled', false);
 	$("#newType").slideDown("fast");
 	$("#existingTypes").hide();
+	$("#existingType").prop('disabled', true);
 	$("#newType input").prop('required',true);
 }
 function displayPriceInputGold() {
@@ -157,4 +164,9 @@ $("#submit").on("click", function(){
 	var timezone_offset_minutes = new Date().getTimezoneOffset();
 	timezone_offset_minutes = timezone_offset_minutes == 0 ? 0 : -timezone_offset_minutes;
 	$("#date").val(timezone_offset_minutes);
+});
+
+$("form").change(function(){
+	$("#warning").css("display","none");
+	$("#submit").prop("disabled", false);
 });
