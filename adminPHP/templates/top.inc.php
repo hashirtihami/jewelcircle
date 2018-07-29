@@ -155,7 +155,8 @@
             <button class="btn bg-custom btn-lg orderButtons"><i class="fas fa-file-download"></i>
               <span class="label-success labelCount counts"></span>
             </button>
-            <button class="btn bg-custom btn-lg orderButtons"><i class="fas fa-shipping-fast"></i>
+            <button id="multiDispatch" class="btn bg-custom btn-lg orderButtons" data-toggle="modal" data-target="#dispatchConfirm">
+              <i class="fas fa-shipping-fast"></i>
               <span class="label-primary labelCount counts"></span>
             </button>
           </div>

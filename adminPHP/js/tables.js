@@ -34,6 +34,7 @@ $(document).ready(function() {
  				console.log(data);
 				row.fadeOut("slow", function(){
 					row.remove();
+					$('#btnAddons, #actionCss').slideUp('slow');					
 				});
 			});
 		});
@@ -50,13 +51,12 @@ $('#delete').unbind().click(function() {
 			var data = $(row).find(".data").html();
 			$(row).fadeOut('slow', function(){
 				$(row).remove();
+				$('#btnAddons, #actionCss').slideUp('slow');
 			});
 			$.post("delete.php" ,{data: data }, function( data ) {
  				console.log(data);
 
 			});
-			$(this).attr('checked', false); 
-			$('#btnAddons').fadeOut('slow');
 		}
 	});
 });
@@ -95,4 +95,39 @@ $('.checks').click(function() {
         return !~text.indexOf(val);
     }).hide();
 });
+});
+
+	// DISPATCH FUNCTION
+
+$(".dispatchBtn").on('click', function() {
+	var target = $(this).parent();
+	var row = $(target).parent();
+	if((row).hasClass('bg-dispatch')) {
+		$(this).attr('data-target', '#undoPopup');
+		$("#undo").unbind().on("click", function() {
+			$(row).removeClass('bg-dispatch');
+			$('#btnAddons, #actionCss').slideUp('slow');			
+	});		
+}
+	else {
+		$(this).attr('data-target', '#dispatchConfirm');	
+		$("#dispatch").unbind().on("click", function() {
+			$(row).addClass('bg-dispatch');
+			$('#btnAddons, #actionCss').slideUp('slow');			
+	});
+}
+});
+
+
+// Multi-dispatch function
+$('#dispatch').unbind().click(function() {
+	var targets = $('.checks');
+	targets.each(function() {
+		if ($(this).is(":checked")) {
+			$(this).prop('checked', false); 
+			var row = this.parentNode.parentNode;
+			$(row).addClass('bg-dispatch');
+			$('#btnAddons, #actionCss').slideUp('slow');
+		}
+	});
 });
