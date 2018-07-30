@@ -4,9 +4,10 @@
 					<div class="span4 pull-left">
 						<h4>TERMS AND POLICIES</h4>
 						<ul class="nav"> 
-							<li><a href="#">Track My Order</a></li>  
-							<li><a href="#">Terms & Privacy</a></li>
-							<li><a href="#">FAQ</a></li>						
+							<li><a href="#">Track My Order</a></li>
+							<li><a href="policy.php">Delivery Policy</a></li>  
+							<li><a href="terms.php">Terms Of Services</a></li>
+							<li><a href="faq.php">FAQ</a></li>						
 						</ul>					
 					</div>
 					<div class="span4">

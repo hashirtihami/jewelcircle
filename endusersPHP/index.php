@@ -203,6 +203,9 @@
 								</div>
 							</div>						
 						</div>
+
+
+						<!-- SHIT ALERT ----------------------
 						<div class="row feature_box">						
 							<div class="span4">
 								<div class="service">
@@ -238,7 +241,7 @@
 					</div>				
 				</div>
 			</section>
-
+		-->
 
 
 <?php

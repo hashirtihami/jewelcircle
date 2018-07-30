@@ -1,13 +1,14 @@
- *, *:before, *:after {
+/* DONT UNLOCK THE DEVIL
+ *,  *:after {
   box-sizing: border-box;
 }
-
+*/
 html {
   overflow-y: scroll;
 }
 
 body {
-  background: #ffffff; /* #c1bdba */
+ /* background: #ffffff; /* #c1bdba */
   font-family: 'Titillium Web', sans-serif;
 }
 

@@ -39,7 +39,7 @@
         </div>
         <div class="span8">
           <!-- <div class="pull-left heading"><img src="logo/logo.png"></div> -->
-          <a href="index.html"><div class="pull-left heading"><i class="fas fa-crown"></i> Jewel Circle</i></div></a>
+          <a href="index.php"><div class="pull-left heading"><i class="fas fa-crown"></i> Jewel Circle</i></div></a>
           <div class="account pull-right">
             <ul class="user-menu">        
               <li><a href="#"><i class="fas fa-shopping-cart"></i> Your Cart</a></li>
