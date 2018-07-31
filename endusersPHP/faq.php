@@ -10,6 +10,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 -->
+
+<link href="themes/css/footerlinks.css" rel="stylesheet">
+
 <div class="container">
   <h2>FAQ</h2>
   <div class="panel-group" id="accordion">
