@@ -2,7 +2,11 @@
 	require 'templates/top.inc.php';
 	require 'connect.inc.php'
 ?>
-
+<style type="text/css">
+	.discountedPrice{
+		text-decoration: line-through;
+	}	
+</style>
 
 <section  class="homepage-slider" id="home-slider">
 				<div class="flexslider">
@@ -41,12 +45,13 @@
 										<div class="active item">
 											<ul class="thumbnails">
 											<?php
-												$query = "SELECT productID,no FROM product ORDER BY date desc LIMIT 4";
+												$query = "SELECT productID,no,discount FROM product ORDER BY date desc LIMIT 4";
 												$query_run = mysqli_query($conn, $query);
         										while(@$query_array = mysqli_fetch_array($query_run)){
 													$lastItem = $query_array["no"];
 													$productID = $query_array["productID"];
-        											$query = "SELECT producttype.typeName, category.category FROM details JOIN producttype ON details.typeID=producttype.typeID JOIN category ON details.categoryID=category.categoryID WHERE productID=".$query_array["productID"]." LIMIT 1";
+													$discount = $query_array["discount"];
+        											$query = "SELECT producttype.typeName, category.category, platingprice.platingPrice FROM details JOIN producttype ON details.typeID=producttype.typeID JOIN category ON details.categoryID=category.categoryID JOIN platingprice WHERE (details.platingID=1 AND platingprice.platingPriceId=details.platingPriceId) LIMIT 1";
         											$result = mysqli_query($conn, $query);
         											while(@$query_array = mysqli_fetch_array($result)){
 														echo '<li class="span3">';
@@ -55,7 +60,7 @@
 														echo '<p><a href="product_detail.html"><img src="../assets/images/products/1.'.$productID.'-thumb.jpg" alt="" /></a></p>';
 														echo '<a href="product_detail.html" class="title">'.$query_array["typeName"].' '.$query_array["category"].'</a><br/>';
 														echo '<a href="products.html" class="category">'.$query_array["category"].'</a>';
-														echo '<p class="price">$17.25</p>';
+														echo '<p class="price"><span class="discountedPrice">Rs'.$query_array["platingPrice"]*100/$discount.'</span> Rs'.$query_array["platingPrice"].'</p>';
 														echo '</div>';
 														echo '</li>';
 													}
@@ -69,17 +74,19 @@
 													$query = "SELECT productID FROM product WHERE no<".$lastItem." LIMIT 4";
 													$query_run = mysqli_query($conn, $query);
         											while(@$query_array = mysqli_fetch_array($query_run)){
-														$lastItem = $query_array["productID"];
-	        											$query = "SELECT producttype.typeName, category.category FROM details JOIN producttype ON details.typeID=producttype.typeID JOIN category ON details.categoryID=category.categoryID WHERE productID=".$query_array["productID"]." LIMIT 1";
+														$lastItem = $query_array["no"];
+														$productID = $query_array["productID"];
+														$discount = $query_array["discount"];
+	        											$query = "SELECT producttype.typeName, category.category, platingprice.platingPrice FROM details JOIN producttype ON details.typeID=producttype.typeID JOIN category ON details.categoryID=category.categoryID JOIN platingprice WHERE (details.platingID=1 AND platingprice.platingPriceId=details.platingPriceId) LIMIT 1";
 	        											$result = mysqli_query($conn, $query);
 	        											while(@$query_array = mysqli_fetch_array($result)){
 															echo '<li class="span3">';
 															echo '<div class="product-box">';
 															echo '<span class="sale_tag"></span>';
-															echo '<p><a href="product_detail.html"><img src="assets/image/products/'.$query_array["category"].$query_array["typeName"].'-thumb.jpg" alt="" /></a></p>';
+															echo '<p><a href="product_detail.html"><img src="../assets/images/products/1.'.$productID.'-thumb.jpg" alt="" /></a></p>';
 															echo '<a href="product_detail.html" class="title">'.$query_array["typeName"].' '.$query_array["category"].'</a><br/>';
 															echo '<a href="products.html" class="category">'.$query_array["category"].'</a>';
-															echo '<p class="price">$17.25</p>';
+															echo '<p class="price"><span class="discountedPrice">Rs'.$query_array["platingPrice"]*100/$discount.'</span> Rs'.$query_array["platingPrice"].'</p>';
 															echo '</div>';
 															echo '</li>';
 														}
