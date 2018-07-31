@@ -36,10 +36,10 @@
         $category = $query_array["categoryID"];
       }
     }
-    if(isset($_POST["newType"]))
-      $type = $_POST['newType'];
-    else
+    if(isset($_POST["type"]))
       $type = $_POST['type'];
+    else
+      $type = $_POST['newType'];
     if(ctype_alpha($type)){
       $query = "SELECT * FROM producttype WHERE typeName = '$type'";
       $result = mysqli_query($conn, $query);
@@ -86,10 +86,24 @@
             if($fileSize < 3000000)
             {
               //$fileNameNew=$i.uniqid('',true).".".$fileExt;
-              $fileNameNew=$i.".".$category.$type.".".$fileExt;
+              $fileNameNew=$i.".".$category.$type;
               $i++;
-              $fileDestination = 'uploads/'.$fileNameNew;
-              move_uploaded_file($fileTmpName, $fileDestination);
+              $fileDestination = 'uploads/'.$fileNameNew.".".$fileExt;
+              // move_uploaded_file($fileTmpName, $fileDestination);
+              if(move_uploaded_file($fileTmpName, $fileDestination)){
+                // echo "hi"; 
+                if($fileExt==="jpg"||$fileExt==="jpeg"){$source_image = imagecreatefromjpeg($fileDestination);}
+                if($fileExt==="png"){$source_image = imagecreatefrompng($fileDestination);}
+                $source_imagex = imagesx($source_image);
+                $source_imagey = imagesy($source_image);
+                $dest_imagex = 300;
+                $dest_imagey = 300;
+                $dest_image = imagecreatetruecolor($dest_imagex, $dest_imagey);
+                imagecopyresampled($dest_image, $source_image, 0, 0, 0, 0, $dest_imagex, $dest_imagey, $source_imagex, $source_imagey);
+                imagejpeg($dest_image,"uploads/thumbs/".$fileNameNew."-thumb.jpg",80);
+                rename("uploads/thumbs/".$fileNameNew."-thumb.jpg", "../assets/images/products/".$fileNameNew."-thumb.jpg");
+                unlink($fileDestination);
+              }
             } else {
                 echo "<script type='text/javascript'>
                       function error(){

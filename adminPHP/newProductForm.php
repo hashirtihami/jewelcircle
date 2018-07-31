@@ -91,6 +91,7 @@
               <input id="file" type="file" name="files[]" multiple>
               <span id="numFiles" class="error"></span>
               <p class="help-block">Upload images of new product (upto 3)</p>
+              <p class="help-block">For best results use jpg format</p>
               <p class="help-block">Max image size = 3MB</p>
             </div>
                             <!-- text input -->

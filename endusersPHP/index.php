@@ -1,5 +1,6 @@
  <?php
 	require 'templates/top.inc.php';
+	require 'connect.inc.php'
 ?>
 
 
@@ -30,7 +31,7 @@
 						<div class="row">
 							<div class="span12">
 								<h4 class="title">
-									<span class="pull-left"><span class="text"><span class="line">Feature <strong>Products</strong></span></span></span>
+									<span class="pull-left"><span class="text"><span class="line">New <strong>Arrivals</strong></span></span></span>
 									<span class="pull-right">
 										<a class="left button" href="#myCarousel" data-slide="prev"></a><a class="right button" href="#myCarousel" data-slide="next"></a>
 									</span>
@@ -38,77 +39,52 @@
 								<div id="myCarousel" class="myCarousel carousel slide">
 									<div class="carousel-inner">
 										<div class="active item">
-											<ul class="thumbnails">												
-												<li class="span3">
-													<div class="product-box">
-														<span class="sale_tag"></span>
-														<p><a href="product_detail.html"><img src="themes/images/ladies/10.jpg" alt="" /></a></p>
-														<a href="product_detail.html" class="title">Ut wisi enim ad</a><br/>
-														<a href="products.html" class="category">Commodo consequat</a>
-														<p class="price">$17.25</p>
-													</div>
-												</li>
-												<li class="span3">
-													<div class="product-box">
-														<span class="sale_tag"></span>
-														<p><a href="product_detail.html"><img src="themes/images/ladies/10.jpg" alt="" /></a></p>
-														<a href="product_detail.html" class="title">Quis nostrud exerci tation</a><br/>
-														<a href="products.html" class="category">Quis nostrud</a>
-														<p class="price">$32.50</p>
-													</div>
-												</li>
-												<li class="span3">
-													<div class="product-box">
-														<p><a href="product_detail.html"><img src="themes/images/ladies/10.jpg" alt="" /></a></p>
-														<a href="product_detail.html" class="title">Know exactly turned</a><br/>
-														<a href="products.html" class="category">Quis nostrud</a>
-														<p class="price">$14.20</p>
-													</div>
-												</li>
-												<li class="span3">
-													<div class="product-box">
-														<p><a href="product_detail.html"><img src="themes/images/ladies/10.jpg" alt="" /></a></p>
-														<a href="product_detail.html" class="title">You think fast</a><br/>
-														<a href="products.html" class="category">World once</a>
-														<p class="price">$31.45</p>
-													</div>
-												</li>
+											<ul class="thumbnails">
+											<?php
+												$query = "SELECT productID,no FROM product ORDER BY date desc LIMIT 4";
+												$query_run = mysqli_query($conn, $query);
+        										while(@$query_array = mysqli_fetch_array($query_run)){
+													$lastItem = $query_array["no"];
+													$productID = $query_array["productID"];
+        											$query = "SELECT producttype.typeName, category.category FROM details JOIN producttype ON details.typeID=producttype.typeID JOIN category ON details.categoryID=category.categoryID WHERE productID=".$query_array["productID"]." LIMIT 1";
+        											$result = mysqli_query($conn, $query);
+        											while(@$query_array = mysqli_fetch_array($result)){
+														echo '<li class="span3">';
+														echo '<div class="product-box">';
+														echo '<span class="sale_tag"></span>';
+														echo '<p><a href="product_detail.html"><img src="../assets/images/products/1.'.$productID.'-thumb.jpg" alt="" /></a></p>';
+														echo '<a href="product_detail.html" class="title">'.$query_array["typeName"].' '.$query_array["category"].'</a><br/>';
+														echo '<a href="products.html" class="category">'.$query_array["category"].'</a>';
+														echo '<p class="price">$17.25</p>';
+														echo '</div>';
+														echo '</li>';
+													}
+												}
+											?>											
 											</ul>
 										</div>
 										<div class="item">
 											<ul class="thumbnails">
-												<li class="span3">
-													<div class="product-box">
-														<p><a href="product_detail.html"><img src="themes/images/ladies/10.jpg" alt="" /></a></p>
-														<a href="product_detail.html" class="title">Know exactly</a><br/>
-														<a href="products.html" class="category">Quis nostrud</a>
-														<p class="price">$22.30</p>
-													</div>
-												</li>
-												<li class="span3">
-													<div class="product-box">
-														<p><a href="product_detail.html"><img src="themes/images/ladies/10.jpg" alt="" /></a></p>
-														<a href="product_detail.html" class="title">Ut wisi enim ad</a><br/>
-														<a href="products.html" class="category">Commodo consequat</a>
-														<p class="price">$40.25</p>
-													</div>
-												</li>
-												<li class="span3">
-													<div class="product-box">
-														<p><a href="product_detail.html"><img src="themes/images/ladies/10.jpg" alt="" /></a></p>
-														<a href="product_detail.html" class="title">You think water</a><br/>
-														<a href="products.html" class="category">World once</a>
-														<p class="price">$10.45</p>
-													</div>
-												</li>
-												<li class="span3">
-													<div class="product-box">
-														<p><a href="product_detail.html"><img src="themes/images/ladies/10.jpg" alt="" /></a></p>
-														<a href="product_detail.html" class="title">Quis nostrud exerci</a><br/>
-														<a href="products.html" class="category">Quis nostrud</a>
-														<p class="price">$35.50</p>
-													</div>
-												</li>																																	
+												<?php
+													$query = "SELECT productID FROM product WHERE no<".$lastItem." LIMIT 4";
+													$query_run = mysqli_query($conn, $query);
+        											while(@$query_array = mysqli_fetch_array($query_run)){
+														$lastItem = $query_array["productID"];
+	        											$query = "SELECT producttype.typeName, category.category FROM details JOIN producttype ON details.typeID=producttype.typeID JOIN category ON details.categoryID=category.categoryID WHERE productID=".$query_array["productID"]." LIMIT 1";
+	        											$result = mysqli_query($conn, $query);
+	        											while(@$query_array = mysqli_fetch_array($result)){
+															echo '<li class="span3">';
+															echo '<div class="product-box">';
+															echo '<span class="sale_tag"></span>';
+															echo '<p><a href="product_detail.html"><img src="assets/image/products/'.$query_array["category"].$query_array["typeName"].'-thumb.jpg" alt="" /></a></p>';
+															echo '<a href="product_detail.html" class="title">'.$query_array["typeName"].' '.$query_array["category"].'</a><br/>';
+															echo '<a href="products.html" class="category">'.$query_array["category"].'</a>';
+															echo '<p class="price">$17.25</p>';
+															echo '</div>';
+															echo '</li>';
+														}
+													}
+												?>														
 											</ul>
 										</div>
 									</div>							
