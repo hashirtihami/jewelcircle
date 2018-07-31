@@ -46,7 +46,7 @@
               imagecopyresampled($dest_image, $source_image, 0, 0, 0, 0, $dest_imagex, $dest_imagey, $source_imagex, $source_imagey);
               imagejpeg($dest_image,"giftcards/thumbs/".$fileNameNew."-thumb.jpg",80);
               rename("giftcards/thumbs/".$fileNameNew."-thumb.jpg", "../assets/images/giftcards/".$fileNameNew."-thumb.jpg");
-              // unlink($fileDestination);
+              unlink($fileDestination);
             }
           } else {
               echo "<script type='text/javascript'>
