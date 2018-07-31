@@ -24,7 +24,7 @@
 
 <section class="content-header">
       <h1>All Products 
-        <div class="btn-group showButtons" id="btnAddons">
+        <div class="btn-group showButtons">
           <button class="btn bg-light-blue-gradient btn-lg" data-toggle="modal" data-target="#delConfirm">
             <i class="fas fa-trash"></i>
             <span class="label-warning nen counts"></span>
