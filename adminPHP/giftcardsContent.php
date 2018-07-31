@@ -50,7 +50,7 @@
           echo '</div>';
           echo '<div class="box-body" >';
           echo '<div class="hovereffect">';
-          echo '<img class="img-thumb" src="giftcards/thumbs/'.$query_array["cardName"].'-thumb.'.$query_array["fileExt"].'" alt="">';
+          echo '<img class="img-thumb" src="../assets/images/giftcards/'.$query_array["cardName"].'-thumb.'.$query_array["fileExt"].'" alt="">';
           echo '<div class="owerlay" style="width: 100%">';
           echo '<a class="info" href="#">';
           echo '<button type="button" class="btn btn-lg bg-black buttonDel" data-toggle="modal" data-target="#delConfirm">';

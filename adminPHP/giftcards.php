@@ -30,10 +30,10 @@
         {
           if($fileSize < 3000000)
           {
-            $fileNameNew=$giftCardName.".".$fileExt;
+            $fileNameNew=$giftCardName;
             //$fileNameNew=$i.".".$category.$type.".".$fileExt;
             // $i++;
-            $fileDestination = 'giftcards/'.$fileNameNew;
+            $fileDestination = 'giftcards/'.$fileNameNew.".".$fileExt;
             //move_uploaded_file($fileTmpName, $fileDestination);
             if(move_uploaded_file($fileTmpName, $fileDestination)){
               if($fileExt==="jpg"||$fileExt==="jpeg"){$source_image = imagecreatefromjpeg($fileDestination);}
@@ -44,8 +44,9 @@
               $dest_imagey = 300;
               $dest_image = imagecreatetruecolor($dest_imagex, $dest_imagey);
               imagecopyresampled($dest_image, $source_image, 0, 0, 0, 0, $dest_imagex, $dest_imagey, $source_imagex, $source_imagey);
-              if($fileExt==="jpg"||$fileExt==="jpeg"){imagejpeg($dest_image,"giftcards/thumbs/".$giftCardName."-thumb.".$fileExt,80);}
-              if($fileExt==="png"){imagepng($dest_image,"giftcards/thumbs/".$giftCardName."-thumb.".$fileExt,80);}
+              imagejpeg($dest_image,"giftcards/thumbs/".$fileNameNew."-thumb.jpg",80);
+              rename("giftcards/thumbs/".$fileNameNew."-thumb.jpg", "../assets/images/giftcards/".$fileNameNew."-thumb.jpg");
+              // unlink($fileDestination);
             }
           } else {
               echo "<script type='text/javascript'>
