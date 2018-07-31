@@ -81,9 +81,11 @@
                           $query = "SELECT PL.platingPrice FROM platingprice PL JOIN product P JOIN plating PLA ON PL.platingPriceId = CONCAT(".$productId.", ".$query_array["platingID"].") LIMIT 1";
                           $check = $query_array["platingID"];
                           $price = mysqli_query($conn, $query);
-                          while(@$query_array = mysqli_fetch_array($price)){
-                            echo "<td>".$query_array["platingPrice"]."</td>";
+                          if(@$query_array = mysqli_fetch_array($price)){
+                                echo "<td>".$query_array["platingPrice"]."</td>";
                           }
+                          else
+                              echo "<td>NULL</td>";
                         }
                         echo '<td><button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm"><i class="fas fa-trash-alt"></i></button></td>';
                         echo '</tr>';
