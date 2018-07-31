@@ -51,7 +51,7 @@
 													$lastItem = $query_array["no"];
 													$productID = $query_array["productID"];
 													$discount = $query_array["discount"];
-        											$query = "SELECT producttype.typeName, category.category, platingprice.platingPrice FROM details JOIN producttype ON details.typeID=producttype.typeID JOIN category ON details.categoryID=category.categoryID JOIN platingprice WHERE (details.platingID=1 AND platingprice.platingPriceId=details.platingPriceId) LIMIT 1";
+        											$query = "SELECT producttype.typeName, category.category, platingprice.platingPrice FROM details JOIN producttype ON details.typeID=producttype.typeID JOIN category ON details.categoryID=category.categoryID JOIN platingprice WHERE (details.platingID=1 AND platingprice.platingPriceId=details.platingPriceId AND details.productID=$productID) LIMIT 1";
         											$result = mysqli_query($conn, $query);
         											while(@$query_array = mysqli_fetch_array($result)){
 														echo '<li class="span3">';
@@ -77,7 +77,7 @@
 														$lastItem = $query_array["no"];
 														$productID = $query_array["productID"];
 														$discount = $query_array["discount"];
-	        											$query = "SELECT producttype.typeName, category.category, platingprice.platingPrice FROM details JOIN producttype ON details.typeID=producttype.typeID JOIN category ON details.categoryID=category.categoryID JOIN platingprice WHERE (details.platingID=1 AND platingprice.platingPriceId=details.platingPriceId) LIMIT 1";
+	        											$query = "SELECT producttype.typeName, category.category, platingprice.platingPrice FROM details JOIN producttype ON details.typeID=producttype.typeID JOIN category ON details.categoryID=category.categoryID JOIN platingprice WHERE (details.platingID=1 AND platingprice.platingPriceId=details.platingPriceId AND details.productID=$productID) LIMIT 1";
 	        											$result = mysqli_query($conn, $query);
 	        											while(@$query_array = mysqli_fetch_array($result)){
 															echo '<li class="span3">';
