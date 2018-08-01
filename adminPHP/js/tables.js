@@ -60,23 +60,35 @@ $('#delete').unbind().click(function() {
 		}
 	});
 });
-
 		// count checked checkboxes
 $('.checks').click(function() {
+	$('#multiDispatch').attr('disabled', 'disabled');
 	var targets = $('.checks');
 	var count = 0;
+	var sum = 0;
 	targets.each(function() {
 		if ($(this).is(":checked")) {
 			count++;
 			if(count > 1) {
 				if($('#btnAddons').is(':hidden')) {
-					$('#actionCss').slideDown('slow');
-					$('#btnAddons').slideDown('slow');
+					$('#actionCss, #btnAddons').slideDown('slow');
 				}
 				$('.counts').text(count);
 			}			
+				var row = this.parentNode.parentNode;
+				if(! $(row).hasClass('bg-dispatch')) {
+					++sum;
+				}
 		}
 	})
+				if(sum > 0) {
+					$('#multiDispatch').removeAttr('disabled');
+					$('.dispatchCount').text(sum);
+				}
+				else {
+					$('.dispatchCount').text('0');
+				}
+				console.log(sum);
 		if(count < 2) {
 			$('#btnAddons').slideUp('slow');
 			$('#actionCss').slideUp('slow');
@@ -102,6 +114,7 @@ $('.checks').click(function() {
 $(".dispatchBtn").on('click', function() {
 	var target = $(this).parent();
 	var row = $(target).parent();
+	$('.dispatchBtn').attr('data-toggle', 'modal');
 	if((row).hasClass('bg-dispatch')) {
 		$(this).attr('data-target', '#undoPopup');
 		$("#undo").unbind().on("click", function() {
@@ -113,6 +126,8 @@ $(".dispatchBtn").on('click', function() {
 		$(this).attr('data-target', '#dispatchConfirm');	
 		$("#dispatch").unbind().on("click", function() {
 			$(row).addClass('bg-dispatch');
+			var chkbox = row.find('input:first');
+			$(chkbox).prop('checked', false); 					
 			$('#btnAddons, #actionCss').slideUp('slow');			
 	});
 }

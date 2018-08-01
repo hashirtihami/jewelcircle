@@ -2,34 +2,10 @@
   //Starting Database Connection
   require 'connect.inc.php';
 ?>
-<style type="">
-    .delColumn {
-      width: 150px;
-    }
-    .nen {
-      position: absolute;
-      top: 9px;
-      right: 7px;
-      text-align: center;
-      font-size: 11px;
-      padding: 2px 3px;
-      line-height: .9;
-      border-radius: 10px;
-    }
-    .showButtons {
-      display: inline-block;
-      margin-left: 5px;
-    }
-</style>
+
 
 <section class="content-header">
       <h1>All Products 
-        <div class="btn-group showButtons">
-          <button class="btn bg-light-blue-gradient btn-lg" data-toggle="modal" data-target="#delConfirm">
-            <i class="fas fa-trash"></i>
-            <span class="label-warning nen counts"></span>
-          </button>
-        </div>
       </h1>
       <ol class="breadcrumb">
         <li><a href="../../home.html"><i class="fas fa-home"></i> Home</a></li>
@@ -52,7 +28,7 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th></th>
+                  <th class="checkboxColumn"></th>
                   <th>Product</th>
                   <th>Product Type</th>
                   <th>Silver Price </th>
@@ -71,7 +47,7 @@
                       while(@$query_array = mysqli_fetch_array($result)){
                         echo '<tr>';
                         echo '<td class="a-center ">';
-                        echo '<input type="checkbox" class="flat checks" name="table_records">';
+                        echo '<input type="checkbox" class="icheckbox_flat-blue checks" name="table_records">';
                         echo '</td>';
                         echo '<td class="category">'.$query_array["category"].'</td>';
                         echo '<td class="type">'.$query_array["typeName"].'</td>';

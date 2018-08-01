@@ -58,11 +58,11 @@
                     <td>150</td>
                     <td class="btn-group buttonsCss" role="group">
                       <!-- <div> -->
-                        <button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm">
+                        <button type="button" class="btn bg-grey buttonDel" title="Delete" data-toggle="modal" data-target="#delConfirm">
                           <i class="fas fa-trash-alt"></i>
                         </button>
-                        <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
-                        <button type="button" class="btn bg-grey dispatchBtn" data-toggle="modal">
+                        <button type="button" class="btn bg-grey" title="PDF Download"><i class="fas fa-file-download"></i></button>
+                        <button type="button" class="btn bg-grey dispatchBtn" title="Dispatch">
                           <i class="fas fa-shipping-fast"></i>
                           <span class="label-success labelCount buttonDispatch hideShow"><i class="fas fa-check"></i></span>
                         </button>
@@ -86,7 +86,7 @@
                           <i class="fas fa-trash-alt"></i>
                         </button>
                         <button type="button" class="btn bg-grey"><i class="fas fa-file-download"></i></button>
-                        <button type="button" class="btn bg-grey dispatchBtn" data-toggle="modal">
+                        <button type="button" class="btn bg-grey dispatchBtn">
                           <i class="fas fa-shipping-fast"></i>
                           <span class="label-success labelCount buttonDispatch hideShow"><i class="fas fa-check"></i></span>
                         </button>                        

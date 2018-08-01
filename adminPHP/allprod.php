@@ -10,6 +10,8 @@
 <script src="js/allprod.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
-    $('tbody > div').addClass('deleteSelection');
+    $('.orderButtons').addClass("disabled");
+    $('button.orderButtons span').hide();
   })
+
 </script>

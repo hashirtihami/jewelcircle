@@ -40,8 +40,8 @@
               if($fileExt==="png"){$source_image = imagecreatefrompng($fileDestination);}
               $source_imagex = imagesx($source_image);
               $source_imagey = imagesy($source_image);
-              $dest_imagex = 300;
-              $dest_imagey = 300;
+              $dest_imagex = 1000;
+              $dest_imagey = 1000;
               $dest_image = imagecreatetruecolor($dest_imagex, $dest_imagey);
               imagecopyresampled($dest_image, $source_image, 0, 0, 0, 0, $dest_imagex, $dest_imagey, $source_imagex, $source_imagey);
               imagejpeg($dest_image,"giftcards/thumbs/".$fileNameNew."-thumb.jpg",80);
@@ -116,6 +116,14 @@
   .btn-dark:focus, .btn-dark.focus {
   box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
   }
+hr.style14 { 
+  border: 0; 
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #e60040, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #e60040, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #e60040, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #e60040, #f0f0f0); 
+}
 </style>
 <link rel="stylesheet" type="text/css" href="utils.css">
 <script src="js/giftcard.js"></script>

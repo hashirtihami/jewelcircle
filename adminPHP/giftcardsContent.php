@@ -36,8 +36,9 @@
 			</form>
   		</div>
     </div>
+    <hr class="style14">
 
-     <div class="contayner" id="some">  
+     <div class="container" id="some">  
       <?php
         $query = "SELECT * FROM giftcard ORDER BY giftcardId";
         $query_run = mysqli_query($conn, $query);

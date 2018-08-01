@@ -148,16 +148,16 @@
       <li id="actionCss" class="header hideShow">ACTIONS</li>
         <li>
           <div class="btn-group hideShow box-footer" id="btnAddons">
-            <button id="firstBtn" class="btn bg-custom btn-lg" data-toggle="modal" data-target="#delConfirm">
+            <button id="firstBtn" class="btn bg-custom btn-lg" data-toggle="modal" data-target="#delConfirm" title="Multi-Delete">
               <i class="fas fa-trash"></i>
               <span class="label-warning labelCount counts"></span>
             </button>
-            <button class="btn bg-custom btn-lg orderButtons"><i class="fas fa-file-download"></i>
+            <button class="btn bg-custom btn-lg orderButtons"><i class="fas fa-file-download" title="Multiple Invoice Download"></i>
               <span class="label-success labelCount counts"></span>
             </button>
-            <button id="multiDispatch" class="btn bg-custom btn-lg orderButtons" data-toggle="modal" data-target="#dispatchConfirm">
+            <button id="multiDispatch" class="btn bg-custom btn-lg orderButtons" disabled="disabled" data-toggle="modal" data-target="#dispatchConfirm" title="Multi-Dispatch">
               <i class="fas fa-shipping-fast"></i>
-              <span class="label-primary labelCount counts"></span>
+              <span class="label-primary labelCount dispatchCount"></span>
             </button>
           </div>
         </li>

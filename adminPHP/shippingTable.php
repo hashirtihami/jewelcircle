@@ -38,7 +38,7 @@
                 <thead>
                   <tr>
                     <th>Country</th>
-                    <th>Shipping Cost</th>
+                    <th>Shipping Cost(Rs)</th>
                     <th>Action</th>
                   </tr>
                 </thead>
@@ -48,7 +48,7 @@
                   $query_run = mysqli_query($conn, $query);
                   while(@$query_array = mysqli_fetch_array($query_run)){
                     echo "<tr>";
-                    echo '<td><input type="checkbox" class="flat checks" name="table_records"></td>';
+                    // echo '<td><input type="checkbox" class="flat checks" name="table_records"></td>';
                     echo '<td class="data">'.$query_array["country"].'</td>';
                     echo '<td>'.$query_array["cost"].'</td>';
                     echo '<td><button type="button" class="btn bg-grey buttonDel" data-toggle="modal" data-target="#delConfirm"><i class="fas fa-trash-alt"></i></button></td>';
@@ -59,7 +59,7 @@
               <tfoot>
                   <tr>
                   <th>Country</th>
-                  <th>Shipping Cost</th>
+                  <th>Shipping Cost(Rs)</th>
                   <th>Action</th>
                 </tr>
               </tfoot>
