@@ -271,6 +271,10 @@
     $('.js-show-modal1').on('click',function(e){
         e.preventDefault();
         $('.js-modal1').addClass('show-modal1');
+        var title = $(this).parentsUntil(".item-slick2").find(".title").html();
+        $.post("templates/modal.inc.php", {title: title}, function(data){
+            console.log(data);
+        });
     });
 
     $('.js-hide-modal1').on('click',function(){
