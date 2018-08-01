@@ -45,7 +45,7 @@
 										<div class="active item">
 											<ul class="thumbnails">
 											<?php
-												$query = "SELECT productID,no,discount FROM product ORDER BY date desc LIMIT 4";
+												$query = "SELECT productID,no,discount FROM product ORDER BY date desc";
 												$query_run = mysqli_query($conn, $query);
         										while(@$query_array = mysqli_fetch_array($query_run)){
 													$lastItem = $query_array["no"];
