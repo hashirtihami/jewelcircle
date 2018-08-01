@@ -1,13 +1,3 @@
-<?php
-	if(isset($_POST["title"])){
-		// echo $_POST["title"];
-		$title = explode(" ", $_POST["title"]);
-		$type = current($title);
-		$category = end($title);
-		$query = "SELECT something"
-	}
-?>
-
 <!-- Modal1 -->
 	<div class="wrap-modal1 js-modal1 p-t-60 p-b-20">
 		<div class="overlay-modal1 js-hide-modal1"></div>
@@ -161,3 +151,11 @@
 			</div>
 		</div>
 	</div>
+
+<?php
+	if(isset($_POST["title"])){
+		$title = explode(" ", $_POST["title"]);
+		$type = current($title);
+		$category = end($title);
+	}
+?>

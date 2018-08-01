@@ -418,7 +418,7 @@
 			</div>
 		</div>
 	</section>
-	
+
 <?php
 	require 'templates/modal.inc.php';
 	require 'templates/bottom.inc.php';
