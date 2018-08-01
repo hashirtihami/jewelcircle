@@ -1,8 +1,9 @@
 <?php 
 /* Main page with two forms: sign up and log in */
+session_start(); // You're outputting HTML before the session_start(). Put your PHP code above the HTML code. answer from quora
 require 'templates/top.inc.php';
 require 'login/db.php';
-session_start();
+
 //https://www.youtube.com/watch?v=Pz5CbLqdGwM&ab_channel=CleverTechie
 ?>
 <!DOCTYPE html>
