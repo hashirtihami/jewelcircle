@@ -141,6 +141,13 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   margin: -28px auto 0 auto; 
 }
 
+.heading{
+  font-family: Anydore;
+  padding-left:10px;
+  font-size:25px;
+  color: #e60044; 
+}
+
 @keyframes loader-scale {
   0% {
     transform: scale(0);
