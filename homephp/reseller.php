@@ -3,12 +3,11 @@
 	require 'templates/top.inc.php';
 ?>
 
-<title>Track My Order</title>
+<title>Resellers</title>
 
 
 
-
-
+<!--
 	<section class="section-slide">
 		<div class="wrap-slick1 rs1-slick1">
 			<div class="slick1">
@@ -38,7 +37,7 @@
 			</div>
 		</div>
 	</section>
-
+-->
 
 <?php
 	require 'templates/modal.inc.php';

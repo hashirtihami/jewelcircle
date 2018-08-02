@@ -1,14 +1,17 @@
-<?php
+ <?php
 	require 'connect.inc.php';
 	require 'templates/top.inc.php';
 ?>
 
-<title>Track My Order</title>
+<title>Resellers</title>
 
 
-
-
-
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">
+		<h2 class="ltext-105 cl0 txt-center">
+			Blog
+		</h2>
+</section>
+<!--
 	<section class="section-slide">
 		<div class="wrap-slick1 rs1-slick1">
 			<div class="slick1">
@@ -38,7 +41,7 @@
 			</div>
 		</div>
 	</section>
-
+-->
 
 <?php
 	require 'templates/modal.inc.php';
