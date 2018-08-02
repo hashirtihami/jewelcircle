@@ -272,8 +272,18 @@
         e.preventDefault();
         $('.js-modal1').addClass('show-modal1');
         var title = $(this).parentsUntil(".item-slick2").find(".title").html();
+        $(".js-name-detail").html(title);
         $.post("templates/modal.inc.php", {title: title}, function(data){
-            console.log(data);
+            var count = 0
+            $.each($(".item-slick3 img"), function(key, value){
+                console.log($(value).attr("src"));
+                count++;
+                // console.log(data);
+                // console.log(key+value);
+                var path = "../assets/images/products/"+count+"."+data+"-thumb.jpg";
+                // console.log(path);
+                $(value).attr("src", path);
+            })
         });
     });
 
