@@ -9,7 +9,7 @@
 
 
 <div class="container">
-  <h2 class="footerheadings">TERMS OF SERVICE</h2>
+  <h3 id="footerheadings">TERMS OF SERVICE</h3>
   <div class="panel-group">
 	<div class="panel panel-danger">
       <div class="panel-heading">OVERVIEW</div>

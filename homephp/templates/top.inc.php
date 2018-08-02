@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Home 02</title>
+	<title>Jewel Circle</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -110,7 +110,10 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->		
 			<div class="logo-mobile">
-				<a href="index.php"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
+				<a href="index.php" class="logo">
+						<span class="heading"> Jewel circle</span>
+					</a>
+
 			</div>
 
 			<!-- Icon header -->
@@ -143,14 +146,9 @@
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
 			<ul class="main-menu-m">
-				<li>
-					<a href="index.html">Home</a>
-				
-					<span class="arrow-main-menu-m">
-						<i class="fa fa-angle-right" aria-hidden="true"></i>
-					</span>
-				</li>
-
+					<li>
+								<a href="index.php">Home</a>
+							</li>
 				
 							<li>
 								<a href="product.html">Ring</a>

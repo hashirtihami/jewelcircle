@@ -9,7 +9,7 @@
 
 					<ul>
 						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="track.php" class=" stext-107 cl7 hov-cl1 trans-04">
 								Track My Order
 							</a>
 						</li>
@@ -53,13 +53,13 @@
 						</li>
 
 						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="infprogram.php" class="stext-107 cl7 hov-cl1 trans-04">
 								Influencer Program
 							</a>
 						</li>
 
 						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="reseller.php" class="stext-107 cl7 hov-cl1 trans-04">
 								Reseller Inquiry
 							</a>
 						</li>
@@ -67,20 +67,32 @@
 				</div>
 
 				<div class="col-sm-6 col-md-4 col-lg-4 p-b-50">
+
 					<h4 class="stext-301 cl0 p-b-30">
 						Contact Us
 					</h4>
 
-					<p class="stext-107 cl7 size-201">
-						info@jewelcircle.net
-					</p>
-					<p class="stext-107 cl7 size-201">
-						+92 334 3118434
-					</p>
-					<p class="stext-107 cl7 size-201">
-						Jewel Circle
-					</p>
+					<ul>
+						
 
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								info@jewelcircle.net
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								+92 334 3118434
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Jewel Circle
+							</a>
+						</li>
+					</ul>
 
 
 					<div class="p-t-27">
@@ -97,37 +109,39 @@
 
 			</div>
 
-			<div class="p-t-40">
-				<div class="flex-c-m flex-w p-b-18">
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-01.png" alt="ICON-PAY">
-					</a>
-
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-02.png" alt="ICON-PAY">
-					</a>
-
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-03.png" alt="ICON-PAY">
-					</a>
-
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
-					</a>
-
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
-					</a>
-				</div>
-
-				<p class=" cl6 txt-center">
+				<h6 class=" copyright  txt-center">
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright  All rights reserved | This website was created using Colorlib</a>
+Copyright  All rights reserved | This website was created in collaboration with Colorlib
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
-				</p>
+				</h6>
 			</div>
 		</div>
+
+
+<!--===============================================================================================-->	
+<!--========================================TRACK YOUR ORDER==========================================-->	
+<!--
+		<div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
+			<div class="container-search-header">
+				<button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
+					<img src="images/icons/icon-close2.png" alt="CLOSE">
+				</button>
+
+				<form class="wrap-search-header flex-w p-l-15">
+					<button class="flex-c-m trans-04">
+						<i class="zmdi zmdi-search"></i>
+					</button>
+					<input class="plh3" type="text" name="search" placeholder="Search...">
+				</form>
+			</div>
+		</div>
+
+
+-->
+<!--===============================================================================================-->	
+
+
 	</footer>
 
 

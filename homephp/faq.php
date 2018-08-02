@@ -16,7 +16,7 @@
   <h2>FAQ</h2>
   <div class="panel-group" id="accordion">
     
-    <div class="panel panel-default">
+    <div class="panel panel-default" style="background-color:#f2dede">
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">How do I order?</a>

@@ -9,12 +9,12 @@
 
 
 <div class="container">
-  <h2>DELIVERY POLICY</h2>
-  <div class="panel-group">
-    <p> No matter where you live in the World, we deliver our amazing stuff world-wide.
+  <h3 id="footerheadings">DELIVERY POLICY</h3>
+  <div  class="panel-group">
+    <p > No matter where you live in the World, we deliver our amazing stuff world-wide.
 	You can get your items delivered right to your doorstep. </p>
 
-    <div class="panel panel-danger">
+    <div   class="panel panel-danger">
       <div class="panel-heading">Our store also delivers to more than 55 cities in Pakistan.</div>
       <div class="panel-body">Our store delivers to more than 55 cities (Karachi, Islamabad, Lahore, Multan, Faisalabad, Rawalpindi, Sialkot, Hyderabad, Sargodha, Quetta, etc.)</div>
     </div>
