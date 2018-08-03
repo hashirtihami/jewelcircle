@@ -275,7 +275,7 @@
         $(".js-name-detail").html(title);
         $.post("templates/modal.inc.php", {title: title}, function(data){
             var DATA = JSON.parse(data);
-            console.log(DATA.html);
+            console.log(DATA);
             $(".slick3").html(DATA.html);
             function sliderInit(){
                 $('.wrap-slick3').each(function(){
@@ -296,14 +296,26 @@
                         appendDots: $(this).find('.wrap-slick3-dots'),
                         dotsClass: 'slick3-dots',
                         customPaging: function(slick, index) {
-                            console.log(slick.$slides+index);
                             var portrait = $(slick.$slides[index]).data('thumb');
                             return '<img src=" ' + portrait + ' "/><div class="slick3-dot-overlay"></div>';
                         },  
                     });
                 });
             }
-            sliderInit();           
+            sliderInit();
+            $(".description").html(DATA.description);
+            for (var i = 0; i < DATA.plating.length ; i++) {
+                var option = "<option>"+DATA.plating[i][0]+" -Rs "+DATA.plating[i][1]+"</option>";
+                $("select[name='plating']").append(option);
+            }        
+            for (var i = 0; i < DATA.language.length ; i++) {
+                var option = "<option>"+DATA.language[i][0]+" -Rs "+DATA.language[i][1]+"</option>";
+                $("select[name='language']").append(option);
+            }
+            for (var i = 0; i < DATA.nametype.length ; i++) {
+                var option = "<option>"+DATA.nametype[i][0]+" -Rs "+DATA.nametype[i][1]+"</option>";
+                $("select[name='nametype']").append(option);
+            }
         });
     });
 
