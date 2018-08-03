@@ -2,7 +2,7 @@
 /* Registration process, inserts user info into the database 
    and sends account confirmation email message
  */
-
+require 'popup.php';
 // Set session variables to be used on profile.php page
 $_SESSION['email'] = $_POST['email'];
 $_SESSION['first_name'] = $_POST['firstname'];
@@ -19,7 +19,7 @@ $address= $mysqli->escape_string($_POST['address']);
 $city= $mysqli->escape_string($_POST['city']);
 $country= $mysqli->escape_string($_POST['country']);
 $zipcode= $mysqli->escape_string($_POST['zipcode']);
-
+$role= $mysqli->escape_string($_POST['role']);
       
 /*
       echo $password . '<br/>';
@@ -34,32 +34,30 @@ $result = $mysqli->query("SELECT * FROM customer WHERE email='$email'") or die($
 if ( $result->num_rows > 0 ) {
     
     $_SESSION['message'] = 'User with this email already exists!';
+  
+/*
+   echo "
+            <script type=\"text/javascript\">
+           
+            </script>
+        ";
+*/
+
     header("location: error.php");
-    
+
 }
 
 else { // Email doesn't already exist in a database, proceed...
 
     // active is 0 by DEFAULT (no need to include it here)
-    $sql1 = "INSERT INTO address (address, city, zipcode, country) " 
-            . "VALUES ('$address','$city','$zipcode','$country')";
+    $sql1 = "INSERT INTO customer (first_name, last_name, email, password, hash, contact, address, city, zipcode, country , role) " 
+            . "VALUES ('$first_name','$last_name','$email','$password', '$hash' , '$contact' , '$address','$city','$zipcode','$country' , '$role')";
    // $addressID ="SELECT addressID FROM address";
 
-    $sql2 = "INSERT INTO customer (first_name, last_name, email, password, hash, contact) " 
-            . "VALUES ('$first_name','$last_name','$email','$password', '$hash' , '$contact' )";
-   
 // ===================== $sql1 aur $sql2 ki jugarr apni taraf sy maari hay .... koi aur hal hay tow kr ley ========================//
 
     // Add user to the database
-    if ( $mysqli->query($sql1) && $mysqli->query($sql2)  ){
-            
-          //$addressID = "SELECT addressID FROM address";
-          $addressID = "SELECT addressID FROM address WHERE address";
-          $foreignID ="INSERT INTO customer (addressID)"
-                      ."VALUES ('$addressID')";
-          $mysqli->query($foreignID);
-
-
+    if ( $mysqli->query($sql1) ){
         $_SESSION['active'] = 0; //0 until user activates their account with verify.php
         $_SESSION['logged_in'] = true; // So we know the user has logged in
         $_SESSION['message'] =

@@ -6,9 +6,7 @@ require 'login/db.php';
 
 //https://www.youtube.com/watch?v=Pz5CbLqdGwM&ab_channel=CleverTechie
 ?>
-<!DOCTYPE html>
-<html>
-<head>
+
   <title>Sign-Up/Login Form</title>
   <?php include 'login/css/css.html'; ?>
 </head>
@@ -136,6 +134,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
               <input type="text"  autocomplete="off" name='zipcode' />
             </div>
 
+              <div class="field-wrap">
+              <label>
+               Role<span >*</span>
+              </label>
+              <input type="text"  autocomplete="off" name='role' /> 
+            </div>
+
           <button type="submit" class="button button-block" name="register" />Register</button>
           
           </form>
@@ -148,9 +153,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <script src="login/js/index.js"></script>
-
-</body>
-</html>
 
 
 <?php
