@@ -19,12 +19,6 @@ $city= $mysqli->escape_string($_POST['city']);
 $country= $mysqli->escape_string($_POST['country']);
 $zipcode= $mysqli->escape_string($_POST['zipcode']);
 $role= $mysqli->escape_string($_POST['role']);
-      
-/*
-      echo $password . '<br/>';
-      echo $hash;
-         die;
-*/
 
 // Check if user with that email already exists
 $result = $mysqli->query("SELECT * FROM customer WHERE email='$email'") or die($mysqli->error());
@@ -34,24 +28,14 @@ if ( $result->num_rows > 0 ) {
     
     $_SESSION['message'] = 'User with this email already exists!';
 
-   header("location: error.php");
-  
-   echo "
-           chey ha kia? 
-        ";
-
-
-
+   header("location:  login/error.php");
 }
 
 else { // Email doesn't already exist in a database, proceed...
-
+    
     // active is 0 by DEFAULT (no need to include it here)
-    $sql1 = "INSERT INTO customer (first_name, last_name, email, password, hash, contact, address, city, zipcode, country , role) " 
-            . "VALUES ('$first_name','$last_name','$email','$password', '$hash' , '$contact' , '$address','$city','$zipcode','$country' , '$role')";
-   // $addressID ="SELECT addressID FROM address";
-
-// ===================== $sql1 aur $sql2 ki jugarr apni taraf sy maari hay .... koi aur hal hay tow kr ley ========================//
+    $sql1 = "INSERT INTO customer (first_name, last_name, email, password, hash, contact, address, city, zipcode, country , role, active) " 
+            . "VALUES ('$first_name','$last_name','$email','$password', '$hash' , '$contact' , '$address','$city','$zipcode','$country' , '$role', '1')";
 
     // Add user to the database
     if ( $mysqli->query($sql1) ){
@@ -64,19 +48,23 @@ else { // Email doesn't already exist in a database, proceed...
 
         // Send registration confirmation link (verify.php)
         $to      = $email;
-        $subject = 'Account Verification ( jewelcircle.net )';
+        $subject = ' Message from jewelcircle.net ';
         $message_body = '
         Hello '.$first_name.',
 
         Thank you for signing up!
 
-        Please click this link to activate your account:
+        Follow us:
 
-        http://localhost/login-system/verify.php?email='.$email.'&hash='.$hash;  
+        Instagram: https://www.instagram.com/jewel_circle/
+
+        Facebook: https://www.facebook.com/JewelCircle/
+
+        For any queries feel free to email us at info@JewelCircle.net';
 
         mail( $to, $subject, $message_body );
 
-        header("location: profile.php"); 
+        header("location: index.php"); 
 
     }
 
@@ -84,5 +72,4 @@ else { // Email doesn't already exist in a database, proceed...
         $_SESSION['message'] = 'Registration failed!';
         header("location: error.php");
     }
-
 }
