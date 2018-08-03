@@ -152,7 +152,7 @@ Copyright  All rights reserved | This website was created in collaboration with 
 		</span>
 	</div>
 
-
+	
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -173,6 +173,7 @@ Copyright  All rights reserved | This website was created in collaboration with 
 <!--===============================================================================================-->
 	<script src="vendor/daterangepicker/moment.min.js"></script>
 	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="js/main.js"></script>
 <!--===============================================================================================-->
 	<script src="vendor/slick/slick.min.js"></script>
 	<script src="js/slick-custom.js"></script>
@@ -252,7 +253,7 @@ Copyright  All rights reserved | This website was created in collaboration with 
 		});
 	</script>
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
+	
 
 </body>
 </html>

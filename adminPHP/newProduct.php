@@ -85,8 +85,9 @@
           {
             if($fileSize < 3000000)
             {
+              $productID = $category.$type;
               //$fileNameNew=$i.uniqid('',true).".".$fileExt;
-              $fileNameNew=$i.".".$category.$type;
+              $fileNameNew=$i.".".$productID;
               $i++;
               $fileDestination = 'uploads/'.$fileNameNew.".".$fileExt;
               // move_uploaded_file($fileTmpName, $fileDestination);
@@ -101,8 +102,10 @@
                 $dest_image = imagecreatetruecolor($dest_imagex, $dest_imagey);
                 imagecopyresampled($dest_image, $source_image, 0, 0, 0, 0, $dest_imagex, $dest_imagey, $source_imagex, $source_imagey);
                 imagejpeg($dest_image,"uploads/thumbs/".$fileNameNew."-thumb.jpg",80);
-                rename("uploads/thumbs/".$fileNameNew."-thumb.jpg", "../assets/images/products/".$fileNameNew."-thumb.jpg");
+                @rename("uploads/thumbs/".$fileNameNew."-thumb.jpg", "../assets/images/products/".$fileNameNew."-thumb.jpg");
                 unlink($fileDestination);
+                $query = "INSERT INTO images (productID, imageDestination) VALUES ('$productID', '../assets/images/products/".$fileNameNew."-thumb.jpg')";
+                mysqli_query($conn, $query);
               }
             } else {
                 echo "<script type='text/javascript'>

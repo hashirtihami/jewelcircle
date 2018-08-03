@@ -274,16 +274,34 @@
         var title = $(this).parentsUntil(".item-slick2").find(".title").html();
         $(".js-name-detail").html(title);
         $.post("templates/modal.inc.php", {title: title}, function(data){
-            var count = 0
-            $.each($(".item-slick3 img"), function(key, value){
-                console.log($(value).attr("src"));
-                count++;
-                // console.log(data);
-                // console.log(key+value);
-                var path = "../assets/images/products/"+count+"."+data+"-thumb.jpg";
-                // console.log(path);
-                $(value).attr("src", path);
-            })
+            var DATA = JSON.parse(data);
+            console.log(DATA.html);
+            $(".slick3").html(DATA.html);
+            $('.wrap-slick3').each(function(){
+                $(this).find('.slick3').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    fade: true,
+                    infinite: true,
+                    autoplay: false,
+                    autoplaySpeed: 6000,
+
+                    arrows: true,
+                    appendArrows: $(this).find('.wrap-slick3-arrows'),
+                    prevArrow:'<button class="arrow-slick3 prev-slick3"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
+                    nextArrow:'<button class="arrow-slick3 next-slick3"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',
+
+                    dots: true,
+                    appendDots: $(this).find('.wrap-slick3-dots'),
+                    dotsClass: 'slick3-dots',
+                    customPaging: function(slick, index) {
+                        console.log(slick.$slides+index);
+                        var portrait = $(slick.$slides[index]).data('thumb');
+                        // var portrait = "images/product-detail-01.jpg";
+                        return '<img src=" ' + portrait + ' "/><div class="slick3-dot-overlay"></div>';
+                    },  
+                });
+            });               
         });
     });
 
