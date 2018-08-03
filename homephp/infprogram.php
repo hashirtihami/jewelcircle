@@ -17,6 +17,15 @@
 	label{
 		font-weight:500;
 	}
+
+hr.style14 { 
+  border: 0; 
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #e60040, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #e60040, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #e60040, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #e60040, #f0f0f0); 
+}
 </style>
 
 
@@ -25,13 +34,14 @@
 			
 			INFLUENCER WANTED
 		</h2>
+		<hr class="style14">
 		<h3 class=" cl0 txt-center" style=" font-size:20px; 	" > GET <span style="color:#e60044;">JEWEL CIRCLE</span> LATEST PRODUCT FOR FREE EVERY MONTH </h3>
 </section>
 
 
 
 <div class="container" style="padding-top:30px">
-<hr>
+<hr class="style14">
 	<h2 style="color:#e60044;"> FASHION INFLUENCER POLICY</h2>
 	<div style="padding-top:30px">
 		
