@@ -1,4 +1,5 @@
 <?php
+session_start();
 /* Registration process, inserts user info into the database 
    and sends account confirmation email message
  */
@@ -26,9 +27,9 @@ $result = $mysqli->query("SELECT * FROM customer WHERE email='$email'") or die($
 // We know user email exists if the rows returned are more than 0
 if ( $result->num_rows > 0 ) {
     
-    $_SESSION['message'] = 'User with this email already exists!';
+    $_SESSION['message'] = 'User with this email already exists!'; 
 
-   header("location:  login/error.php");
+   header("location:  error.php");
 }
 
 else { // Email doesn't already exist in a database, proceed...
