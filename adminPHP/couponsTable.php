@@ -22,7 +22,7 @@
   </h1>
   <span><h4 id="warning" class="error hideShow"><i class="fa fa-warning"></i> Coupon Exists</h4></span>
   <ol class="breadcrumb">
-    <li><a href="../../home.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="home.php"><i class="fas fa-home"></i> Home</a></li>
     <li id="heee"> E-Commerce</li>
     <li class="active"> Coupons</li>
   </ol>
