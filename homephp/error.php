@@ -2,13 +2,8 @@
 /* Displays all error messages */
 session_start();
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Error</title>
-  <?php include 'css/css.html'; ?>
-</head>
-<body>
+
+
 <div class="form">
     <h1>Error</h1>
     <p> 
@@ -20,7 +15,7 @@ session_start();
     endif;
     ?>
     </p>     
-    <a href="index.php"><button class="button button-block"/>Home</button></a>
+    <a href="../index.php"><button class="button button-block"/>Home</button></a>
 </div>
 </body>
 </html>

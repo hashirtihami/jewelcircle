@@ -34,10 +34,10 @@ if ( $result->num_rows > 0 ) {
     
     $_SESSION['message'] = 'User with this email already exists!';
 
-   header("location:  login/error.php");
+   header("location: error.php");
   
    echo "
-           chey ha kia?
+           chey ha kia? 
         ";
 
 
