@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 }
 ?>
 <body>
-  <div class="form">
+  <div class="form"> 
       
       <ul class="tab-group">
         <li class="tab"><a href="#signup">Sign Up</a></li>

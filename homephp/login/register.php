@@ -2,7 +2,6 @@
 /* Registration process, inserts user info into the database 
    and sends account confirmation email message
  */
-require 'popup.php';
 // Set session variables to be used on profile.php page
 $_SESSION['email'] = $_POST['email'];
 $_SESSION['first_name'] = $_POST['firstname'];
@@ -34,16 +33,14 @@ $result = $mysqli->query("SELECT * FROM customer WHERE email='$email'") or die($
 if ( $result->num_rows > 0 ) {
     
     $_SESSION['message'] = 'User with this email already exists!';
-  
-/*
-   echo "
-            <script type=\"text/javascript\">
-           
-            </script>
-        ";
-*/
 
-    header("location: error.php");
+   //header("location:  login/error.php");
+  
+   echo "
+           chey ha kia?
+        ";
+
+
 
 }
 
