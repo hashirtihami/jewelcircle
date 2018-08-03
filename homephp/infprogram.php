@@ -29,20 +29,20 @@ hr.style14 {
 </style>
 
 
-<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('../assets/images/posters/banner2.jpg');">
-		<h2 class="ltext-105 cl0 txt-center" style=" font-size:60px; ">
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('../assets/images/posters/banner3.jpg');">
+		<h3 class=" cl0 txt-center" style=" font-size:6vw; text-shadow:5px 5px 10px black; ">
 			
 			INFLUENCER WANTED
-		</h2>
-		<hr class="style14">
-		<h3 class=" cl0 txt-center" style=" font-size:20px; 	" > GET <span style="color:#e60044;">JEWEL CIRCLE</span> LATEST PRODUCT FOR FREE EVERY MONTH </h3>
+		</h3>
+		
+		<h3 class=" cl0 txt-center" style=" font-size:2vw; text-shadow:5px 5px 10px black;	" > GET <span style="color:#e60044;">JEWEL CIRCLE</span> LATEST PRODUCT FOR FREE EVERY MONTH </h3>
 </section>
 
 
 
-<div class="container" style="padding-top:30px">
-<hr class="style14">
-	<h2 style="color:#e60044;"> FASHION INFLUENCER POLICY</h2>
+<div class="container" style="padding-top:100px">
+
+	<h2 class="txt-center" style="color:#e60044;"> FASHION INFLUENCER POLICY</h2>
 	<div style="padding-top:30px">
 		
 		<table class="table table-bordered" >
