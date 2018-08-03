@@ -273,6 +273,13 @@
         $('.js-modal1').addClass('show-modal1');
         var title = $(this).parentsUntil(".item-slick2").find(".title").html();
         $(".js-name-detail").html(title);
+        $("input[name='nameOnProduct']").on("keyup", function(){
+            $("#preview").css("color", $("select[name='plating']").val().split('-')[0]);
+            $("#preview").html($("input[name='nameOnProduct']").val());
+        });
+        $("select[name='plating']").on("change", function(){
+            $("#preview").css("color", $("select[name='plating']").val().split('-')[0]);
+        });
         $.post("templates/modal.inc.php", {title: title}, function(data){
             var DATA = JSON.parse(data);
             console.log(DATA);
