@@ -40,3 +40,8 @@
 #footerheadings{
 	padding-bottom:15px;
 }
+
+.panel-heading{
+	background-color:black;
+}
+
