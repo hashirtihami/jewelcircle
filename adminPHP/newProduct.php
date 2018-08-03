@@ -97,8 +97,8 @@
                 if($fileExt==="png"){$source_image = imagecreatefrompng($fileDestination);}
                 $source_imagex = imagesx($source_image);
                 $source_imagey = imagesy($source_image);
-                $dest_imagex = 300;
-                $dest_imagey = 300;
+                $dest_imagex = 1000;
+                $dest_imagey = 1000;
                 $dest_image = imagecreatetruecolor($dest_imagex, $dest_imagey);
                 imagecopyresampled($dest_image, $source_image, 0, 0, 0, 0, $dest_imagex, $dest_imagey, $source_imagex, $source_imagey);
                 imagejpeg($dest_image,"uploads/thumbs/".$fileNameNew."-thumb.jpg",80);
