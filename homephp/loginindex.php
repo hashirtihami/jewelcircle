@@ -1,17 +1,6 @@
+
 <?php 
-/* Main page with two forms: sign up and log in */
-session_start(); // You're outputting HTML before the session_start(). Put your PHP code above the HTML code. answer from quora
-require 'templates/top.inc.php';
 require 'login/db.php';
-
-//https://www.youtube.com/watch?v=Pz5CbLqdGwM&ab_channel=CleverTechie
-?>
-
-  <title>Sign-Up/Login Form</title>
-  <?php include 'login/css/css.html'; ?>
-</head>
-
-<?php 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') 
 {
     if (isset($_POST['login'])) { //user logging in
@@ -27,6 +16,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     }
 }
 ?>
+<?php 
+/* Main page with two forms: sign up and log in */
+session_start(); // You're outputting HTML before the session_start(). Put your PHP code above the HTML code. answer from quora
+require 'templates/top.inc.php';
+//https://www.youtube.com/watch?v=Pz5CbLqdGwM&ab_channel=CleverTechie
+?>
+
+  <title>Sign-Up/Login Form</title>
+  <?php include 'login/css/css.html'; ?>
+</head>
+
+
 <body>
   <div class="form"> 
       
