@@ -29,7 +29,7 @@ hr.style14 {
 </style>
 
 
-<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('../assets/images/posters/banner1.jpg');">
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('../assets/images/posters/banner2.jpg');">
 		<h2 class="ltext-105 cl0 txt-center" style=" font-size:60px; ">
 			
 			INFLUENCER WANTED
