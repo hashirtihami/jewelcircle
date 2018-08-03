@@ -185,8 +185,9 @@
       </div>
           <!-- /.box-body -->
 
-          <div class="box-footer">
+          <div class="box-footer btn-group">
             <button type="submit" id="submit" class="btn btn-primary" name="submit">Submit</button>
+            <button type="reset" class="btn bg-red" title="Reset Form"><i class="fas fa-undo"></i></button>
           </div>
         </form>
       </div>
