@@ -273,17 +273,17 @@
         $('.js-modal1').addClass('show-modal1');
         var title = $(this).parentsUntil(".item-slick2").find(".title").html();
         $(".js-name-detail").html(title);
-        $("input[name='nameOnProduct']").on("keyup", function(){
+        $("select[name='plating'], select[name='language'], select[name='nametype'], input[name='num-product'], .btn-num-product-up, .btn-num-product-down").bind("change keyup mouseup click", function(){
             $("#preview").css("color", $("select[name='plating']").val().split('-')[0]);
             $("#preview").html($("input[name='nameOnProduct']").val());
-        });
-        $("select[name='plating']").on("change", function(){
             $("#preview").css("color", $("select[name='plating']").val().split('-')[0]);
+            $("#total").html($("input[name='num-product']").val()*(parseInt($("select[name='plating']").val().split('-')[1].split('Rs')[1])+parseInt($("select[name='nametype']").val().split('-')[1].split('Rs')[1])+parseInt($("select[name='language']").val().split('-')[1].split('Rs')[1])));
         });
         $.post("templates/modal.inc.php", {title: title}, function(data){
             var DATA = JSON.parse(data);
             console.log(DATA);
             $(".slick3").html(DATA.html);
+            $("input[name='nameOnProduct']").attr("maxlength", DATA.nameLength);
             function sliderInit(){
                 $('.wrap-slick3').each(function(){
                     $(this).find('.slick3').slick({
