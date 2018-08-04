@@ -270,10 +270,17 @@
     [ Show modal1 ]*/
     $('.js-show-modal1').on('click',function(e){
         e.preventDefault();
+        $("#addToCart").prop("disabled", true);
         $('.js-modal1').addClass('show-modal1');
         var title = $(this).parentsUntil(".item-slick2").find(".title").html();
         $(".js-name-detail").html(title);
         $("select[name='plating'], select[name='language'], select[name='nametype'], input[name='num-product'], .btn-num-product-up, .btn-num-product-down, input[name='nameOnProduct']").bind("change keyup mouseup click", function(){
+            if($("input[name='nameOnProduct']").val()){
+                $("#addToCart").prop("disabled", false);
+            }
+            else{
+                $("#addToCart").prop("disabled", true);
+            }
             $("#preview").css("color", $("select[name='plating']").val().split('-')[0]);
             $("#preview").html($("input[name='nameOnProduct']").val());
             $("#preview").css("color", $("select[name='plating']").val().split('-')[0]);
@@ -340,14 +347,12 @@
     /*==================================================================
     [ Add to Cart ]*/
     $("#addToCart").on("click", function(){
-        console.log("clicked");
         var product = $(".js-name-detail").html();
         var productID = $(".js-name-detail").attr("id");
         var quantity = $("input[name='num-product']").val();
         var price = $("#total").html();
         var name = $("input[name='nameOnProduct']").val();
         $.post("addToCart.php", {productID: productID, product: product, quantity: quantity, price: price, nameOnProduct: name}, function(data){
-            console.log("hi");
             console.log(data);
         });
     });

@@ -1,3 +1,8 @@
+<?php
+	session_unset();
+	session_start();
+	print_r($_SESSION);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,7 +94,9 @@
 						</div>
 							
 						<div class="flex-c-m h-full p-l-18 p-r-25 bor5">
-							<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="2">
+							<?php
+								echo '<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="'.count($_SESSION["product"]).'">';
+							?>
 								<a href="shopping-cart.php"><i class="zmdi zmdi-shopping-cart"></i></a>
 							</div>
 						</div>

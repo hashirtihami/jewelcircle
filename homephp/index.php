@@ -508,7 +508,7 @@
 									</div>
 									<div class="size-204 respon6-next">
 										<div class="rs1-select2 bor8 bg0">
-											<input class="nameOnProd" type="text" name="nameOnProduct" placeholder="Name on Product" required>
+											<input class="nameOnProd" type="text" name="nameOnProduct" placeholder="Name on Product (required)" required>
 										</div>
 									</div>
 								</div>
@@ -519,7 +519,7 @@
 									</div>
 									<div class="size-204 respon6-next">
 										<div class="rs1-select2 bor8 bg0">
-											<p class="preview" id="preview"></p>
+											<p class="preview" id="preview">Preview</p>
 										</div>
 									</div>
 								</div>
@@ -530,7 +530,7 @@
 									</div>
 									<div class="size-204 respon6-next">
 										<div class="rs1-select2 bor8 bg0">
-											<p class="total" id="total"></p>
+											<p class="total" id="total">Total</p>
 										</div>
 									</div>
 								</div>
@@ -549,7 +549,7 @@
 											</div>
 										</div>
 
-										<button id="addToCart" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail" disabled="disabled">
+										<button id="addToCart" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
 											Add to cart
 										</button>
 									</div>
