@@ -312,6 +312,9 @@
             }
             sliderInit();
             $(".description").html(DATA.description);
+            $("select[name='plating']").html("");
+            $("select[name='language']").html("");
+            $("select[name='nametype']").html("");
             for (var i = 0; i < DATA.plating.length ; i++) {
                 var option = "<option>"+DATA.plating[i][0]+" -Rs "+DATA.plating[i][1]+"</option>";
                 $("select[name='plating']").append(option);
