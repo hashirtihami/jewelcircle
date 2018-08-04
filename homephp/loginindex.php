@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     }
     
     elseif (isset($_POST['register'])) { //user registering
-        
+         $_POST['role']='customer';
         require 'register.php';
         
     }
@@ -54,7 +54,7 @@ require 'templates/top.inc.php';
             <input type="password" required autocomplete="off" name="password"/>
         </div>
           
-          <p class="forgot"><a href="forgot.php">Forgot Password?</a></p>
+          <p class="forgot"><a href="login/forgot.php">Forgot Password?</a></p>
           
           <button class="button button-block" name="login" />Log In</button>
           
@@ -133,15 +133,14 @@ require 'templates/top.inc.php';
               </label>
               <input type="text"  autocomplete="off" name='zipcode' />
             </div>
+            
+           
 
-              <div class="field-wrap">
-              <label>
-               Role<span >*</span>
-              </label>
-              <input type="text"  autocomplete="off" name='role' /> 
+            <div class="field-wrap">
+              <p style=" padding:0; color:black;">By clicking Sign Up, you agree to our <a href="terms.php">Terms Of Services</a> and Data Policy. You may receive SMS notifications from us and can opt out at any time.</p>
             </div>
 
-          <button type="submit" class="button button-block" name="register" />Register</button>
+          <button type="submit" class="button button-block" name="register" />Sign Up</button>
           
           </form>
 

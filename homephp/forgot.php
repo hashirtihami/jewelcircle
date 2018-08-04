@@ -6,7 +6,7 @@ session_start();
 
 //https://www.youtube.com/watch?v=Pz5CbLqdGwM&ab_channel=CleverTechie
 ?>
-<h2> pass bhool gya kia? </h2>
+<h2> password kon bhoolta hay bc! </h2>
 <div class="form">
     <h1>Error</h1>
     <p>
