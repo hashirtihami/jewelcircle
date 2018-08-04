@@ -1,15 +1,13 @@
  <?php
-require 'db.php';
-if ($_SERVER['REQUEST_METHOD'] == 'POST') 
-{
-	if (isset($_POST['register'])) { //registration
-         $_POST['role']='reseller';
-        require 'register.php';
-        
-    }
-}
-
-	require 'templates/top.inc.php';
+	require 'db.php';
+	if ($_SERVER['REQUEST_METHOD'] == 'POST') 
+	{
+		if (isset($_POST['register'])) { //registration
+	         $_POST['role']='reseller';
+	        require 'register.php';  
+	    }
+	}
+		require 'templates/top.inc.php';
 ?>
  <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -77,7 +75,7 @@ hr.style14 {
 	<h2 style="padding-top:90px; color:#e60044;">To become A Jewel Circle reseller, please complete our form</h2>
 	<hr>
 	
-	<form>
+	<form action="reseller.php" method="post">
 	  	<div class="form-group row">
 	    	<label for="inputname" class="col-sm-2 col-form-label">Name</label>
 	    	<div class="col-sm-5">
