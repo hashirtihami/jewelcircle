@@ -1,17 +1,16 @@
-
 <?php 
-require 'login/db.php';
+require 'db.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') 
 {
     if (isset($_POST['login'])) { //user logging in
 
-        require 'login/login.php';
+        require 'login.php';
         
     }
     
     elseif (isset($_POST['register'])) { //user registering
         
-        require 'login/register.php';
+        require 'register.php';
         
     }
 }
@@ -33,7 +32,7 @@ require 'templates/top.inc.php';
       
       <ul class="tab-group">
         <li class="tab"><a href="#signup">Sign Up</a></li>
-        <li class="tab active"><a href="#login">Log In</a></li>
+        <li class="tab active"><a href="#login">Log In</a></li> 
       </ul>
       
       <div class="tab-content">
