@@ -40,7 +40,9 @@ else { // Email doesn't already exist in a database, proceed...
 
     // Add user to the database
     if ( $mysqli->query($sql1) ){
-        $_SESSION['active'] = 0; //0 until user activates their account with verify.php
+        require'junk.php';
+        die();
+        $_SESSION['active'] = 1;
         $_SESSION['logged_in'] = true; // So we know the user has logged in
         $_SESSION['message'] =
                 
