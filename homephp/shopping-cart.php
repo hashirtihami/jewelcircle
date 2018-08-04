@@ -16,74 +16,6 @@
 					<i class="zmdi zmdi-close"></i>
 				</div>
 			</div>
-			
-			<div class="header-cart-content flex-w js-pscroll">
-				<ul class="header-cart-wrapitem w-full">
-					<li class="header-cart-item flex-w flex-t m-b-12">
-						<div class="header-cart-item-img">
-							<img src="images/item-cart-01.jpg" alt="IMG">
-						</div>
-
-						<div class="header-cart-item-txt p-t-8">
-							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
-								White Shirt Pleat
-							</a>
-
-							<span class="header-cart-item-info">
-								1 x $19.00
-							</span>
-						</div>
-					</li>
-
-					<li class="header-cart-item flex-w flex-t m-b-12">
-						<div class="header-cart-item-img">
-							<img src="images/item-cart-02.jpg" alt="IMG">
-						</div>
-
-						<div class="header-cart-item-txt p-t-8">
-							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
-								Converse All Star
-							</a>
-
-							<span class="header-cart-item-info">
-								1 x $39.00
-							</span>
-						</div>
-					</li>
-
-					<li class="header-cart-item flex-w flex-t m-b-12">
-						<div class="header-cart-item-img">
-							<img src="images/item-cart-03.jpg" alt="IMG">
-						</div>
-
-						<div class="header-cart-item-txt p-t-8">
-							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
-								Nixon Porter Leather
-							</a>
-
-							<span class="header-cart-item-info">
-								1 x $17.00
-							</span>
-						</div>
-					</li>
-				</ul>
-				
-				<div class="w-full">
-					<div class="header-cart-total w-full p-tb-40">
-						Total: $75.00
-					</div>
-
-					<div class="header-cart-buttons flex-w w-full">
-						<a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
-							View Cart
-						</a>
-
-						<a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
-							Check Out
-						</a>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 
@@ -119,53 +51,43 @@
 									<th class="column-5">Total</th>
 								</tr>
 
-								<tr class="table_row">
-									<td class="column-1">
-										<div class="how-itemcart1">
-											<img src="images/item-cart-04.jpg" alt="IMG">
-										</div>
-									</td>
-									<td class="column-2">Fresh Strawberries</td>
-									<td class="column-3">$ 36.00</td>
-									<td class="column-4">
-										<div class="wrap-num-product flex-w m-l-auto m-r-0">
-											<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-												<i class="fs-16 zmdi zmdi-minus"></i>
-											</div>
+								<?php
+									for ($i=0, $count = count($_SESSION["products"]); $i < $count; $i++) { 
+										$productID = $_SESSION["products"][$i]["productID"];
+										$title = $_SESSION["products"][$i]["title"];
+										$price = $_SESSION["products"][$i]["price"];
+										$quantity = $_SESSION["products"][$i]["quantity"];
+										$query = "SELECT imageDestination FROM images WHERE productID='$productID'";
+										$query_run = mysqli_query($conn, $query);
+										if(@$query_array = mysqli_fetch_array($query_run)){
+											$imgPath = $query_array['imageDestination'];
+										}
+										echo '<tr class="table_row">';
+											echo '<td class="column-1">';
+												echo '<div class="how-itemcart1">';
+													echo '<img src="'.$imgPath.'" alt="IMG">';
+												echo '</div>';
+											echo '</td>';
+											echo '<td class="column-2">'.$title.'</td>';
+											echo '<td class="column-3">Rs '.$price/$quantity.'</td>';
+											echo '<td class="column-4">';
+												echo '<div class="wrap-num-product flex-w m-l-auto m-r-0">';
+													echo '<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">';
+														echo '<i class="fs-16 zmdi zmdi-minus"></i>';
+													echo '</div>';
 
-											<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product1" value="1">
+													echo '<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product1" value="'.$quantity.'">';
 
-											<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-												<i class="fs-16 zmdi zmdi-plus"></i>
-											</div>
-										</div>
-									</td>
-									<td class="column-5">$ 36.00</td>
-								</tr>
+													echo '<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">';
+														echo '<i class="fs-16 zmdi zmdi-plus"></i>';
+													echo '</div>';
+												echo '</div>';
+											echo '</td>';
+											echo '<td class="column-5">Rs '.$price.'</td>';
+										echo '</tr>';
+									}
+								?>
 
-								<tr class="table_row">
-									<td class="column-1">
-										<div class="how-itemcart1">
-											<img src="images/item-cart-05.jpg" alt="IMG">
-										</div>
-									</td>
-									<td class="column-2">Lightweight Jacket</td>
-									<td class="column-3">$ 16.00</td>
-									<td class="column-4">
-										<div class="wrap-num-product flex-w m-l-auto m-r-0">
-											<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-												<i class="fs-16 zmdi zmdi-minus"></i>
-											</div>
-
-											<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product2" value="1">
-
-											<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-												<i class="fs-16 zmdi zmdi-plus"></i>
-											</div>
-										</div>
-									</td>
-									<td class="column-5">$ 16.00</td>
-								</tr>
 							</table>
 						</div>
 

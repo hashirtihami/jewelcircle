@@ -353,7 +353,9 @@
         var price = $("#total").html();
         var name = $("input[name='nameOnProduct']").val();
         $.post("addToCart.php", {productID: productID, product: product, quantity: quantity, price: price, nameOnProduct: name}, function(data){
-            console.log(data);
+            var DATA = JSON.parse(data);
+            console.log(DATA);
+            $("#numProdInCart").attr("data-notify", DATA.count);
         });
     });
 
