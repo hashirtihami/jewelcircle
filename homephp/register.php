@@ -40,8 +40,7 @@ else { // Email doesn't already exist in a database, proceed...
 
     // Add user to the database
     if ( $mysqli->query($sql1) ){
-        require'junk.php';
-        die();
+
         $_SESSION['active'] = 1;
         $_SESSION['logged_in'] = true; // So we know the user has logged in
         $_SESSION['message'] =
@@ -53,20 +52,26 @@ else { // Email doesn't already exist in a database, proceed...
         $to      = $email;
         $subject = ' Message from jewelcircle.net ';
         $message_body = '
-        Hello '.$first_name.',
+        
+        <div style="text-align:center;">
+                
+                Hello '.$first_name.',<br><br>
 
-        Thank you for signing up!
+                <h3 style="color:#e60044;">Thank you for signing up!</h3><br><br>
 
-        Follow us:
 
-        Instagram: https://www.instagram.com/jewel_circle/
 
-        Facebook: https://www.facebook.com/JewelCircle/
+                Follow us:<br><br>
 
-        For any queries feel free to email us at info@JewelCircle.net';
+                Instagram: https://www.instagram.com/jewel_circle/ <br><br>
 
-        mail( $to, $subject, $message_body );
+                Facebook: https://www.facebook.com/JewelCircle/<br><br>
 
+                For any queries feel free to email us at info@jewelcircle.net
+            </div> ';
+        
+
+        require'mailsender.php';
         header("location: index.php"); 
 
     }

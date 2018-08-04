@@ -1,5 +1,5 @@
 <?php
-require'PHPMailerAutoload.php';
+require'phpmailer/PHPMailerAutoload.php';
 	$mail= new PHPMailer();
 	//$mail->SMTPDebug =4;
 	$mail->isSMTP();
