@@ -66,6 +66,11 @@
       			$data["nametype"][] = array($query_array["nameTypeValue"],$price["nameTypePrice"]);
       		}
       	}
+      	$query = "SELECT nameLength FROM product WHERE productID='$productID'";
+      	$query_run = mysqli_query($conn, $query);
+      	if(@$query_array = mysqli_fetch_array($query_run)){
+      		$data["nameLength"] = $query_array["nameLength"];
+      	}
       	echo json_encode($data);
 	}
 ?>
