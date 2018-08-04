@@ -1,13 +1,24 @@
- <?php
-	require 'connect.inc.php';
-	require 'templates/top.inc.php';
+<?php 
+require 'db.php';
+if ($_SERVER['REQUEST_METHOD'] == 'POST') 
+{
+	if(isset($_POST['register'])) { //user registering
+         $_POST['role']='influencer';
+        require 'infregister.php';
+    }
+}
 ?>
- <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<?php 
+/* Main page with two forms: sign up and log in */
+session_start(); // You're outputting HTML before the session_start(). Put your PHP code above the HTML code. answer from quora
+require 'templates/top.inc.php';
+?>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<title>Resellers</title>
+<title>Ifluencer Program</title>
 
 <style >
 	font{
@@ -115,7 +126,7 @@ hr.style14 {
 <div id="forminf" class="container">
 	<h2 style="padding-top:90px; color:#e60044;">Complete Our Form</h2>
 	 <hr>
-	<form>
+	<form action="infprogram.php" method="post">
 	  <div class="form-group row">
 	    <label for="inputname" class="col-sm-2 col-form-label">Name</label>
 	    <div class="col-sm-5">
@@ -134,7 +145,7 @@ hr.style14 {
 	  <div class="form-group row">
 	    <label for="inputcountry" class="col-sm-2 col-form-label">Country</label>
 	    <div class="col-sm-10">
-	      <input type="email" class="form-control" id="inputcountry" placeholder="Country" name='country'>
+	      <input type="text" class="form-control" id="inputcountry" placeholder="Country" name='country'>
 	    </div>
 	  </div>
 
@@ -165,41 +176,41 @@ hr.style14 {
 	    <div class="col-sm-2"><label>Main Site Type</label></div>
 	    <div class="col-sm-5">
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="inputsocial" name='social'>
-	        <label class="form-check-label" for="inputsocial">
+	        <input class="form-check-input" type="checkbox" id="inputsocial1" name='social'>
+	        <label class="form-check-label" for="inputsocial1">
 	          Facebook
 	        </label>
 	      </div>
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="inputsocial" name='social'>
-	        <label class="form-check-label" for="inputsocial">
+	        <input class="form-check-input" type="checkbox" id="inputsocial2" name='social'>
+	        <label class="form-check-label" for="inputsocial2">
 	          Instagram
 	        </label>
 	      </div>
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="inputsocial" name='social'>
-	        <label class="form-check-label" for="inputsocial">
+	        <input class="form-check-input" type="checkbox" id="inputsocial3" name='social'>
+	        <label class="form-check-label" for="inputsocial3">
 	          Youtube
 	        </label>
 	      </div>
 	    </div>
 	    <div class="col-sm-5">
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="inputsocial" name='social'>
-	        <label class="form-check-label" for="inputsocial">
+	        <input class="form-check-input" type="checkbox" id="inputsocial4" name='social'>
+	        <label class="form-check-label" for="inputsocial4">
 	          Pinterest
 	        </label>
 	      </div>
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="inputsocial" name='social'>
-	        <label class="form-check-label" for="inputsocial">
+	        <input class="form-check-input" type="checkbox" id="inputsocial5" name='social'>
+	        <label class="form-check-label" for="inputsocial5">
 	          Pinterest Blog
 	        </label>
 	      </div>
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="inputsocial" name='social'>
-	        <label class="form-check-label" for="inputsocial">
-	          Others: Please specify
+	        <input class="form-check-input" type="checkbox" id="inputsocial6" name='social'>
+	        <label class="form-check-label" for="inputsocial6">
+	          Others: Please specify in your message
 	        </label>
 	      </div>
 	    </div>
@@ -229,7 +240,7 @@ hr.style14 {
 	  <div class="form-group row">
 	    <label for="inputmsg" class="col-sm-2 col-form-label">Leave us a messge</label>
 	    <div class="col-sm-10">
-	      <input type="email" class="form-control" id="inputmsg" placeholder="Leave us a messge" name='msg'>
+	      <input type="text" class="form-control" id="inputmsg" placeholder="Leave us a messge" name='msg'>
 	    </div>
 	  </div>
 
@@ -238,13 +249,11 @@ hr.style14 {
 		</div>
 	    <div class="col-lg-2 col-md-2 col-md-5 col-xs-12">
 	      <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;" 
-	      	type="submit" class="btn btn-primary">Submit</button>
+	      	type="submit" class="btn btn-primary" name="register">Submit</button>
 	    </div>
 	  </div>
 	</form>
 </div>
-
-
 <?php
 	require 'templates/modal.inc.php';
 	require 'templates/bottom.inc.php';
