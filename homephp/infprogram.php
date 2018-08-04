@@ -30,23 +30,20 @@ hr.style14 {
 
 
 <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('../assets/images/posters/banner3.jpg');">
-		<h3 class=" cl0 txt-center" style=" font-size:6vw; text-shadow:5px 5px 10px black; ">
-			
-			INFLUENCER WANTED
-		</h3>
-		
-		<h3 class=" cl0 txt-center" style=" font-size:2vw; text-shadow:5px 5px 10px black;	" > GET <span style="color:#e60044;">JEWEL CIRCLE</span> LATEST PRODUCT FOR FREE EVERY MONTH </h3>
+	<h3 class=" cl0 txt-center" style=" font-size:6vw; text-shadow:5px 5px 10px black; ">
+		INFLUENCER WANTED
+	</h3>
+	<h3 class=" cl0 txt-center" style=" font-size:2vw; text-shadow:5px 5px 10px black;">
+		GET <span style="color:#e60044;">JEWEL CIRCLE</span> LATEST PRODUCT FOR FREE EVERY MONTH
+	</h3>
 </section>
 
 
 
 <div class="container" style="padding-top:100px">
-
 	<h2 class="txt-center" style="color:#e60044;"> FASHION INFLUENCER POLICY</h2>
 	<div style="padding-top:30px">
-		
 		<table class="table table-bordered" >
-		
 		  <thead>
 		    <tr>
 		      <th colspan="4" scope="col"><font>1. Qualifications</font></th>
@@ -115,125 +112,47 @@ hr.style14 {
 </div>
 
 
-
-
-
 <div id="forminf" class="container">
 	<h2 style="padding-top:90px; color:#e60044;">Complete Our Form</h2>
 	 <hr>
-	
 	<form>
 	  <div class="form-group row">
-	    <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+	    <label for="inputname" class="col-sm-2 col-form-label">Name</label>
 	    <div class="col-sm-5">
-	      <input type="text" class="form-control" id="inputEmail3" placeholder="First Name">
+	      <input type="text" class="form-control" id="inputname" placeholder="First Name" name='firstname'>
 	    </div>
 	    <div class="col-sm-5">
-	      <input type="text" class="form-control" id="inputPassword3" placeholder="Last Name">
+	      <input type="text" class="form-control" id="inputPassword3" placeholder="Last Name" name='lastname'>
 	    </div>
 	  </div>
 	  <div class="form-group row">
-	    <label for="inputPassword3" class="col-sm-2 col-form-label">Email</label>
+	    <label for="inputemail" class="col-sm-2 col-form-label">Email</label>
 	    <div class="col-sm-10">
-	      <input type="email" class="form-control" id="inputPassword3" placeholder="Last Name">
+	      <input type="email" class="form-control" id="inputemail" placeholder="Email" name='email'>
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label for="inputcountry" class="col-sm-2 col-form-label">Country</label>
+	    <div class="col-sm-10">
+	      <input type="email" class="form-control" id="inputcountry" placeholder="Country" name='country'>
 	    </div>
 	  </div>
 
-	  <div class="form-group row">
-	    <label for="country" class="col-sm-2 col-form-label">Country</label>
-	    <div class="col-sm-10">
-	     <select id="country" name="country" class="form-control">
-            <option value="pakistan">Pakistan</option>
-            <option value="australia">Australia</option>
-            <option value="austria">Austria</option>
-            <option value="bangla">Bangladesh</option>
-            <option value="belgium">Belgium</option>
-            <option value="bhutan">Bhutan</option>
-            <option value="botswana">Botswana</option>
-            <option value="brunei">Brunei</option>
-            <option value="bulgaria">Bulgaria</option>
-            <option value="combodia">Combodia</option>
-            <option value="canada">Canada</option>
-            <option value="canaryIsland">Canary Island</option>
-            <option value="channelIslands">Channel Islands</option>
-            <option value="china">China</option>
-            <option value="cyprus">Cyprus</option>
-            <option value="czechRepublic">Czech Republic</option>
-            <option value="denmark">Denmark</option>
-            <option value="egypt">Egypt</option>
-            <option value="ethiopia">Ethiopia</option>
-            <option value="finland">Finland</option>
-            <option value="france">France</option>
-            <option value="germany">Germany</option>
-            <option value="greece">Greece</option>
-            <option value="hongKong">Hong Kong</option>
-            <option value="hungary">Hungary</option>
-            <option value="india">India</option>
-            <option value="indonesia">Indonesia</option>
-            <option value="iran">Iran</option>
-            <option value="ireland">Ireland</option>
-            <option value="italy">Italy</option>
-            <option value="japan">Japan</option>
-            <option value="jordan">Jordan</option>
-            <option value="kenya">Kenya</option>
-            <option value="korea">Korea</option>
-            <option value="laos">Laos</option>
-            <option value="lebonon">Lebonon</option>
-            <option value="lesotho">Lesotho</option>
-            <option value="luxembourg">Luxembourg</option>
-            <option value="macau">Macau</option>
-            <option value="maderia">Maderia</option>
-            <option value="azores">Azores</option>
-            <option value="malwai">Malwai</option>
-            <option value="malaysia">Malaysia</option>
-            <option value="maldives">Maldives</option>
-            <option value="mauritius">Mauritius</option>
-            <option value="mozambique">Mozambique</option>
-            <option value="myanmar">Myanmar</option>
-            <option value="namibia">Namibia</option>
-            <option value="nepal">Nepal</option>
-            <option value="netherlands">Netherlands</option>
-            <option value="newZealand">New Zealand</option>
-            <option value="northernCyprus">Northern Cyprus</option>
-            <option value="northernIreland">Northern Ireland</option>
-            <option value="norway">Norway</option>
-            <option value="philippines">Philippines</option>
-            <option value="poland">Poland</option>
-            <option value="portugal">Portugal</option>
-            <option value="romania">Romania</option>
-            <option value="saudia">Saudia Arabia</option>
-            <option value="scotland">Scotland</option>
-            <option value="singapore">Singapore</option>
-            <option value="slovakia">Slovakia</option>
-            <option value="southAfrica">South Africa</option>
-            <option value="spain">Spain</option>
-            <option value="sriLanka">Sri Lanka</option>
-            <option value="swaziland">Swaziland</option>
-            <option value="sweden">Sweden</option>
-            <option value="switzerland">Switzerland</option>
-            <option value="syria">Syria</option>
-            <option value="taiwan">Taiwan</option>
-            <option value="us">United States of America</option>
-            <option value="uk">United Kingdom</option>
-            <option value="others">Others</option>
-          </select>
-	    </div>
-	  </div>
 	  	<fieldset class="form-group">
 		   <div class="row">
 		      <label class="col-form-label col-sm-2 pt-0">Gender</label>
 		      	<div class="col-lg-1 col-md-5 col-sm-5 col-xs-10">
 		        	<div class="form-check">
-		          		<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-		          		<label class="form-check-label" for="gridRadios1">
+		          		<input class="form-check-input" type="radio" name='gender' id="inputgender1" value="male" checked>
+		          		<label class="form-check-label" for="inputgender1">
 		            			Male
 		          		</label>
 		        	</div>
 		        </div>
 		        <div class="col-lg-1 col-md-5 col-sm-5 col-xs-10 ">
 		        	<div class="form-check">
-			          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-			          <label class="form-check-label" for="gridRadios2">
+			          <input class="form-check-input" type="radio" name='gender' id="inputgender2" value="female">
+			          <label class="form-check-label" for="inputgender2">
 			            	Female
 			          </label>
 		        	</div>
@@ -246,85 +165,82 @@ hr.style14 {
 	    <div class="col-sm-2"><label>Main Site Type</label></div>
 	    <div class="col-sm-5">
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="gridCheck1">
-	        <label class="form-check-label" for="gridCheck1">
+	        <input class="form-check-input" type="checkbox" id="inputsocial" name='social'>
+	        <label class="form-check-label" for="inputsocial">
 	          Facebook
 	        </label>
 	      </div>
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="gridCheck1">
-	        <label class="form-check-label" for="gridCheck1">
+	        <input class="form-check-input" type="checkbox" id="inputsocial" name='social'>
+	        <label class="form-check-label" for="inputsocial">
 	          Instagram
 	        </label>
 	      </div>
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="gridCheck1">
-	        <label class="form-check-label" for="gridCheck1">
+	        <input class="form-check-input" type="checkbox" id="inputsocial" name='social'>
+	        <label class="form-check-label" for="inputsocial">
 	          Youtube
 	        </label>
 	      </div>
 	    </div>
 	    <div class="col-sm-5">
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="gridCheck1">
-	        <label class="form-check-label" for="gridCheck1">
+	        <input class="form-check-input" type="checkbox" id="inputsocial" name='social'>
+	        <label class="form-check-label" for="inputsocial">
 	          Pinterest
 	        </label>
 	      </div>
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="gridCheck1">
-	        <label class="form-check-label" for="gridCheck1">
+	        <input class="form-check-input" type="checkbox" id="inputsocial" name='social'>
+	        <label class="form-check-label" for="inputsocial">
 	          Pinterest Blog
 	        </label>
 	      </div>
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="gridCheck1">
-	        <label class="form-check-label" for="gridCheck1">
+	        <input class="form-check-input" type="checkbox" id="inputsocial" name='social'>
+	        <label class="form-check-label" for="inputsocial">
 	          Others: Please specify
 	        </label>
 	      </div>
 	    </div>
 	  </div>
 	  
-
 	  <div class="form-group row">
-	    <label for="inputPassword3" class="col-sm-2 col-form-label">Main Site URL</label>
+	    <label for="inputmain" class="col-sm-2 col-form-label">Main Site URL</label>
 	    <div class="col-sm-10">
-	      <input type="email" class="form-control" id="inputPassword3" placeholder="Main Site URL">
+	      <input type="text" class="form-control" id="inputmain" placeholder="Main Site URL" name='mainsite'>
 	    </div>
 	  </div>
 
 	  <div class="form-group row">
-	    <label for="inputPassword3" class="col-sm-2 col-form-label">Other Site URL</label>
+	    <label for="inputother" class="col-sm-2 col-form-label">Other Site URL</label>
 	    <div class="col-sm-10">
-	      <input type="email" class="form-control" id="inputPassword3" placeholder="Other Site URL">
+	      <input type="text" class="form-control" id="inputother" placeholder="Other Site URL" name='othersite'>
 	    </div>
 	  </div>
 
 	  <div class="form-group row">
-	    <label for="inputPassword3" class="col-sm-2 col-form-label">Fans/Followers (Please fill in quantity)</label>
+	    <label for="inputfans" class="col-sm-2 col-form-label">Fans/Followers (Please fill in quantity)</label>
 	    <div class="col-sm-10">
-	      <input type="email" class="form-control" id="inputPassword3" placeholder="Please fill in quantity">
+	      <input type="text" class="form-control" id="inputfans" placeholder="Please fill in quantity" name='fans'>
 	    </div>
 	  </div>
 
 	  <div class="form-group row">
-	    <label for="inputPassword3" class="col-sm-2 col-form-label">Leave us a messge</label>
+	    <label for="inputmsg" class="col-sm-2 col-form-label">Leave us a messge</label>
 	    <div class="col-sm-10">
-	      <input type="email" class="form-control" id="inputPassword3" placeholder="Leave us a messge">
+	      <input type="email" class="form-control" id="inputmsg" placeholder="Leave us a messge" name='msg'>
 	    </div>
 	  </div>
 
-
 	  <div class="form-group row">
-
 		<div class="col-lg-5 col-md-5 col-sm-5 ">
 		</div>
 	    <div class="col-lg-2 col-md-2 col-md-5 col-xs-12">
-	      <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;" type="submit" class="btn btn-primary">Submit</button>
+	      <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;" 
+	      	type="submit" class="btn btn-primary">Submit</button>
 	    </div>
 	  </div>
-
 	</form>
 </div>
 
