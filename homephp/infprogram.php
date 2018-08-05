@@ -176,19 +176,19 @@ hr.style14 {
 	    <div class="col-sm-2"><label>Main Site Type</label></div>
 	    <div class="col-sm-5">
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="inputsocial1" name='social[]'>
+	        <input class="form-check-input" type="checkbox" id="inputsocial1" name='social[]' value="Facebook">
 	        <label class="form-check-label" for="inputsocial1">
 	          Facebook
 	        </label>
 	      </div>
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="inputsocial2" name='social[]'>
+	        <input class="form-check-input" type="checkbox" id="inputsocial2" name='social[]' value="Instagram">
 	        <label class="form-check-label" for="inputsocial2">
 	          Instagram
 	        </label>
 	      </div>
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="inputsocial3" name='social[]'>
+	        <input class="form-check-input" type="checkbox" id="inputsocial3" name='social[]' value="Youtube">
 	        <label class="form-check-label" for="inputsocial3">
 	          Youtube
 	        </label>
@@ -196,13 +196,13 @@ hr.style14 {
 	    </div>
 	    <div class="col-sm-5">
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="inputsocial4" name='social[]'>
+	        <input class="form-check-input" type="checkbox" id="inputsocial4" name='social[]' value="Pinterest">
 	        <label class="form-check-label" for="inputsocial4">
 	          Pinterest
 	        </label>
 	      </div>
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="inputsocial5" name='social[]'>
+	        <input class="form-check-input" type="checkbox" id="inputsocial5" name='social[]' value="Pinterest-Blog">
 	        <label class="form-check-label" for="inputsocial5">
 	          Pinterest Blog
 	        </label>
