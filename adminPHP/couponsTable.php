@@ -51,7 +51,8 @@
           <!-- <label>Text</label> -->
           <input type="date" name="expiryDate" class="form-control" required>
         </div>
-				<button type="submit" id="submit" name="submit" class="btn bg-blue">Proceed <i class="far fa-check-circle"></i></button>   
+        <button type="submit" id="submit" name="submit" class="btn bg-blue">Proceed <i class="far fa-check-circle"></i></button>   
+        <button type="button" id="minimize" class="btn btn-box-tool pull-right"><i class="far fa-window-minimize"></i></button>   
 			</form>
   	</div>
   </div>
@@ -62,14 +63,14 @@
 
         <!-- /.box-header -->
     <div class="box-body table-responsive">
-      <div>
+<!--       <div>
         <p>
           <input class="form-control" id="myInput" type="text" placeholder="Search..">
         </p>
-      </div>
+      </div> -->
       <table id="example1" class="table table-bordered table-striped">
         <thead>
-          <tr>
+          <tr class="bg-custom">
             <th class="checkboxColumn"></th>
             <th>Code</th>
             <th>Discount(%)</th>
@@ -95,7 +96,7 @@
           ?>
         </tbody>
         <tfoot>
-          <tr>
+          <tr class="bg-custom">
             <th></th>
             <th>Code</th>
             <th>Discount(%)</th>

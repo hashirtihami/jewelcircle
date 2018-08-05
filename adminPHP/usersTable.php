@@ -30,38 +30,24 @@
           <table id="example1" class="table table-bordered table-striped">
             <thead>
               <tr>
-                <th class="checkboxColumn"></th>
-                <th>Username</th>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Contact</th>
                 <th>Role</th>
-                <th>Posts</th>
               </tr>
             </thead>
             <tbody id="tableBody">
-              <?php
-                $query = "SELECT * FROM coupon ORDER BY couponId";
-                $query_run = mysqli_query($conn, $query);
-                while(@$query_array = mysqli_fetch_array($query_run)){
-                  echo "<tr>";
-                  echo '<td><input type="checkbox" class="icheckbox_flat-blue checks" name="table_records"></td>';
-                  echo '<td class="data"></td>';
-                  echo '<td></td>';
-                  echo '<td></td>';
-                  echo '<td></td>';
-                  echo '<td></td>';
-                  echo '</tr>';
-                }
-              ?>
+                <td>Eli</td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tbody>
             <tfoot>
               <tr>
-                <th></th>
-                <th>Username</th>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Contact</th>
                 <th>Role</th>
-                <th>Posts</th>
               </tr>
             </tfoot>
           </table>

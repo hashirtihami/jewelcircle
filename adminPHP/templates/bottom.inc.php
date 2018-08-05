@@ -40,6 +40,7 @@
 <script src="plugins/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/app.min.js"></script>
+<!-- Slick -->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <!-- <script src="dist/js/pages/dashboard.js"></script> -->
 <!-- AdminLTE for demo purposes -->
