@@ -146,6 +146,9 @@ require 'templates/top.inc.php';
 	      		<input type="text" class="form-control" id="inputzip" required placeholder="zipcode" name='zipcode'>
 	    	</div>
 	  	</div>
+	  	<div class="field-wrap">
+            <p style=" padding:0; color:black;">To become A Jewel Circle reseller, please <a href="terms.php">Click here</a></p>
+        </div>
 
 		<div class="field-wrap">
             <p style=" padding:0; color:black;">By clicking Sign Up, you agree to our <a href="terms.php">Terms Of Services</a> and Data Policy. You may receive SMS notifications from us and can opt out at any time.</p>
