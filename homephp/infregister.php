@@ -31,7 +31,7 @@ if ( $result->num_rows > 0 ) {
 else { // Email doesn't already exist in a database, proceed...
     // active is 0 by DEFAULT (no need to include it here)
     $sql1 = "INSERT INTO influencer (first_name, last_name, email, country, gender, social, mainsite, othersite, fans, msg, role ) " 
-            . "VALUES ('$first_name','$last_name','$email','$country', '$gender' , '123' , '$mainsite','$othersite','$fans','$msg',  '$role')";
+            . "VALUES ('$first_name','$last_name','$email','$country', '$gender' , '$social' , '$mainsite','$othersite','$fans','$msg',  '$role')";
 
     // Add user to the database
     if ( $mysqli->query($sql1) ){
