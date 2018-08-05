@@ -1,5 +1,11 @@
 <?php
 session_start();
+if ($_POST["password"] ==! $_POST["confirm_password"])
+    {   
+        $_SESSION['message']='hogya na chey?';
+        require'error.php';
+            
+    }
 /* Registration process, inserts user info into the database 
    and sends account confirmation email message
  */

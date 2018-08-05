@@ -23,7 +23,14 @@ require 'templates/top.inc.php';
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<title>Resellers</title>
+	<script>
+	    function validate(){
+			if(!document.getElementById("password").value==document.getElementById("confirmpassword").value)alert("Passwords do no match");
+	    	return document.getElementById("password").value==document.getElementById("confirmpassword").value;
+	   		return false;
+	    }
+ 	</script>
+<title>Login/Signup</title>
 
 <style>
 	font{
@@ -87,7 +94,7 @@ require 'templates/top.inc.php';
 
 	<h2 id="signupform" style="padding-top:100px; color:#e60044;">Sign Up</h2>
 	<hr>
-	<form action="userregister.php" method="post">
+	<form onSubmit="return validate();" action="userregister.php" method="post">
 	  	<div class="form-group row">
 	    	<label for="inputname" class="col-sm-2 col-form-label">Name</label>
 	    	<div class="col-sm-5">
@@ -113,9 +120,16 @@ require 'templates/top.inc.php';
 	  	</div>
 
 	  	<div class="form-group row">
+	    	<label for="confirmpassword" class="col-sm-2 col-form-label">Confirm Password</label>
+	    	<div class="col-sm-10">
+	      		<input type="password" class="form-control" id="confirmpassword" required name='confirmpassword'  placeholder="Confirm Password">
+	    	</div>
+	  	</div>
+
+	  	<div class="form-group row">
 	    	<label for="inputcontact" class="col-sm-2 col-form-label">Contact Number</label>
 	    	<div class="col-sm-10">
-	      		<input type="text" class="form-control" id="inputcontact" required placeholder="Contact Number" name='contact'>
+	      		<input type="text" class="form-control" id="inputcontact" required placeholder="Please enter your phone number along with your country code (i.e. +92 for pakistan)" name='contact'>
 	    	</div>
 	  	</div>
 

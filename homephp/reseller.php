@@ -44,7 +44,7 @@ hr.style14 {
 
 <div class="container" style="padding-top:100px">
 
-	<h2 class="txt-center" style="color:#e60044;"> SOUFEEL RESELLER PROGRAM</h2>
+	<h2 class="txt-center" style="color:#e60044;"> JEWEL CIRCLE RESELLER PROGRAM</h2>
 
 	<h4 class="txt-center" style="color:black;"> Are you currently trying to expand your Local or Global business?<br>
 												Are you looking for opportunities to improve your sales and revenue?<br>
@@ -60,7 +60,7 @@ hr.style14 {
 		  </thead>
 		  <tbody style="margin-bottom:30px">
 		    <tr>
-		      <td colspan="4">SOUFEEL reseller program is the best choice for you. Anyone can place wholesale order with us. It will be the perfect way to start your very own business. Our products can be extremely inexpensive and with high quality. More quantity, more discount. You can guarantee that all SOUFEEL products can be availed at an affordable price. Soufeel creates and provides quality product images / holiday banners as well as promotional videos which helps you inspire and activate your new&potential customers. </td>
+		      <td colspan="4">JEWEL CIRCLE reseller program is the best choice for you. Anyone can place wholesale order with us. It will be the perfect way to start your very own business. Our products can be extremely inexpensive and with high quality. More quantity, more discount. You can guarantee that all JEWEL CIRCLE products can be availed at an affordable price. JEWEL CIRCLE creates and provides quality product images / holiday banners as well as promotional videos which helps you inspire and activate your new&potential customers. </td>
 		    </tr>
 		   </tbody>
 		</table>

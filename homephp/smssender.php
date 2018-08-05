@@ -6,7 +6,7 @@ $hash = "56c40b233ed429f077cbe90726553b81e43c1c443422a250f327130d2b5c0314";
 $test = "jewel circle"; 
 // Data for text message. This is the text message data. 
 $sender = "Jewel Circle"; // This is who the message appears to be from. 
-$numbers = "+923158257773";//$_POST['contact']; // A single number or a comma-seperated list of numbers 
+$numbers = "";//$_POST['contact']; // A single number or a comma-seperated list of numbers 
 $message = "Hello jee";//$_POST['msg']; 
 // 612 chars or less 
 // A single number or a comma-seperated list of numbers 
