@@ -20,8 +20,8 @@ else { // User exists
         $_SESSION['active'] = $user['active'];
         
         // This is how we'll know the user is logged in
-        $_SESSION['logged_in'] = true;
-        header("location: index.php");
+        $_SESSION['logged_in'] = 1;
+        header("location: userprofile.php");
     }
     else {
         $_SESSION['message'] = "You have entered wrong password. ";

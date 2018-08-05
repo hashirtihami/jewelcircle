@@ -42,11 +42,10 @@ else { // Email doesn't already exist in a database, proceed...
     if ( $mysqli->query($sql1) ){
 
         $_SESSION['active'] = 1;
-        $_SESSION['logged_in'] = true; // So we know the user has logged in
+        $_SESSION['logged_in'] = 1; // So we know the user has logged in
         $_SESSION['message'] =
                 
-                 "Confirmation link has been sent to $email, please verify
-                 your account by clicking on the link in the message!";
+                 "You have successfully logged in.";
 
         // Send registration confirmation link (verify.php)
         $to      = $email;
@@ -72,7 +71,7 @@ else { // Email doesn't already exist in a database, proceed...
         
 
         require'mailsender.php';
-        header("location: index.php"); 
+        header("location: userprofile.php"); 
 
     }
 
