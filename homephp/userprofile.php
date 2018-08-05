@@ -22,16 +22,19 @@ require 'templates/top.inc.php';
 ?>
   
 <style>
+  body{
+    background-color:#ffcccc;
+  }
   .container2{
-    width: 500px;
+    
     overflow: auto;
+    background-color:white;
   }
   .profilebtn{
     text-align:center;
     border-style: solid;
     border-color:grey;
     border-width: 0.5px;
-    box-sizing:;
   }
 
   .profilebtn:hover{
@@ -52,7 +55,7 @@ require 'templates/top.inc.php';
   }
 
   .proficon{
-    font-size:100px;
+    font-size:80px;
     color:#e60044;
   }
   div.profilebtn a {
