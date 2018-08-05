@@ -107,7 +107,7 @@
 
 							<div class="size-209">
 								<span id="sub-total" class="mtext-110 cl2">
-									Rs0
+									Rs 0
 								</span>
 							</div>
 						</div>
@@ -121,19 +121,21 @@
 
 							<div class="size-209 p-r-18 p-r-0-sm w-full-ssm">
 								<p class="stext-111 cl6 p-t-2">
-									There are no shipping methods available. Please double check your address, or contact us if you need any help.
+									Calculate Shipping
 								</p>
 								
 								<div class="p-t-15">
-									<span class="stext-112 cl8">
-										Calculate Shipping
-									</span>
 
 									<div class="rs1-select2 rs2-select2 bor8 bg0 m-b-12 m-t-9">
-										<select class="js-select2" name="time">
-											<option>Select a country...</option>
-											<option>USA</option>
-											<option>UK</option>
+										<select class="js-select2" name="country">
+											<option>Select your country</option>
+											<?php
+												$query = "SELECT * FROM shipping";
+												$query_run = mysqli_query($conn, $query);
+												while(@$query_array = mysqli_fetch_array($query_run)){
+													echo '<option data-price="'.$query_array['cost'].'">'.$query_array['country'].'</option>';
+												}
+											?>
 										</select>
 										<div class="dropDownSelect2"></div>
 									</div>
@@ -145,9 +147,13 @@
 									<div class="bor8 bg0 m-b-22">
 										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="postcode" placeholder="Postcode / Zip">
 									</div>
+
+									<div class="stext-111 cl6 p-t-2" style="padding-bottom: 15px">
+										<p>Shipping Charges: Rs <span id="shipping">0</span></p>
+									</div>
 									
 									<div class="flex-w">
-										<div class="flex-c-m stext-101 cl2 size-115 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer">
+										<div id="update" class="flex-c-m stext-101 cl2 size-115 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer">
 											Update Totals
 										</div>
 									</div>
@@ -164,8 +170,8 @@
 							</div>
 
 							<div class="size-209 p-t-1">
-								<span class="mtext-110 cl2">
-									$79.65
+								<span id="total" class="mtext-110 cl2">
+									Rs 0
 								</span>
 							</div>
 						</div>
