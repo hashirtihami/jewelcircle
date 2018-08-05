@@ -26,19 +26,7 @@
   display: inline-flex !important;
   border: none !important;
 }
-#searchBar {
-  border: 1px solid #f4f4f4;
-  padding: 5px;
-  /* margin-bottom: 10px; */
-  background: #f7f7f7;
-}
-#myInput {
-  border-radius:5px !important;
-  width: 30%;
-  float: right;
-  background: #f7f7f7;
-  margin: 5px 5px 15px;
-}
+
 #submit {
   margin-bottom: 15px;
 }
@@ -51,8 +39,9 @@
   padding: 2px !important;
   background-color: #2c3a40 !important;
 }
-#firstBtn {
-  margin-left: 16%;
+.btnStyles {
+  display: table;
+  margin: 0 auto;
 }
 .bg-dispatch {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #3c8dbc), color-stop(1, #67a8ce)) !important;
@@ -70,3 +59,11 @@
 .buttonDispatch {
   font-size: 8px !important;
 }
+.row {
+  margin-right: 0 !important;
+}
+div.box-body {
+  margin-top: 20px;
+  border-top: none;
+}
+

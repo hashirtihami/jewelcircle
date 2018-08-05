@@ -17,7 +17,7 @@
         </div> -->
       </h1>
       <ol class="breadcrumb">
-        <li><a href="../../home.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="home.php"><i class="fas fa-home"></i> Home</a></li>
         <li> E-Commerce</li>
         <li class="active"> Orders</li>
       </ol>
@@ -28,16 +28,16 @@
 
           <div class="box">
             <div class="box-body table-responsive">
-                <div>
+  <!--               <div>
                   <p>
                     <input class="form-control" id="myInput" type="text" placeholder="Search..">
                   </p>
-                </div>
+                </div> -->
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
-                <tr>
+                <tr class="bg-custom">
                   <th class="checkboxColumn"></th>
-                  <th>Order ID</th>
+                  <th>ID</th>
                   <th>Order</th>
                   <th>Ship To</th>
                   <th>Date</th>
@@ -75,8 +75,7 @@
                     </td>
                     <td>1926</td>
                     <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
+                    <td>Intenebnerwkjbvkerwjbvrwkjvk vfnjrwnvlrwjvn wlbgnerwlbk rwlgkbnrwlgknrwlkgn gwlgnewrlgjnewrlgn wlgjrln fbgrelgne
                     </td>
                     <td>Win 95+</td>
                     <td> 5</td>
@@ -338,7 +337,7 @@
                       <input type="checkbox" class="icheckbox_flat-blue checks" name="table_records">
                     </td>
                     <td>101</td>
-                    <td>Part</td>
+                    <td>Lalluz</td>
                     <td>Internet
                       Explorer 4.0
                     </td>
@@ -360,9 +359,9 @@
 
                 </tbody>
                 <tfoot>
-                <tr>
+                <tr class="bg-custom">
                   <th></th>
-                  <th>Order ID</th>                 
+                  <th>ID</th>                 
                   <th>Order</th>
                   <th>Ship To</th>
                   <th>Date</th>

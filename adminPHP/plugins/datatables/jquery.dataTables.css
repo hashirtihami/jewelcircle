@@ -283,6 +283,7 @@ table.dataTable td {
 }
 .dataTables_wrapper .dataTables_filter {
   float: right;
+  display: none;
   text-align: right;
 }
 .dataTables_wrapper .dataTables_filter input {

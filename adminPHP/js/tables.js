@@ -13,6 +13,11 @@ function displayAddNew() {
        $("#addNew").slideUp("slow");
    }
 }
+$(document).ready(function() {
+    $('#minimize').click(function() {
+    	$("#addNew").slideUp("slow");
+    	})
+   })
 
 $(document).ready(function() {
 	var d = new Date();
@@ -146,3 +151,15 @@ $('#dispatch').unbind().click(function() {
 		}
 	});
 });
+
+
+$('#btnCollapse').click(function() {
+	if ($("#jugaar").is(":visible")) {
+		$('div.btnStyles button').removeClass('btn-lg');
+		$('div.btnStyles').addClass('btn-group-vertical');
+	}
+	else {
+		$('div.btnStyles button').addClass('btn-lg');
+		$('div.btnStyles').removeClass('btn-group-vertical');
+	}
+})

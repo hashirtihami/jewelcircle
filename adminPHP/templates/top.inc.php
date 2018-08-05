@@ -16,13 +16,13 @@
   <!-- iCheck -->
   <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
   <!-- Morris chart -->
-  <link rel="stylesheet" href="plugins/morris/morris.css">
+  <!-- <link rel="stylesheet" href="plugins/morris/morris.css"> -->
   <!-- jvectormap -->
-  <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+  <!-- <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css"> -->
   <!-- Date Picker -->
-  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+  <!-- <link rel="stylesheet" href="plugins/datepicker/datepicker3.css"> -->
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css"> -->
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
@@ -33,7 +33,8 @@
   <link href="https://fonts.googleapis.com/css?family=Dosis|Inconsolata|Pacifico" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="dist/css/giftcards.css">
   <link rel="stylesheet" type="text/css" href="tables.css">
-
+    <!-- DataTables -->
+  <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
   <!-- JQUERYY -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -56,9 +57,9 @@
       <span class="logo-lg">Admin Panel</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top">
+    <nav class="navbar navbar-static-top bg-light-blue-gradient">
       <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="btnCollapse">
         <span class="sr-only">Toggle navigation</span>
       </a>
 
@@ -75,7 +76,7 @@
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
-              <li class="user-header">
+              <li class="user-header bg-light-blue-gradient">
                 <img src="dist/img/user0.jpg" class="img-circle" alt="User Image">
 
                 <p>
@@ -85,10 +86,10 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  <a href="#" class="btn btn-default btn-flat bg-light-blue-gradient">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="#" class="btn btn-default btn-flat bg-light-blue-gradient  ">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -108,7 +109,7 @@
           <img src="dist/img/user0.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Zaid Farouqi</p>
+          <p id="jugaar">Zaid Farouqi</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -155,18 +156,21 @@
 
       <li id="actionCss" class="header hideShow">ACTIONS</li>
         <li>
-          <div class="btn-group hideShow box-footer" id="btnAddons">
-            <button id="firstBtn" class="btn bg-custom btn-lg" data-toggle="modal" data-target="#delConfirm" title="Multi-Delete">
+          <div class="hideShow box-footer" id="btnAddons">
+            <div class="btn-group btnStyles">
+            <button class="btn bg-custom btn-lg" data-toggle="modal" data-target="#delConfirm" title="Multi-Delete">
               <i class="fas fa-trash"></i>
               <span class="label-warning labelCount counts"></span>
             </button>
             <button class="btn bg-custom btn-lg orderButtons"><i class="fas fa-file-download" title="Multiple Invoice Download"></i>
               <span class="label-success labelCount counts"></span>
             </button>
-            <button id="multiDispatch" class="btn bg-custom btn-lg orderButtons" disabled="disabled" data-toggle="modal" data-target="#dispatchConfirm" title="Multi-Dispatch">
+            <button id="multiDispatch" class="btn bg-custom btn-lg orderButtons" disabled="disabled" data-toggle="modal" data-target="#dispatchConfirm" 
+            title="Multi-Dispatch">
               <i class="fas fa-shipping-fast"></i>
               <span class="label-primary labelCount dispatchCount"></span>
             </button>
+            </div>
           </div>
         </li>
       </ul>
