@@ -271,6 +271,9 @@
     $('.js-show-modal1').on('click',function(e){
         e.preventDefault();
         $("#addToCart").prop("disabled", true);
+        if($("input[name='nameOnProduct']").val()){
+            $("#addToCart").prop("disabled", false);
+        }
         $('.js-modal1').addClass('show-modal1');
         var title = $(this).parentsUntil(".item-slick2").find(".title").html();
         $(".js-name-detail").html(title);
@@ -356,6 +359,9 @@
             var DATA = JSON.parse(data);
             console.log(DATA);
             $("#numProdInCart").attr("data-notify", DATA.count);
+            if(DATA.error){
+                swal("Sorry", DATA.error, "error");
+            }
         });
     });
 

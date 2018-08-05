@@ -229,8 +229,8 @@ Copyright  All rights reserved | This website was created in collaboration with 
 		/*---------------------------------------------*/
 
 		$('.js-addcart-detail').each(function(){
-			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
 			$(this).on('click', function(){
+				var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
 				swal(nameProduct, "is added to cart !", "success");
 			});
 		});
