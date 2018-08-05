@@ -365,4 +365,12 @@
         });
     });
 
+    /*==================================================================
+    [ Updating Cart Total ]*/
+    var total = 0;
+    $("td.column-5").each(function(){
+        total += parseInt($(this).html().split(" ")[1]);
+    });
+    $("#sub-total").html(total);
+
 })(jQuery);

@@ -2,23 +2,6 @@
 	require 'connect.inc.php';
 	require 'templates/top.inc.php';
 ?>
-		<!-- Cart -->
-	<div class="wrap-header-cart js-panel-cart">
-		<div class="s-full js-hide-cart"></div>
-
-		<div class="header-cart flex-col-l p-l-65 p-r-25">
-			<div class="header-cart-title flex-w flex-sb-m p-b-8">
-				<span class="mtext-103 cl2">
-					Your Cart
-				</span>
-
-				<div class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart">
-					<i class="zmdi zmdi-close"></i>
-				</div>
-			</div>
-		</div>
-	</div>
-
 
 	<!-- breadcrumb -->
 	<div class="container">
@@ -52,6 +35,7 @@
 								</tr>
 
 								<?php
+								if(isset($_SESSION["products"])){
 									for ($i=0, $count = count($_SESSION["products"]); $i < $count; $i++) { 
 										$productID = $_SESSION["products"][$i]["productID"];
 										$title = $_SESSION["products"][$i]["title"];
@@ -86,6 +70,7 @@
 											echo '<td class="column-5">Rs '.$price.'</td>';
 										echo '</tr>';
 									}
+								}
 								?>
 
 							</table>
@@ -121,8 +106,8 @@
 							</div>
 
 							<div class="size-209">
-								<span class="mtext-110 cl2">
-									$79.65
+								<span id="sub-total" class="mtext-110 cl2">
+									Rs0
 								</span>
 							</div>
 						</div>
