@@ -108,7 +108,7 @@
 						</div>
 							
 						<div class="flex-c-m h-full p-lr-19">
-							<a href="loginindex.php">
+							<a href="userregister.php">
 								<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 js-show-sidebar">
 								<i class="fas fa-user"></i>
 								</div>
