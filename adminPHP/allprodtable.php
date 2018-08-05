@@ -27,7 +27,7 @@
             <div class="box-body table-responsive">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
-                <tr>
+                <tr  class="bg-custom">
                   <th class="checkboxColumn"></th>
                   <th>Product</th>
                   <th>Product Type</th>
@@ -70,7 +70,7 @@
                   ?>
                 </tbody>
                 <tfoot>
-                <tr>
+                <tr class="bg-custom">
                   <th></th>                 
                   <th>Product</th>
                   <th>Product Type</th>

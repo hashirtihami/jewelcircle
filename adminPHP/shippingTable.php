@@ -36,7 +36,7 @@
             <div class="box-body table-responsive">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
-                  <tr>
+                  <tr class="bg-custom">
                     <th>Country</th>
                     <th>Shipping Cost(Rs)</th>
                     <th>Action</th>
@@ -57,7 +57,7 @@
                 ?>
               </tbody>
               <tfoot>
-                  <tr>
+                  <tr class="bg-custom">
                   <th>Country</th>
                   <th>Shipping Cost(Rs)</th>
                   <th>Action</th>

@@ -22,14 +22,9 @@
 
             <!-- /.box-header -->
         <div class="box-body table-responsive">
-          <div>
-            <p>
-              <input class="form-control" id="myInput" type="text" placeholder="Search..">
-            </p>
-          </div>
           <table id="example1" class="table table-bordered table-striped">
             <thead>
-              <tr>
+              <tr class="bg-custom">
                 <th>Name</th>
                 <th>Email</th>
                 <th>Contact</th>
@@ -43,7 +38,7 @@
                 <td></td>
             </tbody>
             <tfoot>
-              <tr>
+              <tr class="bg-custom">
                 <th>Name</th>
                 <th>Email</th>
                 <th>Contact</th>
