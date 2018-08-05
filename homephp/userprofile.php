@@ -22,11 +22,16 @@ require 'templates/top.inc.php';
 ?>
   
 <style>
+  .container2{
+    width: 500px;
+    overflow: auto;
+  }
   #profilebtn{
     text-align:center;
     border-style: solid;
     border-color:grey;
     border-width: 0.5px;
+    box-sizing:;
   }
 
   #profilebtn:hover{
@@ -56,7 +61,7 @@ require 'templates/top.inc.php';
 
 </style>
 
-<div class="container">
+<div class="container container2">
   <div class="row" style="padding-top:50px;" >
     <div class="col-lg-12" id="dpdiv">
       <div> <img src="../assets/images/posters/dp.png" style="height:100px"></div>
@@ -65,7 +70,7 @@ require 'templates/top.inc.php';
   </div>
   
   <div class="row" style="padding-top:100px;" >
-    <div class="col-sm-4" id="profilebtn" style="">
+    <div class="col-sm-4" id="profilebtn">
       <i class="fas fa-clipboard-list" id="proficon"></i>
       <p>Orders</p>
     </div> 
