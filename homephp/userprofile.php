@@ -38,7 +38,10 @@ require 'templates/top.inc.php';
     background-color:#e60044;
     color:white;
   }
-  .profilebtn:hover .proficon{
+  .profilebtn:hover .proficon {
+    color:white;
+}
+  .profilebtn:hover a p {
     color:white;
 }
 
@@ -51,6 +54,9 @@ require 'templates/top.inc.php';
   .proficon{
     font-size:100px;
     color:#e60044;
+  }
+  div.profilebtn a {
+     color: #666666 !important;
   }
 
   #logoutbtn{
