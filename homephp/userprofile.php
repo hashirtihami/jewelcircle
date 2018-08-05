@@ -26,7 +26,7 @@ require 'templates/top.inc.php';
     width: 500px;
     overflow: auto;
   }
-  #profilebtn{
+  .profilebtn{
     text-align:center;
     border-style: solid;
     border-color:grey;
@@ -34,10 +34,13 @@ require 'templates/top.inc.php';
     box-sizing:;
   }
 
-  #profilebtn:hover{
+  .profilebtn:hover{
     background-color:#e60044;
     color:white;
   }
+  .profilebtn:hover .proficon{
+    color:white;
+}
 
   #dpdiv{
     margin: 0 auto;
@@ -45,11 +48,7 @@ require 'templates/top.inc.php';
     text-align:center;
   }
 
-  #proficon:hover{
-    color:white;
-  }
-
-  #proficon{
+  .proficon{
     font-size:100px;
     color:#e60044;
   }
@@ -70,23 +69,22 @@ require 'templates/top.inc.php';
   </div>
   
   <div class="row" style="padding-top:100px;" >
-    <div class="col-sm-4" id="profilebtn">
-      <i class="fas fa-clipboard-list" id="proficon"></i>
+    <div class="col-sm-4 profilebtn" >
+      <i class="fas fa-clipboard-list proficon"></i>
       <p>Orders</p>
     </div> 
 
-    <div class="col-sm-4" id="profilebtn">
-      <i class="fas fa-cogs" id="proficon"></i>
+    <div class="col-sm-4 profilebtn">
+      <i class="fas fa-cogs proficon"></i>
       <p> Settings </p>
     </div> 
-      <a id="logoutbtn" href="index.php">
-        <button name="logout">  
-          <div class="col-sm-4" id="profilebtn">
-            <i class="fas fa-sign-out-alt" id="proficon"></i>
-            <p>Logout</p>
-          </div>  
-        </button>
+    <div class="col-sm-4 profilebtn" id="logoutbtn">
+      <a href="index.php">
+      <i class="fas fa-sign-out-alt proficon"></i>
+      <p> Logout </p>
       </a>
+    </div>
+
   </div>
 </div>
 
