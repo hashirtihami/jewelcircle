@@ -367,21 +367,40 @@
 
     /*==================================================================
     [ Updating Cart Total ]*/
+    var subtotal = 0;
     var total = 0;
     $("td.column-5").each(function(){
-        total += parseInt($(this).html().split(" ")[1]);
+        subtotal += parseInt($(this).html().split(" ")[1]);
+        total += subtotal;
     });
     $("input[name='num-product'], .btn-num-product-up, .btn-num-product-down").on("change click", function(){
         var quantity = parseInt($(this).parent().find("input[name='num-product']").val());
         var unitPrice = parseInt($(this).parent().parent().parent().find(".unit-price").html().split(" ")[1]);
-        total = quantity*unitPrice; 
-        $(this).parent().parent().parent().find(".column-5").html("Rs "+total);
-        total = 0;
+        subtotal = quantity*unitPrice;
+        total = subtotal;
+        $(this).parent().parent().parent().find(".column-5").html("Rs "+subtotal);
+        $("#total").html("Rs "+total);
+        subtotal = 0;
         $("td.column-5").each(function(){
-            total += parseInt($(this).html().split(" ")[1]);
+            subtotal += parseInt($(this).html().split(" ")[1]);
         });
-        $("#sub-total").html(total);
+        total = subtotal;
+        $("#sub-total").html("Rs "+subtotal);
+        $("#total").html("Rs "+total);
     })
-    $("#sub-total").html(total);
+    $("#sub-total").html("Rs "+subtotal);
+    $("#total").html("Rs "+total);
+    $("select[name='country']").on("change", function(){
+        var shipping = $('option:selected', "select[name='country']").attr('data-price');
+        console.log(shipping);
+        $("#shipping").html(shipping);
+    });
+    $("#update").on("click", function(){
+        var shipping = $('option:selected', "select[name='country']").attr('data-price');
+        total = 0;
+        total += subtotal;
+        total += parseInt(shipping);
+        $("#total").html("Rs "+total);
+    });
 
 })(jQuery);

@@ -176,19 +176,19 @@ hr.style14 {
 	    <div class="col-sm-2"><label>Main Site Type</label></div>
 	    <div class="col-sm-5">
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="inputsocial1" name='social'>
+	        <input class="form-check-input" type="checkbox" id="inputsocial1" name='social[]'>
 	        <label class="form-check-label" for="inputsocial1">
 	          Facebook
 	        </label>
 	      </div>
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="inputsocial2" name='social'>
+	        <input class="form-check-input" type="checkbox" id="inputsocial2" name='social[]'>
 	        <label class="form-check-label" for="inputsocial2">
 	          Instagram
 	        </label>
 	      </div>
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="inputsocial3" name='social'>
+	        <input class="form-check-input" type="checkbox" id="inputsocial3" name='social[]'>
 	        <label class="form-check-label" for="inputsocial3">
 	          Youtube
 	        </label>
@@ -196,19 +196,19 @@ hr.style14 {
 	    </div>
 	    <div class="col-sm-5">
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="inputsocial4" name='social'>
+	        <input class="form-check-input" type="checkbox" id="inputsocial4" name='social[]'>
 	        <label class="form-check-label" for="inputsocial4">
 	          Pinterest
 	        </label>
 	      </div>
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="inputsocial5" name='social'>
+	        <input class="form-check-input" type="checkbox" id="inputsocial5" name='social[]'>
 	        <label class="form-check-label" for="inputsocial5">
 	          Pinterest Blog
 	        </label>
 	      </div>
 	      <div class="form-check">
-	        <input class="form-check-input" type="checkbox" id="inputsocial6" name='social'>
+	        <input class="form-check-input" type="checkbox" id="inputsocial6" name='social[]'>
 	        <label class="form-check-label" for="inputsocial6">
 	          Others: Please specify in your message
 	        </label>
