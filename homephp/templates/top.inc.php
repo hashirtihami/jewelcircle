@@ -139,7 +139,14 @@
 
 				<div class="flex-c-m h-full p-lr-10 bor5">
 					<?php
-						echo '<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" id="numProdInCart" 	data-notify="'.count($_SESSION['products']).'">';
+						if(isset($_SESSION['products'])){
+							$numProds = count($_SESSION['products']);
+							echo '<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" id="numProdInCart" data-notify="'.$numProds.'">';
+						}
+						else{
+							$numProds = 0;
+							echo '<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" id="numProdInCart" data-notify="'.$numProds.'">';	
+						}
 					?>
 					<!-- <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="2"> -->
 						<a href="shopping-cart.php"><i class="zmdi zmdi-shopping-cart"></i></a>

@@ -53,14 +53,14 @@
 												echo '</div>';
 											echo '</td>';
 											echo '<td class="column-2">'.$title.'</td>';
-											echo '<td class="column-3">Rs '.$price/$quantity.'</td>';
+											echo '<td class="column-3 unit-price">Rs '.$price/$quantity.'</td>';
 											echo '<td class="column-4">';
 												echo '<div class="wrap-num-product flex-w m-l-auto m-r-0">';
 													echo '<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">';
 														echo '<i class="fs-16 zmdi zmdi-minus"></i>';
 													echo '</div>';
 
-													echo '<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product1" value="'.$quantity.'">';
+													echo '<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="'.$quantity.'">';
 
 													echo '<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">';
 														echo '<i class="fs-16 zmdi zmdi-plus"></i>';

@@ -371,6 +371,17 @@
     $("td.column-5").each(function(){
         total += parseInt($(this).html().split(" ")[1]);
     });
+    $("input[name='num-product'], .btn-num-product-up, .btn-num-product-down").on("change click", function(){
+        var quantity = parseInt($(this).parent().find("input[name='num-product']").val());
+        var unitPrice = parseInt($(this).parent().parent().parent().find(".unit-price").html().split(" ")[1]);
+        total = quantity*unitPrice; 
+        $(this).parent().parent().parent().find(".column-5").html("Rs "+total);
+        total = 0;
+        $("td.column-5").each(function(){
+            total += parseInt($(this).html().split(" ")[1]);
+        });
+        $("#sub-total").html(total);
+    })
     $("#sub-total").html(total);
 
 })(jQuery);
