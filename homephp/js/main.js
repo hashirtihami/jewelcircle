@@ -277,17 +277,22 @@
         $('.js-modal1').addClass('show-modal1');
         var title = $(this).parentsUntil(".item-slick2").find(".title").html();
         $(".js-name-detail").html(title);
-        $("select[name='plating'], select[name='language'], select[name='nametype'], input[name='num-product'], .btn-num-product-up, .btn-num-product-down, input[name='nameOnProduct']").bind("change keyup mouseup click", function(){
+        $("select[name='plating'], select[name='language'], select[name='nametype'], input[name='num-product'], input[name='nameOnProduct']").bind("change keyup mouseup click", function(){
             if($("input[name='nameOnProduct']").val()){
                 $("#addToCart").prop("disabled", false);
             }
             else{
                 $("#addToCart").prop("disabled", true);
             }
-            $("#preview").css("color", $("select[name='plating']").val().split('-')[0]);
+            // $("#preview").css("color", $("select[name='plating']").val().split('-')[0]);
             $("#preview").html($("input[name='nameOnProduct']").val());
             $("#preview").css("color", $("select[name='plating']").val().split('-')[0]);
-            $("#total").html($("input[name='num-product']").val()*(parseInt($("select[name='plating']").val().split('-')[1].split('Rs')[1])+parseInt($("select[name='nametype']").val().split('-')[1].split('Rs')[1])+parseInt($("select[name='language']").val().split('-')[1].split('Rs')[1])));
+            $("#total").html("Rs "+(parseInt($("input[name='num-product']").val())*(parseInt($("select[name='plating']").val().split('-')[1].split('Rs')[1])+parseInt($("select[name='nametype']").val().split('-')[1].split('Rs')[1])+parseInt($("select[name='language']").val().split('-')[1].split('Rs')[1]))));
+        });
+        $("#prod-plus, #prod-minus").on("click", function(){
+            var total = parseInt($("select[name='plating']").val().split('-')[1].split('Rs')[1])+parseInt($("select[name='nametype']").val().split('-')[1].split('Rs')[1])+parseInt($("select[name='language']").val().split('-')[1].split('Rs')[1]);
+            var quantity = $("input[name='num-product']").val()
+            $("#total").html("Rs "+(parseInt(total)*parseInt(quantity)));
         });
         $.post("templates/modal.inc.php", {title: title}, function(data){
             var DATA = JSON.parse(data);
@@ -337,6 +342,7 @@
                 var option = "<option>"+DATA.nametype[i][0]+" -Rs "+DATA.nametype[i][1]+"</option>";
                 $("select[name='nametype']").append(option);
             }
+        $("#total").html("Rs "+$("input[name='num-product']").val()*(parseInt($("select[name='plating']").val().split('-')[1].split('Rs')[1])+parseInt($("select[name='nametype']").val().split('-')[1].split('Rs')[1])+parseInt($("select[name='language']").val().split('-')[1].split('Rs')[1])));
         });
     });
 
@@ -373,7 +379,7 @@
         subtotal += parseInt($(this).html().split(" ")[1]);
         total += subtotal;
     });
-    $("input[name='num-product'], .btn-num-product-up, .btn-num-product-down").on("change click", function(){
+    $("input[name='num-product'], #cart-prod-plus, #cart-prod-minus").on("change click", function(){
         var quantity = parseInt($(this).parent().find("input[name='num-product']").val());
         var unitPrice = parseInt($(this).parent().parent().parent().find(".unit-price").html().split(" ")[1]);
         subtotal = quantity*unitPrice;
@@ -402,5 +408,18 @@
         total += parseInt(shipping);
         $("#total").html("Rs "+total);
     });
+
+    /*==================================================================
+    [ Deleting Item From Cart ]*/
+    $(".how-itemcart1").on("click", function(){
+        $(this).parent().parent().addClass("removed-item", function(){
+            $(this).parent().parent().remove();
+        });
+        var PID = ($(".removed-item").find(".column-2").attr("data-PID"));
+        $.post("deleteItem.php", {PID: PID}, function(data){
+            console.log(data);
+        });
+    });
+        
 
 })(jQuery);
