@@ -20,12 +20,76 @@ else {
 <?php
 require 'templates/top.inc.php';
 ?>
-  <meta charset="UTF-8">
-  <title>Welcome <?= $first_name.' '.$last_name ?></title>
+  
+<style>
+  #profilebtn{
+    text-align:center;
+    border-style: solid;
+    border-color:grey;
+    border-width: 0.5px;
+  }
+
+  #profilebtn:hover{
+    background-color:#e60044;
+    color:white;
+  }
+
+  #dpdiv{
+    margin: 0 auto;
+    width: 50%;
+    text-align:center;
+  }
+
+  #proficon:hover{
+    color:white;
+  }
+
+  #proficon{
+    font-size:100px;
+    color:#e60044;
+  }
+
+  #logoutbtn{
+    text-decoration:none;
+    color: inherit;
+  }
+
+</style>
+
+<div class="container">
+  <div class="row" style="padding-top:50px;" >
+    <div class="col-lg-12" id="dpdiv">
+      <div> <img src="../assets/images/posters/dp.png" style="height:100px"></div>
+      <?= $first_name.' '.$last_name ?> 
+    </div>
+  </div>
+  
+  <div class="row" style="padding-top:100px;" >
+    <div class="col-sm-4" id="profilebtn" style="">
+      <i class="fas fa-clipboard-list" id="proficon"></i>
+      <p>Orders</p>
+    </div> 
+
+    <div class="col-sm-4" id="profilebtn">
+      <i class="fas fa-cogs" id="proficon"></i>
+      <p> Settings </p>
+    </div> 
+      <a id="logoutbtn" href="index.php">
+        <button name="logout">  
+          <div class="col-sm-4" id="profilebtn">
+            <i class="fas fa-sign-out-alt" id="proficon"></i>
+            <p>Logout</p>
+          </div>  
+        </button>
+      </a>
+  </div>
+</div>
+
+
 
 
   <div class="form">
-          <h1>Welcome</h1>
+    
           
           <p>
           <?php 
@@ -52,11 +116,10 @@ require 'templates/top.inc.php';
               on the email link!
               </div>';
           }
-          
+          //<p><?= $email ?></p>
           ?>
           
-          <h2> Hello jee..! <?php echo $first_name.' '.$last_name; ?></h2>
-          <p><?= $email ?></p>
+          
           
           <a href="logout.php"><button class="button button-block" name="logout"/>Log Out</button></a>
 
