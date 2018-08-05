@@ -155,11 +155,18 @@ $('#dispatch').unbind().click(function() {
 
 $('#btnCollapse').click(function() {
 	if ($("#jugaar").is(":visible")) {
+		$('div.btnStyles').hide('slow');
 		$('div.btnStyles button').removeClass('btn-lg');
 		$('div.btnStyles').addClass('btn-group-vertical');
+		$('div.btnStyles').show('slow');
 	}
 	else {
+		// $('#btnAddons').slideUp('fast');
+		$('#btnAddons').hide();
 		$('div.btnStyles button').addClass('btn-lg');
 		$('div.btnStyles').removeClass('btn-group-vertical');
+		setTimeout(function() {
+			$('#btnAddons').slideDown('slow');
+		}, 300)
 	}
 })
