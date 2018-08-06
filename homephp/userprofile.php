@@ -1,5 +1,3 @@
-
-
 <?php
 /* Displays user information and some useful messages */
 session_start();
@@ -9,7 +7,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
   if( isset($_SESSION['message']))
   {  
     header("location: error.php");
-    //exit();    
+    // exit();    
   }
 }
 else {
@@ -171,22 +169,6 @@ require 'templates/top.inc.php';
 
   <div class="form">
     
-          
-          <p>
-          <?php 
-     
-          // Display message about account verification link only once
-          if ( isset($_SESSION['message']) )
-          {
-              echo $_SESSION['message'];
-              
-              // Don't annoy the user with more messages upon page refresh
-              unset( $_SESSION['message'] );
-          }
-          
-          ?>
-          </p>
-          
           <?php
           
           // Keep reminding the user this account is not active, until they activate
