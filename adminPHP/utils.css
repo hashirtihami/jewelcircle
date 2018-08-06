@@ -16,3 +16,7 @@
     color: red;
     display: block;
   }
+  .tests {
+    margin-bottom: 10px !important;
+    margin-top: 0px !important;
+  }

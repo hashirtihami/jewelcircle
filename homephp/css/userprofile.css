@@ -1,0 +1,74 @@
+  body{
+    /*background-color:#ffcccc;*/
+  }
+  .container2{
+    
+    overflow: auto;
+    background-color:white;
+  }
+  .profilebtn{
+    text-align:center;
+    border-style: solid;
+    border-color:grey;
+    border-width: 0.5px;
+  }
+
+  .profilebtn:hover{
+    background-color:#e60044;
+    color:white;
+  }
+  .profilebtn:hover .proficon {
+    color:white;
+}
+  .profilebtn:hover a p {
+    color:white;
+}
+
+  #dpdiv{
+    margin: 0 auto;
+    width: 50%;
+    text-align:center;
+  }
+
+  .proficon{
+    font-size:80px;
+    color:#e60044;
+  }
+  div.profilebtn a {
+     color: #666666 !important;
+  }
+
+  #logoutbtn{
+    text-decoration:none;
+    color: inherit;
+  }
+  input {
+    background-color: #f9f9f9 !important;
+  }
+  .input-group-addon {
+    background-color: #e60040 !important;
+    color: bisque;
+  }
+  .roaz {
+    margin-top: 50px;
+  }
+  #headingz {
+    text-align: center !important;
+    /*font-family: 'Do Hyeon', sans-serif !important;*/
+    font-family: Poppins-Medium;
+    color: #e60040;
+
+  }
+  hr.style14 { 
+  border: 0; 
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, #ffffff, #000000, #ffffff);
+  background-image: -moz-linear-gradient(left, #ffffff, #000000, #ffffff);
+  background-image: -ms-linear-gradient(left, #ffffff, #000000, #ffffff);
+  background-image: -o-linear-gradient(left, #ffffff, #000000, #ffffff); 
+}
+/*.hedss {
+  font-family: Poppins-Medium;
+  font-size: 18px;
+  text-align: center;
+}*/

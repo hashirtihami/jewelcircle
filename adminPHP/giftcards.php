@@ -119,10 +119,10 @@
 hr.style14 { 
   border: 0; 
   height: 1px; 
-  background-image: -webkit-linear-gradient(left, #f0f0f0, #e60040, #f0f0f0);
-  background-image: -moz-linear-gradient(left, #f0f0f0, #e60040, #f0f0f0);
-  background-image: -ms-linear-gradient(left, #f0f0f0, #e60040, #f0f0f0);
-  background-image: -o-linear-gradient(left, #f0f0f0, #e60040, #f0f0f0); 
+  background-image: -webkit-linear-gradient(left, #ffffff, #000000, #ffffff);
+  background-image: -moz-linear-gradient(left, #ffffff, #000000, #ffffff);
+  background-image: -ms-linear-gradient(left, #ffffff, #000000, #ffffff);
+  background-image: -o-linear-gradient(left, #ffffff, #000000, #ffffff);
 }
 </style>
 <link rel="stylesheet" type="text/css" href="utils.css">

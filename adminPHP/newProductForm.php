@@ -52,7 +52,7 @@
               ?>
             </select>
             <div class="input-group input-group-sm hideShow" id="newCatg">
-              <input type="text" name="newProCategory" class="form-control" placeholder="Enter name of new product..." value="">
+              <input type="text" name="newProCategory" class="form-control tests" placeholder="Enter product category..." value="">
             </div>
           </div>
 
@@ -81,7 +81,7 @@
                 ?>
               </select>
               <div class="input-group input-group-sm hideShow" id="newType">
-                <input type="text" name="newType" class="form-control" placeholder="Enter name of new product..." value="">
+                <input type="text" name="newType" class="form-control tests" placeholder="Enter product type..." value="">
               </div>
             </div>
             <div class="form-group img-group">

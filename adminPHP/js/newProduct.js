@@ -1,28 +1,34 @@
 function displayExistingCatg() {
 	$("#existingCatg").prop('disabled', false);
-	$("#existingCatg").slideDown("fast");
 	$("#newCatg").hide();
+	$("#existingCatg").slideDown(300);
 	$("#newCatg").prop('disabled', true);
 	$("#newCatg input").prop('required',false);
 }
 function displayNewCatg() {
 	$("#newCatg").prop('disabled', false);
-	$("#newCatg").slideDown("fast");
 	$("#existingCatg").hide();
+	$("#newCatg").slideDown(300);
+	setTimeout(function() {
+		$("[name~='newProCategory']").focus();
+	}, 300);
 	$("#existingCatg").prop('disabled', true);
 	$("#newCatg input").prop('required',true);
 }
 function displayExistingTypes() {
 	$("#existingType").prop('disabled', false);
-	$("#existingTypes").slideDown("fast");
 	$("#newType").hide();
+	$("#existingTypes").slideDown(300);
 	$("#newType").prop('disabled', true);
 	$("#newType input").prop('required',false);
 }
 function displayNewType() {
 	$("#newType").prop('disabled', false);
-	$("#newType").slideDown("fast");
 	$("#existingTypes").hide();
+	$("#newType").slideDown(300);
+	setTimeout(function() {
+		$("[name~='newType']").focus();
+	}, 300);
 	$("#existingType").prop('disabled', true);
 	$("#newType input").prop('required',true);
 }
@@ -30,6 +36,9 @@ function displayPriceInputGold() {
 	// var tar = document.getElementById("priceInputGold"); 
 	// tar.classList.toggle("hideShow");
 	$("#priceInputGold").toggle("fast");
+	setTimeout(function() {
+		$("[name~='pricePlating2']").focus();
+	}, 300);
 	if(!($("#priceInputGold").hasClass("hideShow"))){
 		$("#Gold").prop('required',true);
 	}
@@ -38,6 +47,9 @@ function displayPriceInputSilver() {
 	// var tar = document.getElementById("priceInputSilver"); 
 	// tar.classList.toggle("hideShow");
 	$("#priceInputSilver").toggle("fast");
+	setTimeout(function() {
+		$("[name~='pricePlating1']").focus();
+	}, 300);
 	if(!($("#priceInputSilver").hasClass("hideShow"))){
 		$("#Silver").prop('required',true);
 	}
@@ -46,6 +58,9 @@ function displayPriceInputEnglish() {
 	// var tar = document.getElementById("priceInputEnglish"); 
 	// tar.classList.toggle("hideShow");
 	$("#priceInputEnglish").toggle("fast");
+	setTimeout(function() {
+		$("[name~='priceLanguage2']").focus();
+	}, 300);
 	if(!($("#priceInputEnglish").hasClass("hideShow"))){
 		$("#English").prop('required',true);
 	}
@@ -54,6 +69,9 @@ function displayPriceInputUrdu() {
 	// var tar = document.getElementById("priceInputUrdu"); 
 	// tar.classList.toggle("hideShow");
 	$("#priceInputUrdu").toggle("fast");
+	setTimeout(function() {
+		$("[name~='priceLanguage1']").focus();
+	}, 300);
 	if(!($("#priceInputUrdu").hasClass("hideShow"))){
 		$("#Urdu").prop('required',true);
 	}
@@ -62,6 +80,9 @@ function displayPriceInputArabic() {
 	// var tar = document.getElementById("priceInputArabic"); 
 	// tar.classList.toggle("hideShow");
 	$("#priceInputArabic").toggle("fast");
+		setTimeout(function() {
+		$("[name~='priceLanguage3']").focus();
+	}, 300);
 	if(!($("#priceInputArabic").hasClass("hideShow"))){
 		$("#Arabic").prop('required',true);
 	}
@@ -70,6 +91,9 @@ function displayPriceInputDouble() {
 	// var tar = document.getElementById("priceInputDouble"); 
 	// tar.classList.toggle("hideShow");
 	$("#priceInputDouble").toggle("fast");
+	setTimeout(function() {
+		$("[name~='priceNameType2']").focus();
+	}, 300);
 	if(!($("#priceInputDouble").hasClass("hideShow"))){
 		$("#Double").prop('required',true);
 	}
