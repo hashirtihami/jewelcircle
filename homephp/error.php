@@ -11,10 +11,10 @@ var_dump($_SESSION);
         </h1>
         <p> 
             <?php 
-                if( isset($_SESSION['error'])&&!empty($_SESSION['error'])){
+                if( isset($_SESSION['message'])&&!empty($_SESSION['message'])){
                     require 'templates/top.inc.php'; 
                     echo '<h2 style=" font-size:20px;">  
-                            <span style="color:#e60044; "> </span> '.$_SESSION['error'].'&nbsp;
+                            <span style="color:#e60044; "> </span> '.$_SESSION['message'].'&nbsp;
                             <span>
                                 <a href="userregister.php">
                                     <button style="color:#e60044;  padding-bottom:200px;" class="button button-block"/> Go Back.
@@ -24,7 +24,7 @@ var_dump($_SESSION);
                         <h2>';
                 }
                 else
-                    // header( "location: index.php" ); 
+                    header( "location: index.php" ); 
                 // endif;
             ?>
         </p>  
