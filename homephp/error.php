@@ -1,7 +1,7 @@
 <?php
 /* Displays all error messages */
 session_start();
-require 'templates/top.inc.php';
+var_dump($_SESSION);
 ?>
 
 <div class="container"  style="text-align:center;">
@@ -11,21 +11,21 @@ require 'templates/top.inc.php';
         </h1>
         <p> 
             <?php 
-                    if( isset($_SESSION['message']) AND !empty($_SESSION['message']) ): 
-    
-                echo '
-                    <h2 style=" font-size:20px;">  
-                        <span style="color:#e60044; "> </span> '.$_SESSION['message'].'&nbsp;
-                        <span>
-                            <a href="userregister.php">
-                                <button style="color:#e60044;  padding-bottom:200px;" class="button button-block"/> Go Back.
-                                </button>
-                            </a> 
-                        </span>
-                    <h2>';
-                else:
-                    header( "location: index.php" ); 
-                endif;
+                if( isset($_SESSION['error'])&&!empty($_SESSION['error'])){
+                    require 'templates/top.inc.php'; 
+                    echo '<h2 style=" font-size:20px;">  
+                            <span style="color:#e60044; "> </span> '.$_SESSION['error'].'&nbsp;
+                            <span>
+                                <a href="userregister.php">
+                                    <button style="color:#e60044;  padding-bottom:200px;" class="button button-block"/> Go Back.
+                                    </button>
+                                </a> 
+                            </span>
+                        <h2>';
+                }
+                else
+                    // header( "location: index.php" ); 
+                // endif;
             ?>
         </p>  
     </div>
