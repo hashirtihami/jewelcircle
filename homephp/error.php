@@ -1,7 +1,6 @@
 <?php
 /* Displays all error messages */
 session_start();
-var_dump($_SESSION);
 ?>
 
 <div class="container"  style="text-align:center;">
