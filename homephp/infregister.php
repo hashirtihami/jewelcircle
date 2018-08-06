@@ -38,9 +38,7 @@ else { // Email doesn't already exist in a database, proceed...
         $_SESSION['active'] = 1;
         $_SESSION['logged_in'] = true; // So we know the user has logged in
         $_SESSION['message'] =
-                
-                 "Confirmation link has been sent to $email, please verify
-                 your account by clicking on the link in the message!";
+                "You have successfully submitted the form. Check your email for confirmation";
 
         // Send registration confirmation link (verify.php)
         $to      = $email;
@@ -53,8 +51,6 @@ else { // Email doesn't already exist in a database, proceed...
 
                 <h3 style="color:#e60044;">Thank you for signing up!</h3><br><br>
 
-
-
                 Follow us:<br><br>
 
                 Instagram: https://www.instagram.com/jewel_circle/ <br><br>
@@ -66,7 +62,7 @@ else { // Email doesn't already exist in a database, proceed...
         
 
         require'mailsender.php';
-        header("location: index.php"); 
+        header("location: success.php"); 
 
     }
 

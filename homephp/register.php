@@ -48,12 +48,9 @@ else { // Email doesn't already exist in a database, proceed...
     if ( $mysqli->query($sql1) ){
 
         $_SESSION['active'] = 1;
-        $_SESSION['logged_in'] = 1; // So we know the user has logged in
-        $_SESSION['message'] =
-                
-                 "You have successfully logged in.";
+        $_SESSION['logged_in'] = 1;
 
-        // Send registration confirmation link (verify.php)
+
         $to      = $email;
         $subject = ' Message from jewelcircle.net ';
         $message_body = '
@@ -77,6 +74,14 @@ else { // Email doesn't already exist in a database, proceed...
         
 
         require'mailsender.php';
+        if($role=='reseller')
+        {   
+            $_SESSION['message'] =  "You have successfully submitted the form. Check your email for confirmation";
+            $_SESSION['active'] = 0;
+            $_SESSION['logged_in'] = 0;
+            header("location: success.php");
+        }
+        else
         header("location: userprofile.php"); 
 
     }
