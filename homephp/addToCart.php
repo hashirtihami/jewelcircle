@@ -5,7 +5,7 @@
 		if(isset($_SESSION['products'])){
 			$productExists = 0;
 			foreach ($_SESSION["products"] as $key) {
-				if($key['productID']===$_POST['productID']){
+				if($key['productID']===$_POST['productID']&&$key["nameOnProduct"]===$_POST["nameOnProduct"]){
 					$productExists = 1;
 					break;
 				}

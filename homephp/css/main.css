@@ -3375,3 +3375,20 @@ input.num-product::-webkit-inner-spin-button {
    bottom: 0;
 
 }
+
+tr.removed-item {
+    animation: removed-item-animation .6s cubic-bezier(.55,-0.04,.91,.94) forwards;
+}
+ 
+@keyframes removed-item-animation {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+ 
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+ 
