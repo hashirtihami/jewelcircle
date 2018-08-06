@@ -2,7 +2,7 @@
 session_start();
 if ($_POST["password"] ==! $_POST["confirmpassword"])
     {   
-        $_SESSION['message']='hogya na chey? pass sahee daal kutty';
+        $_SESSION['message']='hogya na chey?';
         require'error.php';
             
     }

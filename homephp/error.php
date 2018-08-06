@@ -1,6 +1,7 @@
 <?php
 /* Displays all error messages */
 session_start();
+var_dump($_SESSION);
 ?>
 
 <div class="container"  style="text-align:center;">
@@ -23,7 +24,7 @@ session_start();
                         <h2>';
                 }
                 else
-                    header( "location: index.php" ); 
+                    header( "location: faq.php" ); 
                 // endif;
             ?>
         </p>  
