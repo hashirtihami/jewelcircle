@@ -1,6 +1,9 @@
 <?php
 /* Displays all error messages */
 session_start();
+if(isset($_SESSION['message'])&&!empty($_SESSION['message'])){
+    require 'templates/top.inc.php'; 
+}
 ?>
 
 <div class="container"  style="text-align:center;">
@@ -11,7 +14,6 @@ session_start();
         <p> 
             <?php 
                 if( isset($_SESSION['message'])&&!empty($_SESSION['message'])){
-                    require 'templates/top.inc.php'; 
                     echo '<h2 style=" font-size:20px;">  
                             <span style="color:#e60044; "> </span> '.$_SESSION['message'].'&nbsp;
                             <span>
