@@ -2,7 +2,9 @@
 /* Displays all error messages */
 session_start();
 ?>
-
+<?php
+require 'templates/top.inc.php'; 
+?>
 <div class="container"  style="text-align:center;">
     <div class="form">
         <h1 style="color:#e60044; font-size:200px;  padding-bottom:10px; padding-top:120px;">
@@ -11,7 +13,7 @@ session_start();
         <p> 
             <?php 
                 if( isset($_SESSION['message'])&&!empty($_SESSION['message'])){
-                    require 'templates/top.inc.php'; 
+                    
                     echo '<h2 style=" font-size:20px;">  
                             <span style="color:#e60044; "> </span> '.$_SESSION['message'].'&nbsp;
                             <span>
