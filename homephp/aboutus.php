@@ -54,7 +54,7 @@
 				<div class="col-11 col-md-5 col-lg-4 m-lr-auto">
 					<div class="how-bor1 ">
 						<div class="hov-img0">
-							<img src="../assets/images/posters/about.jpg" alt="IMG">
+							<img src="../assets/images/posters/about2.jpg" alt="IMG">
 						</div>
 					</div>
 				</div>
