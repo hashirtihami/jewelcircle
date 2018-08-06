@@ -24,7 +24,7 @@ var_dump($_SESSION);
                         <h2>';
                 }
                 else
-                    header( "location: index.php" ); 
+                    header( "location: faq.php" ); 
                 // endif;
             ?>
         </p>  

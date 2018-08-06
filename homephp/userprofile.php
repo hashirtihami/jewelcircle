@@ -9,7 +9,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
   if( isset($_SESSION['message']))
   {  
     header("location: error.php");
-    // exit();    
+    //exit();    
   }
 }
 else {

@@ -81,7 +81,6 @@ else { // Email doesn't already exist in a database, proceed...
         }
         else
         header("location: userprofile.php"); 
-
     }
 
     else {
