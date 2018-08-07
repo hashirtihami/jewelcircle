@@ -130,9 +130,9 @@ hr.style14 {
 	  
 	
 		<div class="form-group row">
-	    	<label for="inputPassword3" class="col-sm-2 col-form-label">Leave us a messge</label>
+	    	<label for="inputmsg" class="col-sm-2 col-form-label">Leave us a messge</label>
 	    	<div class="col-sm-10">
-	      		<input type="email" class="form-control" id="inputPassword3" placeholder="Leave us a messge">
+	      		<input type="text" class="form-control" id="inputmsg" placeholder="Leave us a messge">
 	    	</div>
 		</div>
 

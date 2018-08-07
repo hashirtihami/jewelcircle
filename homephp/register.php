@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_POST["password"] ==! $_POST["confirm_password"])
+if ($_POST["password"] ==! $_POST["confirmpassword"])
     {   
         $_SESSION['message']='hogya na chey?';
         require'error.php';
@@ -35,7 +35,7 @@ if ( $result->num_rows > 0 ) {
     
     $_SESSION['message'] = 'User with this email already exists!'; 
 
-   header("location:  error.php");
+   header("location:error.php");
 }
 
 else { // Email doesn't already exist in a database, proceed...
@@ -48,12 +48,9 @@ else { // Email doesn't already exist in a database, proceed...
     if ( $mysqli->query($sql1) ){
 
         $_SESSION['active'] = 1;
-        $_SESSION['logged_in'] = 1; // So we know the user has logged in
-        $_SESSION['message'] =
-                
-                 "You have successfully logged in.";
+        $_SESSION['logged_in'] = 1;
+        $_SESSION['message'] ='ley kr ley gal';
 
-        // Send registration confirmation link (verify.php)
         $to      = $email;
         $subject = ' Message from jewelcircle.net ';
         $message_body = '
@@ -63,8 +60,6 @@ else { // Email doesn't already exist in a database, proceed...
                 Hello '.$first_name.',<br><br>
 
                 <h3 style="color:#e60044;">Thank you for signing up!</h3><br><br>
-
-
 
                 Follow us:<br><br>
 
@@ -77,8 +72,15 @@ else { // Email doesn't already exist in a database, proceed...
         
 
         require'mailsender.php';
+        if($role=='reseller')
+        {   
+            $_SESSION['message'] =  "You have successfully submitted the form. Check your email for confirmation";
+            $_SESSION['active'] = 0;
+            $_SESSION['logged_in'] = 0;
+            header("location: success.php");
+        }
+        else
         header("location: userprofile.php"); 
-
     }
 
     else {
