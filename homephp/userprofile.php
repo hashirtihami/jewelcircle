@@ -36,7 +36,7 @@ require 'templates/top.inc.php';
 
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title hedss">Account Details</h3>
+              <h3 class="box-title">Account Details</h3>
             </div>
             <div class="box-body">
               <!-- Date dd/mm/yyyy -->
@@ -101,7 +101,7 @@ require 'templates/top.inc.php';
                   <th>Order</th>
                   <th>Date</th>
                   <th>Status</th>
-                  <th>Invoice</th>
+                  <th>Payment</th>
                 </tr>
                 <tr>
                   <td>1.</td>
@@ -140,11 +140,11 @@ require 'templates/top.inc.php';
                   <td>4.</td>
                   <td>Fix and squish bugs</td>
                   <td>
-<!--                     <div class="progress progress-xs progress-striped active">
-                      <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                    </div> -->
-                    <td></td>
+                    <div class="progress progress-xs progress-striped active">
+                      <div class="progress-bar progress-bar-primary" style="width: 90%"></div>
+                    </div>
                   </td>
+                  <!-- <td></td> -->
                   <td><span class="badge bg-green">90%</span></td>
                 </tr>
               </table>

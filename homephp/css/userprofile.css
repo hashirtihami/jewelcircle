@@ -62,10 +62,10 @@
   hr.style14 { 
   border: 0; 
   height: 1px; 
-  background-image: -webkit-linear-gradient(left, #ffffff, #000000, #ffffff);
-  background-image: -moz-linear-gradient(left, #ffffff, #000000, #ffffff);
-  background-image: -ms-linear-gradient(left, #ffffff, #000000, #ffffff);
-  background-image: -o-linear-gradient(left, #ffffff, #000000, #ffffff); 
+  background-image: -webkit-linear-gradient(left, #ffffff, rgba(0,0,0,0.2), #ffffff);
+  background-image: -moz-linear-gradient(left, #ffffff, rgba(0,0,0,0.2), #ffffff);
+  background-image: -ms-linear-gradient(left, #ffffff, rgba(0,0,0,0.2), #ffffff);
+  background-image: -o-linear-gradient(left, #ffffff, rgba(0,0,0,0.2), #ffffff); 
 }
 /*.hedss {
   font-family: Poppins-Medium;

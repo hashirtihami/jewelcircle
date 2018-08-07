@@ -1759,6 +1759,10 @@ a:focus {
   font-size: 18px;
   margin: 0;
   line-height: 1;
+  text-align: center;
+  width: 100%;
+  color: #e60040;
+  font-family: Poppins-Regular;
 }
 .box-header > .fa,
 .box-header > .glyphicon,
@@ -4729,8 +4733,8 @@ table.text-center th {
   color: #fff;
 }
 .bg-maroon-gradient {
-  background: #d81b60 !important;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #d81b60), color-stop(1, #e73f7c)) !important;
+  background: #e60040 !important;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e60040), color-stop(1, #e73f7c)) !important;
   background: -ms-linear-gradient(bottom, #d81b60, #e73f7c) !important;
   background: -moz-linear-gradient(center bottom, #d81b60 0%, #e73f7c 100%) !important;
   background: -o-linear-gradient(#e73f7c, #d81b60) !important;
