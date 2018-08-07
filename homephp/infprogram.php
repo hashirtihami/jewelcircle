@@ -14,9 +14,7 @@ session_start(); // You're outputting HTML before the session_start(). Put your 
 require 'templates/top.inc.php';
 ?>
  	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
 
 <title>Ifluencer Program</title>
 
@@ -116,7 +114,7 @@ hr.style14 {
 	<div class="form-group row">
 		<div class="col-lg-5 col-md-5 col-sm-5 ">
 		</div>
-		<div class="col-lg-5 col-md-5 col-sm-5 style="  >
+		<div class="col-lg-5 col-md-5 col-sm-5" >
 		<a href="#forminf" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044; width:80px">I Agree</a>
 		</div>
 	</div>
@@ -247,7 +245,7 @@ hr.style14 {
 	  <div class="form-group row">
 		<div class="col-lg-5 col-md-5 col-sm-5 ">
 		</div>
-	    <div class="col-lg-2 col-md-2 col-md-5 col-xs-12">
+	    <div class="col-lg-2 col-md-2 col-sm-5 ">
 	      <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;" 
 	      	type="submit" class="btn btn-primary" name="register">Submit</button>
 	    </div>

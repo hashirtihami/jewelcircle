@@ -43,24 +43,39 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
         header("location: success.php");
   }
 }
-?>
+?> 
 <?php
  require 'templates/top.inc.php';
   ?>
-    
-  <div class="form">
 
-    <h1>Reset Your Password</h1>
 
-    <form action="forgot.php" method="post">
-     <div class="field-wrap">
-      <label>
-        Email Address<span class="req">*</span>
-      </label>
-      <input type="email" required autocomplete="off" name="email"/>
-    </div>
-    <button class="button button-block"/>Reset</button>
-    </form>
+
+
+  <div class="container" style="padding-top:100px">
+    <table class="table table-bordered" >
+      <thead>
+        <tr>
+          <th colspan="4" scope="col"><font>Reset Your Password</font></th>
+        </tr>
+      </thead>
+      <tbody style="margin-bottom:30px">
+        <tr>
+          <td colspan="4">
+            <form action="forgot.php" method="post" >
+              <div class="form-group row">
+                <label style="font-weight:500;" for="inputemail" class="col-lg-2 col-md-4 col-sm-12 col-form-label">Email:</label>
+                <div class="col-lg-10 cl-md-8 col-sm-12" style="padding-bottom:20px;">
+                  <input type="email" class="form-control" id="inputemail" placeholder="Enter your email here" name='email'>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                  <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;" type="submit" class="btn btn-primary" name="register">Submit</button>
+                </div>
+              </div>
+            </form>
+          </td>
+        </tr>
+       </tbody>
+    </table>
   </div>
        
 <?php

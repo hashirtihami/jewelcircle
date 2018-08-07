@@ -11,8 +11,14 @@ if( isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && 
     $email = $mysqli->escape_string($_GET['email']); 
     $hash = $mysqli->escape_string($_GET['hash']); 
 
+    /*
+    echo $email;
+    echo $hash;
+    die();
+    */
     // Make sure user email with matching hash exist
-    $result = $mysqli->query("SELECT * FROM costumer WHERE email='$email' AND hash='$hash'");
+    $sql1 = 
+    $result = $mysqli->query("SELECT * FROM customer WHERE email='$email' AND hash='$hash' ");
 
     if ( $result->num_rows == 0 )
     { 
@@ -23,19 +29,18 @@ if( isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && 
 else {
     $_SESSION['message'] = "Sorry, verification failed, try again!";
     header("location: error.php");  
-}
+} 
 ?>
 <?php
  require 'templates/top.inc.php';
 ?>
 
 
-<body>
     <div class="form">
 
           <h1>Choose Your New Password</h1>
           
-          <form action="reset_password.php" method="post">
+          <form action="resetpost.php" method="post"> 
               
           <div class="field-wrap">
             <label>
@@ -60,5 +65,6 @@ else {
           </form>
 
     </div>
+
 <?php
   require 'templates/bottom.inc.php';
