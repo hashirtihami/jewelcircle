@@ -16,18 +16,20 @@ require 'templates/top.inc.php';
         <p> 
             <?php 
                 if( isset($_SESSION['message'])&&!empty($_SESSION['message'])){
-                    echo '<h2 style=" font-size:20px;">  
+                    echo '<h2 style=" padding-bottom:250px; font-size:20px;">  
                             <span style="color:#e60044; "> </span> '.$_SESSION['message'].'&nbsp;
                             <span>
+                                <!--
                                 <a href="userregister.php">
                                     <button style="color:#e60044;  padding-bottom:200px;" class="button button-block"/> Go Back.
                                     </button>
-                                </a> 
+                                </a>
+                                --> 
                             </span>
                         <h2>';
                 }
                 else
-                    header( "location: faq.php" ); 
+                    header( "location: index.php" ); 
                 // endif;
             ?>
         </p>  

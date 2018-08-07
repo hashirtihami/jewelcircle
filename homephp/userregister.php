@@ -59,7 +59,7 @@ require 'templates/top.inc.php';
 </section>
 
 <div id="forminf" class="container"  >
-	<h2 style="padding-top:10%; color:#e60044;">Log In</h2>
+	<h2 style="padding-top:10%; color:#e60044;">Log In</h2><p style=" color:#e60044; " > Or create new <a href="#signupform"> Account?</a></p> 
 	<hr>
 	
 	<form action="userregister.php" method="post">
@@ -69,29 +69,23 @@ require 'templates/top.inc.php';
 	    	<div class="col-sm-5">
 	      		<input type="email" class="form-control" id="inputname" name='email' placeholder="Enter your email" required>
 	    	</div>
-	    	
 	  	</div>
 
-	  			<div class="form-group row">
-	    	
+	  	<div class="form-group row">
 	    	<div class="col-sm-5">
 	      		<input type="password" class="form-control" id="inputname" name='password' placeholder="Enter your password" required>
 	    	</div>
-	    	
 	  	</div>
-
 	  	<div class="col-lg-5 col-md-5 col-sm-5 ">
-		</div>
-	  	
+		</div> 	
 	  	<div class="col-lg-2 col-md-2 col-md-5 col-xs-12">
 	      <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;" type="submit" name="login" class="btn btn-primary">Log In</button>
 	    </div>
+	    <p style="padding-top:10px; color:#e60044; " >  <a href="forgot.php"> Forgot Password?</a></p> 
 
-	    <p style="padding-top:50px; color:#e60044; " > Create new <a href="#signupform"> Account?</a></p>
-	  
+	     
 	</form>
-
-
+	
 	<h2 id="signupform" style="padding-top:100px; color:#e60044;">Sign Up</h2>
 	<hr>
 	<form onSubmit="return validate();" action="userregister.php" method="post">

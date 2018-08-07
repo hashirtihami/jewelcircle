@@ -10,12 +10,6 @@ if( isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && 
 {
     $email = $mysqli->escape_string($_GET['email']); 
     $hash = $mysqli->escape_string($_GET['hash']); 
-
-    /*
-    echo $email;
-    echo $hash;
-    die();
-    */
     // Make sure user email with matching hash exist
     $sql1 = 
     $result = $mysqli->query("SELECT * FROM customer WHERE email='$email' AND hash='$hash' ");
@@ -36,35 +30,40 @@ else {
 ?>
 
 
-    <div class="form">
+ <div class="container" style="padding-top:100px">
+    <table class="table table-bordered" >
+      <thead>
+        <tr>
+          <th colspan="4" scope="col"><font>Choose Your New Password</font></th>
+        </tr>
+      </thead>
+      <tbody style="margin-bottom:30px">
+        <tr>
+          <td colspan="4">
+            <form action="resetpost.php" method="post" >
+              <div class="form-group row">
+                <label style="font-weight:500;" for="inputemail" required class="col-lg-2 col-md-4 col-sm-12 col-form-label">New Password</label>
+                <div class="col-lg-10 cl-md-8 col-sm-12" style="padding-bottom:20px;">
+                  <input type="password" class="form-control" id="inputemail" placeholder="Enter your email here" name='newpassword'  autocomplete="off">
+                </div>
+                <label style="font-weight:500;" for="inputemail" required class="col-lg-2 col-md-4 col-sm-12 col-form-label">Confirm New Password</label>
+                <div class="col-lg-10 cl-md-8 col-sm-12" style="padding-bottom:20px;">
+                  <input type="password" required class="form-control" id="inputemail" placeholder="Enter your email here" name='confirmpassword'  autocomplete="off" >
+                </div>
 
-          <h1>Choose Your New Password</h1>
-          
-          <form action="resetpost.php" method="post"> 
-              
-          <div class="field-wrap">
-            <label>
-              New Password<span class="req">*</span>
-            </label>
-            <input type="password"required name="newpassword" autocomplete="off"/>
-          </div>
-              
-          <div class="field-wrap">
-            <label>
-              Confirm New Password<span class="req">*</span>
-            </label>
-            <input type="password"required name="confirmpassword" autocomplete="off"/>
-          </div>
-          
-          <!-- This input field is needed, to get the email of the user -->
-          <input type="hidden" name="email" value="<?= $email ?>">    
-          <input type="hidden" name="hash" value="<?= $hash ?>">    
-              
-          <button class="button button-block"/>Apply</button>
-          
-          </form>
+                <input type="hidden" name="email" value="<?= $email ?>">    
+                <input type="hidden" name="hash" value="<?= $hash ?>">  
 
-    </div>
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                  <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;"  class="btn btn-primary" >Submit</button>
+                </div>
+              </div>
+            </form>
+          </td>
+        </tr>
+       </tbody>
+    </table>
+  </div>
 
 <?php
   require 'templates/bottom.inc.php';

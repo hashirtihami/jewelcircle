@@ -14,13 +14,15 @@ require 'templates/top.inc.php';
                     if( isset($_SESSION['message']) AND !empty($_SESSION['message']) ): 
     
                 echo '
-                    <h2 style=" font-size:20px;">  
-                        <span style="color:#e60044; "> </span> '.$_SESSION['message'].'<br><br>
+                    <h2 style=" padding-bottom:250px; font-size:20px;">  
+                        <span style="color:#e60044;  "> </span> '.$_SESSION['message'].'<br><br>
                         <span>
+                            <!--
                             <a href="index.php">
                                 <button style="color:#e60044;  padding-bottom:200px;" class="button button-block"/> Jewel Circle.
                                 </button>
                             </a> 
+                            -->
                         </span>
                     <h2>';
                 else:

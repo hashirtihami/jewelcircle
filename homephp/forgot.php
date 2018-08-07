@@ -65,10 +65,10 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
               <div class="form-group row">
                 <label style="font-weight:500;" for="inputemail" class="col-lg-2 col-md-4 col-sm-12 col-form-label">Email:</label>
                 <div class="col-lg-10 cl-md-8 col-sm-12" style="padding-bottom:20px;">
-                  <input type="email" class="form-control" id="inputemail" placeholder="Enter your email here" name='email'>
+                  <input type="email"  required  class="form-control" id="inputemail" placeholder="Enter your email here" name='email'>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-2">
-                  <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;" type="submit" class="btn btn-primary" name="register">Submit</button>
+                  <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;"  class="btn btn-primary" >Submit</button>
                 </div>
               </div>
             </form>
