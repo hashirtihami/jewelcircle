@@ -112,9 +112,18 @@
 						</div>
 							
 						<div class="flex-c-m h-full p-lr-19">
-							<a href="userregister.php">
-								<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 js-show-sidebar">
-								<i class="fas fa-user"></i>
+							<!-- <a href="userregister.php"> -->
+								<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 js-show-sidebar btn-group">
+								<button id="logoutBtn" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="fas fa-user"></i>
+								</button>
+								  <div class="dropdown-menu" id="dropdown">
+								    <a class="dropdown-item" href="#">Action</a>
+								 <!--    <a class="dropdown-item" href="#">Another action</a>
+								    <a class="dropdown-item" href="#">Something else here</a>
+								    <div class="dropdown-divider"></div>
+								    <a class="dropdown-item" href="#">Separated link</a> -->
+								  </div>
 								</div>
 							</a>
 						</div>

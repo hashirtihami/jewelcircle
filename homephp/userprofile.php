@@ -30,72 +30,23 @@ require 'templates/top.inc.php';
       
     <section class="content-header">
       <h1 id="headingz">
-        Hashir
-        <small>Mottu</small>
-      </h1><hr class="style14">
+        Hashir Tihami
+        <!-- <small>Loru</small> -->
+        <button type="button" class="btn btn-outline-danger btn-sm">
+          <a href="index.php"> Edit
+            <i class="fas fa-cog"></i>
+          </a>
+        </button>
+      <!-- </h1><hr class=""> -->
     </section>
     <section class="content">
-      <div class="row roaz">
-        <div class="col-md-6">
-
-          <div class="box">
-            <div class="box-header with-border">
-              <h3 class="box-title">Account Details</h3>
-            </div>
-            <div class="box-body">
-              <!-- Date dd/mm/yyyy -->
-              <div class="form-group">
-                <!-- <label>Date masks:</label> -->
-
-                <div class="input-group">
-                  <div class="input-group-addon" title="Full Name">
-                    <i class="fas fa-user"></i>
-                  </div>
-                  <!-- <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask> -->
-                  <input type="text" class="form-control" name="username" placeholder="Elisha Jamil">
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <div class="form-group">
-                <div class="input-group">
-                  <div class="input-group-addon" title="Email">
-                    <i class="fas fa-envelope-square"></i>
-                  </div>
-                  <input type="text" class="form-control" placeholder="elisha.jamil@circle.com">
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-              <div class="form-group">
-                <div class="input-group">
-                  <div class="input-group-addon" title="Contact Number">
-                    <i class="fas fa-phone"></i>
-                  </div>
-                  <input type="text" class="form-control" placeholder="elisha.jamil@circle.com">
-                </div>
-                <!-- /.input group -->
-              </div>
-              <div class="form-group">
-                <div class="input-group">
-                  <div class="input-group-addon" title="Address">
-                    <i class="fas fa-map-marker"></i>
-                  </div>
-                  <input type="text" class="form-control" placeholder="Ghar, Chicago, Sindh">
-                </div>
-                <!-- /.input group -->
-              </div>
-
-            </div>
-            <!-- /.box-body -->
-          </div>
+      <div class="row ">
           <!-- /.box -->
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 roaz">
           <div class="box">
-            <div class="box-header with-border">
-              <h3 class="box-title hedss">Orders</h3>
+            <div class="box-header with-border bg-black-gradient">
+              <h3 class="box-title" id="tableHead">Orders</h3>
             </div>
             <!-- /.box-header -->
             <div class="">

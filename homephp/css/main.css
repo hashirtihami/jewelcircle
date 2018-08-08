@@ -3395,4 +3395,14 @@ tr.removed-item {
         transform: scale(0);
     }
 }
- 
+#logoutBtn {
+  font-size: 12px;
+  /*display: none;*/
+}
+i.fa-user {
+  font-size: 20px;
+}
+#dropdown {
+  /*transform: translate3d(-91px, 23px, 0px) !important;*/
+  transform: translate3d(-45%, 49%, 0px) !important;
+}

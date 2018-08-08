@@ -1,5 +1,5 @@
   body{
-    /*background-color:#ffcccc;*/
+    background-color:#fbfafa;
   }
   .container2{
     
@@ -50,7 +50,8 @@
     color: bisque;
   }
   .roaz {
-    margin-top: 50px;
+    /*width: 50%;*/
+    margin: 0 auto;
   }
   #headingz {
     text-align: center !important;
@@ -59,7 +60,7 @@
     color: #e60040;
 
   }
-  hr.style14 { 
+  hr { 
   border: 0; 
   height: 1px; 
   background-image: -webkit-linear-gradient(left, #ffffff, rgba(0,0,0,0.2), #ffffff);
@@ -72,3 +73,12 @@
   font-size: 18px;
   text-align: center;
 }*/
+button.btn-outline-danger a {
+  color: #666 !important;
+}
+button.btn-outline-danger:hover a {
+  color: white !important;
+}
+#tableHead {
+  color: #e7e7e7 !important;
+}
