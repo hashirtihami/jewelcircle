@@ -1,5 +1,3 @@
-
-
 <?php
 /* Displays user information and some useful messages */
 session_start();
@@ -30,13 +28,10 @@ require 'templates/top.inc.php';
       
     <section class="content-header">
       <h1 id="headingz">
-        Hashir Tihami
-        <!-- <small>Loru</small> -->
-<!--         <button type="button" class="btn btn-outline-danger btn-sm">
           <a href="index.php"> Edit
             <i class="fas fa-cog"></i>
           </a>
-        </button> -->
+        </button> 
       <!-- </h1><hr class=""> -->
     </section>
     <section class="content">
@@ -57,8 +52,9 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="Full Name">
                     <i class="fas fa-user"></i>
                   </div>
+
                   <!-- <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask> -->
-                  <input type="text" class="form-control" name="username" placeholder="Elisha Jamil">
+                  <input type="text" class="form-control" name="username" placeholder="Full Name">
                    <div class="input-group-addon" title="Full Name">
                     <button type="button" class="btn editBtn bg-black">
                       <i class="far fa-edit"></i>
@@ -74,17 +70,18 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="Email">
                     <i class="fas fa-envelope-square"></i>
                   </div>
-                  <input type="text" class="form-control" placeholder="elisha.jamil@circle.com">
+                  <input type="text" class="form-control" placeholder="registered email here">
                 </div>
                 <!-- /.input group -->
               </div>
+
               <!-- /.form group -->
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-addon" title="Contact Number">
                     <i class="fas fa-phone"></i>
                   </div>
-                  <input type="text" class="form-control" placeholder="elisha.jamil@circle.com">
+                  <input type="text" class="form-control" placeholder="number here (editable)">
                 </div>
                 <!-- /.input group -->
               </div>
@@ -93,11 +90,36 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="Address">
                     <i class="fas fa-map-marker"></i>
                   </div>
-                  <input type="text" class="form-control" placeholder="Ghar, Chicago, Sindh">
+                  <input type="text" class="form-control" placeholder="Address (editable)">
                 </div>
-                <!-- /.input group -->
               </div>
-
+              
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-addon" title="City">
+                    <i class="fas fa-map-marker"></i>
+                  </div>
+                  <input type="text" class="form-control" placeholder="City (editable)">
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-addon" title="Address">
+                    <i class="fas fa-map-marker"></i>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Country (editable)">
+                </div>
+              </div>
+             
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-addon" title="Address">
+                    <i class="fas fa-map-marker"></i>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Zipcode (editable)">
+                </div>
+              </div>
             </div>
             <!-- /.box-body -->
           </div>
