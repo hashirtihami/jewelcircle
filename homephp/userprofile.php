@@ -30,7 +30,7 @@ require 'templates/top.inc.php';
       
     <section class="content-header">
       <h1 id="headingz">
-        Hashir Tihami
+        <?php echo $first_name." ".$last_name ?>
         <!-- <small>Loru</small> -->
         <button type="button" class="btn btn-outline-danger btn-sm">
           <a href="index.php"> Edit
