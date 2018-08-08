@@ -143,11 +143,11 @@
 															echo '<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">';
 																echo '<span class="title">'.$query_array["typeName"].' '.$query_array["category"].'</span>';
 															echo '</a>';
-
 															echo '<span class="stext-105 cl3">';
 																echo '<span class="fakePrice">Rs'.$fakePrice.'</span><span class="discountedPrice"> Rs'.$query_array["platingPrice"].'</span>';
 															echo '</span>';
 														echo '</div>';
+														echo '<div class="label1" data-label1="'.$discount.'%Off"></div>';
 													echo '</div>';
 												echo '</div>';
 											echo '</div>';

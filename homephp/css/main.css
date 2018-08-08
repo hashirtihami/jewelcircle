@@ -139,7 +139,8 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   font-family: Anydore;
   padding-left:10px;
   font-size:25px;
-  color: #551a8b; 
+  /*color: #551a8b; */
+  color: #e60044; 
 }
 
 .fakePrice{
@@ -1933,8 +1934,17 @@ input.num-product::-webkit-inner-spin-button {
   opacity: 1;
 }
 
+
 /*//////////////////////////////////////////////////////////////////
 [ Table Shopping Cart ]*/
+
+#numProdInCart::after{
+  background: #e60044;
+}
+
+.zmdi-shopping-cart{
+  color: #e60044;
+}
 
 .wrap-table-shopping-cart {
   overflow: auto;

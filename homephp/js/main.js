@@ -359,7 +359,7 @@
         var product = $(".js-name-detail").html();
         var productID = $(".js-name-detail").attr("id");
         var quantity = $("input[name='num-product']").val();
-        var price = $("#total").html();
+        var price = $("#total").html().split(" ")[1];
         var name = $("input[name='nameOnProduct']").val();
         $.post("addToCart.php", {productID: productID, product: product, quantity: quantity, price: price, nameOnProduct: name}, function(data){
             var DATA = JSON.parse(data);

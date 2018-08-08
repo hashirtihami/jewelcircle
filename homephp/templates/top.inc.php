@@ -71,7 +71,7 @@
 								<a href="product.html">Ring</a>
 							</li>
 
-							<li class="label1" data-label1="50%">
+							<li>
 								<a href="shoping-cart.html">Locket</a>
 							</li>
 

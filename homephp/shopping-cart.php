@@ -30,6 +30,7 @@
 									<th class="column-1">Product</th>
 									<th class="column-2"></th>
 									<th class="column-3">Price</th>
+									<th class="column-3">Name</th>
 									<th class="column-4">Quantity</th>
 									<th class="column-5">Total</th>
 								</tr>
@@ -41,6 +42,7 @@
 										$title = $_SESSION["products"][$i]["title"];
 										$price = $_SESSION["products"][$i]["price"];
 										$quantity = $_SESSION["products"][$i]["quantity"];
+										$name = $_SESSION["products"][$i]["nameOnProduct"];
 										$query = "SELECT imageDestination FROM images WHERE productID='$productID'";
 										$query_run = mysqli_query($conn, $query);
 										if(@$query_array = mysqli_fetch_array($query_run)){
@@ -54,6 +56,7 @@
 											echo '</td>';
 											echo '<td data-PID="'.$productID.'" class="column-2">'.$title.'</td>';
 											echo '<td class="column-3 unit-price">Rs '.$price/$quantity.'</td>';
+											echo '<td>'.$name.'</td>';
 											echo '<td class="column-4">';
 												echo '<div class="wrap-num-product flex-w m-l-auto m-r-0">';
 													echo '<div id="cart-prod-minus" class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">';
