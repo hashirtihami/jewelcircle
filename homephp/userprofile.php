@@ -30,10 +30,10 @@ require 'templates/top.inc.php';
       
     <section class="content-header">
       <h1 id="headingz">
-        <?php echo $first_name." ".$last_name ?>
+        <?php echo $first_name." ".$last_name; ?>
         <!-- <small>Loru</small> -->
         <button type="button" class="btn btn-outline-danger btn-sm">
-          <a href="index.php"> Edit
+          <a href="accountEdit.php"> Account info
             <i class="fas fa-cog"></i>
           </a>
         </button>
