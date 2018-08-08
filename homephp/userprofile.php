@@ -33,7 +33,7 @@ require 'templates/top.inc.php';
         Hashir Tihami
         <!-- <small>Loru</small> -->
         <button type="button" class="btn btn-outline-danger btn-sm">
-          <a href="index.php"> Edit
+          <a href="accountEdit.php"> Edit
             <i class="fas fa-cog"></i>
           </a>
         </button>
