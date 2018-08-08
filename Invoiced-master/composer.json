@@ -1,0 +1,23 @@
+{
+	"name": "concept-core/invoiced",
+	"description": "A PHP class to use https://invoice-generator.com API.",
+	"license": "MIT",
+	"authors": [
+	{
+		"name": "Wouter van Marrum",
+		"email": "wouter.van.marrum@concept-core.nl"
+	}
+	],
+	"minimum-stability": "dev",
+	"require": {},
+	"require-dev": {
+		"guzzlehttp/guzzle": "dev-master",
+		"wixel/gump": "dev-master",
+		"nesbot/carbon": "dev-master"
+		},
+		"autoload": {
+			"psr-4": {
+				"ConceptCore\\": "app/ConceptCore"
+			}
+		}
+	}
