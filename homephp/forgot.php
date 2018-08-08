@@ -47,6 +47,15 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 <?php
  require 'templates/top.inc.php';
   ?>
+<style type="text/css">
+#submitBtn {
+  position: relative;
+  margin: 0 auto;
+ }
+div#submitBtn button {
+  background-color: #e60040;
+}
+</style>
 
 
 
@@ -67,8 +76,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
                 <div class="col-lg-10 cl-md-8 col-sm-12" style="padding-bottom:20px;">
                   <input type="email"  required  class="form-control" id="inputemail" placeholder="Enter your email here" name='email'>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-2">
-                  <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;"  class="btn btn-primary" >Submit</button>
+                <div class="col-lg-2 col-md-2 col-sm-2" id="submitBtn">
+                  <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04"  class="btn btn-primary" >Submit</button>
                 </div>
               </div>
             </form>
