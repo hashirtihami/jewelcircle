@@ -46,7 +46,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 ?> 
 <?php
  require 'templates/top.inc.php';
-  ?>
+?>
 <style type="text/css">
 #submitBtn {
   position: relative;
