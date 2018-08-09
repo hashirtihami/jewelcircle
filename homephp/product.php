@@ -8,8 +8,8 @@
 			<div class="p-b-32">
 				<h3 class="ltext-105 cl5 txt-center respon1">
 				<?php
-				if(isset($_POST['product'])){
-					$query = "SELECT category FROM category WHERE categoryID=".$_POST['product'];
+				if(isset($_SESSION['product'])){
+					$query = "SELECT category FROM category WHERE categoryID=".$_SESSION['product'];
 					$query_run = mysqli_query($conn, $query);
 					if(@$query_array = mysqli_fetch_array($query_run)){
 						echo $query_array["category"];
@@ -20,8 +20,8 @@
 			</div>
 			<div class="row">
 				<?php
-				if(isset($_POST['product'])){
-					$query = "SELECT productID,no,discount FROM product WHERE productID LIKE '".$_POST['product']."_'";
+				if(isset($_SESSION['product'])){
+					$query = "SELECT productID,no,discount FROM product WHERE productID LIKE '".$_SESSION['product']."_'";
 					$query_run = mysqli_query($conn, $query);
 					while(@$query_array = mysqli_fetch_array($query_run)){
 						$lastItem = $query_array["no"];
