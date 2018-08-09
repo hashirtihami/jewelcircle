@@ -3,8 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-  /**
+   <script src="https://js.stripe.com/v3/"></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  
+<style media="screen">
+/**
  * The CSS shown here will not be introduced in the Quickstart guide, but shows
  * how you can use CSS to style your Element's container.
  */
@@ -30,11 +33,9 @@
 .StripeElement--webkit-autofill {
   background-color: #fefde5 !important;
 }
-    
-  </style>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <script >
-    // Create a Stripe client.
+</style>
+
+<script >
 var stripe = Stripe('pk_test_4fWJrHfLJWUL7r6XWYsOqm5m');
 
 // Create an instance of Elements.
@@ -91,13 +92,24 @@ form.addEventListener('submit', function(event) {
     }
   });
 });
+function stripeTokenHandler(token) {
+  // Insert the token ID into the form so it gets submitted to the server
+  var form = document.getElementById('payment-form');
+  var hiddenInput = document.createElement('input');
+  hiddenInput.setAttribute('type', 'hidden');
+  hiddenInput.setAttribute('name', 'stripeToken');
+  hiddenInput.setAttribute('value', token.id);
+  form.appendChild(hiddenInput);
 
-  </script>
+  // Submit the form
+  form.submit();
+}
+</script>
 
 </head>
 <body>
 <div class="container">
- <script src="https://js.stripe.com/v3/"></script>
+
 
 <form action="/charge" method="post" id="payment-form">
   <div class="form-row">
@@ -105,10 +117,10 @@ form.addEventListener('submit', function(event) {
       Credit or debit card
     </label>
     <div id="card-element" class="form-control">
-      <!-- A Stripe Element will be inserted here. -->
+      <!-- a Stripe Element will be inserted here. -->
     </div>
 
-    <!-- Used to display form errors. -->
+    <!-- Used to display form errors -->
     <div id="card-errors" role="alert"></div>
   </div>
 

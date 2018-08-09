@@ -1,8 +1,9 @@
 <?php
 require 'templates/top.inc.php';
 ?>
-<script src="https://js.stripe.com/v3/"></script>
 <script type="text/javascript" href="js/charge.js"></script>
+<script src="https://js.stripe.com/v2/"></script>
+<script src="https://js.stripe.com/v3/"></script>
 <link rel="stylesheet"  href="css/style.css">
 
 <div class="container" style="padding-bottom:80px; padding-top:50px;">
@@ -10,8 +11,8 @@ require 'templates/top.inc.php';
     <div class="form-row">
       
       <input type="text" name="first_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="First Name">
-      <input type="text" name="last_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="First Name">
-      <input type="email" name="email" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="First Name">
+      <input type="text" name="last_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Last Name">
+      <input type="email" name="email" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Email">
       
       <label for="card-element">
         Credit or debit card
