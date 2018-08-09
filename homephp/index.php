@@ -1,6 +1,8 @@
 <?php
 	require 'connect.inc.php';
 	require 'templates/top.inc.php';
+
+	// $router->add('home', '/', 'userprofile.php');
 ?>
 	<!-- Slider -->
 	<section class="section-slide">
