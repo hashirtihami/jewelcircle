@@ -1,13 +1,9 @@
-<?php
-	require 'connect.inc.php';
-	require 'templates/top.inc.php';
-?>
-
 <section class="sec-product bg0 p-t-100 p-b-50">
 		<div class="container">
 			<div class="p-b-32">
 				<h3 class="ltext-105 cl5 txt-center respon1">
 				<?php
+				print_r($_POST);
 				if(isset($_POST['product'])){
 					$query = "SELECT category FROM category WHERE categoryID=".$_POST['product'];
 					$query_run = mysqli_query($conn, $query);
@@ -67,7 +63,3 @@
 		</div>
 </section>
 
-<?php
-	require 'quickview-modal.php';
-	require 'templates/bottom.inc.php';
-?>

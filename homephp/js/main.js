@@ -425,6 +425,7 @@
 })(jQuery);
 
 function submitProduct(value){
-    $("#hiddenProduct").val(value)
-    $("#submitProduct").submit();
+    localStorage.product = value;
+    // $("#hiddenProduct").val(value)
+    // $("#submitProduct").submit();
 }
