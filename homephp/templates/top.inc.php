@@ -70,14 +70,14 @@
 								<a href="index.php">Home</a>
 								
 							</li>
-							<!-- <form id="submitProduct" action="product.php" method="post">
+							<form id="submitProduct" action="product.php" method="post">
 								<input id="hiddenProduct" type="hidden" name="product">
-							</form> -->
+							</form>
 							<?php
 								$query = "SELECT * FROM category";
 								$query_run = mysqli_query($conn, $query);
 								while(@$query_array = mysqli_fetch_array($query_run)){
-									echo '<li><a href="product.php" onclick="submitProduct('.$query_array['categoryID'].')">'.$query_array['category'].'</a></li>';
+									echo '<li><a href="#" onclick="submitProduct('.$query_array['categoryID'].')">'.$query_array['category'].'</a></li>';
 								}
 							?>
 							
