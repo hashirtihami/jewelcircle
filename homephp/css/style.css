@@ -14,7 +14,7 @@
 }
 
 .StripeElement--focus {
-  box-shadow: 0 1px 3px 0 #cfd7df;
+  box-shadow: 0 1px 3px 0 #e60044;
 }
 
 .StripeElement--invalid {
@@ -23,4 +23,4 @@
 
 .StripeElement--webkit-autofill {
   background-color: #fefde5 !important;
-}
+} 

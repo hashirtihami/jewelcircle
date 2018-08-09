@@ -22,6 +22,7 @@ var style = {
     iconColor: '#fa755a'
   }
 };
+ 
 
 // Create an instance of the card Element.
 var card = elements.create('card', {style: style});
