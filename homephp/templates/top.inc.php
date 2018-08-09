@@ -64,28 +64,22 @@
 
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
+						
 						<ul class="main-menu">
 							<li class="active-menu">
 								<a href="index.php">Home</a>
 								
 							</li>
-
-							<li>
-								<a href="product.html">Ring</a>
-							</li>
-
-							<li>
-								<a href="shoping-cart.html">Locket</a>
-							</li>
-
-							<li>
-								<a href="blog.html">Bracelet</a>
-							</li>
-
-							<li>
-								<a href="about.html">Cufflinks</a>
-							</li>
-
+							<form id="submitProduct" action="product.php" method="post">
+								<input id="hiddenProduct" type="hidden" name="product">
+							</form>
+							<?php
+								$query = "SELECT * FROM category";
+								$query_run = mysqli_query($conn, $query);
+								while(@$query_array = mysqli_fetch_array($query_run)){
+									echo '<li><a href="#" onclick="submitProduct('.$query_array['categoryID'].')">'.$query_array['category'].'</a></li>';
+								}
+							?>
 							
 						</ul>
 					</div>	

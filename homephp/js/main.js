@@ -423,3 +423,8 @@
         
 
 })(jQuery);
+
+function submitProduct(value){
+    $("#hiddenProduct").val(value)
+    $("#submitProduct").submit();
+}
