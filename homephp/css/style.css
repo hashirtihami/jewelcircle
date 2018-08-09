@@ -24,3 +24,6 @@
 .StripeElement--webkit-autofill {
   background-color: #fefde5 !important;
 } 
+#card-element{
+  height:200px;
+}
