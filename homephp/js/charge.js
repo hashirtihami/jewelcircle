@@ -1,4 +1,3 @@
-// Create a Stripe client.
 var stripe = Stripe('pk_test_4fWJrHfLJWUL7r6XWYsOqm5m');
 
 // Create an instance of Elements.
@@ -22,14 +21,12 @@ var style = {
     iconColor: '#fa755a'
   }
 };
- 
 
 // Create an instance of the card Element.
 var card = elements.create('card', {style: style});
 
 // Add an instance of the card Element into the `card-element` <div>.
 card.mount('#card-element');
- card.on('ready', () => {});
 
 // Handle real-time validation errors from the card Element.
 card.addEventListener('change', function(event) {
@@ -57,7 +54,6 @@ form.addEventListener('submit', function(event) {
     }
   });
 });
-
 function stripeTokenHandler(token) {
   // Insert the token ID into the form so it gets submitted to the server
   var form = document.getElementById('payment-form');

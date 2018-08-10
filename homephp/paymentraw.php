@@ -35,7 +35,31 @@
 }
 </style>
 
-<script >
+
+
+</head>
+<body>
+<div class="container">
+
+
+<form action="/charge" method="post" id="payment-form">
+  <div class="form-row">
+    <label for="card-element">
+      Credit or debit card
+    </label>
+    <div id="card-element" class="form-control">
+      <!-- a Stripe Element will be inserted here. -->
+    </div>
+
+    <!-- Used to display form errors -->
+    <div id="card-errors" role="alert"></div>
+  </div>
+
+  <button>Submit Payment</button>
+</form>
+</div>
+<script type="text/javascript" src="js/charge.js"></script>
+<!-- <script >
 var stripe = Stripe('pk_test_4fWJrHfLJWUL7r6XWYsOqm5m');
 
 // Create an instance of Elements.
@@ -104,32 +128,7 @@ function stripeTokenHandler(token) {
   // Submit the form
   form.submit();
 }
-</script>
-
-</head>
-<body>
-<div class="container">
-
-
-<form action="/charge" method="post" id="payment-form">
-  <div class="form-row">
-    <label for="card-element">
-      Credit or debit card
-    </label>
-    <div id="card-element" class="form-control">
-      <!-- a Stripe Element will be inserted here. -->
-    </div>
-
-    <!-- Used to display form errors -->
-    <div id="card-errors" role="alert"></div>
-  </div>
-
-  <button>Submit Payment</button>
-</form>
-</div>
-<script type="text/javascript" href="js/charge.js"></script>
-<script src="https://js.stripe.com/v3/"></script>
-
+</script> -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
