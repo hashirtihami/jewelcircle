@@ -136,8 +136,29 @@
         $filter.on('click', 'button', function () {
             var filterValue = $(this).attr('data-filter');
             $topeContainer.isotope({filter: filterValue});
+
         });
-        
+    });
+
+    // filter functions
+    var filterFns = {
+      // 1000-1200
+      thousandtwelvethousand: function() {
+        var number = $(this).find('.discountedPrice').text().split("Rs")[1];
+        console.log(number);
+        return parseInt( number, 10 ) >= 1000 && parseInt( number, 10 ) <= 1200;
+      },
+    };
+
+    $('#filters').on( 'click', 'a', function() {
+      var filterValue = $( this ).attr('data-filter');
+      console.log(filterValue);
+      // use filterFn if matches value
+      filterValue = filterFns[ filterValue ] || filterValue;
+      console.log(filterValue);
+      $topeContainer.isotope({ filter: filterValue });
+      // $(this).parent
+      $(this).addClass('filter-link-active');
     });
 
     // init Isotope
@@ -147,12 +168,16 @@
                 itemSelector: '.isotope-item',
                 layoutMode: 'fitRows',
                 percentPosition: true,
+                getSortData: {
+                    price: '.discountedPrice'
+                },
                 animationEngine : 'best-available',
                 masonry: {
                     columnWidth: '.isotope-item'
                 }
             });
         });
+
     });
 
     var isotopeButton = $('.filter-tope-group button');
@@ -188,7 +213,6 @@
             $('.panel-filter').slideUp(400);
         }    
     });
-
 
 
 
