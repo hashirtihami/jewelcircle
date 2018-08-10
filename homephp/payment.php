@@ -1,8 +1,7 @@
 <?php
 require 'templates/top.inc.php';
 ?>
-<script type="text/javascript" href="js/charge.js"></script>
-<script src="https://js.stripe.com/v2/"></script>
+
 <script src="https://js.stripe.com/v3/"></script>
 <link rel="stylesheet"  href="css/style.css">
 
@@ -24,14 +23,14 @@ require 'templates/top.inc.php';
       <!-- Used to display form errors. -->
       <div id="card-errors" role="alert"></div>
     </div>
+    
+    <div style="padding-top:20px">
+      <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="float:right;" class="btn btn-primary" >Submit Payment</button>
+    </div>
 
-    <button class="btn btn-primary btn-block mt-4" >Submit Payment</button>
   </form>
 </div>
-
-
-
-
+<script type="text/javascript" src="js/charge.js"></script>
 <?php
   require 'templates/bottom.inc.php';
 ?>
