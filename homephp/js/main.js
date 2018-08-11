@@ -140,14 +140,38 @@
         });
     });
 
+    var $plating = $('.plating');
+
+    $plating.each(function(){
+        $plating.on('click', 'a', function(){
+            var filterValue = $(this).attr('data-filter');
+            $topeContainer.isotope({filter: filterValue});
+        });
+    })
+
     // filter functions
     var filterFns = {
       // 1000-1200
-      thousandtwelvethousand: function() {
+      th_tw: function() {
         var number = $(this).find('.discountedPrice').text().split("Rs")[1];
-        console.log(number);
         return parseInt( number, 10 ) >= 1000 && parseInt( number, 10 ) <= 1200;
       },
+      tw_fif: function() {
+        var number = $(this).find('.discountedPrice').text().split("Rs")[1];
+        return parseInt( number, 10 ) >= 1200 && parseInt( number, 10 ) <= 1500;
+      },
+      fif_eit: function() {
+        var number = $(this).find('.discountedPrice').text().split("Rs")[1];
+        return parseInt( number, 10 ) >= 1500 && parseInt( number, 10 ) <= 1800;
+      },
+      eit_two: function() {
+        var number = $(this).find('.discountedPrice').text().split("Rs")[1];
+        return parseInt( number, 10 ) >= 1800 && parseInt( number, 10 ) <= 2000;
+      },
+      twoplus: function() {
+        var number = $(this).find('.discountedPrice').text().split("Rs")[1];
+        return parseInt( number, 10 ) >= 2000;
+      }
     };
 
     $('#filters').on( 'click', 'a', function() {
@@ -157,7 +181,9 @@
       filterValue = filterFns[ filterValue ] || filterValue;
       console.log(filterValue);
       $topeContainer.isotope({ filter: filterValue });
-      // $(this).parent
+      $(this).parent().parent().parent().each(function(){
+        $(this).find('a').removeClass('filter-link-active');
+      })
       $(this).addClass('filter-link-active');
     });
 

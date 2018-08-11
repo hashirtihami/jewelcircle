@@ -51,50 +51,7 @@
 
 				<!-- Filter -->
 				<div class="dis-none panel-filter w-full p-t-10">
-					<div class="wrap-filter flex-w bg6 w-full p-lr-40 p-t-27 p-lr-15-sm">
-						<div class="filter-col1 p-r-15 p-b-27">
-							<div class="mtext-102 cl2 p-b-15">
-								Sort By
-							</div>
-
-							<ul>
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										Default
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										Popularity
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										Average rating
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04 filter-link-active">
-										Newness
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										Price: Low to High
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										Price: High to Low
-									</a>
-								</li>
-							</ul>
-						</div>
+					<div class="wrap-filter flex-w bg6 w-full p-lr-40 p-t-27 p-lr-15-sm">	
 
 						<div id="filters" class="filter-col2 p-r-15 p-b-27">
 							<div class="mtext-102 cl2 p-b-15">
@@ -109,38 +66,38 @@
 								</li>
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04" data-filter="thousandtwelvethousand">
+									<a href="#" class="filter-link stext-106 trans-04" data-filter="th_tw">
 										Rs1000 - Rs1200
 									</a>
 								</li>
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
+									<a href="#" class="filter-link stext-106 trans-04" data-filter="tw_fif">
 										Rs1200 - Rs1500
 									</a>
 								</li>
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
+									<a href="#" class="filter-link stext-106 trans-04" data-filter="fif_eit">
 										Rs1500 - Rs1800
 									</a>
 								</li>
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
+									<a href="#" class="filter-link stext-106 trans-04" data-filter="eit_two">
 										Rs1800 - Rs2000
 									</a>
 								</li>
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
+									<a href="#" class="filter-link stext-106 trans-04" data-filter="twoplus">
 										$2000+
 									</a>
 								</li>
 							</ul>
 						</div>
 
-						<div class="filter-col3 p-r-15 p-b-27">
+						<div class="filter-col3 p-r-15 p-b-27 plating">
 							<div class="mtext-102 cl2 p-b-15">
 								Plating
 							</div>
@@ -155,7 +112,7 @@
 												echo '<i class="zmdi zmdi-circle"></i>';
 											echo '</span>';
 
-											echo '<a href="#" class="filter-link stext-106 trans-04">';
+											echo '<a href="#" class="filter-link stext-106 trans-04" data-filter=".'.$query_array['platingType'].'">';
 												echo $query_array['platingType'];
 											echo '</a>';
 										echo '</li>';
@@ -189,7 +146,18 @@
 						
 						while(@$query_array = mysqli_fetch_array($result)){
 							$fakePrice = $query_array["platingPrice"]+$query_array["platingPrice"]*$discount/100;
-							echo '<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item '.$query_array['category'].'">';
+							echo '<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 ';
+							$query = "SELECT * FROM details WHERE (platingID=1 AND productID=".$productID.")";
+							$run = mysqli_query($conn, $query);
+							if(mysqli_num_rows($run)>0){
+								echo 'Silver';
+							}
+							$query = "SELECT * FROM details WHERE (platingID=2 AND productID=".$productID.")";
+							$run = mysqli_query($conn, $query);
+							if(mysqli_num_rows($run)>0){
+								echo ' Gold';
+							}
+							echo ' isotope-item '.$query_array['category'].'">';
 							// <!-- Block2 -->
 								echo '<div class="block2">';
 									echo '<div class="block2-pic hov-img0">';
