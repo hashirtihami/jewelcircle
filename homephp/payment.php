@@ -3,15 +3,14 @@ require 'templates/top.inc.php';
 ?>
 
 <script src="https://js.stripe.com/v3/"></script>
-<link rel="stylesheet"  href="css/style.css">
+<link rel="stylesheet"  href="css/payment.css">
 
 <div class="container" style="padding-bottom:80px; padding-top:50px;">
+  <h1></h1>
   <form action="charge.php" method="post" id="payment-form">
     <div class="form-row">
       
-      <input type="text" name="first_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="First Name">
-      <input type="text" name="last_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Last Name">
-      <input type="email" name="email" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Email">
+      <input type="email" required name="email" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Email">
       
       <label for="card-element">
         Credit or debit card
@@ -31,6 +30,7 @@ require 'templates/top.inc.php';
   </form>
 </div>
 <script type="text/javascript" src="js/charge.js"></script>
+
 <?php
   require 'templates/bottom.inc.php';
 ?>
