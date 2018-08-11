@@ -147,11 +147,19 @@
         <li class="treeview">
           <a href="users.php">
             <i class="fas fa-users"></i><span> Users</span>
-            <span class="pull-right-container">
+            <!-- <span class="pull-right-container"> -->
               <!-- <i class="fa fa-angle-left pull-right"></i> -->
             </span>
           </a>
         </li>
+        <li class="treeview">
+          <a href="sms.php">
+            <i class="fas fa-envelope"></i><span> SMS Service</span>
+            <!-- <span class="pull-right-container"> -->
+              <!-- <i class="fa fa-angle-left pull-right"></i> -->
+            </span>
+          </a>
+        </li>        
 
 
       <li id="actionCss" class="header hideShow">ACTIONS</li>

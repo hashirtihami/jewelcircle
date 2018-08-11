@@ -60,7 +60,7 @@ div#submitBtn button {
 
 
 
-  <div class="container" style="padding-top:100px">
+  <div class="container" style="padding-top:100px; padding-bottom:100px;">
     <table class="table table-bordered" >
       <thead>
         <tr>
