@@ -6,7 +6,7 @@
 	<!-- breadcrumb -->
 	<div class="container">
 		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
-			<a href="index.html" class="stext-109 cl8 hov-cl1 trans-04">
+			<a href="index.php" class="stext-109 cl8 hov-cl1 trans-04">
 				Home
 				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
 			</a>
@@ -19,7 +19,7 @@
 		
 
 	<!-- Shoping Cart -->
-	<form class="bg0 p-t-75 p-b-85">
+	<form action="checkout.php" method="POST" class="bg0 p-t-75 p-b-85">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
@@ -81,14 +81,14 @@
 
 						<div class="flex-w flex-sb-m bor15 p-t-18 p-b-15 p-lr-40 p-lr-15-sm">
 							<div class="flex-w flex-m m-r-20 m-tb-5">
-								<input class="stext-104 cl2 plh4 size-117 bor13 p-lr-20 m-r-10 m-tb-5" type="text" name="coupon" placeholder="Coupon Code">
+								<input class="stext-104 cl2 plh4 size-117 bor13 p-lr-20 m-r-10 m-tb-5" type="text" name="coupon" placeholder="Coupon Code" maxlength="5">
 									
-								<div class="flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5">
+								<div id="apply-coupon" class="flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5">
 									Apply coupon
 								</div>
 							</div>
 
-							<div class="flex-c-m stext-101 cl2 size-119 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10">
+							<div class="update flex-c-m stext-101 cl2 size-119 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10">
 								Update Cart
 							</div>
 						</div>
@@ -129,22 +129,22 @@
 								
 								<div class="p-t-15">
 
-									<div class="rs1-select2 rs2-select2 bor8 bg0 m-b-12 m-t-9">
+									<!-- <div class="rs1-select2 rs2-select2 bor8 bg0 m-b-12 m-t-9">
 										<select class="js-select2" name="country">
 											<option>Select your country</option>
 											<?php
-												$query = "SELECT * FROM shipping";
-												$query_run = mysqli_query($conn, $query);
-												while(@$query_array = mysqli_fetch_array($query_run)){
-													echo '<option data-price="'.$query_array['cost'].'">'.$query_array['country'].'</option>';
-												}
+												// $query = "SELECT * FROM shipping";
+												// $query_run = mysqli_query($conn, $query);
+												// while(@$query_array = mysqli_fetch_array($query_run)){
+												// 	echo '<option data-price="'.$query_array['cost'].'">'.$query_array['country'].'</option>';
+												// }
 											?>
 										</select>
 										<div class="dropDownSelect2"></div>
-									</div>
+									</div> -->
 
 									<div class="bor8 bg0 m-b-12">
-										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="state" placeholder="State /  country">
+										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="state" placeholder="State">
 									</div>
 
 									<div class="bor8 bg0 m-b-22">
@@ -156,7 +156,7 @@
 									</div>
 									
 									<div class="flex-w">
-										<div id="update" class="flex-c-m stext-101 cl2 size-115 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer">
+										<div class="update flex-c-m stext-101 cl2 size-115 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer">
 											Update Totals
 										</div>
 									</div>
@@ -173,13 +173,14 @@
 							</div>
 
 							<div class="size-209 p-t-1">
+								<div id="coupon" data-label1=""></div>
 								<span id="total" class="mtext-110 cl2">
 									Rs 0
 								</span>
 							</div>
 						</div>
 
-						<button class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
+						<button type="submit" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
 							Proceed to Checkout
 						</button>
 					</div>

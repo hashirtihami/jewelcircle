@@ -451,12 +451,30 @@
         console.log(shipping);
         $("#shipping").html(shipping);
     });
-    $("#update").on("click", function(){
+    $(".update").on("click", function(){
         var shipping = $('option:selected', "select[name='country']").attr('data-price');
+        var coupon = parseInt($("input[name='coupon']").val().split("%")[0])/100;
+        $("#coupon").addClass("label1");
+        $("#coupon").attr("data-label1", $("input[name='coupon']").val());
         total = 0;
         total += subtotal;
-        total += parseInt(shipping);
+        var discount = total * coupon;
+        if(discount)
+            total -= discount;
+        // total += parseInt(shipping);
         $("#total").html("Rs "+total);
+    });
+    $("#apply-coupon").on("click", function(){
+        var couponCode = $("input[name='coupon']").val();
+        console.log(couponCode);
+        $.post('checkCoupon.php', {couponCode: couponCode}, function(data){
+            console.log(data);
+            var DATA = JSON.parse(data);
+            console.log(DATA);
+            if(DATA.discount){
+                $("input[name='coupon']").val(DATA.discount + "% OFF");
+            }
+        });
     });
 
     /*==================================================================
