@@ -23,6 +23,10 @@ $charge = \Stripe\Charge::create(array(
 	"customer" => $customer->id
 ));
 
-print_r($charge);
+
+
+// print_r($charge);
 //echo $token;
+
+?>
 
