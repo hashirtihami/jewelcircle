@@ -8,7 +8,7 @@ $_POST = filter_var_array($_POST, FILTER_SANITIZE_STRING);
 
 $email = $_POST['email'];
 $token = $_POST['stripeToken'];
-
+$total = $_SESSION['total'];
 // creating customer in stripe only -  no db shit
 $customer = \Stripe\Customer::create(array(
 	"email" => $email,
@@ -17,7 +17,7 @@ $customer = \Stripe\Customer::create(array(
 
 //charge customer
 $charge = \Stripe\Charge::create(array(
-	"amount" => 5000,
+	"amount" => $total,
 	"currency" => "usd",
 	"description" => "jewelcircle payment",
 	"customer" => $customer->id

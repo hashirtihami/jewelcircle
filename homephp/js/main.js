@@ -443,6 +443,8 @@
         total = subtotal;
         $("#sub-total").html("Rs "+subtotal);
         $("#total").html("Rs "+total);
+        $.post("sendTotal.php", {total: total}, function(){
+        });
     })
     $("#sub-total").html("Rs "+subtotal);
     $("#total").html("Rs "+total);
@@ -463,6 +465,8 @@
             total -= discount;
         // total += parseInt(shipping);
         $("#total").html("Rs "+total);
+        $.post("sendTotal.php", {total: total}, function(){
+        });
     });
     $("#apply-coupon").on("click", function(){
         var couponCode = $("input[name='coupon']").val();
