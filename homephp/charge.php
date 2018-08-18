@@ -34,6 +34,7 @@ try {
 
 	  $_SESSION['message'] = $err['message'];
 	  header('location:error.php');
+	}
 	  /*
 	  print('Status is:' . $e->getHttpStatus() . "\n");
 	  print('Type is:' . $err['type'] . "\n");
@@ -71,4 +72,3 @@ try {
 //echo $token;
 
 ?>
-
