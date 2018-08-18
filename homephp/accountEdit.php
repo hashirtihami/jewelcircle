@@ -28,9 +28,9 @@ require 'templates/top.inc.php';
       
     <section class="content-header">
       <h1 id="headingz">
-          <a href="index.php"> Edit
+           Edit
             <i class="fas fa-cog"></i>
-          </a>
+          <!-- </a> -->
         </button> 
       <!-- </h1><hr class=""> -->
     </section>
@@ -53,8 +53,8 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="Full Name">
                     <i class="fas fa-user"></i>
                   </div>
-                  <input type="text" class="form-control" disabled="disabled" placeholder="Full name..">
-                 <div class="input-group-addon btn" title="Full Name">
+                  <input type="text" class="form-control" placeholder="Full name..">
+                 <div class="input-group-addon btn bg-gray-light" title="Full Name">
                     <i class="fas fa-edit"></i>
                   </div>                  
                 </div>
@@ -69,8 +69,10 @@ require 'templates/top.inc.php';
                     <i class="fas fa-envelope-square"></i>
                   </div>
                   <input type="text" class="form-control" disabled="disabled" placeholder="registered email here">
-                  <div class="input-group-addon btn" title="Full Name">
-                    <i class="fas fa-edit"></i>
+                  <div class="input-group-addon btn bg-gray-light" title="Email">
+                    <!-- <button type="button""> -->
+                      <i class="fas fa-edit"></i>
+                    <!-- </button> -->
                   </div>
                 </div>
                 <!-- /.input group -->
@@ -83,7 +85,7 @@ require 'templates/top.inc.php';
                     <i class="fas fa-phone"></i>
                   </div>
                   <input type="text" class="form-control" disabled="disabled" placeholder="number here (editable)">
-                 <div class="input-group-addon btn" title="Contact Number">
+                 <div class="input-group-addon btn bg-gray-light editBtn" title="Contact Number">
                     <i class="fas fa-edit"></i>
                   </div>                  
                 </div>
@@ -95,7 +97,7 @@ require 'templates/top.inc.php';
                     <i class="fas fa-map-marker"></i>
                   </div>
                   <input type="text" class="form-control" disabled="disabled" placeholder="Address (editable)">
-                 <div class="input-group-addon btn" title="Address">
+                 <div class="input-group-addon btn bg-gray-light editBtn" title="Address">
                     <i class="fas fa-edit"></i>
                   </div>                  
                 </div>
@@ -107,7 +109,7 @@ require 'templates/top.inc.php';
                     <i class="fas fa-map-marker"></i>
                   </div>
                   <input type="text" class="form-control" disabled="disabled" placeholder="Country (editable)">
-                 <div class="input-group-addon btn" title="Country">
+                 <div class="input-group-addon btn bg-gray-light editBtn" title="Country">
                     <i class="fas fa-edit"></i>
                   </div>                  
                 </div>
@@ -119,7 +121,7 @@ require 'templates/top.inc.php';
                     <i class="fas fa-map-marker"></i>
                   </div>
                   <input type="text" class="form-control" disabled="disabled" placeholder="City (editable)">
-                 <div class="input-group-addon btn" title="City">
+                 <div class="input-group-addon btn bg-gray-light editBtn" title="City">
                     <i class="fas fa-edit"></i>
                   </div>                  
                 </div>
@@ -130,8 +132,8 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="Address">
                     <i class="fas fa-map-marker"></i>
                   </div>
-                  <input type="text" class="form-control" disabled="disabled" placeholder="Zipcode (editable)">
-                 <div class="input-group-addon btn" title="Zipcode">
+                  <input type="text" class="form-control" placeholder="Zipcode (editable)">
+                 <div class="input-group-addon btn bg-gray-light editBtn" title="Zipcode">
                     <i class="fas fa-edit"></i>
                   </div>                  
                 </div>
@@ -183,7 +185,18 @@ require 'templates/top.inc.php';
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="js/index.js"></script>
 <script type="text/javascript">
-  
+  $(document).ready(function() {
+    $('.editBtn').click(function() {
+      var target = $(this).prev();
+      // target.css({"color": "red", "border": "2px solid red"});
+      // target.focus();
+      target.removeAttr('disabled');
+      setTimeout(function() {
+        target.focus();
+        // console.log(target);
+      }, 200);
+    })
+  })
 </script>
 
 <?php
