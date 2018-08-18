@@ -53,7 +53,7 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="Full Name">
                     <i class="fas fa-user"></i>
                   </div>
-                  <input type="text" class="form-control" placeholder="Full name..">
+                  <input type="text" class="form-control" disabled="disabled" placeholder="Full name..">
                  <div class="input-group-addon btn bg-gray-light" title="Full Name">
                     <i class="fas fa-edit"></i>
                   </div>                  
@@ -188,13 +188,26 @@ require 'templates/top.inc.php';
   $(document).ready(function() {
     $('.editBtn').click(function() {
       var target = $(this).prev();
-      // target.css({"color": "red", "border": "2px solid red"});
-      // target.focus();
+      var icon = $(this).find('i');
+      var previousValue = target.val();
       target.removeAttr('disabled');
       setTimeout(function() {
         target.focus();
         // console.log(target);
       }, 200);
+      target.keyup(function(e) {
+        var currentValue = $(this).val();
+        if(currentValue != previousValue) {
+             previousValue = currentValue;
+             icon.removeClass('fa-edit');
+             icon.addClass('fa-check');
+        }
+    });
+    target.blur(function() {
+      icon.removeClass('fa-check');
+      icon.addClass('fa-edit');
+      alert('bvskab');
+    });
     })
   })
 </script>
