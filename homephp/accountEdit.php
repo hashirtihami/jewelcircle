@@ -45,7 +45,7 @@ require 'templates/top.inc.php';
             </div>
             <div class="box-body">
               <!-- Date dd/mm/yyyy -->
-              <div class="form-group">
+              <!-- <div class="form-group"> -->
                 <!-- <label>Date masks:</label> -->
 
               <div class="form-group">
@@ -54,9 +54,7 @@ require 'templates/top.inc.php';
                     <i class="fas fa-user"></i>
                   </div>
                   <input type="text" class="form-control" disabled="disabled" placeholder="Full name..">
-                 <div class="input-group-addon btn bg-gray-light" title="Full Name">
-                    <i class="fas fa-edit"></i>
-                  </div>                  
+                                
                 </div>
         
                 <!-- /.input group -->
@@ -70,9 +68,6 @@ require 'templates/top.inc.php';
                   </div>
                   <input type="text" class="form-control" disabled="disabled" placeholder="registered email here">
                   <div class="input-group-addon btn bg-gray-light" title="Email">
-                    <!-- <button type="button""> -->
-                      <i class="fas fa-edit"></i>
-                    <!-- </button> -->
                   </div>
                 </div>
                 <!-- /.input group -->
@@ -133,17 +128,25 @@ require 'templates/top.inc.php';
                     <i class="fas fa-map-marker"></i>
                   </div>
                   <input type="text" class="form-control" placeholder="Zipcode (editable)">
-                 <div class="input-group-addon btn bg-gray-light editBtn" title="Zipcode">
+                  <div class="input-group-addon btn bg-gray-light editBtn" title="Zipcode">
                     <i class="fas fa-edit"></i>
                   </div>                  
                 </div>
               </div>
-            </div>
+
+
             <!-- /.box-body -->
+            <div class="form-group row">
+              <div style="margin: 0 auto;">
+                <a href="#forminf" class="flex-c-m stext-102 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044; width:80px">Submit Changes</a>
+              </div>
+            </div>
+            </div>
           </div>
  
       </div>
-      </section>
+    </div>
+  </section>
 
   <div class="form">
     
@@ -195,19 +198,18 @@ require 'templates/top.inc.php';
         target.focus();
         // console.log(target);
       }, 200);
-      target.keyup(function(e) {
-        var currentValue = $(this).val();
-        if(currentValue != previousValue) {
-             previousValue = currentValue;
-             icon.removeClass('fa-edit');
-             icon.addClass('fa-check');
-        }
-    });
-    target.blur(function() {
-      icon.removeClass('fa-check');
-      icon.addClass('fa-edit');
-      alert('bvskab');
-    });
+    //   target.keyup(function(e) {
+    //     var currentValue = $(this).val();
+    //     if(currentValue != previousValue) {
+    //          previousValue = currentValue;
+    //          icon.removeClass('fa-edit');
+    //          icon.addClass('fa-check');
+    //     }
+    // });
+    // target.blur(function() {
+    //   icon.removeClass('fa-check');
+    //   icon.addClass('fa-edit');
+    // });
     })
   })
 </script>
