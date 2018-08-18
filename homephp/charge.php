@@ -17,11 +17,14 @@ $customer = \Stripe\Customer::create(array(
 
 //charge customer
 $charge = \Stripe\Charge::create(array(
-	"amount" => $total,
+	"amount" => 50000,
 	"currency" => "usd",
 	"description" => "jewelcircle payment",
 	"customer" => $customer->id
 ));
+
+//redirecting to success
+header ('location: paysuccess.php?tid='.$charge->id.'&product='.$charge->description);
 
 // print_r($charge);
 //echo $token;
