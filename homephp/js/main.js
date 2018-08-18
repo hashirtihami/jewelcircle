@@ -411,7 +411,13 @@
         var quantity = $("input[name='num-product']").val();
         var price = $("#total").html().split(" ")[1];
         var name = $("input[name='nameOnProduct']").val();
-        $.post("addToCart.php", {productID: productID, product: product, quantity: quantity, price: price, nameOnProduct: name}, function(data){
+        var plating = $("select[name='plating']").val().split("-")[0];
+        var language = $("select[name='language']").val().split("-")[0];
+        var nametype = $("select[name='nametype']").val().split("-")[0];
+        console.log(plating);
+        console.log(language);
+        console.log(nametype);
+        $.post("addToCart.php", {productID: productID, product: product, quantity: quantity, price: price, nameOnProduct: name, plating: plating, language: language, nametype: nametype}, function(data){
             var DATA = JSON.parse(data);
             console.log(DATA);
             $("#numProdInCart").attr("data-notify", DATA.count);
@@ -476,6 +482,10 @@
             }
         });
     });
+    $("#proceedToCheckout").on("click", function(){
+        $.post("sendTotal.php", {total: total}, function(){
+        });
+    });
 
     /*==================================================================
     [ Deleting Item From Cart ]*/
@@ -488,7 +498,9 @@
             console.log(data);
         });
     });
-        
+    
+    /*==================================================================
+    [ Sending data to charge.php ]*/
 
 })(jQuery);
 

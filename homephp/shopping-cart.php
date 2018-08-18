@@ -19,7 +19,11 @@
 		
 
 	<!-- Shoping Cart -->
-	<form action="checkout.php" method="POST" class="bg0 p-t-75 p-b-85">
+	<form <?php 
+		if(isset($_SESSION["products"]))
+			if(count($_SESSION["products"]))
+				echo "action='checkout.php'"
+	 ?> method="POST" class="bg0 p-t-75 p-b-85">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
@@ -144,11 +148,11 @@
 									</div> -->
 
 									<div class="bor8 bg0 m-b-12">
-										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="state" placeholder="State">
+										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="state" placeholder="State" required>
 									</div>
 
 									<div class="bor8 bg0 m-b-22">
-										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="postcode" placeholder="Postcode / Zip">
+										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="postcode" placeholder="Postcode / Zip" required>
 									</div>
 
 									<div class="stext-111 cl6 p-t-2" style="padding-bottom: 15px">
@@ -180,7 +184,7 @@
 							</div>
 						</div>
 
-						<button type="submit" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
+						<button type="submit" id="proceedToCheckout" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
 							Proceed to Checkout
 						</button>
 					</div>

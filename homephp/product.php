@@ -146,7 +146,7 @@
 						
 						while(@$query_array = mysqli_fetch_array($result)){
 							$fakePrice = $query_array["platingPrice"]+$query_array["platingPrice"]*$discount/100;
-							echo '<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 ';
+							echo '<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 item-slick2 ';
 							$query = "SELECT * FROM details WHERE (platingID=1 AND productID=".$productID.")";
 							$run = mysqli_query($conn, $query);
 							if(mysqli_num_rows($run)>0){
