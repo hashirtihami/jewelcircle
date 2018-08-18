@@ -12,6 +12,8 @@
 	$query_run = mysqli_query($conn, $query);
 	if($query_array = mysqli_fetch_array($query_run))
 		$customerID = $query_array['customerID'];
+	else
+		$customerID = rand(-500,0);
 	$query = "INSERT INTO order (orderDate, totalAmount, customerID) VALUES ('$date', '$totalAmount', '$customerID')";
 	$query_run = mysqli_query($conn, $query);
 	foreach ($products as $key) {

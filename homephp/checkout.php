@@ -12,33 +12,39 @@
 						Enter Shipping Details
 					</h4>
 					<div class="form-group row">
+					    <label for="email" class="col-sm-2 col-form-label">Email</label>
+					    <div class="col-sm-10">
+					      <input type="text" class="form-control" id="email" placeholder="Email" name="email">
+					    </div>
+				  	</div>
+					<div class="form-group row">
 					    <label for="firstname" class="col-sm-2 col-form-label">First Name</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" id="firstname" placeholder="Name">
+					      <input type="text" class="form-control" id="firstname" placeholder="Name" name="firstname">
 					    </div>
 				  	</div>
 				  	<div class="form-group row">
 					    <label for="lastname" class="col-sm-2 col-form-label">Last Name</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" id="lastname" placeholder="Name">
+					      <input type="text" class="form-control" id="lastname" placeholder="Name" name="lastname">
 					    </div>
 				  	</div>
 				  	<div class="form-group row">
 					    <label for="address" class="col-sm-2 col-form-label">Address</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" id="address" placeholder="Address">
+					      <input type="text" class="form-control" id="address" placeholder="Address" name="address">
 					    </div>
 				  	</div>
 				  	<div class="form-group row">
 					    <label for="contact" class="col-sm-2 col-form-label">Contact</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" id="contact" placeholder="Contact">
+					      <input type="text" class="form-control" id="contact" placeholder="Contact" name="contact">
 					    </div>
 				  	</div>
 				  	<div class="form-group row">
 					    <label for="city" class="col-sm-2 col-form-label">City</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" id="city" placeholder="City">
+					      <input type="text" class="form-control" id="city" placeholder="City" name="city">
 					    </div>
 				  	</div>
 				  	<div class="form-group row">

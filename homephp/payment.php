@@ -1,5 +1,15 @@
 <?php
 require 'templates/top.inc.php';
+if(isset($_POST['email'])&&isset($_POST['firstname'])&&isset($_POST['lastname'])&&isset($_POST['city'])&&isset($_POST['contact'])){
+  $_SESSION['email'] = $_POST['email'];
+  $_SESSION['firstname'] = $_POST['firstname'];
+  $_SESSION['lastname'] = $_POST['lastname'];
+  $_SESSION['city'] = $_POST['city'];
+  $_SESSION['zipcode'] = $_POST['zipcode'];
+  $_SESSION['address'] = $_POST['address'];
+  $_SESSION['contact'] = $_POST['contact'];
+  $_SESSION['state'] = $_POST['state'];
+}
 ?>
 
 <script src="https://js.stripe.com/v3/"></script>
