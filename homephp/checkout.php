@@ -12,15 +12,15 @@
 						Enter Shipping Details
 					</h4>
 					<div class="form-group row">
-					    <label for="name" class="col-sm-2 col-form-label">First Name</label>
+					    <label for="firstname" class="col-sm-2 col-form-label">First Name</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" id="name" placeholder="Name">
+					      <input type="text" class="form-control" id="firstname" placeholder="Name">
 					    </div>
 				  	</div>
 				  	<div class="form-group row">
-					    <label for="name" class="col-sm-2 col-form-label">Last Name</label>
+					    <label for="lastname" class="col-sm-2 col-form-label">Last Name</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" id="name" placeholder="Name">
+					      <input type="text" class="form-control" id="lastname" placeholder="Name">
 					    </div>
 				  	</div>
 				  	<div class="form-group row">
@@ -42,9 +42,23 @@
 					    </div>
 				  	</div>
 				  	<div class="form-group row">
+				    	<label for="inputzip" class="col-sm-2 col-form-label">State</label>
+				    	<div class="col-sm-10">
+				      		<input type="text" class="form-control" id="inputstate" required placeholder="State" name='state' 
+				      		<?php
+				      			echo "value='".$_POST['state']."'";
+				      		?>
+				      		>
+				    	</div>
+				  	</div>
+				  	<div class="form-group row">
 				    	<label for="inputzip" class="col-sm-2 col-form-label">Zip Code</label>
 				    	<div class="col-sm-10">
-				      		<input type="text" class="form-control" id="inputzip" required placeholder="Zipcode" name='zipcode'>
+				      		<input type="text" class="form-control" id="inputzip" required placeholder="Zipcode" name='zipcode' 
+				      		<?php
+				      			echo "value='".$_POST['postcode']."'"; 
+				      		?>
+				      		>
 				    	</div>
 				  	</div>
 					<button type="submit" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
@@ -58,6 +72,7 @@
 				if($_SESSION['logged_in']){
 					echo '<div class="col-sm-10 col-lg-7 col-xl-5 m-lr-auto m-b-50">';
 						echo '<div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm">';
+						echo '<form action="payment.php">';
 							echo '<h4 class="mtext-109 cl2 p-b-30">';
 								echo 'Use Login Info';
 							echo '</h4>';
@@ -65,6 +80,7 @@
 							echo '<button type="submit" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">';
 								echo 'Checkout';
 							echo '</button>';
+						echo '<form>';
 						echo '</div>';
 					echo '</div>';
 				}

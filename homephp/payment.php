@@ -35,15 +35,17 @@ require 'templates/top.inc.php';
     </div>
     <div class="col-sm-10 col-lg-7 col-xl-5 m-lr-auto m-b-50">
       <div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm">
-        <h4 class="mtext-109 cl2 p-b-30">
-          Cash on Delivery
-        </h4>
-        <p>Your package will be delivered to you within 10-15 days</p>
-        <div style="padding-top: 20px">
-          <button type="submit" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
-            Submit
-          </button>
-        </div>
+        <form action="payment-success.php">
+          <h4 class="mtext-109 cl2 p-b-30">
+            Cash on Delivery
+          </h4>
+          <p>Your package will be delivered to you within 10-15 days</p>
+          <div style="padding-top: 20px">
+            <button type="submit" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
+              Submit
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
