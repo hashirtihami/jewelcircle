@@ -48,19 +48,17 @@ require 'templates/top.inc.php';
               <div class="form-group">
                 <!-- <label>Date masks:</label> -->
 
+              <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-addon" title="Full Name">
                     <i class="fas fa-user"></i>
                   </div>
-
-                  <!-- <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask> -->
-                  <input type="text" class="form-control" name="username" placeholder="Full Name">
-                   <div class="input-group-addon" title="Full Name">
-                    <button type="button" class="btn editBtn bg-black">
-                      <i class="far fa-edit"></i>
-                    </button>
-                  </div>
+                  <input type="text" class="form-control" disabled="disabled" placeholder="Full name..">
+                 <div class="input-group-addon btn" title="Full Name">
+                    <i class="fas fa-edit"></i>
+                  </div>                  
                 </div>
+        
                 <!-- /.input group -->
               </div>
               <!-- /.form group -->
@@ -70,7 +68,10 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="Email">
                     <i class="fas fa-envelope-square"></i>
                   </div>
-                  <input type="text" class="form-control" placeholder="registered email here">
+                  <input type="text" class="form-control" disabled="disabled" placeholder="registered email here">
+                  <div class="input-group-addon btn" title="Full Name">
+                    <i class="fas fa-edit"></i>
+                  </div>
                 </div>
                 <!-- /.input group -->
               </div>
@@ -81,7 +82,10 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="Contact Number">
                     <i class="fas fa-phone"></i>
                   </div>
-                  <input type="text" class="form-control" placeholder="number here (editable)">
+                  <input type="text" class="form-control" disabled="disabled" placeholder="number here (editable)">
+                 <div class="input-group-addon btn" title="Contact Number">
+                    <i class="fas fa-edit"></i>
+                  </div>                  
                 </div>
                 <!-- /.input group -->
               </div>
@@ -90,7 +94,10 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="Address">
                     <i class="fas fa-map-marker"></i>
                   </div>
-                  <input type="text" class="form-control" placeholder="Address (editable)">
+                  <input type="text" class="form-control" disabled="disabled" placeholder="Address (editable)">
+                 <div class="input-group-addon btn" title="Address">
+                    <i class="fas fa-edit"></i>
+                  </div>                  
                 </div>
               </div>
               
@@ -99,7 +106,10 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="City">
                     <i class="fas fa-map-marker"></i>
                   </div>
-                  <input type="text" class="form-control" placeholder="City (editable)">
+                  <input type="text" class="form-control" disabled="disabled" placeholder="Country (editable)">
+                 <div class="input-group-addon btn" title="Country">
+                    <i class="fas fa-edit"></i>
+                  </div>                  
                 </div>
               </div>
               
@@ -108,7 +118,10 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="Address">
                     <i class="fas fa-map-marker"></i>
                   </div>
-                  <input type="text" class="form-control" placeholder="Country (editable)">
+                  <input type="text" class="form-control" disabled="disabled" placeholder="City (editable)">
+                 <div class="input-group-addon btn" title="City">
+                    <i class="fas fa-edit"></i>
+                  </div>                  
                 </div>
               </div>
              
@@ -117,7 +130,10 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="Address">
                     <i class="fas fa-map-marker"></i>
                   </div>
-                  <input type="text" class="form-control" placeholder="Zipcode (editable)">
+                  <input type="text" class="form-control" disabled="disabled" placeholder="Zipcode (editable)">
+                 <div class="input-group-addon btn" title="Zipcode">
+                    <i class="fas fa-edit"></i>
+                  </div>                  
                 </div>
               </div>
             </div>
@@ -166,6 +182,9 @@ require 'templates/top.inc.php';
     
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="js/index.js"></script>
+<script type="text/javascript">
+  
+</script>
 
 <?php
   require 'templates/modal.inc.php';
