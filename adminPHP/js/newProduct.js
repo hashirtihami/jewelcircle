@@ -146,45 +146,45 @@ $("input[name='wordCount[]']").change(function(){
 
 $("#submit").on("click", function(){
 	var formValidated=true;
-	// if($(".category-group :checked").length<1){
-	// 	$("#categoryErr").html("Please select one of the following options");
-	// 	formValidated=false;
-	// }
-	// if($(".type-group :checked").length<1){
-	// 	$("#typeErr").html("Please select one of the following options");
-	// 	formValidated=false;
-	// }
-	// if($("input#file")[0].files.length<1){
-	// 	$("#imgErr").html("Please select one or more images");
-	// 	formValidated=false;
-	// }
-	// if(!$("#desc").val()){
-	// 	$("#descErr").html("Please enter description of the product");
-	// 	formValidated=false;
-	// }
-	// if($(".plating-group :checked").length<1){
-	// 	$("#platingErr").html("Please select one of the following options");
-	// 	formValidated=false;
-	// }
-	// if($(".language-group :checked").length<1){
-	// 	$("#languageErr").html("Please select one of the following options");
-	// 	formValidated=false;
-	// }
-	// if($(".nameType-group :checked").length<1){
-	// 	$("#nameTypeErr").html("Please select one of the following options");
-	// 	formValidated=false
-	// }
-	// if(!$("#length").val()){
-	// 	$("#lengthErr").html("Please enter some value");
-	// 	formValidated=false;
-	// }
-	// if(!$("#discount").val()){
-	// 	$("#discountErr").html("Please enter some value");
-	// 	formValidated=false;
-	// }
-	// if(!formValidated){
-	// 	$(this).prop("disabled", true);
-	// }
+	if($(".category-group :checked").length<1){
+		$("#categoryErr").html("Please select one of the following options");
+		formValidated=false;
+	}
+	if($(".type-group :checked").length<1){
+		$("#typeErr").html("Please select one of the following options");
+		formValidated=false;
+	}
+	if($("input#file")[0].files.length<1){
+		$("#imgErr").html("Please select one or more images");
+		formValidated=false;
+	}
+	if(!$("#desc").val()){
+		$("#descErr").html("Please enter description of the product");
+		formValidated=false;
+	}
+	if($(".plating-group :checked").length<1){
+		$("#platingErr").html("Please select one of the following options");
+		formValidated=false;
+	}
+	if($(".language-group :checked").length<1){
+		$("#languageErr").html("Please select one of the following options");
+		formValidated=false;
+	}
+	if($(".nameType-group :checked").length<1){
+		$("#nameTypeErr").html("Please select one of the following options");
+		formValidated=false
+	}
+	if(!$("#length").val()){
+		$("#lengthErr").html("Please enter some value");
+		formValidated=false;
+	}
+	if(!$("#discount").val()){
+		$("#discountErr").html("Please enter some value");
+		formValidated=false;
+	}
+	if(!formValidated){
+		$(this).prop("disabled", true);
+	}
 	var timezone_offset_minutes = new Date().getTimezoneOffset();
 	timezone_offset_minutes = timezone_offset_minutes == 0 ? 0 : -timezone_offset_minutes;
 	$("#date").val(timezone_offset_minutes);

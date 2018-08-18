@@ -12,11 +12,14 @@
 			}
 			if(!$productExists){
 				$_SESSION["products"][] = array('productID'=>$_POST["productID"],
-								                             'title'=>$_POST["product"],
-								                             'quantity'=>$_POST["quantity"],
-								                             'price'=>$_POST["price"],
-								                             'nameOnProduct'=>$_POST["nameOnProduct"]
-															);
+					                             'title'=>$_POST["product"],
+					                             'quantity'=>$_POST["quantity"],
+					                             // 'price'=>$_POST["price"],
+					                             'nameOnProduct'=>$_POST["nameOnProduct"],
+					                             'language'=>$_POST['language'],
+					                             'nametype'=>$_POST['nametype'],
+					                             'plating'=>$_POST['plating']
+												);
 				$data["count"] = count($_SESSION["products"]);
 				$data["session"] = $_SESSION;
 			}
@@ -28,11 +31,14 @@
 		}
 		else{
 			$_SESSION["products"][] = array('productID'=>$_POST["productID"],
-								                             'title'=>$_POST["product"],
-								                             'quantity'=>$_POST["quantity"],
-								                             'price'=>$_POST["price"],
-								                             'nameOnProduct'=>$_POST["nameOnProduct"]
-															);
+				                             'title'=>$_POST["product"],
+				                             'quantity'=>$_POST["quantity"],
+				                             // 'price'=>$_POST["price"],
+				                             'nameOnProduct'=>$_POST["nameOnProduct"],
+				                             'language'=>$_POST['language'],
+				                             'nametype'=>$_POST['nametype'],
+				                             'plating'=>$_POST['plating']
+											);
 			$data["count"] = count($_SESSION["products"]);
 			$data["session"] = $_SESSION;
 		}
