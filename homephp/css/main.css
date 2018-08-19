@@ -127,12 +127,13 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 .loader05 {
   width: 56px;
   height: 56px;
-  border: 4px solid #717fe0;
+  border: 4px solid #FFD700;
   border-radius: 50%;
   position: relative;
   animation: loader-scale 1s ease-out infinite;
   top: 50%;
   margin: -28px auto 0 auto; 
+
 }
 
 .heading{
