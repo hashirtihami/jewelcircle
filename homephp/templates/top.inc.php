@@ -109,7 +109,7 @@
 								</button>
 								  <div class="dropdown-menu" id="dropdown">
 								    <a class="dropdown-item" href="userprofile.php">Account</a>
-								     <a class="dropdown-item" href="#">Logout</a>
+								     <a class="dropdown-item" href="logout.php">Logout</a>
 								 <!--    <a class="dropdown-item" href="#">Another action</a>
 								    <a class="dropdown-item" href="#">Something else here</a>
 								    <div class="dropdown-divider"></div>
