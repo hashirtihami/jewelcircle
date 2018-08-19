@@ -53,7 +53,7 @@
                             <td class="a-center ">
                               <input type="checkbox" class="icheckbox_flat-blue checks" name="table_records">
                             </td>
-                            <td>'.$query_array['orderID'].'</td>
+                            <td class="data">'.$query_array['orderID'].'</td>
                             <td>'.$query_array['address'].'</td>
                             <td>'.$query_array['orderDate'].'</td>
                             <td>'.$query_array['totalAmount'].'</td>
