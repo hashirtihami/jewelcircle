@@ -500,7 +500,20 @@
     });
     
     /*==================================================================
-    [ Sending data to charge.php ]*/
+    [ Edit profile Data ]*/
+    $("#submitChng").on("click", function(){
+        $("input").prop("disabled", true );
+        var email = $("#email").val();
+        var address = $("#address").val();
+        var country = $("#country").val();
+        var city = $("#city").val();
+        var zipcode = $("#zipcode").val();
+        var contact = $("#contact").val();
+        $.post("editProfile.php", {email: email, address: address, country: country, city: city, zipcode: zipcode, contact: contact}, function(data){
+            console.log(data);
+            console.log("Account altered");
+        });
+    });
 
 })(jQuery);
 
