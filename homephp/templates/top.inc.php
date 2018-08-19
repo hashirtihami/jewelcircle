@@ -108,7 +108,7 @@
 									<i class="fas fa-user"></i>
 								</button>
 								  <div class="dropdown-menu" id="dropdown">
-								    <a class="dropdown-item" href="#">Account</a>
+								    <a class="dropdown-item" href="userprofile.php">Account</a>
 								     <a class="dropdown-item" href="#">Logout</a>
 								 <!--    <a class="dropdown-item" href="#">Another action</a>
 								    <a class="dropdown-item" href="#">Something else here</a>

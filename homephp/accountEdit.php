@@ -12,10 +12,20 @@ if ( $_SESSION['logged_in'] != 1 ) {
 }
 else {
     // Makes it easier to read
+    require 'connect.inc.php';
     $first_name = $_SESSION['first_name'];
     $last_name = $_SESSION['last_name'];
     $email = $_SESSION['email'];
     $active = $_SESSION['active'];
+    $query = "SELECT * FROM customer WHERE email='".$email."'";
+    $query_run = mysqli_query($conn, $query);
+    if(@$query_array=mysqli_fetch_array($query_run)){
+      $contact = $query_array['contact'];
+      $address = $query_array['address'];
+      $country = $query_array['country'];
+      $city = $query_array['city'];
+      $zipcode = $query_array['zipcode'];
+    }
 }
 ?>
 
@@ -53,7 +63,9 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="Full Name">
                     <i class="fas fa-user"></i>
                   </div>
-                  <input type="text" class="form-control" disabled="disabled" placeholder="Full name..">
+                  <input type="text" class="form-control" disabled="disabled" placeholder="Full name.." 
+                  <?php echo 'value="'.$first_name.' '.$last_name.'"';?>
+                  >
                                 
                 </div>
         
@@ -66,7 +78,9 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="Email">
                     <i class="fas fa-envelope-square"></i>
                   </div>
-                  <input type="text" class="form-control" disabled="disabled" placeholder="registered email here">
+                  <input id="email" type="text" class="form-control" disabled="disabled" placeholder="registered email here"
+                  <?php echo 'value="'.$email.'"';?>
+                  >
                   <div class="input-group-addon btn bg-gray-light" title="Email">
                   </div>
                 </div>
@@ -79,7 +93,9 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="Contact Number">
                     <i class="fas fa-phone"></i>
                   </div>
-                  <input type="text" class="form-control" disabled="disabled" placeholder="number here (editable)">
+                  <input id="contact" type="text" class="form-control" disabled="disabled" placeholder="number here (editable)"
+                 <?php echo 'value="'.$contact.'"';?>
+                 >
                  <div class="input-group-addon btn bg-gray-light editBtn" title="Contact Number">
                     <i class="fas fa-edit"></i>
                   </div>                  
@@ -91,8 +107,24 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="Address">
                     <i class="fas fa-map-marker"></i>
                   </div>
-                  <input type="text" class="form-control" disabled="disabled" placeholder="Address (editable)">
+                  <input id="address" type="text" class="form-control" disabled="disabled" placeholder="Address (editable)"
+                 <?php echo 'value="'.$address.'"';?>
+                 >
                  <div class="input-group-addon btn bg-gray-light editBtn" title="Address">
+                    <i class="fas fa-edit"></i>
+                  </div>                  
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-addon" title="Country">
+                    <i class="fas fa-map-marker"></i>
+                  </div>
+                  <input id="country" type="text" class="form-control" disabled="disabled" placeholder="Country (editable)"
+                  <?php echo 'value="'.$country.'"';?>
+                  >
+                 <div class="input-group-addon btn bg-gray-light editBtn" title="Country">
                     <i class="fas fa-edit"></i>
                   </div>                  
                 </div>
@@ -103,19 +135,9 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="City">
                     <i class="fas fa-map-marker"></i>
                   </div>
-                  <input type="text" class="form-control" disabled="disabled" placeholder="Country (editable)">
-                 <div class="input-group-addon btn bg-gray-light editBtn" title="Country">
-                    <i class="fas fa-edit"></i>
-                  </div>                  
-                </div>
-              </div>
-              
-              <div class="form-group">
-                <div class="input-group">
-                  <div class="input-group-addon" title="Address">
-                    <i class="fas fa-map-marker"></i>
-                  </div>
-                  <input type="text" class="form-control" disabled="disabled" placeholder="City (editable)">
+                  <input id="city" type="text" class="form-control" disabled="disabled" placeholder="City (editable)"
+                  <?php echo 'value="'.$city.'"';?>
+                  >
                  <div class="input-group-addon btn bg-gray-light editBtn" title="City">
                     <i class="fas fa-edit"></i>
                   </div>                  
@@ -124,10 +146,12 @@ require 'templates/top.inc.php';
              
               <div class="form-group">
                 <div class="input-group">
-                  <div class="input-group-addon" title="Address">
+                  <div class="input-group-addon" title="Zipcode">
                     <i class="fas fa-map-marker"></i>
                   </div>
-                  <input type="text" class="form-control" placeholder="Zipcode (editable)">
+                  <input id="zipcode" type="text" class="form-control" disabled="disabled" placeholder="Zipcode (editable)"
+                  <?php echo 'value="'.$zipcode.'"';?>
+                  >
                   <div class="input-group-addon btn bg-gray-light editBtn" title="Zipcode">
                     <i class="fas fa-edit"></i>
                   </div>                  
@@ -138,7 +162,7 @@ require 'templates/top.inc.php';
             <!-- /.box-body -->
             <div class="form-group row">
               <div style="margin: 0 auto;">
-                <a href="#forminf" class="flex-c-m stext-102 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044; width:80px">Submit Changes</a>
+                <a id="submitChng" href="#forminf" class="flex-c-m stext-102 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044; width:80px">Submit Changes</a>
               </div>
             </div>
             </div>
@@ -186,7 +210,6 @@ require 'templates/top.inc.php';
     </div>
     
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="js/index.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
     $('.editBtn').click(function() {
@@ -215,6 +238,5 @@ require 'templates/top.inc.php';
 </script>
 
 <?php
-  require 'templates/modal.inc.php';
   require 'templates/bottom.inc.php';
 ?>
