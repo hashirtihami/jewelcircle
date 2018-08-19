@@ -108,8 +108,18 @@
 									<i class="fas fa-user"></i>
 								</button>
 								  <div class="dropdown-menu" id="dropdown">
-								    <a class="dropdown-item" href="userprofile.php">Account</a>
-								     <a class="dropdown-item" href="logout.php">Logout</a>
+								  	<?php
+								  	if(isset($_SESSION['logged_in'])){
+								  		if($_SESSION['logged_in']){
+									    	echo '<a class="dropdown-item" href="userprofile.php">Account</a>';
+									    	echo '<a class="dropdown-item" href="logout.php">Logout</a>l';
+								  		}
+								  		else
+								    		echo '<a class="dropdown-item" href="userregister.php">Login</a>';
+								  	}
+							  		else
+								    	echo '<a class="dropdown-item" href="userregister.php">Login</a>';
+								  	?>
 								 <!--    <a class="dropdown-item" href="#">Another action</a>
 								    <a class="dropdown-item" href="#">Something else here</a>
 								    <div class="dropdown-divider"></div>
@@ -180,13 +190,25 @@
 					<li>
 						<a href="product.php">Products</a>
 					</li>
-					<li>
+				  	<?php
+				  	if(isset($_SESSION['logged_in'])){
+				  		if($_SESSION['logged_in']){
+					    	echo '<li><a href="userprofile.php">Account</a></li>';
+					    	echo '<li><a href="logout.php">Logout</a></li>';
+				  		}
+				  		else
+				    		echo '<li><a href="userregister.php">Login</a></li>';
+					}
+			  		else
+				    	echo '<li><a href="userregister.php">Login</a></li>';
+				  	?>				
+					<!-- <li>
 						<a href="userprofile.php">Account</a>
 					</li>
 		
 					<li>
 						<a href="product.php">Logout</a>
-					</li>					
+					</li> -->					
 			</ul>
 		</div>
 
