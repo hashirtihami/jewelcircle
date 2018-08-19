@@ -3406,3 +3406,10 @@ i.fa-user {
   /*transform: translate3d(-91px, 23px, 0px) !important;*/
   transform: translate3d(-45%, 49%, 0px) !important;
 }
+ul.main-menu-m li a:hover {
+  color: #c8c8c8;
+}
+div.input-group-addon {
+  padding-top: 0.45rem !important;
+  padding-bottom: 0.45rem !important;
+}

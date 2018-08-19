@@ -108,7 +108,8 @@
 									<i class="fas fa-user"></i>
 								</button>
 								  <div class="dropdown-menu" id="dropdown">
-								    <a class="dropdown-item" href="#">Action</a>
+								    <a class="dropdown-item" href="#">Account</a>
+								     <a class="dropdown-item" href="#">Logout</a>
 								 <!--    <a class="dropdown-item" href="#">Another action</a>
 								    <a class="dropdown-item" href="#">Something else here</a>
 								    <div class="dropdown-divider"></div>
@@ -171,7 +172,7 @@
 
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
-			<ul class="main-menu-m">
+			<ul class="main-menu-m bg-dark">
 					<li>
 						<a href="index.php">Home</a>
 					</li>
@@ -179,6 +180,13 @@
 					<li>
 						<a href="product.php">Products</a>
 					</li>
+					<li>
+						<a href="userprofile.php">Account</a>
+					</li>
+		
+					<li>
+						<a href="product.php">Logout</a>
+					</li>					
 			</ul>
 		</div>
 

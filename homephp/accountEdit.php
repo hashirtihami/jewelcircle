@@ -28,9 +28,9 @@ require 'templates/top.inc.php';
       
     <section class="content-header">
       <h1 id="headingz">
-          <a href="index.php"> Edit
+           Edit
             <i class="fas fa-cog"></i>
-          </a>
+          <!-- </a> -->
         </button> 
       <!-- </h1><hr class=""> -->
     </section>
@@ -45,22 +45,18 @@ require 'templates/top.inc.php';
             </div>
             <div class="box-body">
               <!-- Date dd/mm/yyyy -->
-              <div class="form-group">
+              <!-- <div class="form-group"> -->
                 <!-- <label>Date masks:</label> -->
 
+              <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-addon" title="Full Name">
                     <i class="fas fa-user"></i>
                   </div>
-
-                  <!-- <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask> -->
-                  <input type="text" class="form-control" name="username" placeholder="Full Name">
-                   <div class="input-group-addon" title="Full Name">
-                    <button type="button" class="btn editBtn bg-black">
-                      <i class="far fa-edit"></i>
-                    </button>
-                  </div>
+                  <input type="text" class="form-control" disabled="disabled" placeholder="Full name..">
+                                
                 </div>
+        
                 <!-- /.input group -->
               </div>
               <!-- /.form group -->
@@ -70,7 +66,9 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="Email">
                     <i class="fas fa-envelope-square"></i>
                   </div>
-                  <input type="text" class="form-control" placeholder="registered email here">
+                  <input type="text" class="form-control" disabled="disabled" placeholder="registered email here">
+                  <div class="input-group-addon btn bg-gray-light" title="Email">
+                  </div>
                 </div>
                 <!-- /.input group -->
               </div>
@@ -81,7 +79,10 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="Contact Number">
                     <i class="fas fa-phone"></i>
                   </div>
-                  <input type="text" class="form-control" placeholder="number here (editable)">
+                  <input type="text" class="form-control" disabled="disabled" placeholder="number here (editable)">
+                 <div class="input-group-addon btn bg-gray-light editBtn" title="Contact Number">
+                    <i class="fas fa-edit"></i>
+                  </div>                  
                 </div>
                 <!-- /.input group -->
               </div>
@@ -90,7 +91,10 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="Address">
                     <i class="fas fa-map-marker"></i>
                   </div>
-                  <input type="text" class="form-control" placeholder="Address (editable)">
+                  <input type="text" class="form-control" disabled="disabled" placeholder="Address (editable)">
+                 <div class="input-group-addon btn bg-gray-light editBtn" title="Address">
+                    <i class="fas fa-edit"></i>
+                  </div>                  
                 </div>
               </div>
               
@@ -99,7 +103,10 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="City">
                     <i class="fas fa-map-marker"></i>
                   </div>
-                  <input type="text" class="form-control" placeholder="City (editable)">
+                  <input type="text" class="form-control" disabled="disabled" placeholder="Country (editable)">
+                 <div class="input-group-addon btn bg-gray-light editBtn" title="Country">
+                    <i class="fas fa-edit"></i>
+                  </div>                  
                 </div>
               </div>
               
@@ -108,7 +115,10 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="Address">
                     <i class="fas fa-map-marker"></i>
                   </div>
-                  <input type="text" class="form-control" placeholder="Country (editable)">
+                  <input type="text" class="form-control" disabled="disabled" placeholder="City (editable)">
+                 <div class="input-group-addon btn bg-gray-light editBtn" title="City">
+                    <i class="fas fa-edit"></i>
+                  </div>                  
                 </div>
               </div>
              
@@ -118,14 +128,25 @@ require 'templates/top.inc.php';
                     <i class="fas fa-map-marker"></i>
                   </div>
                   <input type="text" class="form-control" placeholder="Zipcode (editable)">
+                  <div class="input-group-addon btn bg-gray-light editBtn" title="Zipcode">
+                    <i class="fas fa-edit"></i>
+                  </div>                  
                 </div>
               </div>
-            </div>
+
+
             <!-- /.box-body -->
+            <div class="form-group row">
+              <div style="margin: 0 auto;">
+                <a href="#forminf" class="flex-c-m stext-102 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044; width:80px">Submit Changes</a>
+              </div>
+            </div>
+            </div>
           </div>
  
       </div>
-      </section>
+    </div>
+  </section>
 
   <div class="form">
     
@@ -166,6 +187,32 @@ require 'templates/top.inc.php';
     
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="js/index.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.editBtn').click(function() {
+      var target = $(this).prev();
+      var icon = $(this).find('i');
+      var previousValue = target.val();
+      target.removeAttr('disabled');
+      setTimeout(function() {
+        target.focus();
+        // console.log(target);
+      }, 200);
+    //   target.keyup(function(e) {
+    //     var currentValue = $(this).val();
+    //     if(currentValue != previousValue) {
+    //          previousValue = currentValue;
+    //          icon.removeClass('fa-edit');
+    //          icon.addClass('fa-check');
+    //     }
+    // });
+    // target.blur(function() {
+    //   icon.removeClass('fa-check');
+    //   icon.addClass('fa-edit');
+    // });
+    })
+  })
+</script>
 
 <?php
   require 'templates/modal.inc.php';
