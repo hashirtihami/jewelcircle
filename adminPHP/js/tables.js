@@ -119,21 +119,26 @@ $('.checks').click(function() {
 $(".dispatchBtn").on('click', function() {
 	var target = $(this).parent();
 	var row = $(target).parent();
+	var data = $(row).find(".data").html();
 	$('.dispatchBtn').attr('data-toggle', 'modal');
 	if((row).hasClass('bg-dispatch')) {
 		$(this).attr('data-target', '#undoPopup');
 		$("#undo").unbind().on("click", function() {
-			$(row).removeClass('bg-dispatch');
-			$('#btnAddons, #actionCss').slideUp('slow');			
+			$.post("dispatch.php", {data: data}, function(){
+				$(row).removeClass('bg-dispatch');
+				$('#btnAddons, #actionCss').slideUp('slow');			
+			});
 	});		
 }
 	else {
 		$(this).attr('data-target', '#dispatchConfirm');	
 		$("#dispatch").unbind().on("click", function() {
-			$(row).addClass('bg-dispatch');
-			var chkbox = row.find('input:first');
-			$(chkbox).prop('checked', false); 					
-			$('#btnAddons, #actionCss').slideUp('slow');			
+			$.post("dispatch.php", {data: data}, function(){
+				$(row).addClass('bg-dispatch');
+				var chkbox = row.find('input:first');
+				$(chkbox).prop('checked', false); 					
+				$('#btnAddons, #actionCss').slideUp('slow');			
+			});
 	});
 }
 });
@@ -146,8 +151,11 @@ $('#dispatch').unbind().click(function() {
 		if ($(this).is(":checked")) {
 			$(this).prop('checked', false); 
 			var row = this.parentNode.parentNode;
-			$(row).addClass('bg-dispatch');
-			$('#btnAddons, #actionCss').slideUp('slow');
+			var data = $(row).find(".data").html();
+			$.post("dispatch.php", {data: data}, function(){
+				$(row).addClass('bg-dispatch');
+				$('#btnAddons, #actionCss').slideUp('slow');
+			});
 		}
 	});
 });

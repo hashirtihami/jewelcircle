@@ -46,10 +46,13 @@
                 </thead>
                 <tbody id="tableBody">
                   <?php
-                    $query = "SELECT orderID,orderDate,totalAmount,address FROM `order` o, customer c WHERE c.customerID=o.customerID";
+                    $query = "SELECT orderID,orderDate,totalAmount,address,status FROM `order` o, customer c WHERE c.customerID=o.customerID";
                     $query_run = mysqli_query($conn, $query);
                     while(@$query_array=mysqli_fetch_array($query_run)){
-                      echo '<tr>
+                      echo '<tr ';
+                      if($query_array['status']=='Dispatched')
+                        echo 'class="bg-dispatch"';
+                      echo '>
                             <td class="a-center ">
                               <input type="checkbox" class="icheckbox_flat-blue checks" name="table_records">
                             </td>

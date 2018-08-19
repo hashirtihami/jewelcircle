@@ -56,21 +56,19 @@ require 'templates/top.inc.php';
                   <th style="width: 10px">ID</th>
                   <th>Date</th>
                   <th>Status</th>
-                  <th>Payment</th>
                 </tr>
                 <?php
                   $query = "SELECT customerID FROM customer WHERE email='".$email."'";
                   $query_run = mysqli_query($conn, $query);
                   if($query_array = mysqli_fetch_array($query_run))
                     $customerID=$query_array["customerID"];
-                  $query = "SELECT orderID,orderDate,totalAmount,address,status,payment FROM `order` o, customer c WHERE (c.customerID=o.customerID && c.customerID=9)";
+                  $query = "SELECT orderID,orderDate,totalAmount,address,status FROM `order` o, customer c WHERE (c.customerID=o.customerID && c.customerID=9)";
                   $query_run = mysqli_query($conn, $query);
                   while(@$query_array = mysqli_fetch_array($query_run)){
                     echo '<tr>
                           <td>'.$query_array['orderID'].'</td>
                           <td>'.$query_array['orderDate'].'</td>
                           <td>'.$query_array['status'].'</td>
-                          <td>'.$query_array['payment'].'</td>
                           </tr>';
                   }
                 ?>
