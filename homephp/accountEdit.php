@@ -149,7 +149,7 @@ require 'templates/top.inc.php';
                   <div class="input-group-addon" title="Zipcode">
                     <i class="fas fa-map-marker"></i>
                   </div>
-                  <input id="zipcode" type="text" class="form-control" placeholder="Zipcode (editable)"
+                  <input id="zipcode" type="text" class="form-control" disabled="disabled" placeholder="Zipcode (editable)"
                   <?php echo 'value="'.$zipcode.'"';?>
                   >
                   <div class="input-group-addon btn bg-gray-light editBtn" title="Zipcode">
