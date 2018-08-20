@@ -320,7 +320,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   display: -ms-flexbox;
   display: flex;
   align-items: center;
-  background-color: transparent;
+  background-color: #c6c6c60a;
 }
 
 
@@ -1940,11 +1940,14 @@ input.num-product::-webkit-inner-spin-button {
 [ Table Shopping Cart ]*/
 
 #numProdInCart::after{
-  background: #e60044;
+  background: #eebc29;
 }
 
 .zmdi-shopping-cart{
-  color: #e60044;
+  color: #eebc29;
+}
+#logoutBtn {
+  color: #eebc29;
 }
 
 .wrap-table-shopping-cart {
@@ -3406,6 +3409,25 @@ i.fa-user {
 #dropdown {
   /*transform: translate3d(-91px, 23px, 0px) !important;*/
   transform: translate3d(-45%, 49%, 0px) !important;
+  top: 35px !important;
+  left: 33px !important;
+  /*float: right;*/
+  /*width: 20px;*/
+  min-width: 118px !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+  border-bottom: 1px solid rgba(0,0,0,.15) !important;
+  /*background-color: #eebc29;*/
+  padding: 0 !important;
+}
+div#dropdown button {
+  color: #eebc29 !important;
+  border-color: #eebc29 !important;
+}
+div#dropdown button:hover {
+  color: white !important;
+  background-color: #eebc29 !important;
 }
 ul.main-menu-m li a:hover {
   color: #c8c8c8;

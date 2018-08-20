@@ -103,22 +103,22 @@
 							
 						<div class="flex-c-m h-full p-lr-19">
 							<!-- <a href="userregister.php"> -->
-								<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 js-show-sidebar btn-group">
+								<div class="icon-header-item hov-cl1 trans-04 p-lr-11 js-show-sidebar btn-group">
 								<button id="logoutBtn" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									<i class="fas fa-user"></i>
 								</button>
 								  <div class="dropdown-menu" id="dropdown">
-								    <a class="dropdown-item" href="userprofile.php">Account</a>
-								     <a class="dropdown-item" href="logout.php">Logout</a>
-								 <!--    <a class="dropdown-item" href="#">Another action</a>
-								    <a class="dropdown-item" href="#">Something else here</a>
-								    <div class="dropdown-divider"></div>
-								    <a class="dropdown-item" href="#">Separated link</a> -->
+			
+								    <div class="btn-group">
+									  <button type="button" class="btn btn-outline-warning" title="Account info"><i class="fas fa-info-circle"></i></button>
+									  <button type="button" class="btn btn-outline-warning" title="Edit Account"><i class="fas fa-edit"></i></button>
+									  <button type="button" class="btn btn-outline-warning" title="Logout"><i class="fas fa-sign-out-alt"></i></button>
+									</div>
 								  </div>
 								</div>
-							</a>
+							<!-- </a> -->
 						</div>
-					</div>
+					<!-- </div> -->
 				</nav>
 			</div>	
 		</div>
