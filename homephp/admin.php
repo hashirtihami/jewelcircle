@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             <i class="fas fa-exclamation-circle"></i>
             '.$_SESSION['message'].'
             </div>';
-      
+            //unset($_SESSION['message']);
     }
   ?>
 
@@ -54,4 +54,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
   
 </body>
 </html>
-<?php unset($_SESSION['message']); ?>

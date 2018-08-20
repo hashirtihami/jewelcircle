@@ -3,7 +3,7 @@
  session_start() ;
 // Escape email to protect against SQL injections
 $email = $mysqli->escape_string($_POST['email']);
-$result = $mysqli->query("SELECT * FROM customer WHERE email='$email'");
+$result = $mysqli->query("SELECT * FROM customer WHERE email='$email' AND role='admin'");
 
 if ( $result->num_rows == 0 ){ // User doesn't exist
     $_SESSION['message'] = 'Incorrect Email.';
