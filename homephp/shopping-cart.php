@@ -128,7 +128,7 @@
 
 							<div class="size-209 p-r-18 p-r-0-sm w-full-ssm">
 								<p class="stext-111 cl6 p-t-2">
-									Calculate Shipping
+									Shipping details
 								</p>
 								
 								<div class="p-t-15">
@@ -156,14 +156,14 @@
 									</div>
 
 									<div class="stext-111 cl6 p-t-2" style="padding-bottom: 15px">
-										<p>Shipping Charges: Rs <span id="shipping">0</span></p>
+										<p>Shipping Charges: NONE<!-- Rs <span id="shipping">0</span> --></p>
 									</div>
 									
-									<div class="flex-w">
+									<!-- <div class="flex-w">
 										<div class="update flex-c-m stext-101 cl2 size-115 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer">
 											Update Totals
 										</div>
-									</div>
+									</div> -->
 										
 								</div>
 							</div>
