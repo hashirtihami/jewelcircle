@@ -104,24 +104,32 @@
 							
 						<div class="flex-c-m h-full p-lr-19">
 							<!-- <a href="userregister.php"> -->
-								<div class="icon-header-item hov-cl1 trans-04 p-lr-11 js-show-sidebar btn-group">
-								<button id="logoutBtn" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									<i class="fas fa-user"></i>
-								</button>
-								  <div class="dropdown-menu" id="dropdown">
-			
-								    <div class="btn-group">
-									  <button onclick="window.location.href='userprofile.php'" type="button" class="btn btn-outline-warning" title="Account info">
-									  	<i class="fas fa-info-circle"></i>
-									  </button>
-									  <button onclick="window.location.href='accountEdit.php'" type="button" class="btn btn-outline-warning" title="Edit Account">
-									  	<i class="fas fa-edit"></i>
-									  </button>
-									  <button onclick="window.location.href='logout.php'" type="button" class="btn btn-outline-warning" title="Logout">
-									  	<i class="fas fa-sign-out-alt"></i>
-									  </button>
-									</div>
+				<?php
+					if(isset($_SESSION['logged_in'])){
+						if($_SESSION['logged_in']){
 
+							echo'	<div class="icon-header-item hov-cl1 trans-04 p-lr-11 js-show-sidebar btn-group">
+									<button id="logoutBtn" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="fas fa-user"></i>
+									</button>
+									  <div class="dropdown-menu" id="dropdown">
+				
+									    <div class="btn-group">
+										  <button onclick="window.location.href="userprofile.php" type="button" class="btn btn-outline-warning" title="Account info">
+										  	<i class="fas fa-info-circle"></i>
+										  </button>
+										  <button onclick="window.location.href="accountEdit.php" type="button" class="btn btn-outline-warning" title="Edit Account">
+										  	<i class="fas fa-edit"></i>
+										  </button>
+										  <button onclick="window.location.href="logout.php" type="button" class="btn btn-outline-warning" title="Logout">
+										  	<i class="fas fa-sign-out-alt"></i>
+										  </button>
+										</div>';
+						}
+					else
+						echo '<a class="dropdown-item" href="userregister.php">Login</a>';
+					}
+/*
 								  	<?php
 								  	if(isset($_SESSION['logged_in'])){
 								  		if($_SESSION['logged_in']){
@@ -134,7 +142,7 @@
 							  		else
 								    	echo '<a class="dropdown-item" href="userregister.php">Login</a>';
 								  	?>
-
+*/ ?>
 								  </div>
 								</div>
 							<!-- </a> -->
