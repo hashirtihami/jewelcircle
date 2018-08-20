@@ -108,12 +108,31 @@
 									<i class="fas fa-user"></i>
 								</button>
 								  <div class="dropdown-menu" id="dropdown">
+<<<<<<< HEAD
 			
 								    <div class="btn-group">
 									  <button type="button" class="btn btn-outline-warning" title="Account info"><i class="fas fa-info-circle"></i></button>
 									  <button type="button" class="btn btn-outline-warning" title="Edit Account"><i class="fas fa-edit"></i></button>
 									  <button type="button" class="btn btn-outline-warning" title="Logout"><i class="fas fa-sign-out-alt"></i></button>
 									</div>
+=======
+								  	<?php
+								  	if(isset($_SESSION['logged_in'])){
+								  		if($_SESSION['logged_in']){
+									    	echo '<a class="dropdown-item" href="userprofile.php">Account</a>';
+									    	echo '<a class="dropdown-item" href="logout.php">Logout</a>l';
+								  		}
+								  		else
+								    		echo '<a class="dropdown-item" href="userregister.php">Login</a>';
+								  	}
+							  		else
+								    	echo '<a class="dropdown-item" href="userregister.php">Login</a>';
+								  	?>
+								 <!--    <a class="dropdown-item" href="#">Another action</a>
+								    <a class="dropdown-item" href="#">Something else here</a>
+								    <div class="dropdown-divider"></div>
+								    <a class="dropdown-item" href="#">Separated link</a> -->
+>>>>>>> 5cb7089011f233ff1349bd472a4f574258544328
 								  </div>
 								</div>
 							<!-- </a> -->
@@ -180,13 +199,25 @@
 					<li>
 						<a href="product.php">Products</a>
 					</li>
-					<li>
+				  	<?php
+				  	if(isset($_SESSION['logged_in'])){
+				  		if($_SESSION['logged_in']){
+					    	echo '<li><a href="userprofile.php">Account</a></li>';
+					    	echo '<li><a href="logout.php">Logout</a></li>';
+				  		}
+				  		else
+				    		echo '<li><a href="userregister.php">Login</a></li>';
+					}
+			  		else
+				    	echo '<li><a href="userregister.php">Login</a></li>';
+				  	?>				
+					<!-- <li>
 						<a href="userprofile.php">Account</a>
 					</li>
 		
 					<li>
 						<a href="product.php">Logout</a>
-					</li>					
+					</li> -->					
 			</ul>
 		</div>
 

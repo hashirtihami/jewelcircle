@@ -16,6 +16,10 @@
 			if(mysqli_query($conn, $query)){
 			    echo mysqli_use_result($conn);
 			}
+			$query = "DELETE FROM `order` WHERE orderID='$delete'";
+			if(mysqli_query($conn,$query)){
+				echo mysqli_use_result($conn);
+			}
 		}
 	}
 	if(isset($_POST["category"])&&isset($_POST["type"])){

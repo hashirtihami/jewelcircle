@@ -13,13 +13,13 @@ try {
 	$token = $_POST['stripeToken'];
 	// creating customer in stripe only -  no db shit
 	$customer = \Stripe\Customer::create(array(
-	//	"email" => $email,
+		"email" => $_SESSION['email'],
 		"source" => $token
 	));
 
 	//charge customer
 	$charge = \Stripe\Charge::create(array(
-		"amount" => 5000,
+		"amount" => $_SESSION['total'],
 		"currency" => "usd",
 		"description" => "jewelcircle payment",
 		"customer" => $customer->id
