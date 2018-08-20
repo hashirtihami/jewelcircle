@@ -129,15 +129,15 @@
 							</div>
 
 							<div id="wrapper" class="flex-c-m p-lr-15 m-lr-60">
-								<input type="radio" id="star1" name="star" />
+								<input class="star" type="radio" id="star1" name="star" />
 								<label class="rating" for="star1"></label>
-								<input type="radio" id="star2" name="star" />
+								<input class="star" type="radio" id="star2" name="star" />
 								<label class="rating" for="star2"></label>
-								<input type="radio" id="star3" name="star" />
+								<input class="star" type="radio" id="star3" name="star" />
 								<label class="rating" for="star3"></label>
-								<input type="radio" id="star4" name="star" />
+								<input class="star" type="radio" id="star4" name="star" />
 								<label class="rating" for="star4"></label>
-								<input type="radio" id="star5" name="star" />
+								<input class="star" type="radio" id="star5" name="star" />
 								<label class="rating" for="star5"></label>
 							</div>
 							<!--  -->

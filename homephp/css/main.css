@@ -3437,7 +3437,7 @@ div.input-group-addon {
   padding-bottom: 0.45rem !important;
 }
 
-input {
+.star {
   display: none;
 }
 
@@ -3477,7 +3477,7 @@ input {
   content: "\f005";
 }
 
-input:checked + .rating ~ .rating:before {
+.star:checked + .rating ~ .rating:before {
   content: "\f006";
 }
 
