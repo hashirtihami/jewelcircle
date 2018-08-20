@@ -3441,7 +3441,7 @@ input {
   display: none;
 }
 
-label {
+.rating {
   cursor: pointer;
   font-size: 40px;
   color: gold;
@@ -3457,12 +3457,12 @@ label {
   transition: all 0.2s;
   text-shadow: 0 3px 3px #2b3c4e;
 }
-label:hover {
+.rating:hover {
   font-size: 50px;
   color: gold;
   text-shadow: 0 0 5px #b9c9d8;
 }
-label:before {
+.rating:before {
   display: inline;
   width: auto;
   height: auto;
@@ -3477,7 +3477,7 @@ label:before {
   content: "\f005";
 }
 
-input:checked + label ~ label:before {
+input:checked + .rating ~ .rating:before {
   content: "\f006";
 }
 
@@ -3485,9 +3485,9 @@ input:checked + label ~ label:before {
   text-align: center;
   display: inline-block;
 }
-#wrapper:hover label:before {
+#wrapper:hover .rating:before {
   content: "\f005";
 }
-#wrapper:hover label:hover ~ label:before {
+#wrapper:hover .rating:hover ~ .rating:before {
   content: "\f006";
 }
