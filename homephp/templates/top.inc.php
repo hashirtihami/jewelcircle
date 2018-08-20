@@ -129,13 +129,13 @@
 						}
 					else
 						echo ' <div class="dropdown-menu" id="dropdown">
-								<a class="dropdown-item" href="logout.php">Logout</a>
+								<a class="dropdown-item" href="userregister.php">Log In</a>
 								</div>
 								';
 					}
 					else
 						echo ' <div class="dropdown-menu" id="dropdown">
-								<a class="dropdown-item" href="logout.php">Logout</a>
+								<a class="dropdown-item" href="userregister.php">Log In</a>
 								</div>
 								';
 /*
