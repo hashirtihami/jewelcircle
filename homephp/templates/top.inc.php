@@ -46,7 +46,8 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="fonts/anydore/anydore.css">
+	<link rel="stylesheet" type="text/css" href="fonts/anydore/anydore.css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 <body class="animsition">
 	
@@ -120,7 +121,7 @@
 								  	if(isset($_SESSION['logged_in'])){
 								  		if($_SESSION['logged_in']){
 									    	echo '<a class="dropdown-item" href="userprofile.php">Account</a>';
-									    	echo '<a class="dropdown-item" href="logout.php">Logout</a>l';
+									    	echo '<a class="dropdown-item" href="logout.php">Logout</a>';
 								  		}
 								  		else
 								    		echo '<a class="dropdown-item" href="userregister.php">Login</a>';
