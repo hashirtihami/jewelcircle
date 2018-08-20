@@ -108,7 +108,7 @@
 									<button id="logoutBtn" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 										<i class="fas fa-user"></i>
 									</button>
-									<?php
+				<?php
 					if(isset($_SESSION['logged_in'])){
 						if($_SESSION['logged_in']){
 
@@ -129,17 +129,13 @@
 						}
 					else
 						echo ' <div class="dropdown-menu" id="dropdown">
-								<button onclick="window.location.href=\'userregister.php\'" type="button" class="btn btn-outline-warning" title="Account info">
-										  	<i class="fas fa-info-circle"></i>
-								</button>
+								<a class="dropdown-item" href="logout.php">Logout</a>
 								</div>
 								';
 					}
 					else
 						echo ' <div class="dropdown-menu" id="dropdown">
-								<button onclick="window.location.href=\'userregister.php\'" type="button" class="btn btn-outline-warning" title="Account info">
-										  	<i class="fas fa-info-circle"></i>
-								</button>
+								<a class="dropdown-item" href="logout.php">Logout</a>
 								</div>
 								';
 /*
@@ -155,7 +151,8 @@
 							  		else
 								    	echo '<a class="dropdown-item" href="userregister.php">Login</a>';
 								  	?>
-*/ ?>
+*/ 				
+				?>
 								  </div>
 								</div>
 							<!-- </a> -->
