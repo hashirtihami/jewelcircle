@@ -3,10 +3,10 @@
  session_start() ;
 // Escape email to protect against SQL injections
 $email = $mysqli->escape_string($_POST['email']);
-$result = $mysqli->query("SELECT * FROM customer WHERE email='$email'");
+$result = $mysqli->query("SELECT * FROM customer WHERE email='$email' AND role='admin'");
 
 if ( $result->num_rows == 0 ){ // User doesn't exist
-    $_SESSION['message'] = 'User with that email does not exist!';
+    $_SESSION['message'] = 'Incorrect Email.';
     header("location: admin.php");
 }
 else { // User exists
@@ -24,7 +24,7 @@ else { // User exists
         header("location: ../adminphp/home.php");
     }
     else {
-        $_SESSION['message'] = "You have entered wrong password. ";
+        $_SESSION['message'] = "Wrong Password. ";
         header("location: admin.php");
     }
 }

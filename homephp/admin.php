@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
   </div>
   <p class="p-container">
     <!-- <a href=""><span style="color:#990000;">Forgot password ?</span></a> -->
-    <input style="background-color:#990000;" type="submit" name="login"  value="Log in">
+    <input style="background-color:#990000;" type="submit" name="login"  value="Log In">
   </p>
   <?php
     if( isset($_SESSION['message'])&&!empty($_SESSION['message']) )
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             <i class="fas fa-exclamation-circle"></i>
             '.$_SESSION['message'].'
             </div>';
-      
+            //unset($_SESSION['message']);
     }
   ?>
 
