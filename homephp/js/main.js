@@ -347,6 +347,24 @@
         $.post("templates/modal.inc.php", {title: title}, function(data){
             var DATA = JSON.parse(data);
             console.log(DATA);
+            $.post("rating.php", {PID: DATA.productID}, function(data){
+                var rating = JSON.parse(data);
+                console.log(rating);
+                if(rating.rating)
+                    $("#wrapper #star"+rating.rating).attr("checked", "checked");
+                else
+                    $("#wrapper #star5").attr("checked", "checked");
+            });
+            $("#wrapper input").unbind().on("click", function(){
+                var rating = $(this).attr("id").split("star")[1];
+                console.log(rating);
+                $.post("inputRating.php", {PID: DATA.productID,rating: rating}, function(data){
+                    var ERROR = JSON.parse(data);
+                    if(ERROR.message){
+                        swal("Sorry", ERROR.message, "error");
+                    }
+                })
+            });
             $(".js-name-detail").attr("id", DATA.productID);
             $(".slick3").html(DATA.html);
             $("input[name='nameOnProduct']").attr("maxlength", DATA.nameLength);
@@ -528,6 +546,7 @@
             console.log("Account altered");
         });
     });
+
 
 })(jQuery);
 
