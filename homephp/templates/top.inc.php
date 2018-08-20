@@ -128,8 +128,20 @@
 										</div>';
 						}
 					else
-						echo '<a class="dropdown-item" href="userregister.php">Login</a>';
+						echo ' <div class="dropdown-menu" id="dropdown">
+								<button onclick="window.location.href=\'userregister.php\'" type="button" class="btn btn-outline-warning" title="Account info">
+										  	<i class="fas fa-info-circle"></i>
+								</button>
+								</div>
+								';
 					}
+					else
+						echo ' <div class="dropdown-menu" id="dropdown">
+								<button onclick="window.location.href=\'userregister.php\'" type="button" class="btn btn-outline-warning" title="Account info">
+										  	<i class="fas fa-info-circle"></i>
+								</button>
+								</div>
+								';
 /*
 								  	<?php
 								  	if(isset($_SESSION['logged_in'])){
