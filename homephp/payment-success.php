@@ -1,7 +1,7 @@
 <?php 
 	require 'connect.inc.php';
 	session_start();
-	date_default_timezone_set(date_default_timezone_get());
+	date_default_timezone_set('Asia/Karachi');
 	$date = date('Y/m/d h:i:s a', time());
 	$email = $_SESSION['email'];
 	$firstName = $_SESSION['first_name'];
