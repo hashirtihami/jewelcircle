@@ -19,7 +19,7 @@
 	require 'templates/top.inc.php';
 ?>
 
-<div class="container">
+<div style="padding-top:50px" class="container">
 	<div class="row" style="margin-top: 10px;">
 		<div class="col-sm-5 col-lg-5 col-xl-5 m-lr-auto m-b-50">
 			<div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-25 m-r--38 m-lr-0-xl">

@@ -1,5 +1,6 @@
 <?php
   require 'templates/top.inc.php';
+  session_start();
 ?>
 
 <script src="https://js.stripe.com/v3/"></script>

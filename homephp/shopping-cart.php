@@ -148,13 +148,13 @@
 									</div> -->
 
 									<div class="bor8 bg0 m-b-12">
-										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="state" placeholder="State" required>
+										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="state" placeholder="State" >
 									</div>
 
 									<div class="bor8 bg0 m-b-22">
-										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="postcode" placeholder="Postcode / Zip" required>
+										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="postcode" placeholder="Postcode / Zip" >
 									</div>
-
+									
 									<div class="stext-111 cl6 p-t-2" style="padding-bottom: 15px">
 										<p>Shipping Charges: NONE<!-- Rs <span id="shipping">0</span> --></p>
 									</div>
