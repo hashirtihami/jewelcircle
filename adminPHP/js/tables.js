@@ -178,3 +178,12 @@ $('#btnCollapse').click(function() {
 		}, 300)
 	}
 })
+
+$(".btnPdf").on("click",function(){
+	var target = $(this).parent();
+	var row = $(target).parent();
+	var data = $(row).find(".data").html();
+	$.post("getOrderData.php", {data: data}, function(data){
+		console.log(data);
+	});
+})
