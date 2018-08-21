@@ -10,26 +10,14 @@
     <div class="col-sm-7 col-lg-7 col-xl-7 m-lr-auto m-b-50">
       <div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-25 m-r--38 m-lr-0-xl">
         <h4 class="mtext-109 cl2 p-b-30">Pay Online</h4>
-        <form action="charge.php" method="post" id="payment-form">
-          <div class="form-row">
-                      
-            <label for="card-element">
-              Credit or debit card
-            </label>
-            <div id="card-element"  class="form-control">
-              <!-- A Stripe Element will be inserted here. -->
-            </div>
-
-            <!-- Used to display form errors. -->
-            <div id="card-errors" role="alert"></div>
-          </div>
-          
-          <div class="p-t-20">
-            <button type="submit" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
-              Submit
-            </button>
-          </div>
-
+        <form action='https://www.2checkout.com/checkout/purchase' method='post'>
+          <input type='hidden' name='sid' value='1303908' />
+          <input type='hidden' name='mode' value='2CO' />
+          <input type='hidden' name='li_0_type' value='product' />
+          <input type='hidden' name='li_0_name' value='Monthly Subscription' />
+          <input type='hidden' name='li_0_price' value='1.00' />
+          <input type='hidden' name='li_0_recurrence' value='1 Month' />
+          <input name='submit' type='submit' value='Checkout' />
         </form>
       </div>
     </div>
