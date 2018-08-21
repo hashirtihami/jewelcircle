@@ -33,7 +33,7 @@
 			if($query_array = mysqli_fetch_array($query_run))
 				$nameTypeID = $query_array['nameTypeID'];
 			$detailsID = $key['productID'].$languageID.$platingID.$nameTypeID;
-			$query = "INSERT INTO order_product (orderID, productID, detailID, nameOnProduct) VALUES ((SELECT orderID FROM `order` ORDER BY orderID DESC LIMIT 1), '".$key['productID']."', '".$detailsID."', '".$key['nameOnProduct']."')";
+			$query = "INSERT INTO order_product (orderID, productID, detailsID, nameOnProduct) VALUES ((SELECT orderID FROM `order` ORDER BY orderID DESC LIMIT 1), '".$key['productID']."', '".$detailsID."', '".$key['nameOnProduct']."')";
 			$query_run = mysqli_query($conn, $query);
 		}
 	unset($_SESSION['products']);
