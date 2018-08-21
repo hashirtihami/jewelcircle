@@ -162,7 +162,7 @@ require 'templates/top.inc.php';
             <!-- /.box-body -->
             <div class="form-group row">
               <div style="margin: 0 auto;">
-                <a id="submitChng" href="#forminf" class="flex-c-m stext-102 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044; width:80px">Submit Changes</a>
+                <a id="submitChng" href="#forminf" class="flex-c-m stext-102 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">Submit Changes</a>
               </div>
             </div>
             </div>
