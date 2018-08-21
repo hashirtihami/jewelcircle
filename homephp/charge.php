@@ -20,9 +20,10 @@ try {
 	//charge customer
 	$charge = \Stripe\Charge::create(array(
 		"amount" => $_SESSION['total'],
-		"currency" => "usd",
+		"currency" => "aud",
 		"description" => "jewelcircle payment",
 		"customer" => $customer->id
+		//'metadata' => ['order_id' => $_SESSION['order_id']],
 	));
 	
 	require 'connect.inc.php';
