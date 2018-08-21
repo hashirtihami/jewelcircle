@@ -93,4 +93,6 @@
           <!-- /.box -->
     </section>
 
+<script type="text/javascript" src="js/jspdf.debug.js"></script>
+
 

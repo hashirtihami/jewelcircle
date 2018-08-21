@@ -184,6 +184,10 @@ $(".btnPdf").on("click",function(){
 	var row = $(target).parent();
 	var data = $(row).find(".data").html();
 	$.post("getOrderData.php", {data: data}, function(data){
-		console.log(data);
+		var DATA = JSON.parse(data);
+		var doc = new jsPDF();
+		doc.setFontSize(40);
+		doc.text(5, 25, 'Paranyan loves jsPDF');
+		doc.save('html.pdf');
 	});
-})
+});
