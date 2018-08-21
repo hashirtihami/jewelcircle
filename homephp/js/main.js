@@ -451,6 +451,7 @@
     var total = 0;
     $("td.column-5").each(function(){
         subtotal += parseInt($(this).html().split(" ")[1]);
+        total = 0;
         total += subtotal;
     });
     $("input[name='num-product'], #cart-prod-plus, #cart-prod-minus").on("change click", function(){
