@@ -172,7 +172,7 @@
               <i class="fas fa-trash"></i>
               <span class="label-warning labelCount counts"></span>
             </button>
-            <button class="btn bg-custom btn-lg orderButtons"><i class="fas fa-file-download" title="Multiple Invoice Download"></i>
+            <button id="multiDwnld" class="btn bg-custom btn-lg orderButtons"><i class="fas fa-file-download" title="Multiple Invoice Download"></i>
               <span class="label-success labelCount counts"></span>
             </button>
             <button id="multiDispatch" class="btn bg-custom btn-lg orderButtons" disabled="disabled" data-toggle="modal" data-target="#dispatchConfirm" 
