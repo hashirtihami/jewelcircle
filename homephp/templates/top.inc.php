@@ -72,10 +72,10 @@
 								
 							</li>
 							<li>
-								<a href="product.php">Products</a>
+								<a href="product.php" id="prods">Products</a>
 							</li>
 							<li>
-								<a href="index.php#arriwal">What's New?</a>
+								<a href="index.php#arriwal" id="wutnew">What's New?</a>
 							</li>							
 							
 						</ul>
@@ -260,3 +260,10 @@
 			</div>
 		</div> -->
 	</header>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#prods').click(function() {
+				$('#prods').addClass('border-bottom');
+			})
+		})
+	</script>

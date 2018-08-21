@@ -51,7 +51,7 @@
 
 				<!-- Filter -->
 				<div class="dis-none panel-filter w-full p-t-10">
-					<div class="wrap-filter flex-w bg6 w-full p-lr-40 p-t-27 p-lr-15-sm">	
+					<div class="wrap-filter flex-w w-full p-lr-40 p-t-27 p-lr-15-sm">	
 
 						<div id="filters" class="filter-col2 p-r-15 p-b-27">
 							<div class="mtext-102 cl2 p-b-15">
@@ -126,7 +126,6 @@
 			</div>
 
 
-
 			<div class="row isotope-grid">
 				<?php
 					$query = "SELECT productID,no,discount FROM product ORDER BY date desc";
@@ -162,8 +161,8 @@
 								echo '<div class="block2">';
 									echo '<div class="block2-pic hov-img0">';
 										echo '<img src="../assets/images/products/1.'.$productID.'-thumb.jpg" alt="IMG-PRODUCT" style="margin-top: 25%">';
-										echo '<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">';
-											echo 'Quick View';
+										echo '<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg5 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">';
+											echo 'View details';
 										echo '</a>';
 									echo '</div>';
 
@@ -198,3 +197,12 @@
 	require 'quickview-modal.php';
 	require 'templates/bottom.inc.php';
 ?>
+<script type="text/javascript">
+	$(document).ready(function(){
+	   $(".overlay-modal1").css({
+      "overflow-y" : "scroll"
+   });
+
+})
+
+</script>
