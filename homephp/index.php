@@ -97,7 +97,7 @@
 				<!-- Nav tabs -->
 				<ul class="nav nav-tabs" role="tablist">
 					<li class="nav-item p-b-10">
-						<a class="nav-link active" data-toggle="tab" href="#new-arrivals" role="tab">New Arrivals</a>
+						<a class="nav-link active" data-toggle="tab" href="#new-arrivals" id="arriwal" role="tab">New Arrivals</a>
 					</li>
 
 					<li class="nav-item p-b-10">

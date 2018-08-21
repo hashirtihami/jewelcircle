@@ -74,6 +74,9 @@
 							<li>
 								<a href="product.php">Products</a>
 							</li>
+							<li>
+								<a href="#arriwal">What's New?</a>
+							</li>							
 							
 						</ul>
 					</div>	
