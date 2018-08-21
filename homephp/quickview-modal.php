@@ -85,7 +85,7 @@
 									</div>
 								</div>
 
-								<div class="flex-w flex-r-m p-b-10">
+								<div style="display: none;" class="flex-w flex-r-m p-b-10">
 									<div class="size-203 flex-c-m respon6">
 										Preview:
 									</div>
@@ -121,7 +121,7 @@
 											</div>
 										</div>
 
-										<button id="addToCart" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
+										<button id="addToCart" class="flex-c-m stext-101 cl0 size-101 bg-dark bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
 											Add to cart
 										</button>
 									</div>

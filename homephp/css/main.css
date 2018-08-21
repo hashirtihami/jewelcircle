@@ -1947,6 +1947,7 @@ input.num-product::-webkit-inner-spin-button {
 
 #numProdInCart::after{
   background: #e60044;
+  border-radius: 5px;
 }
 
 .zmdi-shopping-cart{

@@ -12,7 +12,7 @@
 			</a>
 
 			<span class="stext-109 cl4">
-				Shoping Cart
+				Shopping Cart
 			</span>
 		</div>
 	</div>
@@ -128,10 +128,10 @@
 
 							<div class="size-209 p-r-18 p-r-0-sm w-full-ssm">
 								<p class="stext-111 cl6 p-t-2">
-									Shipping details
+									Free shipping across Pakistan
 								</p>
 								
-								<div class="p-t-15">
+								<div style="display: none;" class="p-t-15">
 
 									<!-- <div class="rs1-select2 rs2-select2 bor8 bg0 m-b-12 m-t-9">
 										<select class="js-select2" name="country">
@@ -184,7 +184,7 @@
 							</div>
 						</div>
 
-						<button type="submit" id="proceedToCheckout" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
+						<button type="submit" id="proceedToCheckout" class="flex-c-m stext-101 cl0 size-116 bg-dark bor14 hov-btn3 p-lr-15 trans-04 pointer">
 							Proceed to Checkout
 						</button>
 					</div>

@@ -260,10 +260,3 @@
 			</div>
 		</div> -->
 	</header>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#prods').click(function() {
-				$('#prods').addClass('border-bottom');
-			})
-		})
-	</script>

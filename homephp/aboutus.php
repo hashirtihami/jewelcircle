@@ -23,12 +23,12 @@
 
 
 <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('../assets/images/posters/banner3.jpg');">
-		<h3 class=" cl0 txt-center" style=" font-family:anydore; font-size:9vw; text-shadow:5px 5px 10px black; ">
+		<h3 class=" cl0 txt-center" style=" font-family:anydore; font-size:3.5rem; text-shadow:5px 5px 10px black; ">
 			
 			Jewel Circle
 		</h3>
 		
-		<h3 class=" cl0 txt-center" style=" font-size:2vw; text-shadow:5px 5px 10px black;	" > Made just for you</h3>
+		<h3 class=" cl0 txt-center" style=" font-family:Poppins-Medium; font-size:1rem; text-shadow:5px 5px 10px black;	" > Made just for you</h3>
 </section>
 
 <section class="bg0 p-t-75 p-b-120">

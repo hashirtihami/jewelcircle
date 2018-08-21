@@ -38,11 +38,11 @@ hr.style14 {
 </style>
 
 
-<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('../assets/images/posters/banner3.jpg');">
-	<h3 class=" cl0 txt-center" style=" font-size:6vw; text-shadow:5px 5px 10px black; ">
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style=" font-family:Poppins-Medium; background-image: url('../assets/images/posters/banner3.jpg');">
+	<h3 class=" cl0 txt-center" style=" font-size:3.5rem; text-shadow:5px 5px 10px black; ">
 		INFLUENCER WANTED
 	</h3>
-	<h3 class=" cl0 txt-center" style=" font-size:2vw; text-shadow:5px 5px 10px black;">
+	<h3 class=" cl0 txt-center" style=" font-family:Poppins-Medium; font-size:1.25rem; text-shadow:5px 5px 10px black;">
 		GET <span style="color:#e60044;">JEWEL CIRCLE</span> LATEST PRODUCT FOR FREE EVERY MONTH
 	</h3>
 </section>
@@ -50,7 +50,7 @@ hr.style14 {
 
 
 <div class="container" style="padding-top:100px">
-	<h2 class="txt-center" style="color:#e60044;"> FASHION INFLUENCER POLICY</h2>
+	<h2 class="txt-center" style="color:#e60044; font-family:Poppins-Medium;"> FASHION INFLUENCER POLICY</h2>
 	<div style="padding-top:30px">
 		<table class="table table-bordered" >
 		  <thead>
@@ -122,7 +122,7 @@ hr.style14 {
 
 
 <div id="forminf" class="container">
-	<h2 style="padding-top:90px; color:#e60044;">Complete Our Form</h2>
+	<h2 style="padding-top:90px; color:#e60044; font-family:Poppins-Medium; font-size: 20px;">Complete Our Form</h2>
 	 <hr>
 	<form action="infprogram.php" method="post">
 	  <div class="form-group row">
@@ -245,7 +245,7 @@ hr.style14 {
 	  <div class="form-group row">
 		<div class="col-lg-5 col-md-5 col-sm-5 ">
 		</div>
-	    <div class="col-lg-2 col-md-2 col-sm-5 ">
+	    <div class="col-lg-2 col-md-2 col-sm-5 " style="margin-bottom: 20px;">
 	      <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;" 
 	      	type="submit" class="btn btn-primary" name="register">Submit</button>
 	    </div>
