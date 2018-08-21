@@ -75,7 +75,7 @@
 								<a href="product.php">Products</a>
 							</li>
 							<li>
-								<a href="#arriwal">What's New?</a>
+								<a href="index.php#arriwal">What's New?</a>
 							</li>							
 							
 						</ul>

@@ -85,7 +85,7 @@
 
 	<!-- Product -->
 	<section class="sec-product bg0 p-t-100 p-b-50">
-		<div class="container">
+		<div class="container" id="arriwal">
 			<div class="p-b-32">
 				<h3 class="ltext-105 cl5 txt-center respon1">
 					Store Overview
@@ -93,11 +93,11 @@
 			</div>
 
 			<!-- Tab01 -->
-			<div class="tab01">
+			<div class="tab01"  >
 				<!-- Nav tabs -->
 				<ul class="nav nav-tabs" role="tablist">
 					<li class="nav-item p-b-10">
-						<a class="nav-link active" data-toggle="tab" href="#new-arrivals" id="arriwal" role="tab">New Arrivals</a>
+						<a class="nav-link active" data-toggle="tab" href="#new-arrivals" role="tab">New Arrivals</a>
 					</li>
 
 					<li class="nav-item p-b-10">
