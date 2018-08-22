@@ -24,7 +24,7 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
-								<a href="product.php" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;">
+								<a href="product.php" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 buttonCss">
 									Shop Now
 								</a>
 							</div>
@@ -48,7 +48,7 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="slideInUp" data-delay="1600">
-								<a href="product.php" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;">
+								<a href="product.php" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 buttonCss">
 									Shop Now
 								</a>
 							</div>
@@ -72,7 +72,7 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
-								<a href="product.php" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;">
+								<a href="product.php" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 buttonCss">
 									Shop Now
 								</a>
 							</div>
@@ -142,7 +142,7 @@
 
 													echo '<div class="block2-txt flex-w flex-t p-t-14">';
 														echo '<div class="block2-txt-child1 flex-col-l ">';
-															echo '<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">';
+															echo '<a href="product-detail.html" onclick="return false" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">';
 																echo '<span class="title">'.$query_array["typeName"].' '.$query_array["category"].'</span>';
 															echo '</a>';
 															echo '<span class="stext-105 cl3">';
@@ -195,7 +195,7 @@
 
 													echo '<div class="block2-txt flex-w flex-t p-t-14">';
 														echo '<div class="block2-txt-child1 flex-col-l ">';
-															echo '<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">';
+															echo '<a href="product-detail.html" onclick="return false" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">';
 																echo '<span class="title">'.$query_array["typeName"].' '.$query_array["category"].'</span>';
 															echo '</a>';
 															echo '<span class="stext-105 cl3">';

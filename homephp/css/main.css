@@ -452,7 +452,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 /*---------------------------------------------*/
 .main-menu > li:hover > a {
   text-decoration: none;
-  color: #8a8a8a;
+  color: #e60040;
 }
 
 .main-menu > li:hover > .sub-menu {
@@ -653,7 +653,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   color: #333;
 }
 .main-menu > li.active-menu > a:hover {
-  color: #8a8a8a;
+  color: #e60040;
 }
 
 
@@ -1949,7 +1949,10 @@ input.num-product::-webkit-inner-spin-button {
   background: #e60044;
   border-radius: 5px;
 }
-
+#numProdInCart:hover i{
+  color: #c60037;
+  border-radius: 5px;
+}
 .zmdi-shopping-cart{
   color: #e60044;
 }
@@ -1958,6 +1961,9 @@ input.num-product::-webkit-inner-spin-button {
 }
 #logoutBtn:focus {
   box-shadow: none !important;
+}
+#logoutBtn:hover {
+  color: #c60037;
 }
 
 .wrap-table-shopping-cart {
@@ -3521,4 +3527,19 @@ footer a:hover {
 }
 footer h4 {
   color: #eebc29 !important;
+}
+.buttonCss {
+  background-color:#e60044;
+}
+.buttonCss:hover {
+  background-color:#c60037;
+}
+button.arrow-slick1 {
+  color: #666 !important;
+}
+button.arrow-slick1:hover {
+  color: #333 !important;
+}
+th {
+  background-color: #333;
 }
