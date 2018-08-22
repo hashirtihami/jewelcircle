@@ -45,19 +45,23 @@ else { // Email doesn't already exist in a database, proceed...
         $subject = ' Message from jewelcircle.net ';
         $message_body = '
         
-        <div style="text-align:center;">
+        <div class="container" style="text-align:center;">
                 
                 Hello '.$first_name.',<br><br>
-
                 <h3 style="color:#e60044;">Thank you for signing up!</h3><br><br>
-
-                Follow us:<br><br>
+                Your application for influencer of JEWEL CIRCLE has been received.<br>
+                Your profile and social accounts will be observed and a confirmation email will be sent, once your application is granted.<br>
+                
+                
+                If you have any questions or concerns, please contact Cloudflare support at support@jewelcircle.net
+                <br><br>Follow us:
 
                 Instagram: https://www.instagram.com/jewel_circle/ <br><br>
 
                 Facebook: https://www.facebook.com/JewelCircle/<br><br>
 
-                For any queries feel free to email us at info@jewelcircle.net
+                <br><br>
+                <sub>We apologize if you received this email in error. Please ignore it if you didn\'t make the request.<sub> 
             </div> ';
         
 

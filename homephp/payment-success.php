@@ -1,3 +1,15 @@
+<?php
+/* Displays user information and some useful messages */
+session_start();
+// Check if user is logged in using the session variable
+if ( $_SESSION['logged_in'] != 1 ) {
+  $_SESSION['message'] = "You must log in.";
+  if( isset($_SESSION['message']))
+  {  
+    header("location: error.php");
+    exit();    
+  }
+}
 <?php 
 	require 'connect.inc.php';
 	session_start();
