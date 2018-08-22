@@ -224,6 +224,9 @@ $(".btnPdf").on("click",function(){
 		doc.text(135, 75, "Name")
 		doc.text(135, 75, "Name")
 		doc.line(163, 70, 163, 250);
+		doc.text(165, 75, "Qty")
+		doc.text(165, 75, "Qty")
+		doc.line(173, 70, 173, 250);
 		doc.text(185, 75, "Price")
 		doc.text(185, 75, "Price")
 		doc.line(197, 70, 197, 250);
@@ -238,8 +241,9 @@ $(".btnPdf").on("click",function(){
 			doc.text(60, y, DATA.product[i].plating)
 			doc.text(79, y, DATA.product[i].language)
 			doc.text(103, y, DATA.product[i].nameType)
-			doc.text(125, y, "Wahaj")
-			doc.text(175, y, DATA.product[i].totalAmount)
+			doc.text(125, y, DATA.product[i].nameOnProduct)
+			doc.text(167, y, DATA.product[i].quantity)
+			doc.text(182, y, DATA.product[i].totalAmount)
 			y+=7;
 			total += parseInt(DATA.product[i].totalAmount); 
 		}
