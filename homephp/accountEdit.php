@@ -82,8 +82,6 @@ require 'templates/top.inc.php';
                   <input id="email" type="text" class="form-control" disabled="disabled" placeholder="registered email here"
                   <?php echo 'value="'.$email.'"';?>
                   >
-                  <div class="input-group-addon btn bg-gray-light" title="Email">
-                  </div>
                 </div>
                 <!-- /.input group -->
               </div>
@@ -95,8 +93,6 @@ require 'templates/top.inc.php';
                   <input id="email" type="text" class="form-control" disabled="disabled" placeholder="registered email here"
                   <?php echo 'value="'.$role.'"';?>
                   >
-                  <div class="input-group-addon btn bg-gray-light" title="Email">
-                  </div>
                 </div>
                 <!-- /.input group -->
               </div>
