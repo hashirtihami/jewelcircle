@@ -96,7 +96,7 @@ require 'templates/top.inc.php';
                   <input id="contact" type="text" class="form-control" disabled="disabled" placeholder="number here (editable)"
                  <?php echo 'value="'.$contact.'"';?>
                  >
-                 <div class="input-group-addon btn bg-gray-light editBtn" title="Contact Number">
+                 <div class="input-group-addon btn bg-gray-light editBtn" title="Edit">
                     <i class="fas fa-edit"></i>
                   </div>                  
                 </div>
@@ -110,7 +110,7 @@ require 'templates/top.inc.php';
                   <input id="address" type="text" class="form-control" disabled="disabled" placeholder="Address (editable)"
                  <?php echo 'value="'.$address.'"';?>
                  >
-                 <div class="input-group-addon btn bg-gray-light editBtn" title="Address">
+                 <div class="input-group-addon btn bg-gray-light editBtn" title="Edit">
                     <i class="fas fa-edit"></i>
                   </div>                  
                 </div>
@@ -124,7 +124,7 @@ require 'templates/top.inc.php';
                   <input id="country" type="text" class="form-control" disabled="disabled" placeholder="Country (editable)"
                   <?php echo 'value="'.$country.'"';?>
                   >
-                 <div class="input-group-addon btn bg-gray-light editBtn" title="Country">
+                 <div class="input-group-addon btn bg-gray-light editBtn" title="Edit">
                     <i class="fas fa-edit"></i>
                   </div>                  
                 </div>
@@ -138,7 +138,7 @@ require 'templates/top.inc.php';
                   <input id="city" type="text" class="form-control" disabled="disabled" placeholder="City (editable)"
                   <?php echo 'value="'.$city.'"';?>
                   >
-                 <div class="input-group-addon btn bg-gray-light editBtn" title="City">
+                 <div class="input-group-addon btn bg-gray-light editBtn" title="Edit">
                     <i class="fas fa-edit"></i>
                   </div>                  
                 </div>
@@ -152,7 +152,7 @@ require 'templates/top.inc.php';
                   <input id="zipcode" type="text" class="form-control" disabled="disabled" placeholder="Zipcode (editable)"
                   <?php echo 'value="'.$zipcode.'"';?>
                   >
-                  <div class="input-group-addon btn bg-gray-light editBtn" title="Zipcode">
+                  <div class="input-group-addon btn bg-gray-light editBtn" title="Edit">
                     <i class="fas fa-edit"></i>
                   </div>                  
                 </div>
@@ -162,7 +162,7 @@ require 'templates/top.inc.php';
             <!-- /.box-body -->
             <div class="form-group row">
               <div style="margin: 0 auto;">
-                <a id="submitChng" href="#forminf" class="flex-c-m stext-102 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">Submit Changes</a>
+                <a id="submitChng" href="#forminf" class="flex-c-m stext-102 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 buttonCss">Submit Changes</a>
               </div>
             </div>
             </div>

@@ -24,6 +24,9 @@ hr.style14 {
   background-image: -ms-linear-gradient(left, #f0f0f0, #e60040, #f0f0f0);
   background-image: -o-linear-gradient(left, #f0f0f0, #e60040, #f0f0f0); 
 }
+th {
+  background-color: #333;
+}
 </style>
 
 

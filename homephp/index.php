@@ -135,8 +135,8 @@
 												echo '<div class="block2">';
 													echo '<div class="block2-pic hov-img0">';
 														echo '<img src="../assets/images/products/1.'.$productID.'-thumb.jpg" alt="IMG-PRODUCT" style="margin-top: 25%">';
-														echo '<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">';
-															echo 'Quick View';
+														echo '<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg5 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">';
+															echo 'View details';
 														echo '</a>';
 													echo '</div>';
 
@@ -188,8 +188,8 @@
 												echo '<div class="block2">';
 													echo '<div class="block2-pic hov-img0">';
 														echo '<img src="../assets/images/products/1.'.$productID.'-thumb.jpg" alt="IMG-PRODUCT" style="margin-top: 25%">';
-														echo '<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">';
-															echo 'Quick View';
+														echo '<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg5 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">';
+															echo 'View details';
 														echo '</a>';
 													echo '</div>';
 

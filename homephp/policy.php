@@ -9,7 +9,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style >
   font{
-    color:#e60044;
+    color:#ebebeb;
   }
 
   label{
@@ -23,6 +23,9 @@ hr.style14 {
   background-image: -moz-linear-gradient(left, #f0f0f0, #e60040, #f0f0f0);
   background-image: -ms-linear-gradient(left, #f0f0f0, #e60040, #f0f0f0);
   background-image: -o-linear-gradient(left, #f0f0f0, #e60040, #f0f0f0); 
+}
+th {
+  background-color: #333;
 }
 </style>
 

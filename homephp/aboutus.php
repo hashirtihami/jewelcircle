@@ -40,12 +40,12 @@
 							Our Story
 						</h3>
 
-						<p class="stext-113 cl6 p-b-26">
+						<p class="stext-117 cl3 p-b-26">
 							Jewel Circle came into existence on March 10, 2018. The main concept behind it is to connect, facilitate and serve the Jewel lovers all around the world with the quality product and services. 
 							Jewel Circle grows bigger everyday, with over 3500+ Followers on Instagram so far.
 							Here at Jewel Circle, we have two Top Priorities. Quality Product & Customer Satisfaction.
 						</p>
-						<p class="stext-113 cl6 p-b-26">
+						<p class="stext-117 cl3 p-b-26">
 							If you have any further queries feel free to email us at info@JewelCircle.net
 						</p>	
 					</div>

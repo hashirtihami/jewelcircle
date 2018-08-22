@@ -120,8 +120,7 @@
 												<i class="fs-16 zmdi zmdi-plus"></i>
 											</div>
 										</div>
-
-										<button id="addToCart" class="flex-c-m stext-101 cl0 size-101 bg-dark bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
+										<button type="submit" id="addToCart" class="flex-c-m stext-101 cl0 size-101 bg-dark bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
 											Add to cart
 										</button>
 									</div>
