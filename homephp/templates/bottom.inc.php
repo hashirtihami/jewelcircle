@@ -6,26 +6,22 @@
 					<h4 class="stext-301 cl0 p-b-30">
 						Terms and Policies
 					</h4>
-
 					<ul>
 						<li class="p-b-10">
 							<a href="track.php" class=" stext-107 cl7 hov-cl1 trans-04">
 								Track My Order
 							</a>
 						</li>
-
 						<li class="p-b-10">
 							<a href="policy.php" class="stext-107 cl7 hov-cl1 trans-04">
 								Delivery Policy
 							</a>
 						</li>
-
 						<li class="p-b-10">
 							<a href="terms.php" class="stext-107 cl7 hov-cl1 trans-04">
 								Terms Of Services
 							</a>
 						</li>
-
 						<li class="p-b-10">
 							<a href="faq.php" class="stext-107 cl7 hov-cl1 trans-04">
 								FAQ
@@ -33,31 +29,26 @@
 						</li>
 					</ul>
 				</div>
-
 				<div class="col-sm-6 col-md-4 col-lg-4 p-b-50">
 					<h4 class="stext-301 cl0 p-b-30">
 						Company Info
 					</h4>
-
 					<ul>
 						<li class="p-b-10">
 							<a href="aboutus.php" class="stext-107 cl7 hov-cl1 trans-04">
 								About Us
 							</a>
 						</li>
-
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
 								Jewel Circle Reviews
 							</a>
 						</li>
-
 						<li class="p-b-10">
 							<a href="infprogram.php" class="stext-107 cl7 hov-cl1 trans-04">
 								Influencer Program
 							</a>
 						</li>
-
 						<li class="p-b-10">
 							<a href="reseller.php" class="stext-107 cl7 hov-cl1 trans-04">
 								Reseller Inquiry
@@ -65,55 +56,39 @@
 						</li>
 					</ul>
 				</div>
-
 				<div class="col-sm-6 col-md-4 col-lg-4 p-b-50">
-
 					<h4 class="stext-301 cl0 p-b-30">
 						Contact Us
 					</h4>
-
 					<ul>
-						
-
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
 								info@jewelcircle.net
 							</a>
 						</li>
-
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
 								+92 334 3118434
 							</a>
 						</li>
-
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
 								Jewel Circle
 							</a>
 						</li>
 					</ul>
-
-
 					<div class="p-t-27">
 						<a href="https://www.facebook.com/JewelCircle/" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
 							<i class="fa fa-facebook"></i>
 						</a>
-
 						<a href="https://www.instagram.com/jewel_circle/" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
 							<i class="fa fa-instagram"></i>
 						</a>
-
 					</div>
 				</div>
-
 			</div>
-
-				<h6 class=" copyright  txt-center">
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright  All rights reserved | This website was created in collaboration with Colorlib
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
+			<h6 class=" copyright  txt-center">
+					Copyright  All rights reserved | JEWEL CIRCLE personalized jewelry.
 				</h6>
 			</div>
 		</div>
