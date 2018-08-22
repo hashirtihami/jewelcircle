@@ -62,7 +62,7 @@ require 'templates/top.inc.php';
                   $query_run = mysqli_query($conn, $query);
                   if($query_array = mysqli_fetch_array($query_run))
                     $customerID=$query_array["customerID"];
-                  $query = "SELECT orderID,orderDate,totalAmount,address,status FROM `order` o, customer c WHERE (c.customerID=o.customerID && c.customerID=9)";
+                  $query = "SELECT orderID,orderDate,totalAmount,address,status FROM `order` o, customer c WHERE (c.customerID=o.customerID && c.customerID='$customerID')";
                   $query_run = mysqli_query($conn, $query);
                   while(@$query_array = mysqli_fetch_array($query_run)){
                     echo '<tr>
