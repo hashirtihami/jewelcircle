@@ -161,7 +161,7 @@
 					</div>
 
 					<!-- - -->
-					<div class="tab-pane fade show-active" id="featured" role="tabpanel">
+					<div class="tab-pane fade" id="featured" role="tabpanel">
 						<!-- Slide2 -->
 						<div class="wrap-slick2">
 							<div class="slick2">

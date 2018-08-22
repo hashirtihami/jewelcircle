@@ -173,7 +173,6 @@ Copyright  All rights reserved | This website was created in collaboration with 
 <!--===============================================================================================-->
 	<script src="vendor/daterangepicker/moment.min.js"></script>
 	<script src="vendor/daterangepicker/daterangepicker.js"></script>
-	<script src="js/main.js"></script>
 <!--===============================================================================================-->
 	<script src="vendor/slick/slick.min.js"></script>
 	<script src="js/slick-custom.js"></script>
@@ -253,6 +252,7 @@ Copyright  All rights reserved | This website was created in collaboration with 
 		});
 	</script>
 <!--===============================================================================================-->
+	<script src="js/main.js"></script>
 	
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
