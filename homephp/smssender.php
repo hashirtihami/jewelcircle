@@ -1,12 +1,12 @@
 <?php 
 // Authorisation details. 
-$username =  "jewel.circle.o@gmail.com";
-$hash = "56c40b233ed429f077cbe90726553b81e43c1c443422a250f327130d2b5c0314";
+$username =  "jewelcirclejc@gmail.com";
+$hash = "8c4aa548a152cb49656605e193bbb105b98aa8490a733bbb5e5af282e7338762";
 // Config variables. Consult http://api.txtlocal.com/docs for more info. 
-$test = "jewel circle"; 
+$test = "Jewel circle"; 
 // Data for text message. This is the text message data. 
 $sender = "Jewel Circle"; // This is who the message appears to be from. 
-$numbers = "";//$_POST['contact']; // A single number or a comma-seperated list of numbers 
+$numbers = "+923158257773";//$_POST['contact']; // A single number or a comma-seperated list of numbers 
 $message = "Hello jee";//$_POST['msg']; 
 // 612 chars or less 
 // A single number or a comma-seperated list of numbers 
