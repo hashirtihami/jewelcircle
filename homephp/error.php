@@ -19,12 +19,13 @@ if(isset($_SESSION['message'])&&!empty($_SESSION['message'])){
                     echo '<h2 style=" padding-bottom:250px; font-size:20px;">  
                             <span style="color:#e60044; "> </span> '.$_SESSION['message'].'&nbsp;
                             <span>
-                                <!--
+                                
                                 <a href="userregister.php">
-                                    <button style="color:#e60044;  padding-bottom:200px;" class="button button-block"/> Go Back.
+                                    <button id="goBack" class="flex-c-m stext-101 cl0 size-101 bor1 hov-btn1 p-lr-15 trans-04 bg7" 
+                                    type="submit" class="btn btn-primary" name="register">Go Back
                                     </button>
                                 </a>
-                                --> 
+                                
                             </span>
                         <h2>';
                 }

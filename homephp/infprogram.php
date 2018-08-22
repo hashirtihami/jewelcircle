@@ -76,7 +76,7 @@ hr.style14 {
 			<tbody>
 			    <tr>
 			      <td colspan="4">
-			      	 You should take photos or video for our jewelry within 14 days after you receive the items, and publish them to your blog, facebook, instagram and youtube,etc. When you publish the photos, review and comments, please add the the link of the product page or home page we offer.
+			      	 You should take photos or video for our jewellery within 14 days after you receive the items, and publish them to your blog, facebook, instagram and youtube,etc. When you publish the photos, review and comments, please add the the link of the product page or home page we offer.
 			      </td>
 			    </tr>
 			</tbody>
@@ -84,7 +84,7 @@ hr.style14 {
 		<table class="table table-bordered" >
 				<thead>
 			    <tr>
-			      <th colspan="4" scope="col"><font>3. Please send us an email once you publish your photos and comments.</font></th>
+			      <th colspan="4" scope="col"><font>3. Send us an email once you publish your photos and comments.</font></th>
 			    </tr>
 			</thead>
 			<tbody>
@@ -98,7 +98,7 @@ hr.style14 {
 		<table class="table table-bordered" >
 			<thead>
 			    <tr>
-			      <th colspan="4" scope="col"><font>4. Soufeel Jewelry reserves the right to use the information of your post.</font></th>
+			      <th colspan="4" scope="col"><font>4. Jewel Circle reserves the right to use the information of your post.</font></th>
 			    </tr>
 			</thead>
 			<tbody>
@@ -112,25 +112,26 @@ hr.style14 {
 	</div>
 	
 	<div class="form-group row">
-		<div class="col-lg-5 col-md-5 col-sm-5 ">
-		</div>
-		<div class="col-lg-5 col-md-5 col-sm-5" >
-		<a href="#forminf" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044; width:80px">I Agree</a>
+	<!-- 	<div class="col-lg-5 col-md-5 col-sm-5 ">
+		</div> -->
+		<!-- <div class="col-lg-5 col-md-5 col-sm-5" > -->
+		<div style="margin: 0 auto 20px auto;" >
+		<a id="agreeBtn" href="#forminf" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 buttonCss" style="width:80px">I Agree</a>
 		</div>
 	</div>
 </div>
 
 
-<div id="forminf" class="container">
+<div style="display: none;" id="forminf" class="container">
 	<h2 style="padding-top:90px; color:#e60044; font-family:Poppins-Medium; font-size: 20px;">Complete Our Form</h2>
 	 <hr>
 	<form action="infprogram.php" method="post">
 	  <div class="form-group row">
-	    <label for="inputname" class="col-sm-2 col-form-label">Name</label>
-	    <div class="col-sm-5">
+	    <label style="padding-top: 5px;" for="inputname" class="col-sm-2 col-form-label">Name</label>
+	    <div style="padding-top: 5px;" class="col-sm-5">
 	      <input type="text" class="form-control" id="inputname" placeholder="First Name" name='firstname'>
 	    </div>
-	    <div class="col-sm-5">
+	    <div style="padding-top: 5px;" class="col-sm-5">
 	      <input type="text" class="form-control" id="inputPassword3" placeholder="Last Name" name='lastname'>
 	    </div>
 	  </div>
@@ -243,10 +244,8 @@ hr.style14 {
 	  </div>
 
 	  <div class="form-group row">
-		<div class="col-lg-5 col-md-5 col-sm-5 ">
-		</div>
-	    <div class="col-lg-2 col-md-2 col-sm-5 " style="margin-bottom: 20px;">
-	      <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;" 
+	    <div style="margin: 0 auto 20px auto;">
+	      <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 buttonCss" 
 	      	type="submit" class="btn btn-primary" name="register">Submit</button>
 	    </div>
 	  </div>
@@ -256,3 +255,11 @@ hr.style14 {
 	require 'templates/modal.inc.php';
 	require 'templates/bottom.inc.php';
 ?>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#agreeBtn').click(function() {
+			$('#forminf').slideDown('slow');
+		})
+	})
+</script>

@@ -90,11 +90,11 @@ require 'templates/top.inc.php';
 	<hr>
 	<form onSubmit="return validate();" action="userregister.php" method="post">
 	  	<div class="form-group row">
-	    	<label for="inputname" class="col-sm-2 col-form-label">Name</label>
-	    	<div class="col-sm-5">
+	    	<label style="padding-top: 5px;" for="inputname" class="col-sm-2 col-form-label">Name</label>
+	    	<div style="padding-top: 5px;" class="col-sm-5">
 	      		<input type="text" class="form-control" id="inputname" name='firstname' placeholder="First Name" required>
 	    	</div>
-	    	<div class="col-sm-5">
+	    	<div style="padding-top: 5px;" class="col-sm-5">
 	      		<input type="text" class="form-control" id="inputname" name='lastname' placeholder="Last Name" required>
 	    	</div>
 	  	</div>
