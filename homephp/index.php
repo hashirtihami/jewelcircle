@@ -4,6 +4,7 @@
 
 	// $router->add('home', '/', 'userprofile.php');
 ?>
+<title>Jewel Circle</title>
 	<!-- Slider -->
 	<section class="section-slide">
 		<div class="wrap-slick1 rs1-slick1">

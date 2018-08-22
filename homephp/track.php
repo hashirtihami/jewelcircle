@@ -8,11 +8,6 @@
 	}
 </style>
 <title>Track My Order</title>
-
-
-
-
-
 	<section class="section-slide">
 		<div class="wrap-slick1 rs1-slick1">
 			<div class="slick1">

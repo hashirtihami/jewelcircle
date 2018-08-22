@@ -36,7 +36,7 @@ require 'templates/top.inc.php';
 <link rel="stylesheet" type="text/css" href="css/userprofile.css">
 <link rel="stylesheet" type="text/css" href="css/AdminLTE.css">
 <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
-      
+    <title>General Account Settings</title>
     <section class="content-header">
       <h1 id="headingz">
            Edit
@@ -88,7 +88,7 @@ require 'templates/top.inc.php';
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-addon" title="Email">
-                    <i class="fas fa-envelope-square"></i>
+                    <i class="fas fa-user"></i>
                   </div>
                   <input id="email" type="text" class="form-control" disabled="disabled" placeholder="registered email here"
                   <?php echo 'value="'.$role.'"';?>

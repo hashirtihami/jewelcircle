@@ -59,7 +59,7 @@ div#submitBtn button {
 
 
 
-
+<title>Reset Password</title>
   <div class="container" style="padding-top:100px; padding-bottom:100px;">
     <table class="table table-bordered" >
       <thead>
