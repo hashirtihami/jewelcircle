@@ -2,7 +2,11 @@
 	require 'connect.inc.php';
 	require 'templates/top.inc.php';
 ?>
-
+<style type="text/css">
+	footer {
+		margin-top: 0 !important;
+	}
+</style>
 <title>Track My Order</title>
 
 

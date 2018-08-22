@@ -47,8 +47,14 @@
   }
   div.form-group div.input-group-addon:nth-of-type(1) {
     background-color: #e60040 !important;
-    color: bisque;
+    color: #ffffdb;
+    padding: 0 !important;
+    width: 40px;
   }
+div.form-group div.input-group-addon:nth-of-type(1) i {
+  margin: 0 auto;
+}
+
   .roaz {
     /*width: 50%;*/
     margin: 0 auto;

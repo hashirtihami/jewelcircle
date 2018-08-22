@@ -24,7 +24,7 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
-								<a href="product.php" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;">
+								<a href="product.php" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 buttonCss">
 									Shop Now
 								</a>
 							</div>
@@ -48,7 +48,7 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="slideInUp" data-delay="1600">
-								<a href="product.php" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;">
+								<a href="product.php" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 buttonCss">
 									Shop Now
 								</a>
 							</div>
@@ -72,7 +72,7 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
-								<a href="product.php" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;">
+								<a href="product.php" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 buttonCss">
 									Shop Now
 								</a>
 							</div>
@@ -135,14 +135,14 @@
 												echo '<div class="block2">';
 													echo '<div class="block2-pic hov-img0">';
 														echo '<img src="../assets/images/products/1.'.$productID.'-thumb.jpg" alt="IMG-PRODUCT" style="margin-top: 25%">';
-														echo '<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">';
-															echo 'Quick View';
+														echo '<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg5 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">';
+															echo 'View details';
 														echo '</a>';
 													echo '</div>';
 
 													echo '<div class="block2-txt flex-w flex-t p-t-14">';
 														echo '<div class="block2-txt-child1 flex-col-l ">';
-															echo '<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">';
+															echo '<a href="product-detail.html" onclick="return false" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">';
 																echo '<span class="title">'.$query_array["typeName"].' '.$query_array["category"].'</span>';
 															echo '</a>';
 															echo '<span class="stext-105 cl3">';
@@ -188,14 +188,14 @@
 												echo '<div class="block2">';
 													echo '<div class="block2-pic hov-img0">';
 														echo '<img src="../assets/images/products/1.'.$productID.'-thumb.jpg" alt="IMG-PRODUCT" style="margin-top: 25%">';
-														echo '<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">';
-															echo 'Quick View';
+														echo '<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg5 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">';
+															echo 'View details';
 														echo '</a>';
 													echo '</div>';
 
 													echo '<div class="block2-txt flex-w flex-t p-t-14">';
 														echo '<div class="block2-txt-child1 flex-col-l ">';
-															echo '<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">';
+															echo '<a href="product-detail.html" onclick="return false" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">';
 																echo '<span class="title">'.$query_array["typeName"].' '.$query_array["category"].'</span>';
 															echo '</a>';
 															echo '<span class="stext-105 cl3">';
