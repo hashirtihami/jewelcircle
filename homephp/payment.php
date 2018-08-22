@@ -11,7 +11,7 @@
     <div class="col-sm-12 col-lg-6 col-xl-6 m-lr-auto m-b-50">
       <div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-25 m-r--38 m-lr-0-xl">
         <h4 class="mtext-109 cl2 p-b-30">Pay Online</h4>
-        <p>You will be directed to a secure 2checkout payment gateway to complete the transaction.</p>
+        <p>You will be directed to a secure checkout payment gateway to complete the transaction.</p>
         <form action='https://sandbox.2checkout.com/checkout/purchase' method='post'>
           <input type='hidden' name='sid' value='901389480' />
           <input type='hidden' name='mode' value='2CO' />
