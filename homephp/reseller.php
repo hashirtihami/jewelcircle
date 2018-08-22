@@ -144,7 +144,7 @@ hr.style14 {
 		<div class="col-lg-5 col-md-5 col-sm-5 ">
 		</div>
 	    <div class="col-lg-2 col-md-2 col-md-5 col-xs-12">
-	      <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044; margin-bottom: 20px;" type="submit" name="register" class="btn btn-primary">Submit</button>
+	      <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;" type="submit" name="register" class="btn btn-primary">Submit</button>
 	    </div>
 	  </div>
 

@@ -1,5 +1,5 @@
 	<!-- Footer -->
-	<footer class="bg3 p-t-75 p-b-32 txt-center">
+	<footer style="margin-top: 30px;" class="bg3 p-t-75 p-b-32 txt-center">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-md-4 col-lg-4 p-b-50">

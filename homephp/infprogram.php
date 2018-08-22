@@ -98,7 +98,7 @@ hr.style14 {
 		<table class="table table-bordered" >
 			<thead>
 			    <tr>
-			      <th colspan="4" scope="col"><font>4. Jewel Circle reserves the right to use the information of your post.</font></th>
+			      <th colspan="4" scope="col"><font>4. Jewel Circle reserves the right to use the content of your post.</font></th>
 			    </tr>
 			</thead>
 			<tbody>
@@ -115,7 +115,7 @@ hr.style14 {
 	<!-- 	<div class="col-lg-5 col-md-5 col-sm-5 ">
 		</div> -->
 		<!-- <div class="col-lg-5 col-md-5 col-sm-5" > -->
-		<div style="margin: 0 auto 20px auto;" >
+		<div style="margin: 0 auto;" >
 		<a id="agreeBtn" href="#forminf" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 buttonCss" style="width:80px">I Agree</a>
 		</div>
 	</div>
@@ -230,9 +230,9 @@ hr.style14 {
 	  </div>
 
 	  <div class="form-group row">
-	    <label for="inputfans" class="col-sm-2 col-form-label">Fans/Followers (Please fill in quantity)</label>
+	    <label for="inputfans" class="col-sm-2 col-form-label">Followers/Fans (quantity)</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="inputfans" placeholder="Please fill in quantity" name='fans'>
+	      <input type="text" class="form-control" id="inputfans" placeholder="Fill in quantity" name='fans'>
 	    </div>
 	  </div>
 
