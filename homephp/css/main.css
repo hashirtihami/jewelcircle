@@ -3324,10 +3324,16 @@ input.num-product::-webkit-inner-spin-button {
 
 }
 @media (max-width: 350px) {
-  .p-t-sm1 {padding-top: 200px;}
+  .p-t-sm1 {padding-top: 0px;}
 }
 @media (max-width: 450px) {
-  .p-t-sm2 {padding-top: 250px;}
+  .p-t-sm2 {padding-top: 0px;}
+}
+@media (max-width: 450px) and (max-height: 200px) {
+  .p-t-sm2 {padding-top: 0px; padding-bottom: 100px;}
+}
+@media (max-width: 550px) and (max-height: 300px) {
+  .p-t-sm2 {padding-top: 0px; padding-bottom: 100px;}
 }
 
 
