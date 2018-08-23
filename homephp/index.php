@@ -11,7 +11,7 @@
 			<div class="slick1">
 				<div class="item-slick1" style="background-image: url(../assets/images/posters/jc1.jpg);">
 					<div class="container h-full">
-						<div class="flex-col-l-m h-full p-t-70 p-b-30 ">
+						<div class="flex-col-l-m h-full p-t-70 p-b-30 p-elitop">
 							<div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
 								<span class="ltext-202 cl2 respon2">
 									Jewel Circle
@@ -19,7 +19,7 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
-								<h2 class="ltext-104 cl2 p-t-19 p-b-30 respon1">
+								<h2 class="ltext-104 cl2 p-t-19 p-b-20 respon1">
 									New arrivals
 								</h2>
 							</div>
@@ -35,7 +35,7 @@
 
 				<div class="item-slick1" style="background-image: url(../assets/images/posters/jc3.jpg);">
 					<div class="container h-full">
-						<div class="flex-col-l-m h-full p-t-70 p-b-30 p-t-sm2 p-t-sm1">
+						<div class="flex-col-l-m h-full p-t-70 p-b-30 p-t-sm2 p-t-sm1 p-elitop">
 							<div class="layer-slick1 animated visible-false" data-appear="rollIn" data-delay="0">
 								<span class="ltext-202 cl2 respon2">
 									Jewel Circle
@@ -59,7 +59,7 @@
 
 				<div class="item-slick1" style="background-image: url(../assets/images/posters/giftcards2.jpg);">
 					<div class="container h-full">
-						<div class="flex-col-l-m h-full p-b-30 p-t-40 p-t-sm1 p-t-sm2">
+						<div class="flex-col-l-m h-full p-b-30 p-t-40 p-t-sm1 p-t-sm2 p-elitop">
 							<div class="layer-slick1 animated visible-false" data-appear="rotateInDownLeft" data-delay="0">
 								<span class="ltext-202 cl2 respon2">
 									Make the gift special with a hand made card

@@ -3414,6 +3414,21 @@ input.num-product::-webkit-inner-spin-button {
   }
 
 }
+@media (max-width: 380px) {
+  .p-elitop {
+    padding-top: 300px;
+  }
+}
+@media (max-width: 350px) {
+  .p-elitop {
+    padding-top: 270px;
+  }
+}
+@media (max-width: 320px) {
+  .p-elitop {
+    padding-top: 250px;
+  }
+}
 
 .copyright{
   padding-bottom:0px;
