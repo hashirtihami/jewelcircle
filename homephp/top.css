@@ -11,17 +11,17 @@ body{
 }
 .bubbly-button{
   font-family: 'Helvetica', 'Arial', sans-serif;
-  display: inline-block !important;
-  font-size !important: 1em;
-  padding !important: 1em 2em;
-  margin-top !important: 100px;
-  margin-bottom !important: 60px;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
   -webkit-appearance: none;
   appearance: none;
   background-color: $button-bg !important;
   color: $button-text-color !important;
-  border-radius: 4px !important;
-  border: none !important;
+  border-radius: 4px;
+  border: none;
   cursor: pointer;
   position: relative;
   transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;

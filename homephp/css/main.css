@@ -3541,3 +3541,42 @@ button.arrow-slick1:hover {
 #goBack {
   margin: 20px auto;
 }
+
+#loginAnchor {
+  background: #e60044 !important;
+  font-family: Poppins-Medium;
+  font-size: 1rem;
+  /*font-weight: 300;*/
+  line-height: normal;
+  min-width: 115px !important;
+  border: 0;
+  top: -8px !important;
+  left: 5px !important;
+  border-radius: 0.4rem;
+  box-shadow: -1px 1px 4px rgba(198, 0, 55, 0.6);
+  appearance: none;
+  cursor: pointer;
+  transition: background 250ms, box-shadow 250ms;
+  padding: 0.25rem 0 !important;
+}
+
+#loginAnchor:hover {
+  background: #c60037 !important;
+}
+
+#loginAnchor:active,
+&:focus {
+  outline: none;
+}
+
+#loginAnchor:active {
+  background: none !important;
+}
+#loginAnchor a {
+  color: #ebebeb !important;
+  padding: 0px !important;
+  text-align: center;
+}
+#loginAnchor a:hover {
+  background: none !important;
+}
