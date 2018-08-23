@@ -18,8 +18,13 @@
 								<div class="slick3 gallery-lb">
 
 								</div>
+									<ul style="padding-top: 30px; margin-left:120px;">
+										<li>This item cannot be returned unless it is defective or damaged.</li>
+										<li>This item cannot be modified once you finish payment.</li>
+										<li>This item requires 4-6 business days to be hand crafted</li>
+									</ul>
 							</div>
-						</div>
+						</div>	
 					</div>
 					
 					<div class="col-md-6 col-lg-5 p-b-30">
