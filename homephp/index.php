@@ -57,7 +57,7 @@
 					</div>
 				</div>
 
-				<div class="item-slick1" style="background-image: url(../assets/images/posters/giftcards.jpg);">
+				<div class="item-slick1" style="background-image: url(../assets/images/posters/giftcards2.jpg);">
 					<div class="container h-full">
 						<div class="flex-col-l-m h-full p-b-30 p-t-40 p-t-sm1 p-t-sm2">
 							<div class="layer-slick1 animated visible-false" data-appear="rotateInDownLeft" data-delay="0">
