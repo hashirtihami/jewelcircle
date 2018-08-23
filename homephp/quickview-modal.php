@@ -126,8 +126,8 @@
 									</div>
 								</div>	
 							</div>
-
-							<div id="wrapper" class="flex-c-m p-lr-15 m-lr-60">
+							<div>
+								<div id="wrapper" class="flex-c-m p-lr-15 m-lr-60">
 								<input class="star" type="radio" id="star1" name="star" />
 								<label class="rating" for="star1"></label>
 								<input class="star" type="radio" id="star2" name="star" />
@@ -138,7 +138,26 @@
 								<label class="rating" for="star4"></label>
 								<input class="star" type="radio" id="star5" name="star" />
 								<label class="rating" for="star5"></label>
+							</div>								
 							</div>
+<<<<<<< HEAD
+
+							<!--  -->
+							<div class="flex-w flex-m p-l-100 p-t-40 respon7">
+								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Facebook">
+									<i class="fa fa-facebook"></i>
+								</a>
+
+								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Twitter">
+									<i class="fa fa-twitter"></i>
+								</a>
+
+								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Google Plus">
+									<i class="fa fa-google-plus"></i>
+								</a>
+							</div>
+=======
+>>>>>>> 9c31c672e3dd9567dfb3df8eca2d9f7097ddc08d
 						</div>
 					</div>
 				</div>
