@@ -31,15 +31,15 @@
 						 Filter
 					</div>
 
-<!-- 					<div class="flex-c-m stext-106 cl6 size-105 bor4 pointer hov-btn3 trans-04 m-tb-4 js-show-search">
+					<div class="flex-c-m stext-106 cl6 size-105 bor4 pointer hov-btn3 trans-04 m-tb-4 js-show-search">
 						<i class="icon-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-search"></i>
 						<i class="icon-close-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
 						Search
-					</div> -->
+					</div>
 				</div>
 				
 				<!-- Search product -->
-<!-- 				<div class="dis-none panel-search w-full p-t-10 p-b-15">
+				<div class="dis-none panel-search w-full p-t-10 p-b-15">
 					<div class="bor8 dis-flex p-l-15">
 						<button class="size-113 flex-c-m fs-16 cl2 hov-cl1 trans-04">
 							<i class="zmdi zmdi-search"></i>
@@ -47,7 +47,7 @@
 
 						<input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="search-product" placeholder="Search">
 					</div>	
-				</div> -->
+				</div>
 
 				<!-- Filter -->
 				<div class="dis-none panel-filter w-full p-t-10">
@@ -161,7 +161,7 @@
 								echo '<div class="block2">';
 									echo '<div class="block2-pic hov-img0">';
 										echo '<img src="../assets/images/products/1.'.$productID.'-thumb.jpg" alt="IMG-PRODUCT" style="margin-top: 25%">';
-										echo '<a href="#" class="block2-btn flex-c-m stext-103 cl0 size-102 bg5 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">';
+										echo '<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg5 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">';
 											echo 'View details';
 										echo '</a>';
 									echo '</div>';
@@ -197,3 +197,12 @@
 	require 'quickview-modal.php';
 	require 'templates/bottom.inc.php';
 ?>
+<script type="text/javascript">
+	$(document).ready(function(){
+	   $(".overlay-modal1").css({
+      "overflow-y" : "scroll"
+   });
+
+})
+
+</script>

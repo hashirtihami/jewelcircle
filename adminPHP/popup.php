@@ -24,9 +24,6 @@
   .btn-dark:focus, .btn-dark.focus {
   box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
 }
-.modal-header {
-  background-color: #4e8cb1;
-}
 </style>
 <div class="modal fade" id="delConfirm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -38,7 +35,7 @@
         </button>
       </div>
       <div class="modal-body">
-        Are you sure you want to delete?
+        Are you sure nibba?
       </div>
       <div class="modal-footer">
         <button id="skip" type="button" class="btn bg-grey" data-dismiss="modal">Skip</button>

@@ -85,6 +85,7 @@
 	</section>
 
 	<!-- Product -->
+	<!-- Product -->
 	<section class="sec-product bg0 p-t-100 p-b-50">
 		<div class="container" id="arriwal">
 			<div class="p-b-32">
@@ -102,15 +103,7 @@
 					</li>
 
 					<li class="nav-item p-b-10">
-<<<<<<< HEAD
-<<<<<<< HEAD
-						<a class="nav-link" data-toggle="tab" href="#featured" role="tab">Top Rated</a>
-=======
 						<a class="nav-link" data-toggle="tab" href="#top-rated" role="tab">Top Rated</a>
->>>>>>> 9c31c672e3dd9567dfb3df8eca2d9f7097ddc08d
-=======
-						<a class="nav-link" data-toggle="tab" href="#featured" role="tab">Top Rated</a>
->>>>>>> parent of 9c31c67... Bootstrap-You-fucking-fuckig-fucktard
 					</li>
 				</ul>
 
@@ -144,7 +137,7 @@
 												echo '<div class="block2">';
 													echo '<div class="block2-pic hov-img0">';
 														echo '<img src="../assets/images/products/1.'.$productID.'-thumb.jpg" alt="IMG-PRODUCT" style="margin-top: 25%">';
-														echo '<a href="#" class="block2-btn flex-c-m stext-103 cl0 size-102 bg5 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">';
+														echo '<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg5 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">';
 															echo 'View details';
 														echo '</a>';
 													echo '</div>';
@@ -170,20 +163,12 @@
 					</div>
 
 					<!-- - -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-					<div class="tab-pane fade" id="featured" role="tabpanel">
-=======
 					<div class="tab-pane fade" id="top-rated" role="tabpanel">
->>>>>>> 9c31c672e3dd9567dfb3df8eca2d9f7097ddc08d
-=======
-					<div class="tab-pane fade" id="featured" role="tabpanel">
->>>>>>> parent of 9c31c67... Bootstrap-You-fucking-fuckig-fucktard
 						<!-- Slide2 -->
 						<div class="wrap-slick2">
 							<div class="slick2">
 								<?php
-									$query = "SELECT product.productID,no,discount FROM product JOIN reviews ON product.productID=reviews.productID ORDER BY reviews.rating desc";
+									$query = "SELECT product.productID,no,discount FROM product JOIN reviews ON product.productID=reviews.productID ORDER BY reviews.rating";
 									$query_run = mysqli_query($conn, $query);
 									while(@$query_array = mysqli_fetch_array($query_run)){
 										$lastItem = $query_array["no"];
@@ -205,7 +190,7 @@
 												echo '<div class="block2">';
 													echo '<div class="block2-pic hov-img0">';
 														echo '<img src="../assets/images/products/1.'.$productID.'-thumb.jpg" alt="IMG-PRODUCT" style="margin-top: 25%">';
-														echo '<a href="#" class="block2-btn flex-c-m stext-103 cl0 size-102 bg5 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">';
+														echo '<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg5 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">';
 															echo 'View details';
 														echo '</a>';
 													echo '</div>';
@@ -237,6 +222,6 @@
 
 <?php
 	require 'quickview-modal.php';
-	require 'templates/modal.inc.php';
 	require 'templates/bottom.inc.php';
+	require 'templates/modal.inc.php';
 ?>

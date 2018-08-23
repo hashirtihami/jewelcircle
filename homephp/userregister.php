@@ -78,7 +78,7 @@ require 'templates/top.inc.php';
 	  	<div class="col-lg-5 col-md-5 col-sm-5 ">
 		</div> 	
 	  	<div class="col-lg-2 col-md-2 col-md-5 col-xs-12">
-	      <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 buttonCss" style="background-color:#e60044;" type="submit" name="login" class="btn btn-primary">Log In</button>
+	      <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;" type="submit" name="login" class="btn btn-primary">Log In</button>
 	    </div>
 	    <p style="padding-top:10px; color:#e60044; " >  <a href="forgot.php"> Forgot Password?</a></p> 
 
@@ -161,7 +161,7 @@ require 'templates/top.inc.php';
 		<div class="col-lg-5 col-md-5 col-sm-5 ">
 		</div>
 	    <div class="col-lg-2 col-md-2 col-md-5 col-xs-12" style="padding-bottom:10%">
-	      <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 buttonCss" style="background-color:#e60044;" type="submit" name="register" class="btn btn-primary">Sign Up</button>
+	      <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;" type="submit" name="register" class="btn btn-primary">Sign Up</button>
 	    </div>
 	  </div>
 

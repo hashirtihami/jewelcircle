@@ -60,11 +60,8 @@
 								<a href="product.php" id="prods">Products</a>
 							</li>
 							<li>
-								<a href="giftcards.php" id="wutnew">Giftcards</a>
-							</li>
-							<li>
 								<a href="index.php#arriwal" id="wutnew">What's New?</a>
-							</li>	
+							</li>							
 							
 						</ul>
 					</div>	
