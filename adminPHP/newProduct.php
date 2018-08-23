@@ -6,7 +6,6 @@
 ?>
 
 <link rel="stylesheet" type="text/css" href="utils.css">
-
 <script src="js/newProduct.js"></script>
 
 <?php
