@@ -18,7 +18,7 @@
 								<div class="slick3 gallery-lb">
 
 								</div>
-									<ul style="padding-top: 30px; margin-left:120px;">
+									<ul id="prodList" style="padding-top: 30px; margin-left:120px;">
 										<li>This item cannot be returned unless it is defective or damaged.</li>
 										<li>This item cannot be modified once you finish payment.</li>
 										<li>This item requires 4-6 business days to be hand crafted</li>
@@ -29,10 +29,24 @@
 					
 					<div class="col-md-6 col-lg-5 p-b-30">
 						<div class="p-r-50 p-t-5 p-lr-0-lg">
-							<h4 class="mtext-105 cl2 js-name-detail p-b-14">
+							<h4 class="mtext-105 cl2 js-name-detail p-b-0">
 							</h4>
+							<div id="wrapper" class="flex-w flex-r-m p-b-0">
+								<div>
+									<input class="star" type="radio" id="star1" name="star" />
+									<label class="rating" for="star1"></label>
+									<input class="star" type="radio" id="star2" name="star" />
+									<label class="rating" for="star2"></label>
+									<input class="star" type="radio" id="star3" name="star" />
+									<label class="rating" for="star3"></label>
+									<input class="star" type="radio" id="star4" name="star" />
+									<label class="rating" for="star4"></label>
+									<input class="star" type="radio" id="star5" name="star" />
+									<label class="rating" for="star5"></label>
+								</div>
+							</div>							
 
-							<p class="stext-102 cl3 p-t-23 description">
+							<p class="stext-102 cl3 p-t-15 description">
 							</p>
 							
 							<!--  -->
@@ -132,18 +146,6 @@
 								</div>	
 							</div>
 
-							<div id="wrapper" class="flex-c-m p-lr-15 m-lr-60">
-								<input class="star" type="radio" id="star1" name="star" />
-								<label class="rating" for="star1"></label>
-								<input class="star" type="radio" id="star2" name="star" />
-								<label class="rating" for="star2"></label>
-								<input class="star" type="radio" id="star3" name="star" />
-								<label class="rating" for="star3"></label>
-								<input class="star" type="radio" id="star4" name="star" />
-								<label class="rating" for="star4"></label>
-								<input class="star" type="radio" id="star5" name="star" />
-								<label class="rating" for="star5"></label>
-							</div>
 						</div>
 					</div>
 				</div>
