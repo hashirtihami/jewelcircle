@@ -1,9 +1,8 @@
- <?php
+<?php
 	require 'db.php';
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') 
 	{
 		if (isset($_POST['register'])) { //registration
-	         $_POST['role']='reseller';
 	        require 'register.php';  
 	    }
 	}
@@ -94,6 +93,13 @@ hr.style14 {
 	  	</div>
 
 	  	<div class="form-group row">
+	    	<label for="inputpass" class="col-sm-2 col-form-label">Password</label>
+	    	<div class="col-sm-10">
+	      		<input type="password" class="form-control" id="inputpass" required name='password'  placeholder="Set your password">
+	    	</div>
+	  	</div>
+
+	  	<div class="form-group row">
 	    	<label for="inputcontact" class="col-sm-2 col-form-label">Contact Number</label>
 	    	<div class="col-sm-10">
 	      		<input type="text" class="form-control" id="inputcontact" required placeholder="Contact Number" name='contact'>
@@ -132,9 +138,10 @@ hr.style14 {
 		<div class="form-group row">
 	    	<label for="inputmsg" class="col-sm-2 col-form-label">Leave us a messge</label>
 	    	<div class="col-sm-10">
-	      		<input type="text" class="form-control" id="inputmsg" placeholder="Leave us a messge">
+	      		<input type="text" class="form-control" id="inputmsg" name="msg" placeholder="Leave us a messge">
 	    	</div>
 		</div>
+		<input type="hidden"  name="role" value="reseller">
 
 		<div class="field-wrap">
             <p style=" padding:0; color:black;">By clicking Submit, you agree to our <a href="terms.php">Terms Of Services</a> and Data Policy. You may receive SMS notifications from us and can opt out at any time.</p>

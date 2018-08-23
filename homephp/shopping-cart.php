@@ -2,7 +2,7 @@
 	require 'connect.inc.php';
 	require 'templates/top.inc.php';
 ?>
-
+<title>Your Cart</title>
 	<!-- breadcrumb -->
 	<div class="container">
 		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">

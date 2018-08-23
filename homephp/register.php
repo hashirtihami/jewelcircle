@@ -1,15 +1,5 @@
 <?php
 session_start();
-if ($_POST["password"] ==! $_POST["confirmpassword"])
-    {   
-        $_SESSION['message']='hogya na chey?';
-        require'error.php';
-            
-    }
-/* Registration process, inserts user info into the database 
-   and sends account confirmation email message
- */
-// Set session variables to be used on profile.php page
 $_SESSION['email'] = $_POST['email'];
 $_SESSION['first_name'] = $_POST['firstname'];
 $_SESSION['last_name'] = $_POST['lastname'];
@@ -32,7 +22,7 @@ $city= $mysqli->escape_string($_POST['city']);
 $country= $mysqli->escape_string($_POST['country']);
 $zipcode= $mysqli->escape_string($_POST['zipcode']);
 $role= $mysqli->escape_string($_POST['role']);
-
+$msg= $mysqli->escape_string($_POST['msg']);
 // Check if user with that email already exists
 $result = $mysqli->query("SELECT * FROM customer WHERE email='$email'") or die($mysqli->error());
 
@@ -52,40 +42,31 @@ else { // Email doesn't already exist in a database, proceed...
 
     // Add user to the database
     if ( $mysqli->query($sql1) ){
-
+        
         $_SESSION['active'] = 1;
         $_SESSION['logged_in'] = 1;
-        $_SESSION['message'] ='ley kr ley gal';
-
-        $to      = $email;
-        $subject = ' Message from jewelcircle.net ';
-        $message_body = '
+        $_SESSION['message'] ='Your Account has been created successfully';
         
-        <div style="text-align:center;">
-                
-                Hello '.$first_name.',<br><br>
-
-                <h3 style="color:#e60044;">Thank you for signing up!</h3><br><br>
-
-                Follow us:<br><br>
-
-                Instagram: https://www.instagram.com/jewel_circle/ <br><br>
-
-                Facebook: https://www.facebook.com/JewelCircle/<br><br>
-
-                For any queries feel free to email us at info@jewelcircle.net
-            </div> ';
+            $to      = $email;
+            $subject = ' Message from jewelcircle.net ';
+            $message_body = '
         
+            <div style="text-align:center;">
+                    
+                    Hello '.$first_name.',<br><br>
 
-        require'mailsender.php';
-        if($role=='reseller')
-        {   
-            $_SESSION['message'] =  "You have successfully submitted the form. Check your email for confirmation";
-            $_SESSION['active'] = 0;
-            $_SESSION['logged_in'] = 0;
-            header("location: success.php");
-        }
-        else
+                    <h3 style="color:#e60044;">Thank you for signing up!</h3><br><br>
+
+                    Follow us:<br><br>
+
+                    Instagram: https://www.instagram.com/jewel_circle/ <br><br>
+
+                    Facebook: https://www.facebook.com/JewelCircle/<br><br>
+
+                    For any queries feel free to email us at info@jewelcircle.net
+                </div> ';
+            require'mailsender.php';
+        
         header("location: userprofile.php"); 
     }
 

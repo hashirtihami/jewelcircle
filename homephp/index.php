@@ -4,6 +4,7 @@
 
 	// $router->add('home', '/', 'userprofile.php');
 ?>
+<title>Jewel Circle</title>
 	<!-- Slider -->
 	<section class="section-slide">
 		<div class="wrap-slick1 rs1-slick1">
@@ -101,7 +102,7 @@
 					</li>
 
 					<li class="nav-item p-b-10">
-						<a class="nav-link" data-toggle="tab" href="#featured" role="tab">Featured</a>
+						<a class="nav-link" data-toggle="tab" href="#featured" role="tab">Top Rated</a>
 					</li>
 				</ul>
 

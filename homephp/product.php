@@ -2,7 +2,7 @@
 	require 'connect.inc.php';
 	require 'templates/top.inc.php';
 ?>
-
+<title>Our Products</title>
 <!-- Product -->
 	<div class="bg0 m-t-23 p-b-140">
 		<div class="container">

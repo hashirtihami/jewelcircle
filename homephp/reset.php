@@ -29,7 +29,7 @@ else {
  require 'templates/top.inc.php';
 ?>
 
-
+<title>Reset Password</title>
  <div class="container" style="padding-top:100px">
     <table class="table table-bordered" >
       <thead>

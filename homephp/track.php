@@ -8,11 +8,6 @@
 	}
 </style>
 <title>Track My Order</title>
-
-
-
-
-
 	<section class="section-slide">
 		<div class="wrap-slick1 rs1-slick1">
 			<div class="slick1">
@@ -24,13 +19,11 @@
 									Track Your Order
 								</span>
 							</div>
-								
 							<div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
 								<form class="ltext-104 cl2 p-t-19 p-b-43 respon1">
 									<input class="form-control form-control-lg form-control-borderless" type="text" placeholder="Enter your email">
 								</h2>
 							</div>
-								
 							<div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600"  >
 								<a style="background-color:#e60044;" href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									Track

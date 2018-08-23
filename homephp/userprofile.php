@@ -1,5 +1,3 @@
-
-
 <?php
 /* Displays user information and some useful messages */
 session_start();
@@ -28,7 +26,7 @@ require 'templates/top.inc.php';
 <link rel="stylesheet" type="text/css" href="css/userprofile.css">
 <link rel="stylesheet" type="text/css" href="css/AdminLTE.css">
 <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
-      
+      <title>My Profile</title>
     <section class="content-header">
       <h1 id="headingz">
         <?php echo $first_name." ".$last_name; ?>

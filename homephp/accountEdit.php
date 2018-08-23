@@ -23,6 +23,7 @@ else {
       $contact = $query_array['contact'];
       $address = $query_array['address'];
       $country = $query_array['country'];
+      $role = $query_array['role'];
       $city = $query_array['city'];
       $zipcode = $query_array['zipcode'];
     }
@@ -35,7 +36,7 @@ require 'templates/top.inc.php';
 <link rel="stylesheet" type="text/css" href="css/userprofile.css">
 <link rel="stylesheet" type="text/css" href="css/AdminLTE.css">
 <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
-      
+    <title>General Account Settings</title>
     <section class="content-header">
       <h1 id="headingz">
            Edit
@@ -81,11 +82,21 @@ require 'templates/top.inc.php';
                   <input id="email" type="text" class="form-control" disabled="disabled" placeholder="registered email here"
                   <?php echo 'value="'.$email.'"';?>
                   >
-                  <div class="input-group-addon btn bg-gray-light" title="Email">
-                  </div>
                 </div>
                 <!-- /.input group -->
               </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-addon" title="Email">
+                    <i class="fas fa-user"></i>
+                  </div>
+                  <input id="email" type="text" class="form-control" disabled="disabled" placeholder="registered email here"
+                  <?php echo 'value="'.$role.'"';?>
+                  >
+                </div>
+                <!-- /.input group -->
+              </div>
+
 
               <!-- /.form group -->
               <div class="form-group">
@@ -171,44 +182,6 @@ require 'templates/top.inc.php';
       </div>
     </div>
   </section>
-
-  <div class="form">
-    
-          
-          <p>
-          <?php 
-     
-          // Display message about account verification link only once
-          if ( isset($_SESSION['message']) )
-          {
-              echo $_SESSION['message'];
-              
-              // Don't annoy the user with more messages upon page refresh
-              unset( $_SESSION['message'] );
-          }
-          
-          ?>
-          </p>
-          
-          <?php
-          
-          // Keep reminding the user this account is not active, until they activate
-          if ( !$active ){
-              echo
-              '<div class="info">
-              Account is unverified, please confirm your email by clicking
-              on the email link!
-              </div>';
-          }
-          //<p><?= $email ?></p>
-          <!-- ?> -->
-          
-          
-          
-          <!-- <a href="logout.php"><button class="button button-block" name="logout"/>Log Out</button></a> -->
-
-    </div>
-    
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script type="text/javascript">
   $(document).ready(function() {
