@@ -1,5 +1,3 @@
-
-
 <?php
 /* Displays user information and some useful messages */
 session_start();
@@ -28,7 +26,7 @@ require 'templates/top.inc.php';
 <link rel="stylesheet" type="text/css" href="css/userprofile.css">
 <link rel="stylesheet" type="text/css" href="css/AdminLTE.css">
 <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
-      
+      <title>My Profile</title>
     <section class="content-header">
       <h1 id="headingz">
         <?php echo $first_name." ".$last_name; ?>
@@ -62,7 +60,7 @@ require 'templates/top.inc.php';
                   $query_run = mysqli_query($conn, $query);
                   if($query_array = mysqli_fetch_array($query_run))
                     $customerID=$query_array["customerID"];
-                  $query = "SELECT orderID,orderDate,totalAmount,address,status FROM `order` o, customer c WHERE (c.customerID=o.customerID && c.customerID=9)";
+                  $query = "SELECT orderID,orderDate,totalAmount,address,status FROM `order` o, customer c WHERE (c.customerID=o.customerID && c.customerID='$customerID')";
                   $query_run = mysqli_query($conn, $query);
                   while(@$query_array = mysqli_fetch_array($query_run)){
                     echo '<tr>

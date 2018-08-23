@@ -32,10 +32,16 @@
               </tr>
             </thead>
             <tbody id="tableBody">
-                <td>Eli</td>
-                <td></td>
-                <td></td>
-                <td></td>
+            <?php 
+              $query = "SELECT CONCAT(first_name, ' ', last_name) 'name', email, contact, role FROM customer";
+              $query_run = mysqli_query($conn, $query);
+              while(@$query_array = mysqli_fetch_array($query_run)){
+                echo '<tr><td>'.$query_array['name'].'</td>
+                      <td>'.$query_array['email'].'</td>
+                      <td>'.$query_array['contact'].'</td>
+                      <td>'.$query_array['role'].'</td></tr>';
+              }
+            ?>
             </tbody>
             <tfoot>
               <tr class="bg-custom">

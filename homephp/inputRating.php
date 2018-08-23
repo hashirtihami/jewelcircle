@@ -10,8 +10,8 @@
 			$query = "SELECT * FROM reviews WHERE (email='$email' && productID='$PID')";
 			$query_run = mysqli_query($conn, $query);
 			if(mysqli_num_rows($query_run)>0){
-				$data['message'] = "Review exists";
-				echo json_encode($data);
+				$query = "UPDATE reviews set rating = $rating WHERE (email='$email' AND productID='$PID')";
+				$query_run = mysqli_query($conn, $query);
 			}
 			else{
 				$query = "INSERT INTO reviews (rating, productID, email) VALUES ('$rating','$PID','$email')";

@@ -26,7 +26,7 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form role="form" action="<?php echo $_SERVER['SCRIPT_NAME']?>" method="POST" enctype="multipart/form-data">
+        <form id="newprodform" role="form" action="<?php echo $_SERVER['SCRIPT_NAME']?>" method="POST" enctype="multipart/form-data">
           <div class="box-body">
           <div id="category" class="form-group">
             <label>Product Category</label>

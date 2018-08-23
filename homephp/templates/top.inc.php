@@ -7,10 +7,9 @@
 <html lang="en">
 <head>
 	<link rel="Shortcut Icon" type="image/x-icon" href="../assets/images/logos/favicon2.ico">
-	<title>Jewel Circle</title>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -18,34 +17,20 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->	
 	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->	
 	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/anydore/anydore.css">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
@@ -75,8 +60,11 @@
 								<a href="product.php" id="prods">Products</a>
 							</li>
 							<li>
+								<a href="giftcards.php" id="wutnew">Giftcards</a>
+							</li>
+							<li>
 								<a href="index.php#arriwal" id="wutnew">What's New?</a>
-							</li>							
+							</li>	
 							
 						</ul>
 					</div>	
@@ -141,26 +129,12 @@
 								<a class="dropdown-item" href="userregister.php">Log In</a>
 								</div>
 								';
-/*
-								  	<?php
-								  	if(isset($_SESSION['logged_in'])){
-								  		if($_SESSION['logged_in']){
-									    	echo '<a class="dropdown-item" href="userprofile.php">Account</a>';
-									    	echo '<a class="dropdown-item" href="logout.php">Logout</a>';
-								  		}
-								  		else
-								    		echo '<a class="dropdown-item" href="userregister.php">Login</a>';
-								  	}
-							  		else
-								    	echo '<a class="dropdown-item" href="userregister.php">Login</a>';
-								  	?>
-*/ 				
 				?>
+
+
 								  </div>
 								</div>
-							<!-- </a> -->
 						</div>
-					<!-- </div> -->
 				</nav>
 			</div>	
 		</div>
@@ -233,30 +207,7 @@
 					}
 			  		else
 				    	echo '<li><a href="userregister.php">Login</a></li>';
-				  	?>				
-					<!-- <li>
-						<a href="userprofile.php">Account</a>
-					</li>
-		
-					<li>
-						<a href="product.php">Logout</a>
-					</li> -->					
+				  	?>			
 			</ul>
 		</div>
-
-		<!-- Modal Search -->
-<!-- 		<div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
-			<div class="container-search-header">
-				<button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
-					<img src="images/icons/icon-close2.png" alt="CLOSE">
-				</button>
-
-				<form class="wrap-search-header flex-w p-l-15">
-					<button class="flex-c-m trans-04">
-						<i class="zmdi zmdi-search"></i>
-					</button>
-					<input class="plh3" type="text" name="search" placeholder="Search...">
-				</form>
-			</div>
-		</div> -->
 	</header>

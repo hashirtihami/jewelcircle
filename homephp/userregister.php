@@ -7,7 +7,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     }
     
     elseif (isset($_POST['register'])) { //user registering
-         $_POST['role']='customer';
         require 'register.php';  
     }
 }
@@ -17,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 require 'templates/top.inc.php';
 //https://www.youtube.com/watch?v=Pz5CbLqdGwM&ab_channel=CleverTechie
 ?>
-
+<title>Log in/Sign up</title>
  <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -79,7 +78,7 @@ require 'templates/top.inc.php';
 	  	<div class="col-lg-5 col-md-5 col-sm-5 ">
 		</div> 	
 	  	<div class="col-lg-2 col-md-2 col-md-5 col-xs-12">
-	      <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;" type="submit" name="login" class="btn btn-primary">Log In</button>
+	      <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 buttonCss" style="background-color:#e60044;" type="submit" name="login" class="btn btn-primary">Log In</button>
 	    </div>
 	    <p style="padding-top:10px; color:#e60044; " >  <a href="forgot.php"> Forgot Password?</a></p> 
 
@@ -113,12 +112,6 @@ require 'templates/top.inc.php';
 	    	</div>
 	  	</div>
 
-	  	<div class="form-group row">
-	    	<label for="confirmpassword" class="col-sm-2 col-form-label">Confirm Password</label>
-	    	<div class="col-sm-10">
-	      		<input type="password" class="form-control" id="confirmpassword" required name='confirmpassword'  placeholder="Confirm Password">
-	    	</div>
-	  	</div>
 
 	  	<div class="form-group row">
 	    	<label for="inputcontact" class="col-sm-2 col-form-label">Contact Number</label>
@@ -157,6 +150,8 @@ require 'templates/top.inc.php';
 	  	<div class="field-wrap">
             <p style=" padding:0; color:black;">To become A Jewel Circle reseller, please <a href="terms.php">Click here</a></p>
         </div>
+        		
+        	<input type="hidden"  name="role" value="customer">
 
 		<div class="field-wrap">
             <p style=" padding:0; color:black;">By clicking Sign Up, you agree to our <a href="terms.php">Terms Of Services</a> and Data Policy. You may receive SMS notifications from us and can opt out at any time.</p>
@@ -166,7 +161,7 @@ require 'templates/top.inc.php';
 		<div class="col-lg-5 col-md-5 col-sm-5 ">
 		</div>
 	    <div class="col-lg-2 col-md-2 col-md-5 col-xs-12" style="padding-bottom:10%">
-	      <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;" type="submit" name="register" class="btn btn-primary">Sign Up</button>
+	      <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 buttonCss" style="background-color:#e60044;" type="submit" name="register" class="btn btn-primary">Sign Up</button>
 	    </div>
 	  </div>
 

@@ -1,4 +1,15 @@
 <?php
+/* Displays user information and some useful messages */
+session_start();
+// Check if user is logged in using the session variable
+if ( $_SESSION['logged_in'] != 1 ) {
+  $_SESSION['message'] = "You must log in before viewing this page!";
+  if( isset($_SESSION['message']))
+  {  
+    header("location: error.php");
+    exit();    
+  }
+}
   require 'templates/top.inc.php';
 ?>
 
@@ -7,8 +18,8 @@
     <div class="col-sm-12 col-lg-6 col-xl-6 m-lr-auto m-b-50">
       <div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-25 m-r--38 m-lr-0-xl">
         <h4 class="mtext-109 cl2 p-b-30">Pay Online</h4>
-        <p>You will be directed to a secure 2checkout payment gateway to complete the transaction.</p>
-        <form action='https://sandbox.2checkout.com/checkout/purchase' method='post'>
+        <p> <i style="color:red;" class="fas fa-exclamation-circle"></i> Online payment gateway is temporarily disabled. Apologies for the inconvenience</p>
+        <form method='post'>
           <input type='hidden' name='sid' value='901389480' />
           <input type='hidden' name='mode' value='2CO' />
           <input type='hidden' name='li_0_name' value='product id' />
@@ -29,18 +40,20 @@
           <input type='hidden' name='email' value='example@2co.com' />
           <input type='hidden' name='phone' value='614-921-2450' />
           <div class="p-t-20">
-              <input type="submit" name='submit' value='Checkout' class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer"/>
+              <button type="submit" style="background-color:grey"; name='submit' disabled value='Checkout' aria-disabled="true" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer"> Checkout <button>
           </div>
         </form>
       </div>
     </div>
+
     <div class="col-sm-12 col-lg-6 col-xl-6 m-lr-auto m-b-50">
       <div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm">
         <form action="payment-success.php">
           <h4 class="mtext-109 cl2 p-b-30">
             Cash on Delivery
           </h4>
-          <p>Your package will be delivered to you within 10-15 days</p>
+          <p>Estimated Delivery Time is  5-7 business days for Pakistan.. <br>
+            * Note: The delivery time mentioned above does not include order processing time that usually varies from 1 to 3 days.</p>
           <div class="p-t-20">
             <button type="submit" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
              Checkout
@@ -49,6 +62,7 @@
         </form>
       </div>
     </div>
+    
   </div>
 </div>
 <script src="https://www.2checkout.com/static/checkout/javascript/direct.min.js"></script>

@@ -18,7 +18,7 @@
   	}
 	require 'templates/top.inc.php';
 ?>
-
+<title>Checkout</title>
 <div style="padding-top:50px" class="container">
 	<div class="row" style="margin-top: 10px;">
 		<div class="col-sm-5 col-lg-5 col-xl-5 m-lr-auto m-b-50">

@@ -8,6 +8,7 @@ if(isset($_SESSION['message'])&&!empty($_SESSION['message'])){
 <!-- <?php
 // require 'templates/top.inc.php'; 
 ?> -->
+<title>Error</title>
 <div class="container"  style="text-align:center;">
     <div class="form">
         <h1 style="color:#e60044; font-size:200px;  padding-bottom:10px; padding-top:120px;">
