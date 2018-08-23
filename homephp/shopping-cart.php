@@ -41,41 +41,71 @@
 
 								<?php
 								if(isset($_SESSION["products"])){
-									for ($i=0, $count = count($_SESSION["products"]); $i < $count; $i++) { 
-										$productID = $_SESSION["products"][$i]["productID"];
-										$title = $_SESSION["products"][$i]["title"];
-										$price = $_SESSION["products"][$i]["price"];
-										$quantity = $_SESSION["products"][$i]["quantity"];
-										$name = $_SESSION["products"][$i]["nameOnProduct"];
-										$query = "SELECT imageDestination FROM images WHERE productID='$productID'";
-										$query_run = mysqli_query($conn, $query);
-										if(@$query_array = mysqli_fetch_array($query_run)){
-											$imgPath = $query_array['imageDestination'];
+									for ($i=0, $count = count($_SESSION["products"]); $i < $count; $i++) {
+										if(isset($_SESSION['products'][$i]['cardName'])){
+											$cardName = $_SESSION["products"][$i]["cardName"];
+											$cardCost = $_SESSION["products"][$i]["cardCost"];
+											echo '<tr class="table_row">';
+												echo '<td class="column-1">';
+													echo '<div class="how-itemcart1">';
+														echo '<img src="../assets/images/giftcards/'.$cardName.'-thumb.jpg" alt="IMG">';
+													echo '</div>';
+												echo '</td>';
+												echo '<td data-PID="'.$cardName.'" class="column-2">'.$cardName.'</td>';
+												echo '<td class="column-3 unit-price">Rs '.$cardCost.'</td>';
+												echo '<td>-</td>';
+												echo '<td class="column-4">';
+													echo '<div class="wrap-num-product flex-w m-l-auto m-r-0">';
+														echo '<div id="cart-prod-minus" class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">';
+															echo '<i class="fs-16 zmdi zmdi-minus"></i>';
+														echo '</div>';
+
+														echo '<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="1">';
+
+														echo '<div id="cart-prod-plus" class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">';
+															echo '<i class="fs-16 zmdi zmdi-plus"></i>';
+														echo '</div>';
+													echo '</div>';
+												echo '</td>';
+												echo '<td class="column-5">Rs '.$cardCost.'</td>';
+											echo '</tr>';
+										} 
+										if(isset($_SESSION['products'][$i]['productID'])){
+											$productID = $_SESSION["products"][$i]["productID"];
+											$title = $_SESSION["products"][$i]["title"];
+											$price = $_SESSION["products"][$i]["price"];
+											$quantity = $_SESSION["products"][$i]["quantity"];
+											$name = $_SESSION["products"][$i]["nameOnProduct"];
+											$query = "SELECT imageDestination FROM images WHERE productID='$productID'";
+											$query_run = mysqli_query($conn, $query);
+											if(@$query_array = mysqli_fetch_array($query_run)){
+												$imgPath = $query_array['imageDestination'];
+											}
+											echo '<tr class="table_row">';
+												echo '<td class="column-1">';
+													echo '<div class="how-itemcart1">';
+														echo '<img src="'.$imgPath.'" alt="IMG">';
+													echo '</div>';
+												echo '</td>';
+												echo '<td data-PID="'.$productID.'" class="column-2">'.$title.'</td>';
+												echo '<td class="column-3 unit-price">Rs '.$price/$quantity.'</td>';
+												echo '<td>'.$name.'</td>';
+												echo '<td class="column-4">';
+													echo '<div class="wrap-num-product flex-w m-l-auto m-r-0">';
+														echo '<div id="cart-prod-minus" class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">';
+															echo '<i class="fs-16 zmdi zmdi-minus"></i>';
+														echo '</div>';
+
+														echo '<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="'.$quantity.'">';
+
+														echo '<div id="cart-prod-plus" class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">';
+															echo '<i class="fs-16 zmdi zmdi-plus"></i>';
+														echo '</div>';
+													echo '</div>';
+												echo '</td>';
+												echo '<td class="column-5">Rs '.$price.'</td>';
+											echo '</tr>';
 										}
-										echo '<tr class="table_row">';
-											echo '<td class="column-1">';
-												echo '<div class="how-itemcart1">';
-													echo '<img src="'.$imgPath.'" alt="IMG">';
-												echo '</div>';
-											echo '</td>';
-											echo '<td data-PID="'.$productID.'" class="column-2">'.$title.'</td>';
-											echo '<td class="column-3 unit-price">Rs '.$price/$quantity.'</td>';
-											echo '<td>'.$name.'</td>';
-											echo '<td class="column-4">';
-												echo '<div class="wrap-num-product flex-w m-l-auto m-r-0">';
-													echo '<div id="cart-prod-minus" class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">';
-														echo '<i class="fs-16 zmdi zmdi-minus"></i>';
-													echo '</div>';
-
-													echo '<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="'.$quantity.'">';
-
-													echo '<div id="cart-prod-plus" class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">';
-														echo '<i class="fs-16 zmdi zmdi-plus"></i>';
-													echo '</div>';
-												echo '</div>';
-											echo '</td>';
-											echo '<td class="column-5">Rs '.$price.'</td>';
-										echo '</tr>';
 									}
 								}
 								?>

@@ -74,7 +74,7 @@
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04" data-filter="twoplus">
-										$20000+
+										Rs20000+
 									</a>
 								</li>
 							</ul>

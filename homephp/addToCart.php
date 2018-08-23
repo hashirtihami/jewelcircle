@@ -44,4 +44,33 @@
 		}
 		echo json_encode($data);
 	}
+	if(isset($_POST['cardName'])&&isset($_POST["cardCost"])){
+		if(isset($_SESSION['products'])){
+			$productExists = 0;
+			foreach ($_SESSION["products"] as $key) {
+				if($key['cardName']===$_POST['cardName']){
+					$productExists = 1;
+					break;
+				}
+			}
+			if(!$productExists){
+				$_SESSION["products"][] = array('cardName'=>$_POST["cardName"],
+					                             'cardCost'=>$_POST['cardCost']
+												);
+				$data["count"] = count($_SESSION["products"]);
+				$data["session"] = $_SESSION;
+			}
+			else{
+				$data["error"] = "Product Already in Cart";
+			}
+		}
+		else{
+			$_SESSION["products"][] = array('cardName'=>$_POST["cardName"],
+				                             'cardCost'=>$_POST['cardCost']
+											);
+			$data["count"] = count($_SESSION["products"]);
+			$data["session"] = $_SESSION;
+		}
+		echo json_encode($data);
+	}
 ?>

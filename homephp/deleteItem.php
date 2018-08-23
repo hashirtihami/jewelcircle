@@ -1,9 +1,9 @@
 <?php
 	session_start();
 	$PID = $_POST["PID"];
+	$i = 0;
 	foreach ($_SESSION["products"] as $key){
-		$i = 0;
-		if($key["productID"]===$PID){
+		if($key["productID"]===$PID||$key['cardName']===$PID){
 			print_r($_SESSION["products"]);
 			print_r($key);
 			unset($_SESSION["products"][$i]);

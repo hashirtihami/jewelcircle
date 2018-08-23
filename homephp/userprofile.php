@@ -54,6 +54,7 @@ require 'templates/top.inc.php';
                   <th style="width: 10px">ID</th>
                   <th>Date</th>
                   <th>Status</th>
+                  <th>Invoice</th>
                 </tr>
                 <?php
                   $query = "SELECT customerID FROM customer WHERE email='".$email."'";
@@ -64,9 +65,10 @@ require 'templates/top.inc.php';
                   $query_run = mysqli_query($conn, $query);
                   while(@$query_array = mysqli_fetch_array($query_run)){
                     echo '<tr>
-                          <td>'.$query_array['orderID'].'</td>
+                          <td class="data">'.$query_array['orderID'].'</td>
                           <td>'.$query_array['orderDate'].'</td>
                           <td>'.$query_array['status'].'</td>
+                          <td><button type="button" class="btn bg-grey btnPdf" title="Invoice Download"><i class="fas fa-file-download"></i></button></td>
                           </tr>';
                   }
                 ?>
@@ -91,6 +93,7 @@ require 'templates/top.inc.php';
 
     
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script type="text/javascript" src="vendor/jspdf/jspdf.debug.js"></script>
 <script src="js/index.js"></script>
 
 <?php

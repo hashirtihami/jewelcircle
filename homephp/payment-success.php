@@ -29,25 +29,34 @@ if ( $_SESSION['logged_in'] != 1 ) {
 		echo $query;
 		$query_run = mysqli_query($conn, $query);
 		foreach ($products as $key) {
-			$plating = $key['plating'];
-			$language = $key['language'];
-			$nametype = $key['nametype'];
-			$quantity = $key['quantity'];
-			$query = "SELECT platingID FROM plating WHERE platingType='".$plating."'";
-			$query_run = mysqli_query($conn, $query);
-			if($query_array = mysqli_fetch_array($query_run))
-				$platingID = $query_array['platingID'];
-			$query = "SELECT languageID FROM language WHERE languageName='".$language."'";
-			$query_run = mysqli_query($conn, $query);
-			if($query_array = mysqli_fetch_array($query_run))
-				$languageID = $query_array['languageID'];
-			$query = "SELECT nameTypeID FROM nametype WHERE nameTypeValue='".$nametype."'";
-			$query_run = mysqli_query($conn, $query);
-			if($query_array = mysqli_fetch_array($query_run))
-				$nameTypeID = $query_array['nameTypeID'];
-			$detailsID = $key['productID'].$languageID.$platingID.$nameTypeID;
-			$query = "INSERT INTO order_product (orderID, productID, detailsID, nameOnProduct, quantity) VALUES ((SELECT orderID FROM `order` ORDER BY orderID DESC LIMIT 1), '".$key['productID']."', '".$detailsID."', '".$key['nameOnProduct']."', '".$quantity."')";
-			$query_run = mysqli_query($conn, $query);
+			if(isset($key['productID'])){
+				$plating = $key['plating'];
+				$language = $key['language'];
+				$nametype = $key['nametype'];
+				$quantity = $key['quantity'];
+				$query = "SELECT platingID FROM plating WHERE platingType='".$plating."'";
+				$query_run = mysqli_query($conn, $query);
+				if($query_array = mysqli_fetch_array($query_run))
+					$platingID = $query_array['platingID'];
+				$query = "SELECT languageID FROM language WHERE languageName='".$language."'";
+				$query_run = mysqli_query($conn, $query);
+				if($query_array = mysqli_fetch_array($query_run))
+					$languageID = $query_array['languageID'];
+				$query = "SELECT nameTypeID FROM nametype WHERE nameTypeValue='".$nametype."'";
+				$query_run = mysqli_query($conn, $query);
+				if($query_array = mysqli_fetch_array($query_run))
+					$nameTypeID = $query_array['nameTypeID'];
+				$detailsID = $key['productID'].$languageID.$platingID.$nameTypeID;
+				$query = "INSERT INTO order_product (orderID, productID, detailsID, nameOnProduct, quantity, type) VALUES ((SELECT orderID FROM `order` ORDER BY orderID DESC LIMIT 1), '".$key['productID']."', '".$detailsID."', '".$key['nameOnProduct']."', '".$quantity."', 'product')";
+				$query_run = mysqli_query($conn, $query);
+			}
+			if(isset($key['cardName'])){
+				$cardName = $key['cardName'];
+				$cardCost = $key['cardCost'];
+				$quantity = $key['quantity'];
+				$query = "INSERT INTO order_product (orderID, productID, detailsID, nameOnProduct, quantity, type) VALUES ((SELECT orderID FROM `order` ORDER BY orderID DESC LIMIT 1), (SELECT giftcardId FROM giftcard WHERE cardName = '$cardName'), 'NULL', 'NULL', '".$quantity."', 'giftcard')";
+				$query_run = mysqli_query($conn, $query);
+			}
 		}
 	unset($_SESSION['products']);
 	unset($_SESSION['total']);
