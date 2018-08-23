@@ -33,6 +33,7 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="fonts/anydore/anydore.css">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="top.css">
 </head>
 <body class="animsition">
 	
@@ -59,6 +60,9 @@
 							<li>
 								<a href="product.php" id="prods">Products</a>
 							</li>
+							<li>
+								<a href="giftcards.php" id="wutnew">Giftcards</a>
+							</li>							
 							<li>
 								<a href="index.php#arriwal" id="wutnew">What's New?</a>
 							</li>							
@@ -116,26 +120,24 @@
 										</div>';
 						}
 					else
-						echo ' <div class="dropdown-menu" id="dropdown">
-								<a class="dropdown-item" href="userregister.php">Log In</a>
+						echo ' <div class="dropdown-menu" id="loginAnchor">
+								<a class="dropdown-item" href="userregister.php">Login</a>
 								</div>
 								';
 					}
 					else
-						echo ' <div class="dropdown-menu" id="dropdown">
-								<a class="dropdown-item" href="userregister.php">Log In</a>
+						echo ' <div class="dropdown-menu" id="loginAnchor">
+								<a class="dropdown-item" href="userregister.php">Login</a>
 								</div>
 								';
 				?>
 
-
-								  </div>
-								</div>
-						</div>
+					  </div>
+					</div>
+						
 				</nav>
 			</div>	
 		</div>
-
 		<!-- Header Mobile -->
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->		
@@ -193,6 +195,12 @@
 					<li>
 						<a href="product.php">Products</a>
 					</li>
+					<li>
+						<a href="giftcards.php" id="wutnew">Giftcards</a>
+					</li>							
+					<li>
+						<a href="index.php#arriwal" id="wutnew">What's New?</a>
+					</li>						
 				  	<?php
 				  	if(isset($_SESSION['logged_in'])){
 				  		if($_SESSION['logged_in']){
@@ -208,3 +216,23 @@
 			</ul>
 		</div>
 	</header>
+<script type="text/javascript">
+	var animateButton = function(e) {
+
+  e.preventDefault;
+  //reset animation
+  e.target.classList.remove('animate');
+  
+  e.target.classList.add('animate');
+  setTimeout(function(){
+    e.target.classList.remove('animate');
+  },700);
+};
+
+var bubblyButtons = document.getElementsByClassName("bubbly-button");
+
+for (var i = 0; i < bubblyButtons.length; i++) {
+  bubblyButtons[i].addEventListener('click', animateButton, false);
+}
+
+</script>
