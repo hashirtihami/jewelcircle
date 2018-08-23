@@ -439,6 +439,7 @@
             var DATA = JSON.parse(data);
             console.log(DATA);
             $("#numProdInCart").attr("data-notify", DATA.count);
+            $("#numProdInCartmob").attr("data-notify", DATA.count);
             if(DATA.error){
                 swal("Sorry", DATA.error, "error");
             }
