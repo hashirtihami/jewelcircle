@@ -80,8 +80,8 @@
       $query = "INSERT INTO giftcard (cardName, cardCost, fileExt) VALUES ('$giftCardName', '$price', '$fileExt')";
       if(mysqli_query($conn, $query)){
         echo mysqli_use_result($conn);
+        echo "<meta http-equiv='refresh' content='0'>";
       }
-      echo "<meta http-equiv='refresh' content='0'>";
     }
     else{
       echo "<script type='text/javascript'>

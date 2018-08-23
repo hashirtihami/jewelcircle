@@ -154,23 +154,23 @@
       // 1000-1200
       th_tw: function() {
         var number = $(this).find('.discountedPrice').text().split("Rs")[1];
-        return parseInt( number, 10 ) >= 1000 && parseInt( number, 10 ) <= 1200;
+        return parseInt( number, 10 ) >= 1000 && parseInt( number, 10 ) <= 5000;
       },
       tw_fif: function() {
         var number = $(this).find('.discountedPrice').text().split("Rs")[1];
-        return parseInt( number, 10 ) >= 1200 && parseInt( number, 10 ) <= 1500;
+        return parseInt( number, 10 ) >= 5000 && parseInt( number, 10 ) <= 10000;
       },
       fif_eit: function() {
         var number = $(this).find('.discountedPrice').text().split("Rs")[1];
-        return parseInt( number, 10 ) >= 1500 && parseInt( number, 10 ) <= 1800;
+        return parseInt( number, 10 ) >= 10000 && parseInt( number, 10 ) <= 15000;
       },
       eit_two: function() {
         var number = $(this).find('.discountedPrice').text().split("Rs")[1];
-        return parseInt( number, 10 ) >= 1800 && parseInt( number, 10 ) <= 2000;
+        return parseInt( number, 10 ) >= 15000 && parseInt( number, 10 ) <= 20000;
       },
       twoplus: function() {
         var number = $(this).find('.discountedPrice').text().split("Rs")[1];
-        return parseInt( number, 10 ) >= 2000;
+        return parseInt( number, 10 ) >= 20000;
       }
     };
 

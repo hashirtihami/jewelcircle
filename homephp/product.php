@@ -67,31 +67,31 @@
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04" data-filter="th_tw">
-										Rs1000 - Rs1200
+										Rs1000 - Rs5000
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04" data-filter="tw_fif">
-										Rs1200 - Rs1500
+										Rs5000 - Rs10000
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04" data-filter="fif_eit">
-										Rs1500 - Rs1800
+										Rs10000 - Rs15000
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04" data-filter="eit_two">
-										Rs1800 - Rs2000
+										Rs15000 - Rs20000
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04" data-filter="twoplus">
-										$2000+
+										$20000+
 									</a>
 								</li>
 							</ul>
