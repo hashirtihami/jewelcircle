@@ -2470,7 +2470,7 @@ input.num-product::-webkit-inner-spin-button {
 
 .ltext-202 {
   font-family: PlayfairDisplay-Regular;
-  font-size: 28px;
+  font-size: 26px;
   line-height: 1.2857;
 }
 
@@ -3273,6 +3273,7 @@ input.num-product::-webkit-inner-spin-button {
   .p-lr-0-lg {padding-left: 0; padding-right: 0;}
   .p-lr-15-lg {padding-left: 15px; padding-right: 15px;}
   .p-l-0-lg {padding-left: 0;}
+  .p-l-200-lg {padding-left: 200px;}
   .p-r-0-lg{padding-right: 0;}
   .p-l-15-lg {padding-left: 15px;}
   .p-r-15-lg {padding-right: 15px;}
@@ -3306,6 +3307,7 @@ input.num-product::-webkit-inner-spin-button {
   .p-0-md {padding: 0;}
   .p-lr-0-md {padding-left: 0; padding-right: 0;}
   .p-lr-15-md {padding-left: 15px; padding-right: 15px;}
+  .p-lr-10-md {padding-left: 10px; padding-right: 0px;} //custom made
   .p-l-0-md {padding-left: 0;}
   .p-r-0-md{padding-right: 0;}
   .p-l-15-md {padding-left: 15px;}
@@ -3339,6 +3341,7 @@ input.num-product::-webkit-inner-spin-button {
   .p-r-0-sm{padding-right: 0;}
   .p-l-15-sm {padding-left: 15px;}
   .p-r-15-sm {padding-right: 15px;}
+  .p-l-25-sm {padding-left: 25px;}
 
   .w-full-sm {width: 100%;}
 
