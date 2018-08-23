@@ -121,13 +121,13 @@
 						}
 					else
 						echo ' <div class="dropdown-menu" id="loginAnchor">
-								<a class="dropdown-item" href="userregister.php">Log In</a>
+								<a class="dropdown-item" href="userregister.php">Login</a>
 								</div>
 								';
 					}
 					else
 						echo ' <div class="dropdown-menu" id="loginAnchor">
-								<a class="dropdown-item" href="userregister.php">Log In</a>
+								<a class="dropdown-item" href="userregister.php">Login</a>
 								</div>
 								';
 				?>
