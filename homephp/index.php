@@ -11,7 +11,7 @@
 			<div class="slick1">
 				<div class="item-slick1" style="background-image: url(../assets/images/posters/jc1.jpg);">
 					<div class="container h-full">
-						<div class="flex-col-l-m h-full p-t-100 p-b-30">
+						<div class="flex-col-l-m h-full p-t-300 p-b-30">
 							<div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
 								<span class="ltext-202 cl2 respon2">
 									Jewel Circle
@@ -19,7 +19,7 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
-								<h2 class="ltext-104 cl2 p-t-19 p-b-43 respon1">
+								<h2 class="ltext-104 cl2 p-t-19 p-b-30 respon1">
 									New arrivals
 								</h2>
 							</div>
@@ -35,7 +35,7 @@
 
 				<div class="item-slick1" style="background-image: url(../assets/images/posters/jc3.jpg);">
 					<div class="container h-full">
-						<div class="flex-col-l-m h-full p-t-100 p-b-30">
+						<div class="flex-col-l-m h-full p-t-300 p-b-30">
 							<div class="layer-slick1 animated visible-false" data-appear="rollIn" data-delay="0">
 								<span class="ltext-202 cl2 respon2">
 									Jewel Circle
@@ -43,7 +43,7 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="lightSpeedIn" data-delay="800">
-								<h2 class="ltext-104 cl2 p-t-19 p-b-43 respon1">
+								<h2 class="ltext-104 cl2 p-t-19 p-b-30 respon1">
 									Name Ring
 								</h2>
 							</div>
@@ -59,9 +59,9 @@
 
 				<div class="item-slick1" style="background-image: url(../assets/images/posters/giftcards.jpg);">
 					<div class="container h-full">
-						<div class="flex-col-l-m h-full p-t-300 p-l-300 p-l-200-lg p-lr-10-md p-l-25-sm p-b-30">
+						<div class="flex-col-l-m h-full p-t-300 p-lr-10-md p-l-25-sm p-b-30">
 							<div class="layer-slick1 animated visible-false" data-appear="rotateInDownLeft" data-delay="0">
-								<span class="ltext-202 cl2 p-t-10 respon2">
+								<span class="ltext-202 cl2 respon2">
 									Make the gift special with a hand made card
 								</span>
 							</div>
