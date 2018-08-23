@@ -102,7 +102,7 @@
 					</li>
 
 					<li class="nav-item p-b-10">
-						<a class="nav-link" data-toggle="tab" href="#featured" role="tab">Featured</a>
+						<a class="nav-link" data-toggle="tab" href="#featured" role="tab">Top Rated</a>
 					</li>
 				</ul>
 

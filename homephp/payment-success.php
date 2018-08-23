@@ -10,7 +10,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
     exit();    
   }
 }
-<?php 
+
 	require 'connect.inc.php';
 	session_start();
 	date_default_timezone_set('Asia/Karachi');
