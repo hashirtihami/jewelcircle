@@ -140,6 +140,7 @@
 								<label class="rating" for="star5"></label>
 							</div>								
 							</div>
+<<<<<<< HEAD
 
 							<!--  -->
 							<div class="flex-w flex-m p-l-100 p-t-40 respon7">
@@ -155,6 +156,8 @@
 									<i class="fa fa-google-plus"></i>
 								</a>
 							</div>
+=======
+>>>>>>> 9c31c672e3dd9567dfb3df8eca2d9f7097ddc08d
 						</div>
 					</div>
 				</div>

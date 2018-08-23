@@ -106,7 +106,11 @@
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 	<script src="vendor/animsition/js/animsition.min.js"></script>
 	<script src="vendor/bootstrap/js/popper.js"></script>
+<<<<<<< HEAD
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+=======
+	<!-- <script src="vendor/bootstrap/js/bootstrap.min.js"></script> -->
+>>>>>>> 9c31c672e3dd9567dfb3df8eca2d9f7097ddc08d
 	<script src="vendor/select2/select2.min.js"></script>
 	<script>
 		$(".js-select2").each(function(){
