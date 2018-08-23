@@ -453,6 +453,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 .main-menu > li:hover > a {
   text-decoration: none;
   color: #e60040;
+  font-size: 16px;
 }
 
 .main-menu > li:hover > .sub-menu {
@@ -654,6 +655,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 .main-menu > li.active-menu > a:hover {
   color: #e60040;
+  font-size: 16px !important;
 }
 
 
