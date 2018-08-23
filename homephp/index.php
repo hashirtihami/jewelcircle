@@ -9,7 +9,7 @@
 	<section class="section-slide">
 		<div class="wrap-slick1 rs1-slick1">
 			<div class="slick1">
-				<div class="item-slick1" style="background-image: url(../assets/images/posters/jc2.jpg);">
+				<div class="item-slick1" style="background-image: url(../assets/images/posters/jc6.jpg);">
 					<div class="container h-full">
 						<div class="flex-col-l-m h-full p-t-100 p-b-30">
 							<div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
@@ -218,6 +218,7 @@
 			</div>
 		</div>
 	</section>
+
 
 
 <?php
