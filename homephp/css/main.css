@@ -3323,6 +3323,12 @@ input.num-product::-webkit-inner-spin-button {
   }
 
 }
+@media (max-width: 350px) {
+  .p-t-sm1 {padding-top: 200px;}
+}
+@media (max-width: 450px) {
+  .p-t-sm2 {padding-top: 250px;}
+}
 
 
 /*//////////////////////////////////////////////////////////////////
