@@ -539,12 +539,14 @@
         });
     });
     $("#proceedToCheckout").on("click", function(){
-        var quantity = $("input[name='num-product']").parent().find("input[name='num-product']").val();
-        var PID = $("input[name='num-product']").parent().parent().parent().find(".column-2").attr("data-PID");
-        console.log(quantity);
-        console.log(PID);
-        $.post("fixQty.php", {PID: PID, quantity: quantity}, function(data){
-            console.log(data);
+        $("input[name='num-product']").each(function(){
+            var quantity = $(this).parent().find("input[name='num-product']").val();
+            var PID = $(this).parent().parent().parent().find(".column-2").attr("data-PID");
+            console.log(quantity);
+            console.log(PID);
+            $.post("fixQty.php", {PID: PID, quantity: quantity}, function(data){
+                console.log(data);
+            });
         });
         $.post("sendTotal.php", {total: total}, function(){
         });
@@ -637,7 +639,7 @@
             doc.text(29, 64, DATA.city+","+DATA.zipcode);
 
             doc.text(148,50,"OrderID:");
-            doc.text(166,50,"20");
+            doc.text(166,50,DATA.orderID);
             doc.text(148,57,"Order Date:");
             doc.text(174,57,DATA.date.split(" ")[0]);
 

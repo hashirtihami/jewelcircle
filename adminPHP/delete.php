@@ -16,8 +16,9 @@
 			if(mysqli_query($conn, $query)){
 			    echo mysqli_use_result($conn);
 			}
-			$query = "DELETE FROM `order` WHERE orderID='$delete'";
-			if(mysqli_query($conn,$query)){
+			$query = "DELETE FROM `order` WHERE orderID='$delete';
+					DELETE FROM `order_product` WHERE orderID='$delete'";
+			if(mysqli_multi_query($conn,$query)){
 				echo mysqli_use_result($conn);
 			}
 		}
