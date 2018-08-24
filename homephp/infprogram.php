@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	if(isset($_POST['register'])) { //user registering
          $_POST['role']='influencer';
-        require 'infregister.php';
+        require 'infregister';
     }
 }
 ?>
@@ -125,7 +125,7 @@ hr.style14 {
 <div style="display: none;" id="forminf" class="container">
 	<h2 style="padding-top:90px; color:#e60044; font-family:Poppins-Medium; font-size: 20px;">Complete Our Form</h2>
 	 <hr>
-	<form action="infprogram.php" method="post">
+	<form action="infprogram" method="post">
 	  <div class="form-group row">
 	    <label style="padding-top: 5px;" for="inputname" class="col-sm-2 col-form-label">Name</label>
 	    <div style="padding-top: 5px;" class="col-sm-5">

@@ -25,7 +25,7 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
-								<a href="product.php" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 buttonCss">
+								<a href="product" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 buttonCss">
 									Shop Now
 								</a>
 							</div>
@@ -49,7 +49,7 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="slideInUp" data-delay="1600">
-								<a href="product.php" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 p-b-5 hov-btn1 p-lr-15 trans-04 buttonCss">
+								<a href="product" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 p-b-5 hov-btn1 p-lr-15 trans-04 buttonCss">
 									Shop Now
 								</a>
 							</div>
@@ -73,7 +73,7 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
-								<a href="giftcards.php" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 buttonCss">
+								<a href="giftcards" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 buttonCss">
 									Shop Now
 								</a>
 							</div>

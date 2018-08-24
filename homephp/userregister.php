@@ -61,7 +61,7 @@ require 'templates/top.inc.php';
 	<h2 style="padding-top:10%; color:#e60044;">Log In</h2><p style=" color:#e60044; " > Or create new <a href="#signupform"> Account?</a></p> 
 	<hr>
 	
-	<form action="userregister.php" method="post">
+	<form action="userregister" method="post">
 	  	
 		<div class="form-group row " >
 	    	
@@ -80,14 +80,14 @@ require 'templates/top.inc.php';
 	  	<div class="col-lg-2 col-md-2 col-md-5 col-xs-12">
 	      <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="background-color:#e60044;" type="submit" name="login" class="btn btn-primary">Log In</button>
 	    </div>
-	    <p style="padding-top:10px; color:#e60044; " >  <a href="forgot.php"> Forgot Password?</a></p> 
+	    <p style="padding-top:10px; color:#e60044; " >  <a href="forgot"> Forgot Password?</a></p> 
 
 	     
 	</form>
 	
 	<h2 id="signupform" style="padding-top:100px; color:#e60044;">Sign Up</h2>
 	<hr>
-	<form onSubmit="return validate();" action="userregister.php" method="post">
+	<form onSubmit="return validate();" action="userregister" method="post">
 	  	<div class="form-group row">
 	    	<label style="padding-top: 5px;" for="inputname" class="col-sm-2 col-form-label">Name</label>
 	    	<div style="padding-top: 5px;" class="col-sm-5">
@@ -148,13 +148,13 @@ require 'templates/top.inc.php';
 	    	</div>
 	  	</div>
 	  	<div class="field-wrap">
-            <p style=" padding:0; color:black;">To become A Jewel Circle reseller, please <a href="terms.php">Click here</a></p>
+            <p style=" padding:0; color:black;">To become A Jewel Circle reseller, please <a href="terms">Click here</a></p>
         </div>
         		
         	<input type="hidden"  name="role" value="customer">
 
 		<div class="field-wrap">
-            <p style=" padding:0; color:black;">By clicking Sign Up, you agree to our <a href="terms.php">Terms Of Services</a> and Data Policy. You may receive SMS notifications from us and can opt out at any time.</p>
+            <p style=" padding:0; color:black;">By clicking Sign Up, you agree to our <a href="terms">Terms Of Services</a> and Data Policy. You may receive SMS notifications from us and can opt out at any time.</p>
         </div>
 
 	  	<div class="form-group row">

@@ -19,7 +19,7 @@ require 'templates/top.inc.php';
                         <span style="color:#e60044;  "> </span> '.$_SESSION['message'].'<br><br>
                         <span>
                             <!--
-                            <a href="index.php">
+                            <a href="index">
                                 <button style="color:#e60044;  padding-bottom:200px;" class="button button-block"/> Jewel Circle.
                                 </button>
                             </a> 
@@ -27,7 +27,7 @@ require 'templates/top.inc.php';
                         </span>
                     <h2>';
                 else:
-                    header( "location: index.php" ); 
+                    header( "location: index" ); 
                 endif;
             ?>
         </p>  

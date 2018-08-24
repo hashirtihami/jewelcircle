@@ -8,22 +8,22 @@
 					</h4>
 					<ul>
 						<li class="p-b-10">
-							<a href="track.php" class=" stext-107 cl7 hov-cl1 trans-04">
+							<a href="track" class=" stext-107 cl7 hov-cl1 trans-04">
 								Track My Order
 							</a>
 						</li>
 						<li class="p-b-10">
-							<a href="policy.php" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="policy" class="stext-107 cl7 hov-cl1 trans-04">
 								Delivery Policy
 							</a>
 						</li>
 						<li class="p-b-10">
-							<a href="terms.php" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="terms" class="stext-107 cl7 hov-cl1 trans-04">
 								Terms Of Services
 							</a>
 						</li>
 						<li class="p-b-10">
-							<a href="faq.php" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="faq" class="stext-107 cl7 hov-cl1 trans-04">
 								FAQ
 							</a>
 						</li>
@@ -35,7 +35,7 @@
 					</h4>
 					<ul>
 						<li class="p-b-10">
-							<a href="aboutus.php" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="aboutus" class="stext-107 cl7 hov-cl1 trans-04">
 								About Us
 							</a>
 						</li>
@@ -45,12 +45,12 @@
 							</a>
 						</li>
 						<li class="p-b-10">
-							<a href="infprogram.php" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="infprogram" class="stext-107 cl7 hov-cl1 trans-04">
 								Influencer Program
 							</a>
 						</li>
 						<li class="p-b-10">
-							<a href="reseller.php" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="reseller" class="stext-107 cl7 hov-cl1 trans-04">
 								Reseller Inquiry
 							</a>
 						</li>

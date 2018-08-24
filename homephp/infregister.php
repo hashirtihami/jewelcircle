@@ -66,12 +66,12 @@ else { // Email doesn't already exist in a database, proceed...
         
 
         require'mailsender.php';
-        header("location: success.php"); 
+        header("location: success"); 
 
     }
 
     else {
         $_SESSION['message'] = 'Registration failed!';
-        header("location: error.php");
+        header("location: error");
     }
 }

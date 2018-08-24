@@ -4,7 +4,7 @@ require 'db.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') 
 {
     if (isset($_POST['login'])) { //user logging in 
-        require 'adminlogin.php';
+        require 'adminlogin';
     }
 }
 ?>
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 </head>
 <body>
 
-<form action="admin.php" method="post">
+<form action="admin" method="post">
   <h1 style="color:grey;"> Administrator</h1>
   <div class="inset">
   <p>
