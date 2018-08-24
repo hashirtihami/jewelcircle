@@ -44,7 +44,8 @@
 									<input class="star" type="radio" id="star5" name="star" />
 									<label class="rating" for="star5"></label>
 								</div>
-							</div>							
+							</div>	
+							<div style="color: gray; padding: 0; font-size: 10px;">Based on <span id="numReviews"></span> reviews</div>						
 
 							<p class="stext-102 cl3 p-t-15 description" style="">
 							</p>

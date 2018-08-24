@@ -374,6 +374,7 @@
             $.post("rating.php", {PID: DATA.productID}, function(data){
                 var rating = JSON.parse(data);
                 console.log(rating);
+                $('#numReviews').html(rating.numReviews)
                 if(rating.rating)
                     $("#wrapper #star"+rating.rating).attr("checked", "checked");
                 else
@@ -382,10 +383,15 @@
             $("#wrapper input").unbind().on("click", function(){
                 var rating = $(this).attr("id").split("star")[1];
                 console.log(rating);
+                console.log(DATA);
                 $.post("inputRating.php", {PID: DATA.productID,rating: rating}, function(data){
+                    console.log(data);
                     var ERROR = JSON.parse(data);
                     if(ERROR.message){
                         swal("Sorry", ERROR.message, "error");
+                    }
+                    if(ERROR.success){
+                        swal("Thank you", ERROR.success, "success");
                     }
                 })
             });
