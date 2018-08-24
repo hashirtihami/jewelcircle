@@ -3,6 +3,7 @@
 session_start();
 require 'templates/top.inc.php';
 ?>
+<title>Success</title>
 
 <div class="container"  style="text-align:center;">
     <div class="form">

@@ -76,7 +76,7 @@ hr.style14 {
 			<tbody>
 			    <tr>
 			      <td colspan="4">
-			      	 You should take photos or video for our jewellery within 14 days after you receive the items, and publish them to your blog, facebook, instagram and youtube,etc. When you publish the photos, review and comments, please add the the link of the product page or home page we offer.
+			      	 You should take photos or video for our jewelry within 14 days after you receive the items, and publish them to your blog, facebook, instagram and youtube,etc. When you publish the photos, review and comments, please add the the link of the product page or home page we offer.
 			      </td>
 			    </tr>
 			</tbody>
