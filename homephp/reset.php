@@ -17,12 +17,12 @@ if( isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && 
     if ( $result->num_rows == 0 )
     { 
         $_SESSION['message'] = "You have entered invalid URL for password reset!";
-        header("location: error.php");
+        header("location: error");
     }
 }
 else {
     $_SESSION['message'] = "Sorry, verification failed, try again!";
-    header("location: error.php");  
+    header("location: error");  
 } 
 ?>
 <?php
@@ -40,7 +40,7 @@ else {
       <tbody style="margin-bottom:30px">
         <tr>
           <td colspan="4">
-            <form action="resetpost.php" method="post" >
+            <form action="resetpost" method="post" >
               <div class="form-group row">
                 <label style="font-weight:500;" for="inputemail" required class="col-lg-2 col-md-4 col-sm-12 col-form-label">New Password</label>
                 <div class="col-lg-10 cl-md-8 col-sm-12" style="padding-bottom:20px;">

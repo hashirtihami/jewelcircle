@@ -45,7 +45,7 @@
 				<nav class="limiter-menu-desktop p-l-45">
 					
 					<!-- Logo desktop -->		
-					<a href="index.php" class="logo">
+					<a href="index" class="logo">
 						<span class="heading"> Jewel circle</span>
 					</a>
 
@@ -54,17 +54,17 @@
 						
 						<ul class="main-menu">
 							<li class="active-menu">
-								<a href="index.php">Home</a>
+								<a href="index">Home</a>
 								
 							</li>
 							<li>
-								<a href="product.php" id="prods">Products</a>
+								<a href="product" id="prods">Products</a>
 							</li>
 							<li>
-								<a href="giftcards.php" id="wutnew">Giftcards</a>
+								<a href="giftcards" id="wutnew">Giftcards</a>
 							</li>							
 							<li>
-								<a href="index.php#arriwal" id="wutnew">What's New?</a>
+								<a href="index#arriwal" id="wutnew">What's New?</a>
 							</li>							
 							
 						</ul>
@@ -90,12 +90,12 @@
 								}
 							?>
 							<!-- <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" id="numProdInCart" data-notify="0"> -->
-								<a href="shopping-cart.php"><i class="zmdi zmdi-shopping-cart"></i></a>
+								<a href="shopping-cart"><i class="zmdi zmdi-shopping-cart"></i></a>
 							</div>
 						</div>
 							
 						<div class="flex-c-m h-full p-lr-19">
-							<!-- <a href="userregister.php"> -->
+							<!-- <a href="userregister"> -->
 					<div class="icon-header-item hov-cl1 trans-04 p-lr-11 js-show-sidebar btn-group">
 									<button id="logoutBtn" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 										<i class="fas fa-user"></i>
@@ -108,26 +108,26 @@
 									  <div class="dropdown-menu" id="dropdown">
 				
 									    <div class="btn-group">
-										  <button onclick="window.location.href=\'userprofile.php\'" type="button" class="btn btn-outline-warning" title="Account info">
+										  <button onclick="window.location.href=\'userprofile\'" type="button" class="btn btn-outline-warning" title="Account info">
 										  	<i class="fas fa-info-circle"></i>
 										  </button>
-										  <button onclick="window.location.href=\'accountEdit.php\'" type="button" class="btn btn-outline-warning" title="Edit Account">
+										  <button onclick="window.location.href=\'accountEdit\'" type="button" class="btn btn-outline-warning" title="Edit Account">
 										  	<i class="fas fa-edit"></i>
 										  </button>
-										  <button onclick="window.location.href=\'logout.php\'" type="button" class="btn btn-outline-warning" title="Logout">
+										  <button onclick="window.location.href=\'logout\'" type="button" class="btn btn-outline-warning" title="Logout">
 										  	<i class="fas fa-sign-out-alt"></i>
 										  </button>
 										</div>';
 						}
 					else
 						echo ' <div class="dropdown-menu" id="loginAnchor">
-								<a class="dropdown-item" href="userregister.php">Login</a>
+								<a class="dropdown-item" href="userregister">Login</a>
 								</div>
 								';
 					}
 					else
 						echo ' <div class="dropdown-menu" id="loginAnchor">
-								<a class="dropdown-item" href="userregister.php">Login</a>
+								<a class="dropdown-item" href="userregister">Login</a>
 								</div>
 								';
 				?>
@@ -142,7 +142,7 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->		
 			<div class="logo-mobile">
-				<a href="index.php" class="logo">
+				<a href="index" class="logo">
 						<span class="heading"> Jewel circle</span>
 					</a>
 
@@ -168,7 +168,7 @@
 						}
 					?>
 					<!-- <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="2"> -->
-						<a href="shopping-cart.php"><i class="zmdi zmdi-shopping-cart"></i></a>
+						<a href="shopping-cart"><i class="zmdi zmdi-shopping-cart"></i></a>
 					</div>
 				</div>
 			</div>
@@ -189,29 +189,29 @@
 		<div class="menu-mobile">
 			<ul class="main-menu-m bg-dark">
 					<li>
-						<a href="index.php">Home</a>
+						<a href="index">Home</a>
 					</li>
 		
 					<li>
-						<a href="product.php">Products</a>
+						<a href="product">Products</a>
 					</li>
 					<li>
-						<a href="giftcards.php" id="wutnew">Giftcards</a>
+						<a href="giftcards" id="wutnew">Giftcards</a>
 					</li>							
 					<li>
-						<a href="index.php#arriwal" id="wutnew">What's New?</a>
+						<a href="index#arriwal" id="wutnew">What's New?</a>
 					</li>						
 				  	<?php
 				  	if(isset($_SESSION['logged_in'])){
 				  		if($_SESSION['logged_in']){
-					    	echo '<li><a href="userprofile.php">Account</a></li>';
-					    	echo '<li><a href="logout.php">Logout</a></li>';
+					    	echo '<li><a href="userprofile">Account</a></li>';
+					    	echo '<li><a href="logout">Logout</a></li>';
 				  		}
 				  		else
-				    		echo '<li><a href="userregister.php">Login</a></li>';
+				    		echo '<li><a href="userregister">Login</a></li>';
 					}
 			  		else
-				    	echo '<li><a href="userregister.php">Login</a></li>';
+				    	echo '<li><a href="userregister">Login</a></li>';
 				  	?>			
 			</ul>
 		</div>

@@ -7,7 +7,7 @@ $result = $mysqli->query("SELECT * FROM customer WHERE email='$email'");
 
 if ( $result->num_rows == 0 ){ // User doesn't exist
     $_SESSION['message'] = 'User with that email does not exist!';
-    header("location: error.php");
+    header("location: error");
 }
 else { // User exists
     $user = $result->fetch_assoc();
@@ -21,11 +21,11 @@ else { // User exists
         
         // This is how we'll know the user is logged in
         $_SESSION['logged_in'] = 1;
-        header("location: userprofile.php");
+        header("location: userprofile");
     }
     else {
         $_SESSION['message'] = "You have entered wrong password. ";
-        header("location: error.php");
+        header("location: error");
     }
 }
 

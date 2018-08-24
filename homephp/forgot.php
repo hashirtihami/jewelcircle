@@ -12,7 +12,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
     if ( $result->num_rows == 0 ) // User doesn't exist
     { 
         $_SESSION['message'] = "User with that email doesn't exist!";
-        header("location: error.php");
+        header("location: error");
     }
     else { // User exists (num_rows != 0) 
 
@@ -44,7 +44,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
          
         require'mailsender.php';
         
-        header("location: success.php");
+        header("location: success");
   }
 }
 ?> 
@@ -74,7 +74,7 @@ div#submitBtn button {
       <tbody style="margin-bottom:30px">
         <tr>
           <td colspan="4">
-            <form action="forgot.php" method="post" >
+            <form action="forgot" method="post" >
               <div class="form-group row">
                 <label style="font-weight:500;" for="inputemail" class="col-lg-2 col-md-4 col-sm-12 col-form-label">Email:</label>
                 <div class="col-lg-10 cl-md-8 col-sm-12" style="padding-bottom:20px;">

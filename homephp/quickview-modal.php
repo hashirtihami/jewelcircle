@@ -101,7 +101,7 @@
 
 									<div class="size-204 respon6-next">
 										<div class="rs1-select2 bor8 bg0">
-											<input class="nameOnProd" type="text" name="size" placeholder="Size (required)" maxlength="2" required>
+											<input class="nameOnProd" type="text" name="size" placeholder="Refrence pic in the gallery" maxlength="2" required>
 										</div>
 									</div>
 								</div>

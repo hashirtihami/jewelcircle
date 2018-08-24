@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 </head>
 <body>
 
-<form action="admin.php" method="post">
+<form action="admin" method="post">
   <h1 style="color:grey;"> Administrator</h1>
   <div class="inset">
   <p>

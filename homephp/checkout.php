@@ -23,7 +23,7 @@
 	<div class="row" style="margin-top: 10px;">
 		<div class="col-sm-5 col-lg-5 col-xl-5 m-lr-auto m-b-50">
 			<div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-25 m-r--38 m-lr-0-xl">
-				<form action="payment.php">
+				<form action="payment">
 					<h4 class="mtext-109 cl2 p-b-30">
 						Use account address
 					</h4>
@@ -36,7 +36,7 @@
 		</div>
 		<div class="col-sm-7 col-lg-7 col-xl-7 m-lr-auto m-b-50">
 			<div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm">
-				<form action="payment.php">
+				<form action="payment">
 					<h4 class="mtext-109 cl2 p-b-30">
 						New shipping address
 					</h4>

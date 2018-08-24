@@ -21,7 +21,7 @@
 							</div>
 							
 							<div style="padding-top:20px" class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600"  >
-								<a style="background-color:#e60044; " href="userregister.php" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+								<a style="background-color:#e60044; " href="userregister" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									Log In
 								</a>
 							</div>

@@ -3,10 +3,10 @@
 session_start();
 // Check if user is logged in using the session variable
 if ( $_SESSION['logged_in'] != 1 ) {
-  $_SESSION['message'] = "You must <a href=\"userregister.php\">log in or sign up</a> before viewing your profile page!";
+  $_SESSION['message'] = "You must <a href=\"userregister\">log in or sign up</a> before viewing your profile page!";
   if( isset($_SESSION['message']))
   {  
-    header("location: error.php");
+    header("location: error");
     exit();    
   }
 } 
@@ -32,7 +32,7 @@ require 'templates/top.inc.php';
         <?php echo $first_name." ".$last_name; ?>
         <!-- <small>Loru</small> -->
         <button type="button" class="btn btn-outline-danger btn-sm">
-          <a href="accountEdit.php"> Account info
+          <a href="accountEdit"> Account info
             <i class="fas fa-cog"></i>
           </a>
         </button>

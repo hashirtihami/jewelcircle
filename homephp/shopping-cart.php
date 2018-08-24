@@ -6,7 +6,7 @@
 	<!-- breadcrumb -->
 	<div class="container">
 		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
-			<a href="index.php" class="stext-109 cl8 hov-cl1 trans-04">
+			<a href="index" class="stext-109 cl8 hov-cl1 trans-04">
 				Home
 				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
 			</a>
@@ -22,7 +22,7 @@
 	<form <?php 
 		if(isset($_SESSION["products"]))
 			if(count($_SESSION["products"]))
-				echo "action='checkout.php'"
+				echo "action='checkout'"
 	 ?> method="POST" class="bg0 p-t-75 p-b-85">
 		<div class="container">
 			<div class="row">

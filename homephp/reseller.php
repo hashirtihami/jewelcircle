@@ -74,7 +74,7 @@ hr.style14 {
 	<h2 style="padding-top:90px; color:#e60044;">To become A Jewel Circle reseller, please complete our form</h2>
 	<hr>
 	
-	<form action="reseller.php" method="post">
+	<form action="reseller" method="post">
 	  	<div class="form-group row">
 	    	<label for="inputname" class="col-sm-2 col-form-label">Name</label>
 	    	<div class="col-sm-5">
@@ -144,7 +144,7 @@ hr.style14 {
 		<input type="hidden"  name="role" value="reseller">
 
 		<div class="field-wrap">
-            <p style=" padding:0; color:black;">By clicking Submit, you agree to our <a href="terms.php">Terms Of Services</a> and Data Policy. You may receive SMS notifications from us and can opt out at any time.</p>
+            <p style=" padding:0; color:black;">By clicking Submit, you agree to our <a href="terms">Terms Of Services</a> and Data Policy. You may receive SMS notifications from us and can opt out at any time.</p>
         </div>
 	  	<div class="form-group row">
 

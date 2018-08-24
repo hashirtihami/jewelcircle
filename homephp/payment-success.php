@@ -6,7 +6,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
   $_SESSION['message'] = "You must <a href=\"userregister.php\">log in or sign up</a>.";
   if( isset($_SESSION['message']))
   {  
-    header("location: error.php");
+    header("location: error");
     exit();    
   }
 }
@@ -101,10 +101,10 @@ if ( $_SESSION['logged_in'] != 1 ) {
             require'mailsender.php';
 
 	$_SESSION['message'] = "Order Placed Successfully.<br> The current status of your order will be viewed <a href=\"userprofile.php\"> here</a>.<br>You can also download the Cash Receipt by simply clicking the download icon next to your order.<br>Thank You!  ";
-	header("location: success.php");
+	header("location: success");
 	}
 	else{
 		$_SESSION['message'] = "Cart is empty";
-		header("location: error.php");
+		header("location: error");
 	}
  ?>

@@ -19,15 +19,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ( $mysqli->query($sql) ) {
 
-        $_SESSION['message'] = "Your password has been reset successfully! Click here to <a href=\"userregister.php\">log in </a>";
-        header("location: success.php");    
+        $_SESSION['message'] = "Your password has been reset successfully! Click here to <a href=\"userregister\">log in </a>";
+        header("location: success");    
 
         }
 
     }
     else {
         $_SESSION['message'] = "Two passwords you entered don't match, try again!";
-        header("location: error.php");    
+        header("location: error");    
     }
 
 }

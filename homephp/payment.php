@@ -3,10 +3,10 @@
 session_start();
 // Check if user is logged in using the session variable
 if ( $_SESSION['logged_in'] != 1 ) {
-  $_SESSION['message'] = "You must  <a href=\"userregister.php\">log in or sign up</a> before viewing this page!";
+  $_SESSION['message'] = "You must  <a href=\"userregister\">log in or sign up</a> before viewing this page!";
   if( isset($_SESSION['message']))
   {  
-    header("location: error.php");
+    header("location: error");
     exit();    
   }
 }
@@ -48,7 +48,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
 
     <div class="col-sm-12 col-lg-6 col-xl-6 m-lr-auto m-b-50">
       <div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm">
-        <form action="payment-success.php">
+        <form action="payment-success">
           <h4 class="mtext-109 cl2 p-b-30">
             Cash on Delivery
           </h4>

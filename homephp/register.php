@@ -31,7 +31,7 @@ if ( $result->num_rows > 0 ) {
     
     $_SESSION['message'] = 'User with this email already exists!'; 
 
-   header("location:error.php");
+   header("location:error");
 }
 
 else { // Email doesn't already exist in a database, proceed...
@@ -80,11 +80,11 @@ else { // Email doesn't already exist in a database, proceed...
                 </div> ';
             require'mailsender.php';
         
-        header("location: userprofile.php"); 
+        header("location: userprofile"); 
     }
 
     else {
         $_SESSION['message'] = 'Registration failed!';
-        header("location: error.php");
+        header("location: error");
     }
 }

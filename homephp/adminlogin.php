@@ -7,7 +7,7 @@ $result = $mysqli->query("SELECT * FROM customer WHERE email='$email' AND role='
 
 if ( $result->num_rows == 0 ){ // User doesn't exist
     $_SESSION['message'] = 'Incorrect Email.';
-    header("location: admin.php");
+    header("location: admin");
 }
 else { // User exists
     $user = $result->fetch_assoc();
@@ -21,11 +21,11 @@ else { // User exists
         
         // This is how we'll know the user is logged in
         $_SESSION['admin_logged_in'] = 1;
-        header("location: ../adminphp/home.php");
+        header("location: ../adminphp/home");
     }
     else {
         $_SESSION['message'] = "Wrong Password. ";
-        header("location: admin.php");
+        header("location: admin");
     }
 }
 
