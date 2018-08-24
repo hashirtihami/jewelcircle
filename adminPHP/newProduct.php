@@ -6,43 +6,6 @@
 ?>
 
 <link rel="stylesheet" type="text/css" href="utils.css">
-<script>
-function controlTextAreaInput(textarea, maxlength, maxLines)
-{
-
-var mainString = textarea.value;
-var len = mainString.length;
-var aLines = mainString.split("\n");
-var numberOfLines = aLines.length;
-
-var indexOfCurrentLine = eval(parseInt(aLines.length)-1);
-var string = aLines[indexOfCurrentLine];
-var lastCharacter = string.charAt(eval(len-1));
-var previousLines = "";
-
-if (numberOfLines > maxLines){
-     indexOfCurrentLine = maxLines;
-}
-
-for(var i=0;i<indexOfCurrentLine;i++){
-     previousLines +=aLines[i];
-}
-var keyCode = document.layers ? event.which : event.keyCode;
-if (keyCode==13){
-     if (aLines.length >= eval(maxLines+1)){
-          textarea.value = mainString.substr(0, eval(len-2));
-          textarea.value = previousLines.substring(0,eval(previousLines.length-1));
-     }
-     else {
-          return true;
-     }
-}
-if (string.length > maxlength - 1)
-     textarea.value = previousLines +string.substr(0, maxlength);
-return;
-}
-
-</script>
 <script src="js/newProduct.js"></script>
 
 <?php

@@ -46,7 +46,7 @@
 								</div>
 							</div>							
 
-							<p class="stext-102 cl3 p-t-15 description">
+							<p class="stext-102 cl3 p-t-15 description" style="">
 							</p>
 							
 							<!--  -->

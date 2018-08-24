@@ -98,8 +98,7 @@
             <div class="form-group">
               <label>Product Description</label>
               <span id="descErr" class="error"></span>
-              <textarea id="desc" class="form-control" rows="3" placeholder="Enter a few details of the product..." name="desc" onkeyup="javascript:controlTextAreaInput(this,35,4);"></textarea>
-              <p class="help-block">Max characters per line = 50</p>
+              <textarea id="desc" class="form-control" rows="3" placeholder="Enter a few details of the product..." name="desc"></textarea>
             </div>
 
           <div class="form-group plating-group">
