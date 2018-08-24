@@ -561,9 +561,10 @@
     /*==================================================================
     [ Deleting Item From Cart ]*/
     $(".how-itemcart1").on("click", function(){
-        $(this).parent().parent().addClass("removed-item", function(){
-            $(this).parent().parent().remove();
-        });
+        $(this).parent().parent().addClass("removed-item");
+        $(this).parent().parent().fadeOut(1000, function(){
+            $(this).remove();
+        })
         var PID = ($(".removed-item").find(".column-2").attr("data-PID"));
         $.post("deleteItem.php", {PID: PID}, function(data){
             console.log(data);
