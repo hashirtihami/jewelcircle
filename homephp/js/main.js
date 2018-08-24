@@ -610,6 +610,9 @@
             if(DATA.error){
                 swal("Sorry", DATA.error, "error");
             }
+            if(DATA.success){
+                swal("Giftcard" ,DATA.success, "success");
+            }
         });
     });
 

@@ -57,6 +57,7 @@
 				$_SESSION["products"][] = array('cardName'=>$_POST["cardName"],
 					                             'cardCost'=>$_POST['cardCost']
 												);
+				$data["success"] = "Added to Cart";
 				$data["count"] = count($_SESSION["products"]);
 				$data["session"] = $_SESSION;
 			}
@@ -68,6 +69,7 @@
 			$_SESSION["products"][] = array('cardName'=>$_POST["cardName"],
 				                             'cardCost'=>$_POST['cardCost']
 											);
+			$data["success"] = "added to Cart";
 			$data["count"] = count($_SESSION["products"]);
 			$data["session"] = $_SESSION;
 		}
