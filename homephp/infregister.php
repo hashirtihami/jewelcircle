@@ -42,27 +42,38 @@ else { // Email doesn't already exist in a database, proceed...
 
         // Send registration confirmation link (verify.php)
         $to      = $email;
+        $_POST['email']= $email;
         $subject = ' Message from jewelcircle.net ';
         $message_body = '
         
-        <div class="container" style="text-align:center;">
-                
-                Hello '.$first_name.',<br><br>
-                <h3 style="color:#e60044;">Thank you for signing up!</h3><br><br>
-                Your application for influencer of JEWEL CIRCLE has been received.<br>
-                Your profile and social accounts will be observed and a confirmation email will be sent, once your application is granted.<br>
-                
-                
-                If you have any questions or concerns, please contact Cloudflare support at support@jewelcircle.net
-                <br><br>Follow us:
+        <div style=" background-color:#fff2fd; text-align:center;"> 
+                    <div style=" background-color:#E60044;  font-size:40px; color:white; padding:40px;";>
+                        JEWEL CIRCLE
+                    </div>
 
-                Instagram: https://www.instagram.com/jewel_circle/ <br><br>
+                        <div class="container" style="padding:40px">
 
-                Facebook: https://www.facebook.com/JewelCircle/<br><br>
 
-                <br><br>
-                <sub>We apologize if you received this email in error. Please ignore it if you didn\'t make the request.<sub> 
-            </div> ';
+                            Dear '.$first_name.',<br><br>
+                            You have just created an account on Jewel Circle. <br>For your records, your username is '.$email.'.<br>
+                            Your application for influencer of JEWEL CIRCLE has been received.<br>
+                            Your profile and social accounts will be observed and a confirmation email will be sent, once your application is granted.<br>
+                            <br>
+                            Welcome to JEWEL CIRCLE,<br>
+                            The Jewel Circle Team.<br> <br>
+                            <sub>
+                            Follow us:<br>
+
+                            Instagram: https://www.instagram.com/jewel_circle/ <br>
+
+                            Facebook: https://www.facebook.com/JewelCircle/<br><br>
+
+                            For any queries feel free to email us at info@jewelcircle.net
+                            <br><br><hr>
+                            <font style="font-size:10px">We apologize if you received this email in error. Please ignore it if you didn\'t make the request.</font>
+                            <sub>
+                         </div>
+                </div> ';
         
 
         require'mailsender.php';

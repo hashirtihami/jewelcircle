@@ -6,7 +6,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
   $_SESSION['message'] = "You must <a href=\"userregister.php\">log in or sign up</a>.";
   if( isset($_SESSION['message']))
   {  
-    header("location: error.php");
+    header("location: error");
     exit();    
   }
 }

@@ -3,7 +3,7 @@
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') 
 	{
 		if (isset($_POST['register'])) { //registration
-	        require 'register';  
+	        require 'register.php';  
 	    }
 	}
 		require 'templates/top.inc.php';

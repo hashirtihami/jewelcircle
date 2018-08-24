@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	if(isset($_POST['register'])) { //user registering
          $_POST['role']='influencer';
-        require 'infregister';
+        require 'infregister.php';
     }
 }
 ?>
