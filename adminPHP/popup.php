@@ -35,7 +35,7 @@
         </button>
       </div>
       <div class="modal-body">
-        Are you sure nibba?
+        Are you sure ?
       </div>
       <div class="modal-footer">
         <button id="skip" type="button" class="btn bg-grey" data-dismiss="modal">Skip</button>
