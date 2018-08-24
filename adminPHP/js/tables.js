@@ -203,7 +203,7 @@ $(".btnPdf").on("click",function(){
 		doc.text(29, 64, DATA.city+","+DATA.zipcode);
 
 		doc.text(148,50,"OrderID:");
-		doc.text(166,50,"20");
+		doc.text(166,50,DATA.orderID);
 		doc.text(148,57,"Order Date:");
 		doc.text(174,57,DATA.date.split(" ")[0]);
 
@@ -287,7 +287,7 @@ $('#multiDwnld').unbind().click(function() {
 				doc.text(29, 64, DATA.city+","+DATA.zipcode);
 
 				doc.text(148,50,"OrderID:");
-				doc.text(166,50,"20");
+				doc.text(166,50,DATA.orderID);
 				doc.text(148,57,"Order Date:");
 				doc.text(174,57,DATA.date.split(" ")[0]);
 
