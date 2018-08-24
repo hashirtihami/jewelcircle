@@ -3617,3 +3617,6 @@ button.arrow-slick1:hover {
 ul#prodList li {
   list-style-type: disc !important;
 }
+button.btn-outline-danger:hover {
+  background: #e60044 !important;
+}
