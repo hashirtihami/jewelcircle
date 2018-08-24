@@ -52,7 +52,7 @@ else { // Email doesn't already exist in a database, proceed...
             $message_body = '
         
             <div style=" background-color:#fff2fd; text-align:center;"> 
-                    <div style=" background-color:#E60044;  font-size:6vw; color:white; padding:40px;";>
+                    <div style=" background-color:#E60044;  font-size:40px; color:white; padding:40px;";>
                         JEWEL CIRCLE
                     </div>
 

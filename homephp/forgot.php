@@ -23,8 +23,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
         $first_name = $user['first_name'];
 
         // Session message to display on success.php
-        $_SESSION['message'] = "<p>Please check your email <span>$email</span>"
-        . " for a confirmation link to complete your password reset!</p>";
+        $_SESSION['message'] = "<p>Please check your email for a confirmation link to complete your password reset!</p>";
 
         // Send registration confirmation link (reset.php)
         $to      = $email;
@@ -32,11 +31,16 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
         $message_body = '
         Hello '.$first_name.',
 
-        You have requested password reset!
+        You have requested password reset!<br>
 
-        Please click this link to reset your password:
+        Please click this link to reset your password:<br>
 
-        http://localhost/jewelcircle/homephp/reset.php?email='.$email.'&hash='.$hash; 
+        http://localhost/jewelcircle/homephp/reset.php?email='.$email.'&hash='.$hash.'
+                            <sub><br><br>
+                            For any queries feel free to email us at info@jewelcircle.net
+                            <br><br><hr>
+                            <font style="font-size:10px">We apologize if you received this email in error. Please ignore it if you didn\'t make the request.</font>
+                            <sub>';
          
         require'mailsender.php';
         

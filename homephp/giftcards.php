@@ -6,7 +6,7 @@
 <!-- Product -->
 	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('../assets/images/posters/giftbanner.jpg');">
 		<h3 class=" cl0 txt-center" style=" font-family:anydore; font-size:3.5rem; color:white; text-shadow:5px 5px 10px black; ">
-			Make the gift special with a hand made card
+			Make the gift special with a hand made gift card
 		</h3>
 	</section>
 	<div class="bg0 m-t-23 p-b-140">
