@@ -191,70 +191,76 @@ $(".btnPdf").on("click",function(){
 		// Use http://dataurl.net/#dataurlmaker
 		var imgData = 'data:image/jpeg;base64,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';
 		var doc = new jsPDF();
+            
+            // You'll need to make your image into a Data URL
+            // Use http://dataurl.net/#dataurlmaker
+            var imgData = 'data:image/jpeg;base64,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';
+            var doc = new jsPDF();
 
-		doc.setFontSize(30);
-		doc.addImage(imgData, 'JPEG', 20, 15, 15, 17);
-		doc.text(40, 27, 'Jewel Circle');
+            doc.setFontSize(30);
+            doc.addImage(imgData, 'JPEG', 20, 15, 15, 17);
+            doc.text(40, 27, 'Jewel Circle');
 
-		doc.setFontSize(13);
-		doc.text(20, 50, "To:");
-		doc.text(29, 50, DATA.name);
-		doc.text(29, 57, DATA.address);
-		doc.text(29, 64, DATA.city+","+DATA.zipcode);
+            doc.setFontSize(13);
+            doc.text(20, 50, "To:");
+            doc.text(29, 50, DATA.name);
+            doc.text(29, 57, DATA.address);
+            doc.text(29, 64, DATA.city+","+DATA.zipcode);
 
-		doc.text(148,50,"OrderID:");
-		doc.text(166,50,DATA.orderID);
-		doc.text(148,57,"Order Date:");
-		doc.text(174,57,DATA.date.split(" ")[0]);
+            doc.text(148,50,"OrderID:");
+            doc.text(166,50,DATA.orderID);
+            doc.text(148,57,"Order Date:");
+            doc.text(174,57,DATA.date.split(" ")[0]);
 
-		doc.line(20, 70, 197, 70);
-		doc.line(20, 70, 20, 250);
-		doc.text(23, 75, "Product")
-		doc.text(23, 75, "Product")
-		doc.line(57, 70, 57, 250);
-		doc.text(59, 75, "Plating")
-		doc.text(59, 75, "Plating")
-		doc.line(75, 70, 75, 250);
-		doc.text(77, 75, "Language")
-		doc.text(77, 75, "Language")
-		doc.line(99, 70, 99, 250);
-		doc.text(100, 75, "Nametype")
-		doc.text(100, 75, "Nametype")
-		doc.line(123, 70, 123, 250);
-		doc.text(135, 75, "Name")
-		doc.text(135, 75, "Name")
-		doc.line(163, 70, 163, 250);
-		doc.text(165, 75, "Qty")
-		doc.text(165, 75, "Qty")
-		doc.line(173, 70, 173, 250);
-		doc.text(185, 75, "Price")
-		doc.text(185, 75, "Price")
-		doc.line(197, 70, 197, 250);
-		doc.line(20, 77, 197, 77)
-		doc.line(20, 250, 197, 250)
+            doc.line(15, 70, 197, 70);
+            doc.line(15, 70, 15, 250);
+            doc.text(18, 75, "Product")
+            doc.text(18, 75, "Product")
+            doc.line(58, 70, 58, 250);
+            doc.text(59, 75, "Plating")
+            doc.text(59, 75, "Plating")
+            doc.line(75, 70, 75, 250);
+            doc.text(77, 75, "Language")
+            doc.text(77, 75, "Language")
+            doc.line(99, 70, 99, 250);
+            doc.text(100, 75, "Nametype")
+            doc.text(100, 75, "Nametype")
+            doc.line(123, 70, 123, 250);
+            doc.text(135, 75, "Name")
+            doc.text(135, 75, "Name")
+            doc.line(163, 70, 163, 250);
+            doc.text(165, 75, "Qty")
+            doc.text(165, 75, "Qty")
+            doc.line(173, 70, 173, 250);
+            doc.text(185, 75, "Price")
+            doc.text(185, 75, "Price")
+            doc.line(197, 70, 197, 250);
+            doc.line(15, 77, 197, 77)
+            doc.line(20, 250, 197, 250)
 
-		var y = 85;
-		var total = 0;
+            var y = 85;
+            var total = 0;
 
-		for (var i = DATA.product.length - 1; i >= 0; i--) {
-			doc.text(23, y, DATA.product[i].type+" "+DATA.product[i].category)
-			doc.text(60, y, DATA.product[i].plating)
-			doc.text(79, y, DATA.product[i].language)
-			doc.text(103, y, DATA.product[i].nameType)
-			doc.text(125, y, DATA.product[i].nameOnProduct)
-			doc.text(167, y, DATA.product[i].quantity)
-			doc.text(182, y, DATA.product[i].totalAmount)
-			y+=7;
-			total += parseInt(DATA.product[i].totalAmount); 
-		}
-		
-		doc.text(135, 265, "Total: Rs")
-		doc.text(155, 265, ""+total)
-		doc.line(20,275,197,275)
-		doc.setFontSize(10)
-		doc.text(102,285, "Jewel Circle ®")
+            for (var i = DATA.product.length - 1; i >= 0; i--) {
+                doc.text(16, y, DATA.product[i].type+" "+DATA.product[i].category+"("+DATA.product[i].prodSize+")")
+                doc.text(60, y, DATA.product[i].plating)
+                doc.text(79, y, DATA.product[i].language)
+                doc.text(103, y, DATA.product[i].nameType)
+                doc.text(125, y, DATA.product[i].nameOnProduct)
+                doc.text(167, y, DATA.product[i].quantity)
+                doc.text(182, y, DATA.product[i].totalAmount)
+                doc.line(15, y+1, 197, y+1)
+                y+=7;
+                total += parseInt(DATA.product[i].totalAmount); 
+            }
+            
+            doc.text(135, 265, "Total: Rs")
+            doc.text(155, 265, ""+total)
+            doc.line(20,275,197,275)
+            doc.setFontSize(10)
+            doc.text(102,285, "Jewel Circle ®")
 
-		doc.save('invoice.pdf');
+            doc.save('invoice.pdf');
 
 	});
 });
@@ -270,71 +276,76 @@ $('#multiDwnld').unbind().click(function() {
 			$.post("getOrderData.php", {data: data}, function(data){
 				var DATA = JSON.parse(data);
 				var doc = new jsPDF();
-				
-				// You'll need to make your image into a Data URL
-				// Use http://dataurl.net/#dataurlmaker
-				var imgData = 'data:image/jpeg;base64,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';
-				var doc = new jsPDF();
+            
+            // You'll need to make your image into a Data URL
+            // Use http://dataurl.net/#dataurlmaker
+            var imgData = 'data:image/jpeg;base64,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';
+            var doc = new jsPDF();
 
-				doc.setFontSize(30);
-				doc.addImage(imgData, 'JPEG', 20, 15, 15, 17);
-				doc.text(40, 27, 'Jewel Circle');
+            doc.setFontSize(30);
+            doc.addImage(imgData, 'JPEG', 20, 15, 15, 17);
+            doc.text(40, 27, 'Jewel Circle');
 
-				doc.setFontSize(13);
-				doc.text(20, 50, "To:");
-				doc.text(29, 50, DATA.name);
-				doc.text(29, 57, DATA.address);
-				doc.text(29, 64, DATA.city+","+DATA.zipcode);
+            doc.setFontSize(13);
+            doc.text(20, 50, "To:");
+            doc.text(29, 50, DATA.name);
+            doc.text(29, 57, DATA.address);
+            doc.text(29, 64, DATA.city+","+DATA.zipcode);
 
-				doc.text(148,50,"OrderID:");
-				doc.text(166,50,DATA.orderID);
-				doc.text(148,57,"Order Date:");
-				doc.text(174,57,DATA.date.split(" ")[0]);
+            doc.text(148,50,"OrderID:");
+            doc.text(166,50,DATA.orderID);
+            doc.text(148,57,"Order Date:");
+            doc.text(174,57,DATA.date.split(" ")[0]);
 
-				doc.line(20, 70, 197, 70);
-				doc.line(20, 70, 20, 250);
-				doc.text(23, 75, "Product")
-				doc.text(23, 75, "Product")
-				doc.line(57, 70, 57, 250);
-				doc.text(59, 75, "Plating")
-				doc.text(59, 75, "Plating")
-				doc.line(75, 70, 75, 250);
-				doc.text(77, 75, "Language")
-				doc.text(77, 75, "Language")
-				doc.line(99, 70, 99, 250);
-				doc.text(100, 75, "Nametype")
-				doc.text(100, 75, "Nametype")
-				doc.line(123, 70, 123, 250);
-				doc.text(135, 75, "Name")
-				doc.text(135, 75, "Name")
-				doc.line(163, 70, 163, 250);
-				doc.text(185, 75, "Price")
-				doc.text(185, 75, "Price")
-				doc.line(197, 70, 197, 250);
-				doc.line(20, 77, 197, 77)
-				doc.line(20, 250, 197, 250)
+            doc.line(15, 70, 197, 70);
+            doc.line(15, 70, 15, 250);
+            doc.text(18, 75, "Product")
+            doc.text(18, 75, "Product")
+            doc.line(58, 70, 58, 250);
+            doc.text(59, 75, "Plating")
+            doc.text(59, 75, "Plating")
+            doc.line(75, 70, 75, 250);
+            doc.text(77, 75, "Language")
+            doc.text(77, 75, "Language")
+            doc.line(99, 70, 99, 250);
+            doc.text(100, 75, "Nametype")
+            doc.text(100, 75, "Nametype")
+            doc.line(123, 70, 123, 250);
+            doc.text(135, 75, "Name")
+            doc.text(135, 75, "Name")
+            doc.line(163, 70, 163, 250);
+            doc.text(165, 75, "Qty")
+            doc.text(165, 75, "Qty")
+            doc.line(173, 70, 173, 250);
+            doc.text(185, 75, "Price")
+            doc.text(185, 75, "Price")
+            doc.line(197, 70, 197, 250);
+            doc.line(15, 77, 197, 77)
+            doc.line(20, 250, 197, 250)
 
-				var y = 85;
-				var total = 0;
+            var y = 85;
+            var total = 0;
 
-				for (var i = DATA.product.length - 1; i >= 0; i--) {
-					doc.text(23, y, DATA.product[i].type+" "+DATA.product[i].category)
-					doc.text(60, y, DATA.product[i].plating)
-					doc.text(79, y, DATA.product[i].language)
-					doc.text(103, y, DATA.product[i].nameType)
-					doc.text(125, y, "Wahaj")
-					doc.text(175, y, DATA.product[i].totalAmount)
-					y+=7;
-					total += parseInt(DATA.product[i].totalAmount); 
-				}
-				
-				doc.text(135, 265, "Total: Rs")
-				doc.text(155, 265, ""+total)
-				doc.line(20,275,197,275)
-				doc.setFontSize(10)
-				doc.text(102,285, "Jewel Circle ®")
+            for (var i = DATA.product.length - 1; i >= 0; i--) {
+                doc.text(16, y, DATA.product[i].type+" "+DATA.product[i].category+"("+DATA.product[i].prodSize+")")
+                doc.text(60, y, DATA.product[i].plating)
+                doc.text(79, y, DATA.product[i].language)
+                doc.text(103, y, DATA.product[i].nameType)
+                doc.text(125, y, DATA.product[i].nameOnProduct)
+                doc.text(167, y, DATA.product[i].quantity)
+                doc.text(182, y, DATA.product[i].totalAmount)
+                doc.line(15, y+1, 197, y+1)
+                y+=7;
+                total += parseInt(DATA.product[i].totalAmount); 
+            }
+            
+            doc.text(135, 265, "Total: Rs")
+            doc.text(155, 265, ""+total)
+            doc.line(20,275,197,275)
+            doc.setFontSize(10)
+            doc.text(102,285, "Jewel Circle ®")
 
-				doc.save('invoice.pdf');
+            doc.save('invoice.pdf');
 
 			});
 		}

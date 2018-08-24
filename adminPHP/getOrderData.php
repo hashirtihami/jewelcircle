@@ -35,7 +35,7 @@
 					$data['product'][$i]['totalAmount'] = $prod_array['totalAmount'];
 					$data['product'][$i]['quantity'] = $prod_array['quantity'];
 					$data['product'][$i]['nameOnProduct'] = $prod_array['nameOnProduct'];
-					$data['product'][$i]['size'] = $prod_array['size'];
+					$data['product'][$i]['prodSize'] = $prod_array['size'];
 					$i++;
 				}
 			}
