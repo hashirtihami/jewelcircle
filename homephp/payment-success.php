@@ -47,7 +47,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
 				if($query_array = mysqli_fetch_array($query_run))
 					$nameTypeID = $query_array['nameTypeID'];
 				$detailsID = $key['productID'].$languageID.$platingID.$nameTypeID;
-				$query = "INSERT INTO order_product (orderID, productID, detailsID, nameOnProduct, quantity, type) VALUES ((SELECT orderID FROM `order` ORDER BY orderID DESC LIMIT 1), '".$key['productID']."', '".$detailsID."', '".$key['nameOnProduct']."', '".$quantity."', 'product')";
+				$query = "INSERT INTO order_product (orderID, productID, detailsID, nameOnProduct, quantity, size, type) VALUES ((SELECT orderID FROM `order` ORDER BY orderID DESC LIMIT 1), '".$key['productID']."', '".$detailsID."', '".$key['nameOnProduct']."', '".$quantity."', '".$key['size']."', 'product')";
 				$query_run = mysqli_query($conn, $query);
 
 			}
@@ -55,7 +55,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
 				$cardName = $key['cardName'];
 				$cardCost = $key['cardCost'];
 				$quantity = $key['quantity'];
-				$query = "INSERT INTO order_product (orderID, productID, detailsID, nameOnProduct, quantity, type) VALUES ((SELECT orderID FROM `order` ORDER BY orderID DESC LIMIT 1), (SELECT giftcardId FROM giftcard WHERE cardName = '$cardName'), 'NULL', 'NULL', '".$quantity."', 'giftcard')";
+				$query = "INSERT INTO order_product (orderID, productID, detailsID, nameOnProduct, quantity, size, type) VALUES ((SELECT orderID FROM `order` ORDER BY orderID DESC LIMIT 1), (SELECT giftcardId FROM giftcard WHERE cardName = '$cardName'), 'NULL', 'NULL', '".$quantity."', 'NULL', 'giftcard')";
 				$query_run = mysqli_query($conn, $query);
 			}
 		}

@@ -34,10 +34,11 @@
       		$html .= $div;
       	}
       	$data['html'] = $html;
-      	$query = "SELECT description FROM product WHERE productID='$productID'";
+      	$query = "SELECT description,size FROM product WHERE productID='$productID'";
       	$query_run = mysqli_query($conn, $query);
       	if(@$query_array = mysqli_fetch_array($query_run)){
-      		$data["description"] = $query_array["description"];
+                  $data["description"] = $query_array["description"];
+      		$data["size"] = $query_array["size"];
       	}
       	$query = "SELECT * from plating";
       	$query_run = mysqli_query($conn, $query);

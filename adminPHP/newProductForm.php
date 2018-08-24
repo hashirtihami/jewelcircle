@@ -161,13 +161,9 @@
               }
             ?>
           </div>
-          <div id="chainSize" class="form-group hideShow">
-            <label>Chain size</label>
-            <select class="form-control">
-              <option>Small</option>
-              <option>Medium</option>
-              <option>Large</option>
-            </select>
+          <div class="form-group">
+            <label>Size:</label>
+            <input type="checkbox" name="size" value="1">
           </div>
           <div class="form-group">
             <label>Allowed Name Length</label>

@@ -18,7 +18,8 @@
 					                             'nameOnProduct'=>$_POST["nameOnProduct"],
 					                             'language'=>$_POST['language'],
 					                             'nametype'=>$_POST['nametype'],
-					                             'plating'=>$_POST['plating']
+					                             'plating'=>$_POST['plating'],
+					                             'size'=>$_POST['size']
 												);
 				$data["count"] = count($_SESSION["products"]);
 				$data["session"] = $_SESSION;
@@ -37,7 +38,8 @@
 				                             'nameOnProduct'=>$_POST["nameOnProduct"],
 				                             'language'=>$_POST['language'],
 				                             'nametype'=>$_POST['nametype'],
-				                             'plating'=>$_POST['plating']
+				                             'plating'=>$_POST['plating'],
+				                             'size'=>$_POST['size']
 											);
 			$data["count"] = count($_SESSION["products"]);
 			$data["session"] = $_SESSION;

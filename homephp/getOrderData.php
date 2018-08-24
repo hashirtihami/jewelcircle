@@ -24,7 +24,7 @@
 			$type = $query_array['type'];
 			$data['type'] = $type;
 			if($type == 'product'){
-				$query = "SELECT DISTINCT orderID, category, typeName, languageName, platingType, nameTypeValue, (languagePrice + platingPrice + nameTypePrice) totalAmount, quantity, nameOnProduct FROM order_product, details JOIN category ON category.categoryID=details.categoryID JOIN producttype ON producttype.typeID=details.typeID JOIN language ON language.languageID=details.languageID JOIN plating ON plating.platingID=details.platingID JOIN nameType ON nameType.nameTypeID=details.nameTypeID JOIN languageprice ON languageprice.languagePriceId=details.languagePriceId JOIN platingprice ON platingprice.platingPriceId=details.platingPriceId JOIN nametypeprice ON nametypeprice.nameTypePriceId=details.nameTypePriceId WHERE (orderID = '$orderID' AND order_product.detailsID = details.detailsID)";
+				$query = "SELECT DISTINCT orderID, category, typeName, languageName, platingType, nameTypeValue, (languagePrice + platingPrice + nameTypePrice) totalAmount, quantity, nameOnProduct, size FROM order_product, details JOIN category ON category.categoryID=details.categoryID JOIN producttype ON producttype.typeID=details.typeID JOIN language ON language.languageID=details.languageID JOIN plating ON plating.platingID=details.platingID JOIN nameType ON nameType.nameTypeID=details.nameTypeID JOIN languageprice ON languageprice.languagePriceId=details.languagePriceId JOIN platingprice ON platingprice.platingPriceId=details.platingPriceId JOIN nametypeprice ON nametypeprice.nameTypePriceId=details.nameTypePriceId WHERE (orderID = '$orderID' AND order_product.detailsID = details.detailsID)";
 				$result = mysqli_query($conn, $query);
 				while(@$prod_array = mysqli_fetch_array($result)){
 					$data['product'][$i]['category'] = $prod_array['category'];
@@ -35,6 +35,7 @@
 					$data['product'][$i]['totalAmount'] = $prod_array['totalAmount'];
 					$data['product'][$i]['quantity'] = $prod_array['quantity'];
 					$data['product'][$i]['nameOnProduct'] = $prod_array['nameOnProduct'];
+					$data['product'][$i]['prodSize'] = $prod_array['size'];
 					$i++;
 				}
 			}
@@ -50,6 +51,7 @@
 					$data['product'][$i]['totalAmount'] = $prod_array['totalAmount'];
 					$data['product'][$i]['quantity'] = $prod_array['quantity'];
 					$data['product'][$i]['nameOnProduct'] = "Giftcard";
+					$data['product'][$i]['size'] = "NULL";
 					$i++;
 				}
 			}

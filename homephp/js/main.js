@@ -440,7 +440,14 @@
                 var option = "<option>"+DATA.nametype[i][0]+" -Rs "+DATA.nametype[i][1]+"</option>";
                 $("select[name='nametype']").append(option);
             }
-        $("#total").html("Rs "+$("input[name='num-product']").val()*(parseInt($("select[name='plating']").val().split('-')[1].split('Rs')[1])+parseInt($("select[name='nametype']").val().split('-')[1].split('Rs')[1])+parseInt($("select[name='language']").val().split('-')[1].split('Rs')[1])));
+            if(DATA.size === 'FALSE'){
+                $("input[name='size']").parent().parent().parent().css("display", "none");
+                $("input[name='size']").parent().parent().parent().val("");
+            }
+            if(DATA.size === 'TRUE'){
+                $("input[name='size']").parent().parent().parent().css("display", "flex");
+            }
+            $("#total").html("Rs "+$("input[name='num-product']").val()*(parseInt($("select[name='plating']").val().split('-')[1].split('Rs')[1])+parseInt($("select[name='nametype']").val().split('-')[1].split('Rs')[1])+parseInt($("select[name='language']").val().split('-')[1].split('Rs')[1])));
         });
     });
 
@@ -458,6 +465,8 @@
         var productID = $(".js-name-detail").attr("id");
         var quantity = $("input[name='num-product']").val();
         var price = $("#total").html().split(" ")[1];
+        var size = $("input[name='size'").val()+"\"";
+        console.log(size);
         var name = $("input[name='nameOnProduct']").val();
         var plating = $("select[name='plating']").val().split("-")[0];
         var language = $("select[name='language']").val().split("-")[0];
@@ -465,7 +474,8 @@
         console.log(plating);
         console.log(language);
         console.log(nametype);
-        $.post("addToCart.php", {productID: productID, product: product, quantity: quantity, price: price, nameOnProduct: name, plating: plating, language: language, nametype: nametype}, function(data){
+        $.post("addToCart.php", {productID: productID, product: product, quantity: quantity, price: price, nameOnProduct: name, size: size, plating: plating, language: language, nametype: nametype}, function(data){
+            console.log(data);
             var DATA = JSON.parse(data);
             console.log(DATA);
             $("#numProdInCart").attr("data-notify", DATA.count);
@@ -653,11 +663,11 @@
             doc.text(148,57,"Order Date:");
             doc.text(174,57,DATA.date.split(" ")[0]);
 
-            doc.line(20, 70, 197, 70);
-            doc.line(20, 70, 20, 250);
-            doc.text(23, 75, "Product")
-            doc.text(23, 75, "Product")
-            doc.line(57, 70, 57, 250);
+            doc.line(15, 70, 197, 70);
+            doc.line(15, 70, 15, 250);
+            doc.text(18, 75, "Product")
+            doc.text(18, 75, "Product")
+            doc.line(58, 70, 58, 250);
             doc.text(59, 75, "Plating")
             doc.text(59, 75, "Plating")
             doc.line(75, 70, 75, 250);
@@ -676,20 +686,21 @@
             doc.text(185, 75, "Price")
             doc.text(185, 75, "Price")
             doc.line(197, 70, 197, 250);
-            doc.line(20, 77, 197, 77)
+            doc.line(15, 77, 197, 77)
             doc.line(20, 250, 197, 250)
 
             var y = 85;
             var total = 0;
 
             for (var i = DATA.product.length - 1; i >= 0; i--) {
-                doc.text(23, y, DATA.product[i].type+" "+DATA.product[i].category)
+                doc.text(16, y, DATA.product[i].type+" "+DATA.product[i].category+"("+DATA.product[i].prodSize+")")
                 doc.text(60, y, DATA.product[i].plating)
                 doc.text(79, y, DATA.product[i].language)
                 doc.text(103, y, DATA.product[i].nameType)
                 doc.text(125, y, DATA.product[i].nameOnProduct)
                 doc.text(167, y, DATA.product[i].quantity)
                 doc.text(182, y, DATA.product[i].totalAmount)
+                doc.line(15, y+1, 197, y+1)
                 y+=7;
                 total += parseInt(DATA.product[i].totalAmount); 
             }

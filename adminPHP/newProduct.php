@@ -54,6 +54,12 @@
         $type = $query_array["typeID"];
       }
     }
+    if(isset($_POST['size'])){
+      $size = 'TRUE';
+    }
+    else{
+      $size = 'FALSE';
+    }
     $desc = $_POST['desc'];
     $discount = $_POST['discount'];
     $nameLength = $_POST['length'];
@@ -61,7 +67,7 @@
     @$language = $_POST['language'];
     @$nameType = $_POST['wordCount'];
     if(!empty($language)&&!empty($platingType)&&!empty($nameType)){
-      $query = "INSERT INTO product (productID, description, discount, date, nameLength) VALUES (CONCAT('$category', '$type'), '$desc', '$discount', '$date', '$nameLength');";
+      $query = "INSERT INTO product (productID, description, discount, date, nameLength, size) VALUES (CONCAT('$category', '$type'), '$desc', '$discount', '$date', '$nameLength', '$size');";
       if(mysqli_query($conn, $query)){
         echo mysqli_use_result($conn);
       }
