@@ -51,19 +51,32 @@ else { // Email doesn't already exist in a database, proceed...
             $subject = ' Message from jewelcircle.net ';
             $message_body = '
         
-            <div style="text-align:center;">
-                    
-                    Hello '.$first_name.',<br><br>
+            <div style=" background-color:#fff2fd; text-align:center;"> 
+                    <div style=" background-color:#E60044;  font-size:6vw; color:white; padding:40px;";>
+                        JEWEL CIRCLE
+                    </div>
 
-                    <h3 style="color:#e60044;">Thank you for signing up!</h3><br><br>
+                        <div class="container" style="padding:40px">
 
-                    Follow us:<br><br>
 
-                    Instagram: https://www.instagram.com/jewel_circle/ <br><br>
+                            Dear '.$first_name.',<br><br>
+                            You have just created an account on Jewel Circle. <br>For your records, your username is '.$email.'.<br>
+                          
+                            <br>
+                            Welcome to JEWEL CIRCLE,<br>
+                            The Jewel Circle Team.<br> <br>
+                            <sub>
+                            Follow us:<br>
 
-                    Facebook: https://www.facebook.com/JewelCircle/<br><br>
+                            Instagram: https://www.instagram.com/jewel_circle/ <br>
 
-                    For any queries feel free to email us at info@jewelcircle.net
+                            Facebook: https://www.facebook.com/JewelCircle/<br><br>
+
+                            For any queries feel free to email us at info@jewelcircle.net
+                            <br><br><hr>
+                            <font style="font-size:10px">We apologize if you received this email in error. Please ignore it if you didn\'t make the request.</font>
+                            <sub>
+                         </div>
                 </div> ';
             require'mailsender.php';
         

@@ -3,13 +3,13 @@
 session_start();
 // Check if user is logged in using the session variable
 if ( $_SESSION['logged_in'] != 1 ) {
-  $_SESSION['message'] = "You must log in before viewing your profile page!";
+  $_SESSION['message'] = "You must <a href=\"userregister.php\">log in or sign up</a> before viewing your profile page!";
   if( isset($_SESSION['message']))
   {  
     header("location: error.php");
     exit();    
   }
-}
+} 
 else {
     // Makes it easier to read
     $first_name = $_SESSION['first_name'];
@@ -49,12 +49,12 @@ require 'templates/top.inc.php';
             </div>
             <!-- /.box-header -->
             <div class="">
-              <table class="table table-bordered">
-                <tr>
-                  <th style="width: 10px">ID</th>
-                  <th>Date</th>
-                  <th>Status</th>
-                  <th>Invoice</th>
+              <table style="text-align:center" class="table table-bordered">
+                <tr >
+                  <th style="text-align:center; width: 10px">ID</th>
+                  <th style="text-align:center">Date</th>
+                  <th  style="text-align:center;">Status</th>
+                  <th style="text-align:center;">Invoice</th>
                 </tr>
                 <?php
                   $query = "SELECT customerID FROM customer WHERE email='".$email."'";

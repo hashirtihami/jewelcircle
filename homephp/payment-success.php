@@ -3,7 +3,7 @@
 session_start();
 // Check if user is logged in using the session variable
 if ( $_SESSION['logged_in'] != 1 ) {
-  $_SESSION['message'] = "You must log in.";
+  $_SESSION['message'] = "You must <a href=\"userregister.php\">log in or sign up</a>.";
   if( isset($_SESSION['message']))
   {  
     header("location: error.php");
@@ -60,7 +60,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
 		}
 	unset($_SESSION['products']);
 	unset($_SESSION['total']);
-	$_SESSION['message'] = "Order Placed Successfully";
+	$_SESSION['message'] = "Order Placed Successfully.<br> The current status of your order will be viewed <a href=\"userprofile.php\"> here</a>.<br>You can also download the Cash Receipt by simply clicking the download icon next to your order.<br>Thank You!  ";
 	header("location: success.php");
 	}
 	else{
