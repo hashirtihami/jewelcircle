@@ -35,7 +35,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 
         Please click this link to reset your password:<br>
 
-        https://www.jewelcircle/homephp/reset.php?email='.$email.'&hash='.$hash.'
+        https://www.jewelcircle.net/homephp/reset.php?email='.$email.'&hash='.$hash.'
                             <sub><br><br>
                             For any queries feel free to email us at info@jewelcircle.net
                             <br><br><hr>

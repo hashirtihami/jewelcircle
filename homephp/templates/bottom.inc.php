@@ -88,7 +88,7 @@
 				</div>
 			</div>
 			<h6 class=" copyright  txt-center">
-					Copyright  All rights reserved | JEWEL CIRCLE personalized jewelry.
+					© Copyright 2018 JEWEL CIRCLE | Website by <a href="https://www.runglab.com">w.h.e.m</a>
 				</h6>
 			</div>
 		</div>
