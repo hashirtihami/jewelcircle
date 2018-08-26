@@ -43,7 +43,7 @@
       	$query = "SELECT * from plating";
       	$query_run = mysqli_query($conn, $query);
       	while(@$query_array = mysqli_fetch_array($query_run)){
-      		$query = "SELECT plating.platingType, platingprice.platingPrice FROM details JOIN plating ON details.platingID=plating.platingID JOIN platingprice ON details.platingPriceId=platingprice.platingPriceId WHERE details.platingPriceID=".$productID.$query_array["platingID"];
+      		$query = "SELECT plating.platingType, platingPrice.platingPrice FROM details JOIN plating ON details.platingID=plating.platingID JOIN platingprice ON details.platingPriceId=platingPrice.platingPriceId WHERE details.platingPriceID=".$productID.$query_array["platingID"];
       		$result = mysqli_query($conn, $query);
       		if(@$price = mysqli_fetch_array($result)){
       			$data["plating"][] = array($query_array["platingType"],$price["platingPrice"]);
@@ -52,7 +52,7 @@
       	$query = "SELECT * from language";
       	$query_run = mysqli_query($conn, $query);
       	while(@$query_array = mysqli_fetch_array($query_run)){
-      		$query = "SELECT language.languageName, languageprice.languagePrice FROM details JOIN language ON details.languageID=language.languageID JOIN languageprice ON details.languagePriceId=languageprice.languagePriceId WHERE details.languagePriceId=".$productID.$query_array["languageID"];
+      		$query = "SELECT language.languageName, languagePrice.languagePrice FROM details JOIN language ON details.languageID=language.languageID JOIN languageprice ON details.languagePriceId=languagePrice.languagePriceId WHERE details.languagePriceId=".$productID.$query_array["languageID"];
       		$result = mysqli_query($conn, $query);
       		if(@$price = mysqli_fetch_array($result)){
       			$data["language"][] = array($query_array["languageName"],$price["languagePrice"]);
@@ -61,7 +61,7 @@
       	$query = "SELECT * from nametype";
       	$query_run = mysqli_query($conn, $query);
       	while(@$query_array = mysqli_fetch_array($query_run)){
-      		$query = "SELECT nametype.nameTypeValue, nametypeprice.nameTypePrice FROM details JOIN nametype ON details.nameTypeID=nametype.nameTypeID JOIN nametypeprice ON details.nameTypePriceId=nametypeprice.nameTypePriceId WHERE details.nameTypepriceId=".$productID.$query_array["nameTypeID"];
+      		$query = "SELECT nametype.nameTypeValue, nameTypePrice.nameTypePrice FROM details JOIN nametype ON details.nameTypeID=nametype.nameTypeID JOIN nametypeprice ON details.nameTypePriceId=nameTypePrice.nameTypePriceId WHERE details.nameTypepriceId=".$productID.$query_array["nameTypeID"];
       		$result = mysqli_query($conn, $query);
       		if(@$price = mysqli_fetch_array($result)){
       			$data["nametype"][] = array($query_array["nameTypeValue"],$price["nameTypePrice"]);
