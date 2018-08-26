@@ -1,4 +1,6 @@
+
 <?php
+	
   require 'templates/top.inc.php';
   require 'allprodtable.php';
   require 'popup.php';

@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
 <!DOCTYPE html>
 <html lang='en'>
-<head>
+<head><link rel="Shortcut Icon" type="image/x-icon" href="../assets/images/logos/favicon2.ico">
     <meta charset="UTF-8" /> 
     <title>
         Admin

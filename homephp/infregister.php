@@ -25,8 +25,8 @@ $result = $mysqli->query("SELECT * FROM influencer WHERE email='$email'") or die
 
 // We know user email exists if the rows returned are more than 0
 if ( $result->num_rows > 0 ) {
-    $_SESSION['message'] = 'User with this email already exists!'; 
-   header("location:  error.php");
+    $_SESSION['message'] = 'A request has already been received from this email. '; 
+   header("location:  error");
 }
 else { // Email doesn't already exist in a database, proceed...
     // active is 0 by DEFAULT (no need to include it here)
@@ -46,7 +46,7 @@ else { // Email doesn't already exist in a database, proceed...
         $subject = ' Message from jewelcircle.net ';
         $message_body = '
         
-        <div style=" background-color:#fff2fd; text-align:center;"> 
+        <div style=" background-color:#fff2fd;  text-align:center;"> 
                     <div style=" background-color:#E60044;  font-size:40px; color:white; padding:40px;";>
                         JEWEL CIRCLE
                     </div>
@@ -55,10 +55,10 @@ else { // Email doesn't already exist in a database, proceed...
 
 
                             Dear '.$first_name.',<br><br>
-                            You have just created an account on Jewel Circle. <br>For your records, your username is '.$email.'.<br>
+                           
                             Your application for influencer of JEWEL CIRCLE has been received.<br>
                             Your profile and social accounts will be observed and a confirmation email will be sent, once your application is granted.<br>
-                            <br>
+                            <br>For your records, your username is '.$email.'.<br>
                             Welcome to JEWEL CIRCLE,<br>
                             The Jewel Circle Team.<br> <br>
                             <sub>
