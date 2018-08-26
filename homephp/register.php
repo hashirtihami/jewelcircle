@@ -29,7 +29,7 @@ $result = $mysqli->query("SELECT * FROM customer WHERE email='$email'") or die($
 // We know user email exists if the rows returned are more than 0
 if ( $result->num_rows > 0 ) {
     
-    $_SESSION['message'] = 'User with this email already exists!'; 
+    $_SESSION['message'] = 'User with this email already exists! <a href="userregister.php">Log in</a>'; 
 
    header("location:error");
 }
@@ -84,7 +84,7 @@ else { // Email doesn't already exist in a database, proceed...
     }
 
     else {
-        $_SESSION['message'] = 'Registration failed!';
+        $_SESSION['message'] = 'Registration failed!  <a href="userregister.php">Try again</a>';
         header("location: error");
     }
 }
