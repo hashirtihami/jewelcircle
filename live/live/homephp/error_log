@@ -1,0 +1,129 @@
+[24-Aug-2018 20:21:25 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[24-Aug-2018 20:23:18 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[24-Aug-2018 20:23:33 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[24-Aug-2018 20:26:53 UTC] PHP Notice:  Undefined index: msg in /home/u7julk33z0fd/public_html/homephp/register.php on line 25
+[24-Aug-2018 20:26:53 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 20:35:56 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[24-Aug-2018 20:36:39 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[24-Aug-2018 20:40:33 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[24-Aug-2018 20:40:55 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[24-Aug-2018 20:40:59 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[24-Aug-2018 20:41:09 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[24-Aug-2018 20:41:15 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[24-Aug-2018 20:43:52 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[24-Aug-2018 21:01:38 UTC] PHP Notice:  Undefined index: msg in /home/u7julk33z0fd/public_html/homephp/register.php on line 25
+[24-Aug-2018 21:13:42 UTC] PHP Notice:  Undefined index: msg in /home/u7julk33z0fd/public_html/homephp/register.php on line 25
+[24-Aug-2018 21:13:42 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:15:31 UTC] PHP Notice:  Undefined index: msg in /home/u7julk33z0fd/public_html/homephp/register.php on line 25
+[24-Aug-2018 21:15:31 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:23:39 UTC] PHP Notice:  Undefined index: msg in /home/u7julk33z0fd/public_html/homephp/register.php on line 25
+[24-Aug-2018 21:23:39 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:24:59 UTC] PHP Notice:  Undefined index: msg in /home/u7julk33z0fd/public_html/homephp/register.php on line 25
+[24-Aug-2018 21:24:59 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:27:11 UTC] PHP Notice:  Undefined index: msg in /home/u7julk33z0fd/public_html/homephp/register.php on line 25
+[24-Aug-2018 21:27:11 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:28:39 UTC] PHP Notice:  Undefined variable: role in /home/u7julk33z0fd/public_html/homephp/accountEdit.php on line 94
+[24-Aug-2018 21:28:39 UTC] PHP Notice:  Undefined variable: contact in /home/u7julk33z0fd/public_html/homephp/accountEdit.php on line 108
+[24-Aug-2018 21:28:39 UTC] PHP Notice:  Undefined variable: address in /home/u7julk33z0fd/public_html/homephp/accountEdit.php on line 122
+[24-Aug-2018 21:28:39 UTC] PHP Notice:  Undefined variable: country in /home/u7julk33z0fd/public_html/homephp/accountEdit.php on line 136
+[24-Aug-2018 21:28:39 UTC] PHP Notice:  Undefined variable: city in /home/u7julk33z0fd/public_html/homephp/accountEdit.php on line 150
+[24-Aug-2018 21:28:39 UTC] PHP Notice:  Undefined variable: zipcode in /home/u7julk33z0fd/public_html/homephp/accountEdit.php on line 164
+[24-Aug-2018 21:28:54 UTC] PHP Notice:  Undefined index: msg in /home/u7julk33z0fd/public_html/homephp/register.php on line 25
+[24-Aug-2018 21:28:54 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:33:55 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:37:50 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:39:30 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:39:39 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:40:29 UTC] PHP Notice:  Undefined index: msg in /home/u7julk33z0fd/public_html/homephp/register.php on line 25
+[24-Aug-2018 21:40:29 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:45:03 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:45:14 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:45:19 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:46:41 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:49:25 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:49:27 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:52:13 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:53:38 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:55:32 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:56:04 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:56:27 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 21:58:19 UTC] PHP Notice:  Undefined index: msg in /home/u7julk33z0fd/public_html/homephp/register.php on line 25
+[24-Aug-2018 21:58:19 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 22:01:00 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 22:03:47 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 22:04:16 UTC] PHP Notice:  Undefined index: msg in /home/u7julk33z0fd/public_html/homephp/register.php on line 25
+[24-Aug-2018 22:04:55 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 22:05:32 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 22:06:57 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 22:07:38 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 22:08:15 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 22:08:55 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 22:09:47 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 22:13:03 UTC] PHP Notice:  Undefined index: msg in /home/u7julk33z0fd/public_html/homephp/register.php on line 25
+[24-Aug-2018 22:13:03 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 22:13:08 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/u7julk33z0fd/public_html/homephp/phpmailer/class.smtp.php:239) in /home/u7julk33z0fd/public_html/homephp/register.php on line 89
+[24-Aug-2018 22:15:16 UTC] PHP Notice:  Undefined index: msg in /home/u7julk33z0fd/public_html/homephp/register.php on line 25
+[24-Aug-2018 22:15:16 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[24-Aug-2018 22:49:55 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[24-Aug-2018 22:50:14 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[24-Aug-2018 22:50:33 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[24-Aug-2018 23:08:01 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[25-Aug-2018 04:58:06 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[25-Aug-2018 04:58:25 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[25-Aug-2018 09:02:52 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[25-Aug-2018 09:21:49 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[25-Aug-2018 09:30:37 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[26-Aug-2018 07:18:14 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[26-Aug-2018 07:58:33 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/u7julk33z0fd/public_html/homephp/index.php on line 125
+[26-Aug-2018 08:02:19 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/u7julk33z0fd/public_html/homephp/index.php on line 125
+[26-Aug-2018 08:02:48 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/u7julk33z0fd/public_html/homephp/index.php on line 125
+[26-Aug-2018 09:03:04 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/u7julk33z0fd/public_html/homephp/index.php on line 125
+[26-Aug-2018 09:19:48 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/u7julk33z0fd/public_html/homephp/index.php on line 125
+[26-Aug-2018 09:24:20 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/u7julk33z0fd/public_html/homephp/index.php on line 125
+[26-Aug-2018 10:28:24 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[26-Aug-2018 10:33:56 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[26-Aug-2018 10:39:56 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[26-Aug-2018 10:55:38 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[26-Aug-2018 10:59:10 UTC] PHP Notice:  Undefined index: logged_in in /home/u7julk33z0fd/public_html/homephp/checkout.php on line 5
+[26-Aug-2018 10:59:27 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/payment-success.php on line 15
+[26-Aug-2018 15:59:27 Asia/Karachi] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[26-Aug-2018 11:08:49 UTC] PHP Notice:  Undefined index: msg in /home/u7julk33z0fd/public_html/homephp/register.php on line 25
+[26-Aug-2018 11:08:49 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[26-Aug-2018 11:10:59 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[26-Aug-2018 11:17:49 UTC] PHP Notice:  Undefined index: cardName in /home/u7julk33z0fd/public_html/homephp/addToCart.php on line 53
+[26-Aug-2018 11:17:56 UTC] PHP Notice:  Undefined index: cardName in /home/u7julk33z0fd/public_html/homephp/addToCart.php on line 53
+[26-Aug-2018 11:18:18 UTC] PHP Notice:  Undefined index: cardName in /home/u7julk33z0fd/public_html/homephp/addToCart.php on line 53
+[26-Aug-2018 11:18:21 UTC] PHP Notice:  Undefined index: cardName in /home/u7julk33z0fd/public_html/homephp/addToCart.php on line 53
+[26-Aug-2018 11:18:27 UTC] PHP Notice:  Undefined index: cardName in /home/u7julk33z0fd/public_html/homephp/deleteItem.php on line 6
+[26-Aug-2018 11:18:27 UTC] PHP Notice:  Undefined index: productID in /home/u7julk33z0fd/public_html/homephp/deleteItem.php on line 6
+[26-Aug-2018 11:18:27 UTC] PHP Notice:  Undefined index: productID in /home/u7julk33z0fd/public_html/homephp/deleteItem.php on line 6
+[26-Aug-2018 11:18:27 UTC] PHP Notice:  Undefined index: productID in /home/u7julk33z0fd/public_html/homephp/deleteItem.php on line 6
+[26-Aug-2018 11:18:27 UTC] PHP Notice:  Undefined index: productID in /home/u7julk33z0fd/public_html/homephp/deleteItem.php on line 6
+[26-Aug-2018 11:18:37 UTC] PHP Notice:  Undefined index: cardName in /home/u7julk33z0fd/public_html/homephp/deleteItem.php on line 6
+[26-Aug-2018 11:18:37 UTC] PHP Notice:  Undefined index: productID in /home/u7julk33z0fd/public_html/homephp/deleteItem.php on line 6
+[26-Aug-2018 11:18:37 UTC] PHP Notice:  Undefined index: productID in /home/u7julk33z0fd/public_html/homephp/deleteItem.php on line 6
+[26-Aug-2018 11:18:37 UTC] PHP Notice:  Undefined index: productID in /home/u7julk33z0fd/public_html/homephp/deleteItem.php on line 6
+[26-Aug-2018 11:18:38 UTC] PHP Notice:  Undefined index: cardName in /home/u7julk33z0fd/public_html/homephp/deleteItem.php on line 6
+[26-Aug-2018 11:18:38 UTC] PHP Notice:  Undefined index: productID in /home/u7julk33z0fd/public_html/homephp/deleteItem.php on line 6
+[26-Aug-2018 11:18:38 UTC] PHP Notice:  Undefined index: productID in /home/u7julk33z0fd/public_html/homephp/deleteItem.php on line 6
+[26-Aug-2018 11:21:03 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/payment-success.php on line 15
+[26-Aug-2018 16:21:03 Asia/Karachi] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[26-Aug-2018 11:23:35 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[26-Aug-2018 11:33:14 UTC] PHP Notice:  Undefined index: logged_in in /home/u7julk33z0fd/public_html/homephp/checkout.php on line 5
+[26-Aug-2018 11:33:14 UTC] PHP Notice:  Undefined index: email in /home/u7julk33z0fd/public_html/homephp/checkout.php on line 10
+[26-Aug-2018 11:33:14 UTC] PHP Notice:  Undefined variable: address in /home/u7julk33z0fd/public_html/homephp/checkout.php on line 58
+[26-Aug-2018 11:33:14 UTC] PHP Notice:  Undefined variable: city in /home/u7julk33z0fd/public_html/homephp/checkout.php on line 69
+[26-Aug-2018 11:33:14 UTC] PHP Notice:  Undefined variable: country in /home/u7julk33z0fd/public_html/homephp/checkout.php on line 80
+[26-Aug-2018 11:33:14 UTC] PHP Notice:  Undefined variable: zipcode in /home/u7julk33z0fd/public_html/homephp/checkout.php on line 93
+[26-Aug-2018 11:36:02 UTC] PHP Notice:  Undefined index: msg in /home/u7julk33z0fd/public_html/homephp/register.php on line 25
+[26-Aug-2018 11:36:02 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[26-Aug-2018 11:36:55 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/payment-success.php on line 15
+[26-Aug-2018 16:36:55 Asia/Karachi] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45
+[26-Aug-2018 11:39:17 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[26-Aug-2018 11:53:42 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[26-Aug-2018 12:34:33 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[26-Aug-2018 12:34:47 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u7julk33z0fd/public_html/homephp/adminlogin.php on line 3
+[26-Aug-2018 13:09:26 UTC] PHP Parse error:  syntax error, unexpected 'userregister' (T_STRING) in /home/u7julk33z0fd/public_html/homephp/login.php on line 27
+[26-Aug-2018 13:09:37 UTC] PHP Parse error:  syntax error, unexpected 'userregister' (T_STRING) in /home/u7julk33z0fd/public_html/homephp/login.php on line 27
+[26-Aug-2018 13:14:01 UTC] PHP Notice:  Undefined index: msg in /home/u7julk33z0fd/public_html/homephp/register.php on line 25
+[26-Aug-2018 13:14:10 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/u7julk33z0fd/public_html/homephp/phpmailer/PHPMailerAutoload.php on line 45

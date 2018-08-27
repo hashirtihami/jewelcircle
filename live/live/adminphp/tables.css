@@ -1,0 +1,69 @@
+.hideShow {
+  display: none;  
+  /*margin-left: 5px;*/
+}
+.delColumn {
+  width: 135px !important;
+}
+.labelCount {
+  position: absolute;
+  top: 9px;
+  right: 7px;
+  text-align: center;
+  font-size: 11px;
+  padding: 2px 3px;
+  line-height: .9;
+  border-radius: 10px;
+}
+.showButtons {
+  display: inline-block;
+  margin-left: 5px;
+}
+.checkboxColumn {
+  width: 50px;
+}
+.buttonsCss {
+  display: inline-flex !important;
+  border: none !important;
+}
+
+#submit {
+  margin-bottom: 15px;
+}
+.bg-custom {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #1a2226), color-stop(1, #222d32)) !important;
+  color: #b8c7ce;
+}
+#btnAddons {
+  border: 5px solid #1a2226;
+  padding: 2px !important;
+  background-color: #2c3a40 !important;
+}
+.btnStyles {
+  display: table;
+  margin: 0 auto;
+}
+.bg-dispatch {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #3c8dbc), color-stop(1, #67a8ce)) !important;
+  border-top: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f4f4f4;
+  color: white;
+}
+.bg-dispatch button {
+  color: #333;
+}
+.bg-dispatch span {
+  display: block;
+}
+
+.buttonDispatch {
+  font-size: 8px !important;
+}
+.row {
+  margin-right: 0 !important;
+}
+div.box-body {
+  margin-top: 20px;
+  border-top: none;
+}
+
